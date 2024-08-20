@@ -141,7 +141,6 @@ GLOBAL_DATUM(storyteller, /datum/storyteller)
 		set_timer()
 		//Increase chaos every hour.
 	if(can_hourly_tick())
-		to_chat(world, ("The time has passed."))
 		increase_chaos()
 
 /datum/storyteller/proc/can_tick()
@@ -389,7 +388,5 @@ The actual fire event proc is located in storyteller_meta*/
 // Intended to increase chaos overtime throughout a round to a certain cap, based on how many players are present.
 
 /datum/storyteller/proc/increase_chaos()
-	to_chat(world, ("The chaos has tried to increase."))
 	if (GLOB.chaos_level < 5)
 		GLOB.chaos_level += (GLOB.player_list.len * 0.1)
-		to_chat(world, ("The chaos has succesfully increase."))
