@@ -17,7 +17,7 @@
 	//Warrior has starting values that will cause moderate and major events very early in the round
 	points = list(
 	EVENT_LEVEL_MUNDANE = 0, //Mundane
-	EVENT_LEVEL_MODERATE = 100, //Moderate
+	EVENT_LEVEL_MODERATE = 35, //Moderate
 	EVENT_LEVEL_MAJOR = 75, //Major
 	EVENT_LEVEL_ROLESET = -999 //Roleset
 	)
