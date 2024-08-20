@@ -317,6 +317,32 @@
 	text = "We have enough chaos already!"
 
 
+/datum/poll/chaos_level_decrease
+	name = "Decrease Chaos Level"
+	question = "Do you want to decrease the chaos level?"
+	description = "Lower chaos level makes storyteller events much less likely."
+	time = 120
+	minimum_win_percentage = 0.75 //High % needed for something that alters the whole round
+	cooldown = 30 MINUTES
+	next_vote = 90 MINUTES //Same lenght as bluespace jump
+	choice_types = list(/datum/vote_choice/yes_chaos_level, /datum/vote_choice/no_chaos_level)
+	only_admin = FALSE
+	can_revote = TRUE
+	can_unvote = TRUE
+
+
+/datum/vote_choice/yes_chaos_level
+	text = "Decrease the chaos level!"
+
+/datum/vote_choice/yes_chaos_level/on_win()
+	GLOB.chaos_level -= 1
+	for (var/mob/M as mob in SSmobs.mob_list)
+		to_chat(M, "<br><center><span class='danger'><b><font size=4>Chaos Level Decreased</font></b><br></span></center><br>")
+
+/datum/vote_choice/no_chaos_level
+	text = "We don't have enough chaos!"
+
+
 
 /datum/poll/custom
 	name = "Custom"
