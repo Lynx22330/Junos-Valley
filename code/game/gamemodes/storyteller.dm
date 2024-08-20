@@ -19,7 +19,9 @@ GLOBAL_DATUM(storyteller, /datum/storyteller)
 	var/list/processing_events = list()
 	var/last_tick = 0
 	var/next_tick = 0
+	var/next_hourly_tick = 0
 	var/tick_interval = 60 SECONDS //Ticks once per minute.
+	var/hourly_tick_interval = 1 HOURS //Ticks once per hour.
 
 	var/crew = 0
 	var/heads = 0
@@ -127,7 +129,6 @@ GLOBAL_DATUM(storyteller, /datum/storyteller)
 		//Update these things so we can accurately select events
 		update_crew_count()
 		update_event_weights()
-
 		/*
 			Handle points calls a large stack that increments all the point totals, and then attempts to
 			trigger as many events as our totals can afford to
@@ -138,10 +139,17 @@ GLOBAL_DATUM(storyteller, /datum/storyteller)
 
 		//Set the time for the next tick
 		set_timer()
-
+		//Increase chaos every hour.
+	if(can_hourly_tick())
+		to_chat(world, ("The time has passed."))
+		increase_chaos()
 
 /datum/storyteller/proc/can_tick()
 	if (world.time > next_tick)
+		return TRUE
+
+/datum/storyteller/proc/can_hourly_tick()
+	if (world.time > next_hourly_tick)
 		return TRUE
 
 /datum/storyteller/proc/set_timer()
@@ -153,7 +161,7 @@ GLOBAL_DATUM(storyteller, /datum/storyteller)
 
 	last_tick = world.time
 	next_tick = last_tick + tick_interval
-
+	next_hourly_tick = last_tick + hourly_tick_interval
 
 
 /****************************
@@ -374,3 +382,14 @@ The actual fire event proc is located in storyteller_meta*/
 
 		pool[a] = new_weight
 	return pool
+
+/****************************
+*  Chaos Level Handling
+*****************************/
+// Intended to increase chaos overtime throughout a round to a certain cap, based on how many players are present.
+
+/datum/storyteller/proc/increase_chaos()
+	to_chat(world, ("The chaos has tried to increase."))
+	if (GLOB.chaos_level < 5)
+		GLOB.chaos_level += (GLOB.player_list.len * 0.1)
+		to_chat(world, ("The chaos has succesfully increase."))
