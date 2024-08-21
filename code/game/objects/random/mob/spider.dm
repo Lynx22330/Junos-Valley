@@ -22,13 +22,13 @@
 		mobs += list(/mob/living/carbon/superior_animal/giant_spider/tarantula/pit = (4 * GLOB.chaos_level))
 	if(GLOB.chaos_level > 3)
 		mobs += list(/mob/living/carbon/superior_animal/giant_spider/nurse/cave_spider = (4 * GLOB.chaos_level)) // Frost oil should be scary.
-		mobs += list(/mob/living/carbon/superior_animal/giant_spider/plasma = (2 * GLOB.chaos_level))
 		mobs += list(/mob/living/carbon/superior_animal/giant_spider/hunter/viper = (2 * GLOB.chaos_level))     // More venomous, scary spiders occur here.
 		mobs += list(/mob/living/carbon/superior_animal/giant_spider/tarantula/ogre = (6 * GLOB.chaos_level))
 	if(GLOB.chaos_level > 5) // These should only be active if players ever decide to vote on it.
 		mobs += list(/mob/living/carbon/superior_animal/giant_spider/hunter/viper_cloaker = (2 * GLOB.chaos_level)) // Your worst nightmare.
-		mobs += list(/mob/living/carbon/superior_animal/giant_spider/tarantula/emperor = (1 * GLOB.chaos_level))
-		mobs += list(/mob/living/carbon/superior_animal/giant_spider/nurse/queen = (2 * GLOB.chaos_level))
+		mobs += list(/mob/living/carbon/superior_animal/giant_spider/tarantula/emperor = (0.1 * GLOB.chaos_level))
+		mobs += list(/mob/living/carbon/superior_animal/giant_spider/nurse/queen = (1 * GLOB.chaos_level))
+		mobs += list(/mob/living/carbon/superior_animal/giant_spider/plasma = (0.02 * GLOB.chaos_level)) // Spider go boom!
 	return pickweight(mobs)
 
 /obj/random/mob/spiders/low_chance

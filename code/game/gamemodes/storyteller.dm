@@ -18,6 +18,7 @@ GLOBAL_DATUM(storyteller, /datum/storyteller)
 	var/force_spawn_now = FALSE
 	var/list/processing_events = list()
 	var/last_tick = 0
+	var/last_hourly_tick = 0      // Using the same 'last_tick' is bad... For some reason.
 	var/next_tick = 0
 	var/next_hourly_tick = 0
 	var/tick_interval = 60 SECONDS //Ticks once per minute.
@@ -160,7 +161,7 @@ GLOBAL_DATUM(storyteller, /datum/storyteller)
 
 	last_tick = world.time
 	next_tick = last_tick + tick_interval
-	next_hourly_tick = last_tick + hourly_tick_interval
+	next_hourly_tick = last_hourly_tick + hourly_tick_interval
 
 
 /****************************

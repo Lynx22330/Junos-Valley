@@ -32,7 +32,10 @@
 							for(var/obj/item/reagent_containers/food/snacks/food in view(src,3))
 								if(istype(food.loc, /turf))
 									eatTargets += food
-
+						if(gibconsumer)
+							for(var/obj/effect/decal/cleanable/blood/gibs/gibs in view(src,3))
+								if(istype(gibs.loc, /turf))
+									eatTargets += gibs
 
 					eat_target = safepick(nearestObjectsInList(eatTargets,src,1))
 					if (eat_target)

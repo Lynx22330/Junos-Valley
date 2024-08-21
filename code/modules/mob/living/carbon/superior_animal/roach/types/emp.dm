@@ -4,13 +4,13 @@
 	icon_state = "elektromagnetisch"
 	meat_amount = 2
 	turns_per_move = 2
-	maxHealth = 75 * ROACH_HEALTH_MOD
-	health = 75 * ROACH_HEALTH_MOD
+	maxHealth = 125 * ROACH_HEALTH_MOD
+	health = 125 * ROACH_HEALTH_MOD
 	move_to_delay = 7
 	deathmessage = "pulses violently as it dies!"
-	melee_damage_lower = 12
-	melee_damage_upper = 15 //Rare
-	armor_divisor = 4
+	melee_damage_lower = 15
+	melee_damage_upper = 20 //Rare, and strong.
+	armor_divisor = 3
 
 	mob_size = MOB_MEDIUM
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/roachmeat/elektromagnetisch
@@ -19,7 +19,7 @@
 
 /mob/living/carbon/superior_animal/roach/elektromagnetisch/UnarmedAttack(atom/A, proximity)
 	. = ..()
-	if(prob(5))
+	if(prob(10)) //A 10% chance per attack sounds decent due to the chaos level.
 		empulse(loc, 0, 3)
 		playsound(loc, list('sound/weapons/guns/unknown_spacegun_burn.ogg', 'sound/weapons/guns/unknown_spacegun_melt.ogg', 'sound/weapons/guns/unknown_spacegun_incinerate.ogg', 'sound/weapons/guns/unknown_spacegun_vaporize.ogg'), 50, 1)
 

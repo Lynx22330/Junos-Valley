@@ -39,8 +39,8 @@
 
 
 /mob/living/carbon/superior_animal/giant_spider/hunter/viper_cloaker
-	name = "viper spider"
-	desc = "Furry, black, and has slight chameleonic chitin, it makes you want to scream. It's glinted, purple eyes and red splotch on its abdomen makes you fear for your life."
+	name = "cloaked viper spider"
+	desc = "Furry, black, and has a powerful, energy resilient chameleonic chitin. It makes you want to scream. It's glinted, purple eyes and red splotch on its abdomen makes you fear for your life."
 	icon_state = "viper"
 	icon_living = "viper"
 	maxHealth = 30 * SPIDER_HEALTH_MOD // We are very venemous. We are very hard to spot. Yet, we can't take a single melee attack it seems.
@@ -48,7 +48,8 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 10      // Fangs designed for injecting heavy doses, not heavy bites. Better carry some anti-venom!
 	poison_per_bite = 9
-	alpha = 40
+	alpha = 45
+	armor = list(melee = 0, bullet = 0, energy = 20, bomb = 1, bio = 10, rad = 25)
 
 /mob/living/carbon/superior_animal/giant_spider/hunter/viper_cloaker/death() //We are still somewhat hidden after death, our cloak is stronger than normal.
 	..()

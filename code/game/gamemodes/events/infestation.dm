@@ -23,6 +23,7 @@ It focuses on spawning large numbers of moderate-to-weak monsters, and includes 
 #define INFESTATION_LIZARDS "lizards"
 #define INFESTATION_SPACE_BATS "bats"
 #define INFESTATION_SPIDERLINGS "spiderlings"
+#define INFESTATION_ROACHLINGS "roachlings"
 #define INFESTATION_SPIDERS "spider"
 #define INFESTATION_ROACHES "large insects"
 #define INFESTATION_TERMIE "large burrowing insects"
@@ -47,28 +48,30 @@ It focuses on spawning large numbers of moderate-to-weak monsters, and includes 
 	var/infestation_time = 3 MINUTES
 	var/list/chosen_mob_classification = list()
 	var/list/possible_mobs_mundane = list(
-		INFESTATION_MICE = 8,
-		INFESTATION_LIZARDS = 6,
-		INFESTATION_SPIDERLINGS = 10,
-		INFESTATION_YITHIAN = 3,
-		INFESTATION_TINDALOS = 3,
-		INFESTATION_DIYAAB = 6,
+		//INFESTATION_MICE = 8,
+		//INFESTATION_LIZARDS = 6,		// I see why these were commented out now. Poor for mob health.
+		INFESTATION_SPIDERLINGS = 6,
+		INFESTATION_ROACHLINGS = 8,
+		//INFESTATION_YITHIAN = 3,      // I see why these were commented out now. Poor for mob health.
+		//INFESTATION_TINDALOS = 3,
+		//INFESTATION_DIYAAB = 6,       // Eh. Nothing of note with this creature. These should be focused on "setup" events that can break way for dynamic events to occur.
 		INFESTATION_SPACE_BATS = 9,
-		INFESTATION_TERMIE = 12
 	)
 
 	var/possible_mobs_moderate = list(
 		INFESTATION_SPACE_BATS = 10,
-		INFESTATION_SAMAK = 5,
-		INFESTATION_SHANTAK = 7,
+		INFESTATION_SAMAK = 4,
+		INFESTATION_SHANTAK = 6,
 		INFESTATION_SPIDERS = 10,//This is a combination of spiderlings and adult spiders
 		INFESTATION_ROACHES = 14
 	)
 
 	var/possible_mobs_major = list(
-		INFESTATION_SPIDERS = 8,
-		INFESTATION_HIVEBOTS = 6,
-		INFESTATION_SLIMES = 5
+		INFESTATION_SPIDERS = 16,
+		INFESTATION_HIVEBOTS = 10,
+		INFESTATION_SLIMES = 8,
+		INFESTATION_TERMIE = 14,
+		INFESTATION_ROACHES = 24
 	)
 
 /datum/event/infestation/setup()
@@ -177,6 +180,10 @@ It focuses on spawning large numbers of moderate-to-weak monsters, and includes 
 			chosen_mob_classification[/obj/effect/spider/spiderling] = 1
 			chosen_mob_classification[/obj/effect/spider/eggcluster] = 0.2
 			chosen_mob_classification[/obj/structure/spider_nest] = 0.1
+		if(INFESTATION_ROACHLINGS)
+			event_name = "Roachling Infestation"
+			chosen_verb = "have burrowed into"
+			chosen_mob_classification += /mob/living/carbon/superior_animal/roach/roachling
 		if(INFESTATION_SPIDERS)
 			event_name = "Spider Infestation"
 			chosen_verb = "have burrowed into"

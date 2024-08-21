@@ -61,6 +61,7 @@
 	var/probability_egg_laying = 90 // probability to lay an egg, 90% to encourage more roaches due to smaller natural spawn rates
 
 	var/snacker = FALSE
+	var/gibconsumer = FALSE
 
 	do_friendly_fire_chance = 100
 
@@ -96,4 +97,4 @@
 /mob/living/carbon/superior_animal/roach/doTargetMessage()
 	. = ..()
 
-	playsound(src, 'sound/voice/insect_battle_screeching.ogg', 30, 1, -3)
+	playsound(src, 'sound/voice/insect_battle_screeching.ogg', 15, 1, -3)

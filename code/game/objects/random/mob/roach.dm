@@ -9,12 +9,11 @@
 				)
 
 /obj/random/mob/roaches/item_to_spawn()
-	if(GLOB.chaos_level > 1) //Higher weights as chaose increase
-		mobs += list(/mob/living/carbon/superior_animal/roach/fuhrer = (0.5 * GLOB.chaos_level)) //They finally get some order.
-	if(GLOB.chaos_level > 2)
-		mobs += list(/mob/living/carbon/superior_animal/roach/nitro = (0.5 * GLOB.chaos_level))
+	if(GLOB.chaos_level > 1)
 		mobs += list(/mob/living/carbon/superior_animal/roach/glowing = (2 * GLOB.chaos_level)) // This is where the more supportive roaches begin.
 		mobs += list(/mob/living/carbon/superior_animal/roach/support = (2 * GLOB.chaos_level))
+	if(GLOB.chaos_level > 2) //Higher weights as chaose increase
+		mobs += list(/mob/living/carbon/superior_animal/roach/fuhrer = (0.5 * GLOB.chaos_level)) //They finally get some order.
 	if(GLOB.chaos_level > 3)
 		mobs += list(/mob/living/carbon/superior_animal/roach/nanite = (0.2 * GLOB.chaos_level))
 		mobs += list(/mob/living/carbon/superior_animal/roach/elektromagnetisch = (0.2 * GLOB.chaos_level))
@@ -22,6 +21,7 @@
 		mobs += list(/mob/living/carbon/superior_animal/roach/kaiser = (0.02 * GLOB.chaos_level)) //0.10, then 0.12, 0.14, so on, so forth. Starts off 0.1% chance spawning.
 		mobs += list(/mob/living/carbon/superior_animal/roach/tazntz = (1 * GLOB.chaos_level)) // The roaches are now mutating. True chaos unfolds.
 		mobs += list(/mob/living/carbon/superior_animal/roach/bluespace = (0.05 * GLOB.chaos_level)) // Teleporting Roaches? Chaos... Chaos!
+		mobs += list(/mob/living/carbon/superior_animal/roach/nitro = (0.5 * GLOB.chaos_level)) // Boom Roaches stay here. Makes sense.
 	return pickweight(mobs)
 
 /obj/random/mob/roaches/low_chance
@@ -64,3 +64,14 @@
 // For Scrap Beacon
 /obj/random/cluster/roaches/beacon/item_to_spawn()
 	return /mob/living/carbon/superior_animal/roach/nanite
+
+/obj/random/cluster/roachlings
+	name = "hoard of roachlings"
+	icon_state = "hostilemob-brown-cluster"
+	alpha = 128
+	min_amount = 6
+	max_amount = 16
+	spread_range = 0
+
+/obj/random/cluster/roachlings/item_to_spawn()
+	return /mob/living/carbon/superior_animal/roach/roachling
