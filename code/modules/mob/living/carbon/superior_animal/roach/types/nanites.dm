@@ -11,7 +11,7 @@
 
 	knockdown_odds = 3
 	melee_damage_lower = 1
-	melee_damage_upper = 3 //He's a ranged roach
+	melee_damage_upper = 3 //He's a ranged roach. Or were they?
 
 	blattedin_revives_left = 1
 
@@ -28,7 +28,7 @@
 	var/list/nanite_swarms = list()
 	var/max_swarms = 5
 
-/mob/living/carbon/superior_animal/roach/nanite/UnarmedAttack(atom/A, proximity)
+/mob/living/carbon/superior_animal/roach/nanite/RangedAttack(atom/A, proximity) // Apparently they used to be ranged. Lets give that back to them, shall we?
 	. = ..()
 
 	if(isliving(A))

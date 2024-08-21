@@ -344,7 +344,7 @@
 
 
 
-/datum/poll/chaos_level_decrease
+/datum/poll/chaos_level_reset
 	name = "Reset Chaos Level"
 	question = "Do you want to reset the chaos level?"
 	description = "Reset chaos back to its default value. For when things are too much."

@@ -18,6 +18,7 @@
 	name = "cloaker spider"
 	desc = "Furry and black, it makes you shudder to look at it. This one has a weaker chameleonic chitin that makes it hard to see."
 	alpha = 50
+	move_to_delay = 2
 	armor = list(melee = 1, bullet = 0, energy = 0, bomb = 0, bio = 10, rad = 25, agony = 0)
 
 
@@ -32,8 +33,26 @@
 	icon_living = "viper"
 	maxHealth = 100 * SPIDER_HEALTH_MOD
 	health = 100 * SPIDER_HEALTH_MOD
-	melee_damage_lower = 20
-	melee_damage_upper = 25
+	melee_damage_lower = 10
+	melee_damage_upper = 15 // We are designed for injecting, not chewing.
+	poison_per_bite = 7 // Slightly more venom than normal.
+
+
+/mob/living/carbon/superior_animal/giant_spider/hunter/viper_cloaker
+	name = "viper spider"
+	desc = "Furry, black, and has slight chameleonic chitin, it makes you want to scream. It's glinted, purple eyes and red splotch on its abdomen makes you fear for your life."
+	icon_state = "viper"
+	icon_living = "viper"
+	maxHealth = 30 * SPIDER_HEALTH_MOD // We are very venemous. We are very hard to spot. Yet, we can't take a single melee attack it seems.
+	health = 30 * SPIDER_HEALTH_MOD
+	melee_damage_lower = 5
+	melee_damage_upper = 10      // Fangs designed for injecting heavy doses, not heavy bites. Better carry some anti-venom!
+	poison_per_bite = 9
+	alpha = 40
+
+/mob/living/carbon/superior_animal/giant_spider/hunter/viper_cloaker/death() //We are still somewhat hidden after death, our cloak is stronger than normal.
+	..()
+	alpha = 200
 
 //bomb spider, very little toxins and not much health but explodes on reaching melee range.
 /mob/living/carbon/superior_animal/giant_spider/plasma

@@ -58,7 +58,7 @@
 
 	var/atom/eat_target // target that the roach wants to eat
 	var/fed = 0 // roach gets fed after eating a corpse
-	var/probability_egg_laying = 75 // probability to lay an egg
+	var/probability_egg_laying = 90 // probability to lay an egg, 90% to encourage more roaches due to smaller natural spawn rates
 
 	var/snacker = FALSE
 

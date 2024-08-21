@@ -34,7 +34,7 @@
 			L.damage_through_armor(damage, BURN)
 			playsound(src, 'sound/voice/insect_battle_screeching.ogg', 30, 1, -3)
 			L.visible_message(SPAN_DANGER("\the [src] pinches hard, chemically burning \the [L]!"))
-		if(prob(5))
+		if(prob(15))
 			var/mob/living/carbon/C = L
 			var/safety = C.eyecheck()
 			if(safety < FLASH_PROTECTION_MINOR)
