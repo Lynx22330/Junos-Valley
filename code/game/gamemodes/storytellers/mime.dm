@@ -5,6 +5,7 @@
 	description = "A storyteller which will not do anything."
 	votable = TRUE //For lower pops
 
+	GLOB.chaos_storyteller_gain_multiplier = 0   // Chaos should never gain with this storyteller.
 	gain_mult_mundane = 0
 	gain_mult_moderate = 0
 	gain_mult_major = 0

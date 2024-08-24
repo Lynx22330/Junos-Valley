@@ -364,6 +364,7 @@
 
 /datum/vote_choice/yes_reset_chaos_level/on_win()
 	GLOB.chaos_level -= GLOB.chaos_level
+	GLOB.chaos_surpass = FALSE
 	for (var/mob/M as mob in SSmobs.mob_list)
 		to_chat(M, "<br><center><span class='danger'><b><font size=4>Chaos Level has been RESET!</font></b><br></span></center><br>")
 
