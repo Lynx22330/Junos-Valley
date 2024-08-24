@@ -4,8 +4,7 @@
 	welcome = "Welcome to the Nadezhda colony! It's going to be a quiet day"
 	description = "A passive storyteller that does almost nothing. It will be a very uneventful day."
 
-
-	GLOB.chaos_storyteller_gain_multiplier = 0.90 // 10% less chaos. Keeping things relatively tame, but not for a long time unlike the Healer.
+	multipliergain = 0.9 // 10% less chaos. Keeping things relatively tame, but not for a long time unlike the Healer.
 
 	gain_mult_mundane = 0.7
 	gain_mult_moderate = 0.4

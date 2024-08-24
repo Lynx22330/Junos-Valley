@@ -4,7 +4,7 @@
 	welcome = "Ready your weapons, and prepare for battle..."
 	description = "Aggressive storyteller with a focus on generating monsters and antagonists that will do battle with the colonists."
 
-	GLOB.chaos_storyteller_gain_multiplier = 1.5 // 50% chaos for more variants sooner. Intended to actually focus on fighting and for spawning many events.
+	multipliergain = 1.5 // 50% chaos for more variants sooner. Intended to actually focus on fighting and for spawning many events.
 
 	gain_mult_mundane = 1.1
 	gain_mult_moderate = 1.5   // Very aggressive focus on moderate events, mundane events can still occur however.

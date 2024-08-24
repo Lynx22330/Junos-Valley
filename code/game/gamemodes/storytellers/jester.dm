@@ -4,7 +4,8 @@
 	welcome = "Welcome to the house of fun. We're all mad here!"
 	description = "Aggressive and chaotic storyteller who generates a larger quantity of random events."
 
-	GLOB.chaos_storyteller_gain_multiplier = 1.5 // 50% more chaos. Just a bit more.
+	multipliergain = 1.5 // 50% more chaos. Just a bit more.
+
 	gain_mult_mundane = 1.2
 	gain_mult_moderate = 1.2
 	gain_mult_major = 1.2

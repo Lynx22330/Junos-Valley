@@ -22,7 +22,8 @@ GLOBAL_DATUM(storyteller, /datum/storyteller)
 	var/next_tick = 0
 	var/next_hourly_tick = 0
 	var/tick_interval = 60 SECONDS //Ticks once per minute.
-	var/hourly_tick_interval = 1 HOURS //Ticks once per hour.
+	var/hourly_tick_interval = 30 SECONDS //Ticks once per hour.
+	var/multipliergain = 1
 
 	var/crew = 0
 	var/heads = 0
@@ -116,6 +117,7 @@ GLOBAL_DATUM(storyteller, /datum/storyteller)
 	build_event_pools()
 	set_timer()
 	set_up_events()
+	change_multipliers()
 
 /datum/storyteller/proc/set_up_events()
 	return
@@ -393,3 +395,6 @@ The actual fire event proc is located in storyteller_meta*/
 		GLOB.chaos_level += ((GLOB.player_list.len * 0.1) * GLOB.chaos_storyteller_gain_multiplier)  // At a rate of each hour, increase chaos levels to a certain cap.
 	if (GLOB.chaos_level > (GLOB.player_list.len * 0.1) + 4 && !GLOB.chaos_surpass)
 		GLOB.chaos_level = 4      // Caps the chaos level to 4 just incase it does somehow go beyond 5. Requires the "Increase Chaos Levels" vote to trigger once to be able to surpass.
+
+/datum/storyteller/proc/change_multipliers()
+	GLOB.chaos_storyteller_gain_multiplier = multipliergain
