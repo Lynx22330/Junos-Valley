@@ -317,7 +317,6 @@
 /datum/vote_choice/no_chaos_level
 	text = "We have enough chaos already!"
 
-
 /datum/poll/chaos_level_decrease
 	name = "Decrease Chaos Level"
 	question = "Do you want to decrease the chaos level?"
