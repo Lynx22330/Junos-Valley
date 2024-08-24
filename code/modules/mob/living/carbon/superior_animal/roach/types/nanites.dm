@@ -6,8 +6,8 @@
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/roachmeat/kraftwerk
 	meat_amount = 3
 	turns_per_move = 1
-	maxHealth = 30 * ROACH_HEALTH_MOD
-	health = 30 * ROACH_HEALTH_MOD
+	maxHealth = 66 * ROACH_HEALTH_MOD
+	health = 66 * ROACH_HEALTH_MOD      // More HP to accomodate their rarity and ability to swarm people with weaker flies.
 
 	knockdown_odds = 3
 	melee_damage_lower = 1
@@ -28,12 +28,10 @@
 	var/list/nanite_swarms = list()
 	var/max_swarms = 5
 
-/mob/living/carbon/superior_animal/roach/nanite/RangedAttack(atom/A, proximity) // Apparently they used to be ranged. Lets give that back to them, shall we?
-	. = ..()
-
+/mob/living/carbon/superior_animal/roach/nanite/UnarmedAttack(atom/A, proximity)
 	if(isliving(A))
 		var/mob/living/L = A
-		if(istype(L) && prob(25) && nanite_swarms.len < max_swarms)
+		if(istype(L) && prob(33) && nanite_swarms.len < max_swarms)
 			var/sound/screech = pick('sound/machines/robots/robot_talk_light1.ogg','sound/machines/robots/robot_talk_light2.ogg','sound/machines/robots/robot_talk_heavy4.ogg')
 			playsound(src, screech, 30, 1, -3)
 			var/mob/living/simple_animal/hostile/naniteswarm/M = new /mob/living/simple_animal/hostile/naniteswarm(get_turf(src), src)
