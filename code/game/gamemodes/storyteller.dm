@@ -389,5 +389,7 @@ The actual fire event proc is located in storyteller_meta*/
 // Intended to increase chaos overtime throughout a round to a certain cap, based on how many players are present.
 
 /datum/storyteller/proc/increase_chaos()
-	if (GLOB.chaos_level < 5)
-		GLOB.chaos_level += (GLOB.player_list.len * 0.1)
+	if (GLOB.chaos_level < 4)
+		GLOB.chaos_level += (GLOB.player_list.len * 0.1)  // At a rate of each hour, increase chaos levels to a certain cap.
+	if (GLOB.chaos_level > (GLOB.player_list.len * 0.1) + 4 && !GLOB.chaos_surpass)
+		GLOB.chaos_level = 4      // Caps the chaos level to 4 just incase it does somehow go beyond 5. Requires the "Increase Chaos Levels" vote to trigger once to be able to surpass.

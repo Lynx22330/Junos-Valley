@@ -294,7 +294,7 @@
 /datum/poll/chaos_level_increase
 	name = "Increase Chaos Level"
 	question = "Do you want to increase the chaos level?"
-	description = "Higher chaos level makes storyteller events much more likely."
+	description = "Higher chaos level makes storyteller events much more likely. Also allows the Chaos Levels to uncap."
 	time = 120
 	minimum_win_percentage = 0.75 //High % needed for something that alters the whole round
 	cooldown = 30 MINUTES
@@ -310,6 +310,7 @@
 
 /datum/vote_choice/yes_chaos_level/on_win()
 	GLOB.chaos_level += 1
+	GLOB.chaos_surpass = TRUE
 	for (var/mob/M as mob in SSmobs.mob_list)
 		to_chat(M, "<br><center><span class='danger'><b><font size=4>Chaos Level Increased</font></b><br></span></center><br>")
 
@@ -325,21 +326,21 @@
 	minimum_win_percentage = 0.75 //High % needed for something that alters the whole round
 	cooldown = 30 MINUTES
 	next_vote = 90 MINUTES //Same lenght as bluespace jump
-	choice_types = list(/datum/vote_choice/yes_chaos_level, /datum/vote_choice/no_chaos_level)
+	choice_types = list(/datum/vote_choice/yes_decrease_chaos_level, /datum/vote_choice/no_decrease_chaos_level)
 	only_admin = FALSE
 	can_revote = TRUE
 	can_unvote = TRUE
 
 
-/datum/vote_choice/yes_chaos_level
+/datum/vote_choice/yes_decrease_chaos_level
 	text = "Decrease the chaos level!"
 
-/datum/vote_choice/yes_chaos_level/on_win()
+/datum/vote_choice/yes_decrease_chaos_level/on_win()
 	GLOB.chaos_level -= 1
 	for (var/mob/M as mob in SSmobs.mob_list)
 		to_chat(M, "<br><center><span class='danger'><b><font size=4>Chaos Level Decreased</font></b><br></span></center><br>")
 
-/datum/vote_choice/no_chaos_level
+/datum/vote_choice/no_decrease_chaos_level
 	text = "We don't have enough chaos!"
 
 
@@ -352,21 +353,21 @@
 	minimum_win_percentage = 0.75 //High % needed for something that alters the whole round
 	cooldown = 30 MINUTES
 	next_vote = 90 MINUTES //Same lenght as bluespace jump
-	choice_types = list(/datum/vote_choice/yes_chaos_level, /datum/vote_choice/no_chaos_level)
+	choice_types = list(/datum/vote_choice/yes_reset_chaos_level, /datum/vote_choice/no_reset_chaos_level)
 	only_admin = FALSE
 	can_revote = TRUE
 	can_unvote = TRUE
 
 
-/datum/vote_choice/yes_chaos_level
+/datum/vote_choice/yes_reset_chaos_level
 	text = "Return to normalcy."
 
-/datum/vote_choice/yes_chaos_level/on_win()
+/datum/vote_choice/yes_reset_chaos_level/on_win()
 	GLOB.chaos_level -= GLOB.chaos_level
 	for (var/mob/M as mob in SSmobs.mob_list)
 		to_chat(M, "<br><center><span class='danger'><b><font size=4>Chaos Level has been RESET!</font></b><br></span></center><br>")
 
-/datum/vote_choice/no_chaos_level
+/datum/vote_choice/no_reset_chaos_level
 	text = "Embrace chaos."
 
 /datum/poll/custom

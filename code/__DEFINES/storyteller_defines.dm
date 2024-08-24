@@ -1,4 +1,5 @@
 GLOBAL_VAR_INIT(chaos_level, 1) //Works as global multiplier for all storyteller points, also used in bluespace entropy.
+GLOBAL_VAR_INIT(chaos_surpass, FALSE)
 
 
 // Event defines.
