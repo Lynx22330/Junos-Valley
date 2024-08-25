@@ -19,7 +19,6 @@
 	eating_time = 90 SECONDS //Takes less time
 	life_cycles_before_sleep = 800 //We need more time to eat
 	probability_egg_laying = 95 //We are the quickest are we dont want to waste eggs!
-	gibconsumer = TRUE         // Natural cleansers of filth. Spiders however need 'live' hosts, they're classy.
 	var/amount_grown = 0
 	var/big_boss = FALSE
 
