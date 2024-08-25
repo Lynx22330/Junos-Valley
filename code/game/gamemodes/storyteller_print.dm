@@ -61,6 +61,7 @@
 	data += "<br>One role per player: <b><a href='?src=\ref[src];toggle_orpp=1'>\[[one_role_per_player?"YES":"NO"]\]</a></b>"
 	data += "<br>Chaos Level: <a href='?src=\ref[src];edit_chaos=1'>\[[GLOB.chaos_level]\]</a>"
 	data += "<br>Chaos Gain: <a href='?src=\ref[src];edit_chaos_gain=1'>\[[GLOB.chaos_storyteller_gain_multiplier]\]</a>"
+	data += "<br>Mob count: <b>[GLOB.mob_count]</b>"
 	data += "</td><td style=\"padding-left: 40px\">"
 
 	data += "Heads: [heads] "

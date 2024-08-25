@@ -12,7 +12,6 @@
 	emote_see = list("chirps loudly.", "cleans its whiskers with forelegs.")
 	turns_per_move = 4
 	turns_since_move = 0
-	gibconsumer = TRUE         // Natural cleansers of filth. Spiders however need 'live' hosts, they're classy.
 	get_stat_modifier = FALSE//NNNNNOPE, having hoard enemies get these has caused massive issues for balance. These should be limited to actual serious mobs from here on out.
 
 	armor = list(melee = 2, bullet = 0, energy = 0, bomb = 5, bio = 20, rad = 0, agony = 0)
@@ -61,7 +60,7 @@
 	var/probability_egg_laying = 90 // probability to lay an egg, 90% to encourage more roaches due to smaller natural spawn rates
 
 	var/snacker = FALSE
-	var/gibconsumer = FALSE
+	var/gibconsumer = TRUE // Natural cleansers of filth. Spiders however need 'live' hosts, they're classy.
 
 	do_friendly_fire_chance = 100
 

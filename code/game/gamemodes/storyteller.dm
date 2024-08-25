@@ -1,4 +1,5 @@
 GLOBAL_DATUM(storyteller, /datum/storyteller)
+GLOBAL_VAR_INIT(mob_count, 0) // For calculating how many mobs are alive at once.
 
 /datum/storyteller
 	//Strings
@@ -22,7 +23,7 @@ GLOBAL_DATUM(storyteller, /datum/storyteller)
 	var/next_tick = 0
 	var/next_hourly_tick = 0
 	var/tick_interval = 60 SECONDS //Ticks once per minute.
-	var/hourly_tick_interval = 30 SECONDS //Ticks once per hour.
+	var/hourly_tick_interval = 1 HOURS //Ticks once per hour.
 	var/multipliergain = 1
 
 	var/crew = 0
