@@ -3,14 +3,14 @@
 	desc = "A monstrous, dog-sized cockroach. This one smells like hell and secretes strange vapors."
 	icon_state = "seuche"
 	turns_per_move = 6
-	maxHealth = 15 * ROACH_HEALTH_MOD
-	health = 15 * ROACH_HEALTH_MOD
+	maxHealth = 100 * ROACH_HEALTH_MOD
+	health = 100 * ROACH_HEALTH_MOD
 	var/datum/reagents/gas_sac //Stores gas. Can't use the default reagents since that is now bloodstream
 	melee_damage_upper = 3
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/roachmeat/seuche
 	meat_amount = 3
 
-	knockdown_odds = 3
+	knockdown_odds = 5  // We are a support we should be able to knockdown more often.
 
 	blattedin_revives_left = 1
 	inherent_mutations = list(MUTATION_ROACH_BLOOD, MUTATION_PSN_BREATH, MUTATION_COUGHING, MUTATION_DEAF, MUTATION_TOURETTES, MUTATION_EPILEPSY)
@@ -35,6 +35,7 @@
 
 	S.attach(location)
 	S.set_up(gas_sac, gas_sac.total_volume, 0, location)
+	S.alpha = 100	// This smoke has always hidden them, and I personally find that strange and not fun to fight against. Reduced to 100 for now.
 	src.visible_message(SPAN_DANGER("\the [src] secretes strange vapors!"))
 
 	spawn(0)
@@ -59,7 +60,7 @@
 	if(!targetted_mob)
 		return
 
-	if(prob(7))
+	if(prob(12))     //Higher chance to attack. They come in smokey clouds of death.
 		gas_attack()
 
 /mob/living/carbon/superior_animal/roach/support/doTargetMessage()

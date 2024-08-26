@@ -4,15 +4,15 @@
 	icon_state = "jager"
 
 	turns_per_move = 1 // Should always be moving, actively hunting for their next host.
-	maxHealth = 30 * ROACH_HEALTH_MOD
-	health = 30 * ROACH_HEALTH_MOD
-	move_to_delay = 5  // A fast mob. Meant for hunting and chasing down prey.
+	maxHealth = 45 * ROACH_HEALTH_MOD
+	health = 45 * ROACH_HEALTH_MOD
+	move_to_delay = 3  // A fast mob. Meant for hunting and chasing down prey.
 
 	blattedin_revives_left = 2
 
-	knockdown_odds = 5
-	melee_damage_lower = 5   // We are hunters, meant to kill, not meant to tickle.
-	melee_damage_upper = 10
+	knockdown_odds = 0		 // We are hunters, we kill, not cap.
+	melee_damage_lower = 8   // We are hunters, meant to kill, not meant to tickle.
+	melee_damage_upper = 12
 
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/roachmeat/jager
 	meat_amount = 3

@@ -28,13 +28,13 @@
 	leather_amount = 0
 	bones_amount = 0
 
-	maxHealth = 15 * ROACH_HEALTH_MOD
-	health = 15 * ROACH_HEALTH_MOD
+	maxHealth = 35 * ROACH_HEALTH_MOD
+	health = 35 * ROACH_HEALTH_MOD
 
 	var/blattedin_revives_left = 3 // how many times blattedin can get us back to life (as num for adminbus fun).
 	//The common roach, gets to live 4 times, same as a roachling. They have so much to live for.
 	melee_damage_lower = 3
-	melee_damage_upper = 4
+	melee_damage_upper = 5
 	var/knockdown_odds = 1 //1% KO odds
 
 	min_breath_required_type = 3

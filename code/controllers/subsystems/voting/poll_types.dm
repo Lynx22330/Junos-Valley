@@ -294,7 +294,7 @@
 /datum/poll/chaos_level_increase
 	name = "Increase Chaos Level"
 	question = "Do you want to increase the chaos level?"
-	description = "Higher chaos level makes storyteller events much more likely. Also allows the Chaos Levels to uncap."
+	description = "Higher chaos level makes storyteller events much more likely."
 	time = 120
 	minimum_win_percentage = 0.75 //High % needed for something that alters the whole round
 	cooldown = 30 MINUTES
@@ -310,12 +310,36 @@
 
 /datum/vote_choice/yes_chaos_level/on_win()
 	GLOB.chaos_level += 1
-	GLOB.chaos_surpass = TRUE
 	for (var/mob/M as mob in SSmobs.mob_list)
 		to_chat(M, "<br><center><span class='danger'><b><font size=4>Chaos Level Increased</font></b><br></span></center><br>")
 
 /datum/vote_choice/no_chaos_level
 	text = "We have enough chaos already!"
+
+/datum/poll/chaos_level_increase
+	name = "Surpass the Chaos Level"
+	question = "Do you want to allow the chaos level to go beyond level 4?"
+	description = "Allows the storyteller's chaos to go beyond level 4, allowing new, dangerous mobs to be added to the spawn pool and new changes to existing mobs to occur."
+	time = 120
+	minimum_win_percentage = 0.75 //High % needed for something that alters the whole round
+	cooldown = 30 MINUTES
+	next_vote = 90 MINUTES //Same lenght as bluespace jump
+	choice_types = list(/datum/vote_choice/yes_chaos_surpass, /datum/vote_choice/no_chaos_surpass)
+	only_admin = FALSE
+	can_revote = TRUE
+	can_unvote = TRUE
+
+
+/datum/vote_choice/yes_chaos_surpass
+	text = "Uncap the chaos level!"
+
+/datum/vote_choice/yes_chaos_surpass/on_win()
+	GLOB.chaos_surpass = TRUE
+	for (var/mob/M as mob in SSmobs.mob_list)
+		to_chat(M, "<br><center><span class='danger'><b><font size=4>Chaos Level Has Been Uncapped. Embrace Chaos!</font></b><br></span></center><br>")
+
+/datum/vote_choice/no_chaos_surpass
+	text = "No! Do not allow chaos to consume us!"
 
 /datum/poll/chaos_level_decrease
 	name = "Decrease Chaos Level"

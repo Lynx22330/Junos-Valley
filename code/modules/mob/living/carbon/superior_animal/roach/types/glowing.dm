@@ -7,8 +7,8 @@
 
 	meat_amount = 2
 	turns_per_move = 1
-	maxHealth = 40 * ROACH_HEALTH_MOD
-	health = 40 * ROACH_HEALTH_MOD
+	maxHealth = 55 * ROACH_HEALTH_MOD
+	health = 55 * ROACH_HEALTH_MOD
 
 	flash_resistances = 10 //We are the light
 
@@ -19,9 +19,9 @@
 	contaminant_immunity = TRUE
 	toxin_immune = TRUE
 
-	knockdown_odds = 3 //Well we still can knockdown we dont tend to over other affects
-	melee_damage_lower = 5
-	melee_damage_upper = 7 //Weaker than hunter
+	knockdown_odds = 2 //Well we still can knockdown we dont tend to over other affects
+	melee_damage_lower = 6
+	melee_damage_upper = 8 //Weaker than hunter as we are a support mob
 	armor_divisor = 1
 
 /mob/living/carbon/superior_animal/roach/glowing/UnarmedAttack(var/atom/A, var/proximity)

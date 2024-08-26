@@ -243,10 +243,10 @@ GLOBAL_VAR_INIT(mob_count, 0) // For calculating how many mobs are alive at once
 		points[EVENT_LEVEL_MAJOR] += 1 * (gain_mult_major) * (RAND_DECIMAL(1-variance, 1+variance))
 		points[EVENT_LEVEL_ROLESET] += 0 //1 * (gain_mult_roleset) * (RAND_DECIMAL(1-variance, 1+variance))
 	else
-		points[EVENT_LEVEL_MUNDANE] += GLOB.chaos_level * (gain_mult_mundane) * (RAND_DECIMAL(1-variance, 1+variance))
-		points[EVENT_LEVEL_MODERATE] += GLOB.chaos_level * (gain_mult_moderate) * (RAND_DECIMAL(1-variance, 1+variance))
-		points[EVENT_LEVEL_MAJOR] += GLOB.chaos_level * (gain_mult_major) * (RAND_DECIMAL(1-variance, 1+variance))
-		points[EVENT_LEVEL_ROLESET] += GLOB.chaos_level * 0 //(gain_mult_roleset) * (RAND_DECIMAL(1-variance, 1+variance))
+		points[EVENT_LEVEL_MUNDANE] += (GLOB.chaos_level / 2 ) * (gain_mult_mundane) * (RAND_DECIMAL(1-variance, 1+variance))
+		points[EVENT_LEVEL_MODERATE] += (GLOB.chaos_level / 3 ) * (gain_mult_moderate) * (RAND_DECIMAL(1-variance, 1+variance))
+		points[EVENT_LEVEL_MAJOR] += (GLOB.chaos_level / 4 ) * (gain_mult_major) * (RAND_DECIMAL(1-variance, 1+variance))
+		points[EVENT_LEVEL_ROLESET] += (GLOB.chaos_level / 4 ) * 0 //(gain_mult_roleset) * (RAND_DECIMAL(1-variance, 1+variance))
 
 
 	check_thresholds()

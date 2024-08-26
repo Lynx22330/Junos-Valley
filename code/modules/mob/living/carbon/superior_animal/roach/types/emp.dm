@@ -4,12 +4,12 @@
 	icon_state = "elektromagnetisch"
 	meat_amount = 2
 	turns_per_move = 2
-	maxHealth = 125 * ROACH_HEALTH_MOD
-	health = 125 * ROACH_HEALTH_MOD
+	maxHealth = 133 * ROACH_HEALTH_MOD
+	health = 133 * ROACH_HEALTH_MOD
 	move_to_delay = 7
 	deathmessage = "pulses violently as it dies!"
-	melee_damage_lower = 15
-	melee_damage_upper = 20 //Rare, and strong.
+	melee_damage_lower = 10
+	melee_damage_upper = 15 //Rare, and strong.
 	armor_divisor = 3
 
 	mob_size = MOB_MEDIUM
