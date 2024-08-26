@@ -25,6 +25,7 @@ GLOBAL_VAR_INIT(mob_count, 0) // For calculating how many mobs are alive at once
 	var/tick_interval = 60 SECONDS //Ticks once per minute.
 	var/hourly_tick_interval = 1 HOURS //Ticks once per hour.
 	var/multipliergain = 1
+	var/tally = 0 // Player count used for chaos increments.
 
 	var/crew = 0
 	var/heads = 0
@@ -393,8 +394,11 @@ The actual fire event proc is located in storyteller_meta*/
 
 /datum/storyteller/proc/increase_chaos()
 	if (GLOB.chaos_level < 4)
-		GLOB.chaos_level += ((GLOB.player_list.len * 0.1) * GLOB.chaos_storyteller_gain_multiplier)  // At a rate of each hour, increase chaos levels to a certain cap.
-	if (GLOB.chaos_level > (GLOB.player_list.len * 0.1) + 4 && !GLOB.chaos_surpass)
+		tally = 0
+		for(var/mob/living/L in GLOB.player_list)
+			tally += 1
+	GLOB.chaos_level += ((tally * 0.1) * GLOB.chaos_storyteller_gain_multiplier)  // At a rate of each hour, increase chaos levels to a certain cap.
+	if (GLOB.chaos_level > (tally * 0.1) + 4 && !GLOB.chaos_surpass)
 		GLOB.chaos_level = 4      // Caps the chaos level to 4 just incase it does somehow go beyond 5. Requires the "Increase Chaos Levels" vote to trigger once to be able to surpass.
 
 /datum/storyteller/proc/change_multipliers()
