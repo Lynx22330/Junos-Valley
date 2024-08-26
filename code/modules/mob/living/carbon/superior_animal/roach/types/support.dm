@@ -35,7 +35,6 @@
 
 	S.attach(location)
 	S.set_up(gas_sac, gas_sac.total_volume, 0, location)
-	S.alpha = 100	// This smoke has always hidden them, and I personally find that strange and not fun to fight against. Reduced to 100 for now.
 	src.visible_message(SPAN_DANGER("\the [src] secretes strange vapors!"))
 
 	spawn(0)

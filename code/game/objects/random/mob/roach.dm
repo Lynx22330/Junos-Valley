@@ -92,8 +92,8 @@
 	name = "hoard of roachlings"
 	icon_state = "hostilemob-brown-cluster"
 	alpha = 128
-	min_amount = 6
-	max_amount = 16
+	min_amount = 1
+	max_amount = 1    // Set to 1 since the event spawner is being weird with Roachlings.
 	spread_range = 0
 
 /obj/random/cluster/roachlings/item_to_spawn()

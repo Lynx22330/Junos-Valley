@@ -183,7 +183,7 @@ It focuses on spawning large numbers of moderate-to-weak monsters, and includes 
 		if(INFESTATION_ROACHLINGS)
 			event_name = "Roachling Infestation"
 			chosen_verb = "have burrowed into"
-			chosen_mob_classification += /mob/living/carbon/superior_animal/roach/roachling
+			chosen_mob_classification += /obj/random/cluster/roachlings //Event spawns are being weird with Roachlings.
 		if(INFESTATION_SPIDERS)
 			event_name = "Spider Infestation"
 			chosen_verb = "have burrowed into"

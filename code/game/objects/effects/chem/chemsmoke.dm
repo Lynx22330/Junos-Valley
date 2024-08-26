@@ -76,7 +76,6 @@
 	var/list/wallList
 	var/density
 	var/show_log = 1
-	var/alpha
 
 /datum/effect/effect/system/smoke_spread/chem/spores
 	show_log = 0

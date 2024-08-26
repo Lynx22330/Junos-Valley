@@ -11,8 +11,8 @@
 	blattedin_revives_left = 2
 
 	knockdown_odds = 0		 // We are hunters, we kill, not cap.
-	melee_damage_lower = 8   // We are hunters, meant to kill, not meant to tickle.
-	melee_damage_upper = 12
+	melee_damage_lower = 6   // We are hunters, meant to kill, not meant to tickle.
+	melee_damage_upper = 10
 
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/roachmeat/jager
 	meat_amount = 3
