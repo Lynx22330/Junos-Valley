@@ -12,7 +12,7 @@
 	affective_ap_range = 5
 
 	recoil = 8
-	has_drop_off = FALSE
+	has_drop_off = TRUE
 
 	muzzle_type = /obj/effect/projectile/plasma/muzzle
 	impact_type = /obj/effect/projectile/plasma/impact

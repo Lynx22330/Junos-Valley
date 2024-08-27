@@ -16,7 +16,7 @@ Bullet also tend to have more armor against them do to this and can be douged un
 	affective_damage_range = 6
 	affective_ap_range = 10
 
-	has_drop_off = FALSE
+	has_drop_off = TRUE
 
 	var/mob_passthrough_check = 0
 
