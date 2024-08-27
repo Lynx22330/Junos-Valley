@@ -67,7 +67,8 @@
 
 	var/remaining_armor = armor
 	var/remaining_ablative = ablative_armor
-
+	//log_and_message_admins("LOG 1: armor [armor] | ablative_armor [ablative_armor] | remaining_armor| [remaining_armor] | remaining_ablative [remaining_ablative].")
+	//log_and_message_admins("LOG 1.2: attack_flag [attack_flag] | damagetype [damagetype] | def_zone| [def_zone] | armor_divisor [armor_divisor].")	for(var/dmg_type in dmg_types)
 	for(var/dmg_type in dmg_types)
 		var/dmg = dmg_types[dmg_type]
 		if(dmg)
@@ -152,6 +153,7 @@
 	//Feedback
 	//In order to show both target and everyone around that armor is actually working, we are going to send message for both of them
 	//Goon/tg chat should take care of spam issue on this one
+	//log_and_message_admins("LOG 2: effective_armor [effective_armor] | total_dmg [total_dmg] | dealt_damage| [dealt_damage].")
 	switch(effective_armor)
 		if(90 to INFINITY)
 			armor_message(SPAN_NOTICE("[src] armor absorbs the blow!"),
@@ -413,15 +415,11 @@
 
 	if(!damage || !istype(user))
 		return
-	
-	var/used_divisor = 1
-	if(isliving(user))
-		var/mob/living/L = user
-		used_divisor = L.armor_divisor
-	var/attack_BP = BP_CHEST
-	if(prob(20))
-		attack_BP = pick(list(BP_L_LEG, BP_R_LEG, BP_R_ARM, BP_L_ARM, BP_GROIN, BP_HEAD))
-	damage_through_armor(damage, damagetype, attack_BP, ARMOR_MELEE, used_divisor, sharp=sharp, edge=edge)
+	if(damagetype == BRUTE)
+		adjustBruteLoss(damage)
+	else
+		adjustFireLoss(damage)
+
 	user.attack_log += text("\[[time_stamp()]\] <font color='red'>attacked [src.name] ([src.ckey])</font>")
 	src.attack_log += text("\[[time_stamp()]\] <font color='orange'>was attacked by [user.name] ([user.ckey])</font>")
 	src.visible_message(SPAN_DANGER("[user] has [attack_message] [src]!"))
