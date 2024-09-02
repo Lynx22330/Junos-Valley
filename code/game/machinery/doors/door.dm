@@ -459,7 +459,10 @@
 	if(!can_open(forced))
 		return
 	operating = TRUE
-	activate_mobs_in_range(src, 10)
+	for(var/mob/living/G in GLOB.player_list)
+		if(G.mind.current)
+			activate_mobs_in_range(src, 15)    // Perhaps a solution to the lag. Players now activate mobs via doors.
+			// to_chat(world, "\ [G.name] successfully activated mob AI with a door.") // Debug line to make sure mobs aren't activating.
 
 	set_opacity(0)
 	if(istype(src, /obj/machinery/door/airlock/multi_tile/metal))

@@ -38,7 +38,10 @@
 	melee_damage_upper = 4
 	var/knockdown_odds = 1 //1% KO odds
 
-	min_breath_required_type = 3
+	breath_required_type = NONE
+	breath_poison_type = NONE
+	min_breath_required_type = 0 //Insects shouldn't be oxygen hogs.
+
 	min_air_pressure = 15 //below this, brute damage is dealt
 
 	faction = "roach"
