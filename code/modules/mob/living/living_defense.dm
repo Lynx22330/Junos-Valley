@@ -16,7 +16,7 @@
 	else
 		show_message(msg1, 1)
 
-/mob/living/proc/damage_through_armor(damage = 0, damagetype = BRUTE, def_zone, attack_flag = ARMOR_MELEE, armor_penetration = 0, armor_maximum, used_weapon, sharp = FALSE, edge = FALSE, wounding_multiplier, list/dmg_types = list(), return_continuation = FALSE, dir_mult = 1)
+/mob/living/proc/damage_through_armor(damage = 0, damagetype = BRUTE, def_zone, attack_flag = ARMOR_MELEE, armor_penetration = 0, used_weapon, sharp = FALSE, edge = FALSE, wounding_multiplier, list/dmg_types = list(), return_continuation = FALSE, armor_maximum)
 	if(damage) // If damage is defined, we add it to the list
 		if(!dmg_types[damagetype])
 			dmg_types += damagetype
@@ -60,10 +60,10 @@
 
 
 	// Determine DR and ADR, armour divisor reduces it
-	var/armor = min(armor_maximum, (-getarmor(def_zone, attack_flag) + armor_penetration))
+	var/armor = max(armor_maximum, (getarmor(def_zone, attack_flag) - armor_penetration))
 	if(!(attack_flag in list(ARMOR_MELEE, ARMOR_BULLET, ARMOR_ENERGY))) // Making sure BIO and other armor types are handled correctly
 		armor /= 5
-	var/ablative_armor = min(armor_maximum, (-getarmorablative(def_zone, attack_flag) + armor_penetration))
+	var/ablative_armor = max(armor_maximum, (getarmorablative(def_zone, attack_flag) - armor_penetration))
 // Damage calculation for QoL purposes.
 // ((Base Projectile Damage * Weapon Damage Projectile Multiplier) + min(armor_maximum, (-Armor + Penetration Power))) * Wound Scale = Result Damage
 // Results in clear, flat damage reduction and flat armor pen.
@@ -77,14 +77,14 @@
 
 			if(dmg_type in list(BRUTE, BURN, TOX, BLAST)) // Some damage types do not help penetrate armor
 				if(remaining_armor)
-					var/dmg_armor_difference = dmg + remaining_armor
+					var/dmg_armor_difference = dmg - remaining_armor
 					var/is_difference_positive = dmg_armor_difference > 0
 					used_armor += is_difference_positive ? dmg - dmg_armor_difference : dmg
 					remaining_armor = is_difference_positive ? 0 : -dmg_armor_difference
 					dmg = is_difference_positive ? dmg_armor_difference : 0
 				if(remaining_ablative && dmg)
 					var/ablative_difference
-					ablative_difference = dmg + remaining_ablative
+					ablative_difference = dmg - remaining_ablative
 					var/is_difference_positive = ablative_difference > 0
 					used_armor += is_difference_positive ? dmg - ablative_difference : dmg
 					remaining_ablative = is_difference_positive ? 0 : -ablative_difference
