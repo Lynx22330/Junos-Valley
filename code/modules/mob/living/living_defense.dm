@@ -96,7 +96,7 @@
 				var/effective_damage = damage - guaranteed_damage_red
 
 				if(damagetype == HALLOSS)
-					effective_damage =  max(0,round(effective_damage - mob_agony_armor))
+					effective_damage =  max(0,round(effective_damage - mob_agony_armor) / 2) // Mobs only take half halloss damage. They're mutant beasts!
 
 			if(!(dmg_type == HALLOSS)) // Determine pain from impact
 				adjustHalLoss(used_armor * (wounding_multiplier ? wounding_multiplier : 1) * ARMOR_HALLOS_COEFFICIENT * max(0.5, (get_specific_organ_efficiency(OP_NERVE, def_zone) / 100)))
