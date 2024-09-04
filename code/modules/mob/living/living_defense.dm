@@ -16,14 +16,14 @@
 	else
 		show_message(msg1, 1)
 
-/mob/living/proc/damage_through_armor(damage = 0, damagetype = BRUTE, def_zone, attack_flag = ARMOR_MELEE, armor_divisor = 0, used_weapon, sharp = FALSE, edge = FALSE, wounding_multiplier, list/dmg_types = list(), return_continuation = FALSE, dir_mult = 1)
+/mob/living/proc/damage_through_armor(damage = 0, damagetype = BRUTE, def_zone, attack_flag = ARMOR_MELEE, armor_penetration = 0, used_weapon, sharp = FALSE, edge = FALSE, wounding_multiplier, list/dmg_types = list(), return_continuation = FALSE, dir_mult = 1)
 	if(damage) // If damage is defined, we add it to the list
 		if(!dmg_types[damagetype])
 			dmg_types += damagetype
 		dmg_types[damagetype] += damage
 
-	if(armor_divisor <= 0)
-		armor_divisor = 0.001
+	if(armor_penetration <= 0)
+		armor_penetration = 0.001
 		log_debug("[used_weapon] applied damage to [name] with a nonpositive armor divisor")
 
 	var/total_dmg = 0
@@ -60,10 +60,10 @@
 
 
 	// Determine DR and ADR, armour divisor reduces it
-	var/armor = getarmor(def_zone, attack_flag) / armor_divisor
+	var/armor = min(0, (-getarmor(def_zone, attack_flag) + armor_penetration))
 	if(!(attack_flag in list(ARMOR_MELEE, ARMOR_BULLET, ARMOR_ENERGY))) // Making sure BIO and other armor types are handled correctly
 		armor /= 5
-	var/ablative_armor = getarmorablative(def_zone, attack_flag) / armor_divisor
+	var/ablative_armor = min(0, (-getarmorablative(def_zone, attack_flag) + armor_penetration))
 
 	var/remaining_armor = armor
 	var/remaining_ablative = ablative_armor
@@ -75,14 +75,14 @@
 
 			if(dmg_type in list(BRUTE, BURN, TOX, BLAST)) // Some damage types do not help penetrate armor
 				if(remaining_armor)
-					var/dmg_armor_difference = dmg - remaining_armor
+					var/dmg_armor_difference = dmg + remaining_armor
 					var/is_difference_positive = dmg_armor_difference > 0
 					used_armor += is_difference_positive ? dmg - dmg_armor_difference : dmg
 					remaining_armor = is_difference_positive ? 0 : -dmg_armor_difference
 					dmg = is_difference_positive ? dmg_armor_difference : 0
 				if(remaining_ablative && dmg)
 					var/ablative_difference
-					ablative_difference = dmg - remaining_ablative
+					ablative_difference = dmg + remaining_ablative
 					var/is_difference_positive = ablative_difference > 0
 					used_armor += is_difference_positive ? dmg - ablative_difference : dmg
 					remaining_ablative = is_difference_positive ? 0 : -ablative_difference
@@ -107,7 +107,7 @@
 
 				if(dmg_type == HALLOSS && ishuman(src)) //We already did this for mobs
 					dmg = round(dmg * clamp((get_specific_organ_efficiency(OP_NERVE, def_zone) / 100), 0.5, 1.5))
-					var/pain_armor = max(0, (src.getarmor(def_zone, "bullet") +  src.getarmor(def_zone, "melee") / armor_divisor))//All brute over-pen checks bullet rather then melee for simple mobs to keep melee viable
+					var/pain_armor = max(0, (src.getarmor(def_zone, "bullet") +  src.getarmor(def_zone, "melee") / armor_penetration))//All brute over-pen checks bullet rather then melee for simple mobs to keep melee viable
 					var/pain_no_matter_what = (dmg * 0.15) //we deal 15% of are pain, this is to stop rubbers being *completely* uses with basic armor - Its not perfect in melee
 					dmg = max(pain_no_matter_what, (dmg - pain_armor))
 					if(ishuman(src))
@@ -137,7 +137,7 @@
 						armor_message(SPAN_NOTICE("[src] armor deflected the strike!"), // No cut (strike), only bash
 										SPAN_NOTICE("Your armor deflects the strike!"))
 
-				apply_damage(dmg, dmg_type, def_zone, armor_divisor, wounding_multiplier, sharp, edge, used_weapon)
+				apply_damage(dmg, dmg_type, def_zone, armor_penetration, wounding_multiplier, sharp, edge, used_weapon)
 				if(ishuman(src) && def_zone && dmg >= 20)
 					var/mob/living/carbon/human/H = src
 					var/obj/item/organ/external/o = H.get_organ(def_zone)
@@ -168,7 +168,7 @@
 
 	// Deal damage to ablative armour based on how much was used, we multiply armour divisor back so high AP doesn't decrease damage dealt to ADR
 	if(ablative_armor)
-		damageablative(def_zone, (ablative_armor - remaining_ablative) * armor_divisor)
+		damageablative(def_zone, (ablative_armor - remaining_ablative) * armor_penetration)
 
 	//If we have a grab in our hands and get hit with melee damage type, there is a chance we lower our grab's state
 	if(attack_flag == ARMOR_MELEE && ishuman(src) && isitem(used_weapon))
@@ -250,7 +250,7 @@
 				dmult += P.supereffective_mult
 			damage *= dmult
 		hit_impact(P.get_structure_damage(), hit_dir)
-		return damage_through_armor(def_zone = def_zone_hit, attack_flag = P.check_armour, armor_divisor = P.armor_divisor, used_weapon = P, sharp = is_sharp(P), edge = has_edge(P), wounding_multiplier = P.wounding_mult, dmg_types = P.damage_types, return_continuation = TRUE)
+		return damage_through_armor(def_zone = def_zone_hit, attack_flag = P.check_armour, armor_penetration = P.armor_penetration, used_weapon = P, sharp = is_sharp(P), edge = has_edge(P), wounding_multiplier = P.wounding_mult, dmg_types = P.damage_types, return_continuation = TRUE)
 
 	return PROJECTILE_CONTINUE
 
@@ -310,7 +310,7 @@
 //		effective_force *= 2
 
 	//Apply weapon damage
-	if (damage_through_armor(effective_force, I.damtype, hit_zone, ARMOR_MELEE, I.armor_divisor, used_weapon = I, sharp = is_sharp(I), edge = has_edge(I)))
+	if (damage_through_armor(effective_force, I.damtype, hit_zone, ARMOR_MELEE, I.armor_penetration, used_weapon = I, sharp = is_sharp(I), edge = has_edge(I)))
 		return TRUE
 	else
 		return FALSE
@@ -336,7 +336,7 @@
 
 		src.visible_message(SPAN_WARNING("[src] has been hit by [O]."))
 
-		damage_through_armor(throw_damage, dtype, null, ARMOR_MELEE, O.armor_divisor, used_weapon = O, sharp = is_sharp(O), edge = has_edge(O))
+		damage_through_armor(throw_damage, dtype, null, ARMOR_MELEE, O.armor_penetration, used_weapon = O, sharp = is_sharp(O), edge = has_edge(O))
 
 		O.throwing = 0		//it hit, so stop moving
 
@@ -413,11 +413,11 @@
 
 	if(!damage || !istype(user))
 		return
-	
+
 	var/used_divisor = 1
 	if(isliving(user))
 		var/mob/living/L = user
-		used_divisor = L.armor_divisor
+		used_divisor = L.armor_penetration
 	var/attack_BP = BP_CHEST
 	if(prob(20))
 		attack_BP = pick(list(BP_L_LEG, BP_R_LEG, BP_R_ARM, BP_L_ARM, BP_GROIN, BP_HEAD))

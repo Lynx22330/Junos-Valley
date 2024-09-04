@@ -5,7 +5,7 @@
 	var/active_w_class
 	sharp = 0
 	edge = 0
-	armor_divisor = ARMOR_PEN_MASSIVE
+	armor_penetration = ARMOR_PEN_MASSIVE
 	flags = NOBLOODY
 	structure_damage_factor = STRUCTURE_DAMAGE_HEAVY
 	heat = 3800
@@ -202,7 +202,7 @@
 	name = "laser dagger"
 	desc = "A much smaller but still useful energy based short blade."
 	clickdelay_offset = FAST_WEAPON_COOLDOWN
-	armor_divisor = ARMOR_PEN_EXTREME
+	armor_penetration = ARMOR_PEN_EXTREME
 	active_force =  WEAPON_FORCE_DANGEROUS
 	active_throwforce =  WEAPON_FORCE_DANGEROUS
 	icon_state = "dagger0"
@@ -278,7 +278,7 @@
 	desc = "A concentrated beam of energy in the shape of a blade. Very stylish... and lethal."
 	icon_state = "blade"
 	icon = 'icons/obj/weapons.dmi'
-	armor_divisor = 2
+	armor_penetration = 2
 	sharp = 1
 	edge = 1
 	force = WEAPON_FORCE_BRUTAL

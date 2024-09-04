@@ -12,7 +12,7 @@
 ///9mm///
 /obj/item/projectile/bullet/pistol_35
 	damage_types = list(BRUTE = 24)
-	armor_divisor = 0.4
+	armor_penetration = 1
 	step_delay = 0.65
 	can_ricochet = TRUE
 	wounding_mult = WOUNDING_SMALL
@@ -22,7 +22,7 @@
 
 /obj/item/projectile/bullet/pistol_35/hv
 	damage_types = list(BRUTE = 18)
-	armor_divisor = 1.2
+	armor_penetration = 2
 	step_delay = 0.5
 	affective_damage_range = 5
 	affective_ap_range = 5
@@ -42,7 +42,7 @@
 /obj/item/projectile/bullet/pistol_35/lethal
 	name = "hollow-point bullet"
 	damage_types = list(BRUTE = 18)
-	armor_divisor = 0.2
+	armor_penetration = 0
 	wounding_mult = WOUNDING_NORMAL
 	penetrating = 0
 	can_ricochet = FALSE
@@ -55,7 +55,7 @@
 	name = "rubber bullet"
 	icon_state = "rubber"
 	damage_types = list(BRUTE = 12, HALLOSS = 22)
-	armor_divisor = 0.4
+	armor_penetration = 1
 	wounding_mult = WOUNDING_SMALL
 	embed = FALSE	//Prob should have a chance to embed, but makes close to no sense to do this for 9mm at least.
 	sharp = FALSE
@@ -116,7 +116,7 @@
 
 /obj/item/projectile/bullet/pistol_35/scrap
 	damage_types = list(BRUTE = 14)
-	armor_divisor = 0.25
+	armor_penetration = 0
 	affective_damage_range = 1
 	affective_ap_range = 1
 	recoil = 3
@@ -139,7 +139,7 @@
 /obj/item/projectile/bullet/magnum_40
 	icon_state = "bullet_magnum"
 	damage_types = list(BRUTE = 28)
-	armor_divisor = 0.5
+	armor_penetration = 1
 	wounding_mult = WOUNDING_NORMAL
 	can_ricochet = TRUE
 	step_delay = 0.4
@@ -159,7 +159,7 @@
 
 /obj/item/projectile/bullet/magnum_40/hv
 	damage_types = list(BRUTE = 22)
-	armor_divisor = 1.3
+	armor_penetration = 3
 	penetrating = 1
 	step_delay = 0.25
 	nocap_structures = TRUE //Door breaching
@@ -171,7 +171,7 @@
 /obj/item/projectile/bullet/magnum_40/lethal
 	name = "hollow-point bullet"
 	damage_types = list(BRUTE = 22)
-	armor_divisor = 0.25
+	armor_penetration = 0
 	wounding_mult = WOUNDING_SERIOUS
 	penetrating = 0
 	can_ricochet = FALSE
@@ -184,7 +184,7 @@
 	name = "rubber bullet"
 	icon_state = "rubber"
 	damage_types = list(BRUTE = 15, HALLOSS = 30)	//Basically a lower-damage HP but with more agony damage to it. Technically LTL - but not really ideal for it. Crowd-suppression.
-	armor_divisor = 0.5
+	armor_penetration = 1
 	wounding_mult = WOUNDING_SMALL
 	embed = TRUE	//If you shoot someone with a rubber, it will take out an eye - or require surgery if it's high-velocity. Anything over 9mm should, realistically, fuck you up.
 	sharp = FALSE
@@ -235,7 +235,7 @@
 
 /obj/item/projectile/bullet/magnum_40/scrap
 	damage_types = list(BRUTE = 15)
-	armor_divisor = 0.5
+	armor_penetration = 1
 	affective_damage_range = 3
 	affective_ap_range = 3
 	recoil = 6
@@ -243,7 +243,7 @@
 /obj/item/projectile/bullet/magnum_40/biomatter
 	name = "biomatter bullet"
 	damage_types = list(BURN = 20, HALLOSS = 32)
-	armor_divisor = 0.7
+	armor_penetration = 1
 	penetrating = 0
 	can_ricochet = FALSE
 	embed = FALSE
@@ -256,7 +256,7 @@
 /obj/item/projectile/bullet/kurtz_50
 	icon_state = "bullet_krutz"
 	damage_types = list(BRUTE = 36)
-	armor_divisor = 0.6
+	armor_penetration = 3
 	wounding_mult = WOUNDING_WIDE
 	can_ricochet = TRUE
 	embed = TRUE
@@ -271,7 +271,7 @@
 	damage_types = list(BRUTE = 20, HALLOSS = 35)
 	wounding_mult = WOUNDING_SERIOUS
 	check_armour = ARMOR_MELEE
-	armor_divisor = 0.5
+	armor_penetration = 2
 	can_ricochet = TRUE
 	//ricochet_mod = 2 //including our AP mallus for bounce we are baseline about 1.9x as likely to bounce.
 	step_delay = 0.7
@@ -310,7 +310,7 @@
 /obj/item/projectile/bullet/kurtz_50/lethal
 	name = "hollow-point bullet"
 	damage_types = list(BRUTE = 27)
-	armor_divisor = 0.3
+	armor_penetration = 1
 	wounding_mult = WOUNDING_EXTREME
 	penetrating = 0
 	can_ricochet = FALSE
@@ -320,7 +320,7 @@
 /obj/item/projectile/bullet/kurtz_50/hv
 	name = "AV bullet"
 	damage_types = list(BRUTE = 27)
-	armor_divisor = 1.4
+	armor_penetration = 6
 	penetrating = 2
 	can_ricochet = FALSE
 	step_delay = 0.45
@@ -339,7 +339,7 @@
 /obj/item/projectile/bullet/light_rifle_257
 	icon_state = "bullet_carbine"
 	damage_types = list(BRUTE = 21)
-	armor_divisor = 1
+	armor_penetration = 0
 	wounding_mult = WOUNDING_SMALL
 	penetrating = 1
 	can_ricochet = TRUE
@@ -359,7 +359,7 @@
 
 /obj/item/projectile/bullet/light_rifle_257/hv
 	damage_types = list(BRUTE = 17)
-	armor_divisor = 2.5
+	armor_penetration = 3
 	penetrating = 2
 	hitscan = TRUE
 	affective_damage_range = 8 //Can snipe
@@ -373,7 +373,7 @@
 	icon_state = "rubber"
 	damage_types = list(BRUTE = 10, HALLOSS = 20)
 	check_armour = ARMOR_MELEE
-	armor_divisor = 0.8
+	armor_penetration = 1
 	wounding_mult = WOUNDING_TINY
 	embed = TRUE	//Imagine being shot with a high velocity .223/5.56 rubber bullet - that shit could easily kill you - or at least would act like a normal bullet.
 	sharp = FALSE
@@ -405,7 +405,7 @@
 /obj/item/projectile/bullet/light_rifle_257/lethal
 	name = "hollow-point bullet"
 	damage_types = list(BRUTE = 17)
-	armor_divisor = 0.5
+	armor_penetration = 0
 	wounding_mult = WOUNDING_SERIOUS
 	penetrating = 0
 	can_ricochet = FALSE
@@ -418,7 +418,7 @@
 	name = "incendiary bullet"
 	damage_types = list(BURN = 10) //We deal most of are damage with fire stacks
 	fire_stacks = 1
-	armor_divisor = 0.5
+	armor_penetration = 0
 	penetrating = 0
 	can_ricochet = FALSE
 	embed = FALSE
@@ -429,7 +429,7 @@
 
 /obj/item/projectile/bullet/light_rifle_257/scrap
 	damage_types = list(BRUTE = 14)
-	armor_divisor = 0.5
+	armor_penetration = 1
 	affective_damage_range = 4
 	affective_ap_range = 4
 	recoil = 6
@@ -441,7 +441,7 @@
 
 /obj/item/projectile/bullet/rifle_75
 	damage_types = list(BRUTE = 25)
-	armor_divisor = 1.25
+	armor_penetration = 2
 	wounding_mult = WOUNDING_SERIOUS
 	penetrating = 1
 	can_ricochet = TRUE
@@ -452,7 +452,7 @@
 
 /obj/item/projectile/bullet/rifle_75/hv
 	damage_types = list(BRUTE = 19)
-	armor_divisor = 3
+	armor_penetration = 6
 	penetrating = 2
 	hitscan = TRUE
 	affective_damage_range = 8
@@ -464,7 +464,7 @@
 /obj/item/projectile/bullet/rifle_75/practice
 	name = "practice bullet"
 	damage_types = list(BRUTE = 2, HALLOSS = 2)
-	armor_divisor = 1
+	armor_penetration = 0
 	embed = FALSE
 	sharp = FALSE
 	can_ricochet = FALSE
@@ -475,7 +475,7 @@
 	icon_state = "rubber"
 	damage_types = list(BRUTE = 14, HALLOSS = 26)
 	check_armour = ARMOR_MELEE
-	armor_divisor = 1
+	armor_penetration = 1
 	wounding_mult = WOUNDING_NORMAL
 	embed = TRUE	//literally imagine a 7.62 rubber bullet hitting you - holy shit.
 	sharp = FALSE
@@ -505,7 +505,7 @@
 /obj/item/projectile/bullet/rifle_75/lethal
 	name = "hollow-point bullet"
 	damage_types = list(BRUTE = 19)
-	armor_divisor = 0.65
+	armor_penetration = 0
 	wounding_mult = WOUNDING_WIDE
 	penetrating = 0
 	can_ricochet = FALSE
@@ -527,7 +527,7 @@
 
 /obj/item/projectile/bullet/rifle_75/scrap
 	damage_types = list(BRUTE = 14)
-	armor_divisor = 0.5
+	armor_penetration = 1
 	affective_damage_range = 3
 	affective_ap_range = 3
 	recoil = 5
@@ -537,7 +537,7 @@
 /obj/item/projectile/bullet/heavy_rifle_408
 	icon_state = "bullet_heavy"
 	damage_types = list(BRUTE = 28)
-	armor_divisor = 1.4
+	armor_penetration = 0
 	wounding_mult = WOUNDING_SERIOUS
 	penetrating = 2
 	can_ricochet = TRUE
@@ -550,7 +550,7 @@
 	name = "rubber bullet"
 	icon_state = "rubber"
 	damage_types = list(BRUTE = 17, HALLOSS = 32)
-	armor_divisor = 1.3
+	armor_penetration = 1
 	check_armour = ARMOR_MELEE
 	embed = TRUE	//imagine an effectively smaller .50 Cal marksman round hitting you. holy shit.
 	sharp = FALSE
@@ -563,7 +563,7 @@
 /obj/item/projectile/bullet/heavy_rifle_408/practice
 	name = "practice bullet"
 	damage_types = list(BRUTE = 6)
-	armor_divisor = 1
+	armor_penetration = 1
 	embed = FALSE
 	sharp = FALSE
 	wounding_mult = WOUNDING_NORMAL
@@ -574,7 +574,7 @@
 /obj/item/projectile/bullet/heavy_rifle_408/hv
 	name = "sabot penetrator"
 	damage_types = list(BRUTE = 20)
-	armor_divisor = 3.5
+	armor_penetration = 12
 	penetrating = 3
 	hitscan = TRUE
 	affective_damage_range = 9 //Sniping cal
@@ -586,7 +586,7 @@
 /obj/item/projectile/bullet/heavy_rifle_408/lethal
 	name = "hollow-point bullet"
 	damage_types = list(BRUTE = 20)
-	armor_divisor = 0.7
+	armor_penetration = 1
 	wounding_mult = WOUNDING_WIDE
 	penetrating = 0
 	can_ricochet = FALSE
@@ -599,7 +599,7 @@
 	name = "incendiary bullet"
 	damage_types = list(BURN = 15) //We deal most of are damage with fire stacks
 	fire_stacks = 3
-	armor_divisor = 1
+	armor_penetration = 1
 	penetrating = 0
 	can_ricochet = FALSE
 	embed = FALSE
@@ -609,7 +609,7 @@
 
 /obj/item/projectile/bullet/heavy_rifle_408/scrap
 	damage_types = list(BRUTE = 15)
-	armor_divisor = 0.75
+	armor_penetration = 1
 	affective_damage_range = 4
 	affective_ap_range = 4
 	recoil = 12
@@ -618,7 +618,7 @@
 
 /obj/item/projectile/bullet/c10x24
 	damage_types = list(BRUTE = 20)
-	armor_divisor = 2
+	armor_penetration = 2
 	wounding_mult = WOUNDING_SMALL
 	penetrating = 2
 	can_ricochet = TRUE
@@ -630,7 +630,7 @@
 
 /obj/item/projectile/bullet/auto_460
 	damage_types = list(BRUTE = 30)
-	armor_divisor = 1.25
+	armor_penetration = 2
 	penetrating = 2
 	can_ricochet = TRUE
 	step_delay = 0.3
@@ -640,7 +640,7 @@
 
 /obj/item/projectile/bullet/auto_460/scrap
 	damage_types = list(BRUTE = 17.5)
-	armor_divisor = 1.15
+	armor_penetration = 1
 	penetrating = 1
 	can_ricochet = TRUE
 	step_delay = 0.3
@@ -651,7 +651,7 @@
 //// 14.5×114mm Anti-Materiel Rifle Rounds ////
 /obj/item/projectile/bullet/antim
 	damage_types = list(BRUTE = 60)
-	armor_divisor = 10
+	armor_penetration = 16
 	wounding_mult = WOUNDING_WIDE
 	nocap_structures = TRUE
 	//stun = 5
@@ -665,7 +665,7 @@
 /obj/item/projectile/bullet/antim/lethal
 	damage_types = list(BRUTE = 45, HALLOSS = 100)
 	embed = TRUE
-	armor_divisor = 4
+	armor_penetration = 8
 	wounding_mult = WOUNDING_EXTREME
 	penetrating = 2
 	affective_damage_range = 9
@@ -677,7 +677,7 @@
 	damage_types = list(BURN = 45)
 	embed = FALSE
 	fire_stacks = 5	//BURN, BABY! BUUURN!!
-	armor_divisor = 4
+	armor_penetration = 4
 	penetrating = 2
 	affective_damage_range = 10
 	affective_ap_range = 10
@@ -686,14 +686,14 @@
 
 /obj/item/projectile/bullet/antim/scrap
 	damage_types = list(BRUTE = 40)
-	armor_divisor = 4
+	armor_penetration = 4
 	affective_damage_range = 8
 	affective_ap_range = 8
 	recoil = 30
 
 /obj/item/projectile/bullet/antim/ion
 	damage_types = list(BRUTE = 25)
-	armor_divisor = 4
+	armor_penetration = 4
 	recoil = 15
 
 /obj/item/projectile/bullet/antim/ion/on_impact(atom/target, blocked = FALSE)
@@ -705,7 +705,7 @@
 /obj/item/projectile/bullet/ball
 	nocap_structures = TRUE
 	damage_types = list(BRUTE = 40, HALLOSS = 60) //Grab me musket as the founding fathers intended
-	armor_divisor = 4 //no longer a little jank, much like other older rifles it falters in terms of AP while still having enough to really smash through armor.
+	armor_penetration = 4 //no longer a little jank, much like other older rifles it falters in terms of AP while still having enough to really smash through armor.
 	supereffective_mult = 6 //we do 40 damage base, up to 240 with supereffective - plus AP bonus, plus agony bonus, about the same 350~ as before
 	supereffective_types = list(/mob/living/carbon/human = FALSE, /mob/living = TRUE) //We are great at fighting living things(other than people, for balance reasons) but not so much robots.
 	wounding_mult = WOUNDING_EXTREME
@@ -721,7 +721,7 @@
 	name = "coilgun round"
 	icon_state = null
 	damage_types = list(BRUTE = 26)
-	armor_divisor = 2
+	armor_penetration = 4
 	wounding_mult = WOUNDING_SERIOUS
 	penetrating = 1
 
@@ -736,7 +736,7 @@
 	name = "flak shrapnel"
 	icon_state = "l_birdshot-4"
 	damage_types = list(BRUTE = 14)
-	armor_divisor = 1.5
+	armor_penetration = 4
 	wounding_mult = WOUNDING_NORMAL
 	penetrating = 0
 
@@ -766,7 +766,7 @@
 	icon_state = "bullet_heavy"
 	damage_types = list(BRUTE = 21)
 	wounding_mult = WOUNDING_SERIOUS
-	armor_divisor = 1.25 //To keep it somewhat fair towards the handhelds considering it has higher ammo capacity
+	armor_penetration = 2 //To keep it somewhat fair towards the handhelds considering it has higher ammo capacity
 	penetrating = 1
 
 	can_ricochet = TRUE
@@ -779,7 +779,7 @@
 	name = "gigantic round"
 	icon_state = "slug"
 	damage_types = list(BRUTE = 56)
-	armor_divisor = 4 //Tally ho
+	armor_penetration = 6 //Tally ho
 	wounding_mult = WOUNDING_EXTREME
 	penetrating = 3 //tank sized round
 
@@ -793,7 +793,7 @@
 	name = "humongous round"
 	icon_state = "bullet_kurtz"
 	damage_types = list(BRUTE = 26)
-	armor_divisor = 3 //This fires 2 in a row so keep that in mind
+	armor_penetration = 4 //This fires 2 in a row so keep that in mind
 	wounding_mult = WOUNDING_SERIOUS
 	penetrating = 3 //tank sized round
 
@@ -810,7 +810,7 @@
 	name = "slug"
 	icon_state = "slug"
 	damage_types = list(BRUTE = 35)
-	armor_divisor = 3
+	armor_penetration = 2
 	wounding_mult = WOUNDING_SERIOUS
 	knockback = 0 //Bug doups hits
 	step_delay = 0.9
@@ -823,7 +823,7 @@
 	name = "ceramic slug"
 	icon_state = "slug"
 	damage_types = list(BRUTE = 30)
-	armor_divisor = 1.2
+	armor_penetration = 1
 	knockback = 1 //KER-BLAM!!!!
 	affective_damage_range = 4
 	affective_ap_range = 4
@@ -834,7 +834,7 @@
 	icon_state = "rubber"
 	damage_types = list(BRUTE = 20, HALLOSS = 60)
 	wounding_mult = WOUNDING_NORMAL
-	armor_divisor = 1.5
+	armor_penetration = 0
 	embed = FALSE
 	sharp = FALSE
 	step_delay = 1.65
@@ -847,7 +847,7 @@
 	name = "pepperball slug"
 	damage_types = list(BRUTE = 6, HALLOSS = 50)	//Pepperballs disipate upon impact. They'll sting like shit, but won't do much in a low-velocity round.
 	step_delay = 2 //Slower than a beanbag due to it being STRONG as fuck.
-	armor_divisor = 0.8
+	armor_penetration = 0
 	var/spray = "condensedcapsaicin"
 	embed = FALSE
 	can_ricochet = FALSE	//breaks upon impact; impossible.
@@ -867,7 +867,7 @@
 /obj/item/projectile/bullet/shotgun/beanbag/soporific
 	name = "soporific coated beanbag"
 	damage_types = list(BRUTE = 10, HALLOSS = 65) // They still hurt!
-	armor_divisor = 0.8
+	armor_penetration = 0
 	var/spray = "stoxin"
 
 /obj/item/projectile/bullet/shotgun/beanbag/soporific/New()
@@ -886,7 +886,7 @@
 /obj/item/projectile/bullet/shotgun/practice
 	name = "practice slug"
 	damage_types = list(BRUTE = 4, HALLOSS = 5)
-	armor_divisor = 0.5
+	armor_penetration = 0
 	embed = FALSE
 	affective_damage_range = 1
 	affective_ap_range = 1
@@ -895,27 +895,27 @@
 /obj/item/projectile/bullet/shotgun/incendiary
 	//This is the best ammo for pvp in a shotgun, beating the stunshell with its pain and cooks anyone in any armor!
 	damage_types = list(BURN = 22.5) //We deal most of are damage with fire stacks
-	armor_divisor = 0.5
+	armor_penetration = 0
 	fire_stacks = 4 //40 pain a fire proc through ALL armor!
 	recoil = 40
 
 /obj/item/projectile/bullet/shotgun/scrap
 	damage_types = list(BRUTE = 27)
-	armor_divisor = 1.2
+	armor_penetration = 0
 	affective_damage_range = 3
 	affective_ap_range = 4
 	recoil = 10
 
 /obj/item/projectile/bullet/shotgun/beanbag/scrap
 	damage_types = list(BRUTE = 13, HALLOSS  = 55)
-	armor_divisor = 1.25
+	armor_penetration = 0
 	affective_damage_range = 1
 	affective_ap_range = 1
 	recoil = 8
 
 /obj/item/projectile/bullet/pellet/shotgun/scrap
 	damage_types = list(BRUTE = 8)
-	armor_divisor = 0.9
+	armor_penetration = 0
 	affective_damage_range = 4
 	affective_ap_range = 4
 	recoil = 6
@@ -923,7 +923,7 @@
 /obj/item/projectile/bullet/shotgun/biomatter //Unique niche round. High AP, Low damage, high agony. Good for mob crunching, or AP LTL uses
 	name = "biomatter slug"
 	damage_types = list(BURN = 10, HALLOSS = 40) // Thin little piece of biomass designed to defeat armor but not really large enough to cause super serious injuries.
-	armor_divisor = 4 //high velocity
+	armor_penetration = 3 //high velocity
 	wounding_mult = WOUNDING_SMALL //tiny slug.
 	penetrating = 0
 	can_ricochet = FALSE
@@ -1006,7 +1006,7 @@
 	mob_hit_sound = list('sound/effects/gore/sear.ogg')
 	hitsound_wall = 'sound/weapons/guns/misc/ric4.ogg'
 	damage_types = list(BRUTE = 40)
-	armor_divisor = 4
+	armor_penetration = 12
 	check_armour = ARMOR_BULLET
 	embed = FALSE
 	can_ricochet = FALSE
@@ -1022,7 +1022,7 @@
 	name = "shrapnel"
 	icon_state = "birdshot-1"
 	damage_types = list(BRUTE = 16)
-	armor_divisor = 0.6
+	armor_penetration = 0
 	wounding_mult = WOUNDING_SMALL //lotta relatively smaller pellets.
 	pellets = 4
 	range_step = 1
@@ -1051,7 +1051,7 @@
 	name = "Unstable energy bolt"
 	icon_state = "l_birdshot-1"
 	damage_types = list(BURN = 11.5) //slightly less than buck, but FAR more painful
-	armor_divisor = 2 //heated shot melt armor.
+	armor_penetration = 4 //heated shot melt armor.
 	embed = FALSE
 	can_ricochet = FALSE
 	sharp = FALSE
@@ -1067,7 +1067,7 @@
 	wounding_mult = WOUNDING_EXTREME //Shredding
 	knockback = 1
 	fire_stacks = 1
-	armor_divisor = 10
+	armor_penetration = 10
 	nocap_structures = TRUE
 	check_armour = ARMOR_BOMB
 	sharp = TRUE
@@ -1102,7 +1102,7 @@
 	icon_state = "bolt"
 	damage_types = list(BRUTE = 25)
 	wounding_mult = WOUNDING_SERIOUS //decent but won't like armor
-	armor_divisor = 1.3
+	armor_penetration = 3
 	knockback = 0 //Bug doups hits
 	supereffective_types = list(/mob/living/carbon/human = FALSE, /mob/living = TRUE)
 	supereffective_mult = 1.5
@@ -1116,7 +1116,7 @@
 	icon_state = "bolt"
 	damage_types = list(BRUTE = 30)
 	wounding_mult = WOUNDING_WIDE //slightly bigger
-	armor_divisor = 0.5
+	armor_penetration = 0
 	supereffective_types = list(/mob/living/carbon/human = FALSE, /mob/living = TRUE)
 	supereffective_mult = 1.5
 	step_delay = 0.9
@@ -1126,7 +1126,7 @@
 	name = "bolt"
 	icon_state = "bolt"
 	damage_types = list(BRUTE = 20)
-	armor_divisor = 3
+	armor_penetration = 8
 	penetrating = 3
 	hitscan = TRUE
 	sharp = TRUE
@@ -1151,7 +1151,7 @@
 	name = "metal rod"
 	icon_state = "bolt"
 	damage_types = list(BRUTE = 5) //This is multiplied by tension when fired, so it's actually 25 damage.
-	armor_divisor = 1.25
+	armor_penetration = 2
 	wounding_mult = WOUNDING_NORMAL //it's a whole ass rod.
 	step_delay = 0.9
 	embed = FALSE
@@ -1163,7 +1163,7 @@
 /obj/item/projectile/bullet/reusable/rod_bolt/superheated
 	name = "superheated metal rod"
 	damage_types = list(BRUTE = 5, BURN = 2.5) //This is multiplied by tension when fired, so it's actually 37.5 damage.
-	armor_divisor = 1.5
+	armor_penetration = 4
 	wounding_mult = WOUNDING_SERIOUS //it's a SUPER HOT whole ass bolt.
 	step_delay = 0.6
 	embed = TRUE
@@ -1178,7 +1178,7 @@
 	name = "flashforged rod"
 	icon_state = "bolt"
 	damage_types = list(BRUTE = 5) //This is multiplied by tension when fired, so it's actually 25 damage. Slightly worse, but it's faster and has higher AP.
-	armor_divisor = 2
+	armor_penetration = 6
 	step_delay = 0.6
 	embed = FALSE
 	penetrating = 1
@@ -1191,7 +1191,7 @@
 	name = "flashforged superheated rod"
 	icon_state = "bolt"
 	damage_types = list(BRUTE = 5, BURN = 2.5) //This is multiplied by tension when fired, so it's actually 57.5 damage. Slightly worse, but it's faster and has higher AP.
-	armor_divisor = 20
+	armor_penetration = 100
 	step_delay = 0.2
 	embed = TRUE
 	penetrating = 2
@@ -1204,7 +1204,7 @@
 	name = "arrow"
 	icon_state = "arrow"
 	damage_types = list(BRUTE = 2) //Multiplied by 10 when fired.
-	armor_divisor = 0.3
+	armor_penetration = 1
 	effective_faction = list("wurm", "roach", "spider", "vox_tribe", "russian", "tengo") //good against common colony mobs
 	damage_mult = 2 // Turns out arrows always sucked
 	embed = FALSE //don't want to embed and drop an arrow, that would be weird
@@ -1223,7 +1223,7 @@
 	damage_types = list(BRUTE = 1.5) // 15 damage at max pull
 	damage_mult = 1.5 // Less bonus damage against effective faction
 	embed_mult = 3 //we are going to try really hard to embed
-	armor_divisor = 0.75 // Crossbow bolts are better, however this should not penetrate armor the same as a bullet (if not MORE).
+	armor_penetration = 2 // Crossbow bolts are better, however this should not penetrate armor the same as a bullet (if not MORE).
 	hitscan = TRUE // As every HV ammo
 	affective_damage_range = 8
 	affective_ap_range = 8
@@ -1236,7 +1236,7 @@
 	icon_state = "arrow-broad"
 	damage_types = list(BRUTE = 4.5) //Very good base damage, negligible (5) AP, but no embedding. Think of it as arrow-hollowpoints.
 	embed = FALSE
-	armor_divisor = 0.2
+	armor_penetration = 0
 	create_type = /obj/item/ammo_casing/arrow/broadhead
 
 /obj/item/projectile/bullet/reusable/arrow/hunting
@@ -1245,7 +1245,7 @@
 	damage_types = list(BRUTE = 1) //Multiplied by 10 when fired.
 	supereffective_types = list(/mob/living/carbon/human = FALSE, /mob/living = TRUE)
 	supereffective_mult = 5 //we do 10 damage base, up to 50 against SE mobs, then with 50 AP on should do ~100. Slow to fire, unwieldly, slow projectiles (but reusable), so I'll say this is fair?
-	armor_divisor = 1 //high ap to take advantage of overpen on mobs
+	armor_penetration = 4 //high ap to take advantage of overpen on mobs
 	step_delay = 0.7 // 20% faster than normal arrows
 	affective_damage_range = 8 //worse than the baroque, but better than regular arrows
 	affective_ap_range = 8
@@ -1255,7 +1255,7 @@
 	name = "fragmenting hunting arrow"
 	icon_state = "arrow-bone"
 	damage_types = list(BRUTE = 2) //Multiplied by 10 when fired.
-	armor_divisor = 0.75
+	armor_penetration = 1
 	embed = TRUE
 	hitscan = TRUE // Sniping round, fast
 	supereffective_mult = 18 //we do 20 damage base, up to 360 against SE mobs, then with 55 (+5 hunting bow) AP on should do ~410. Baroque is around ~430 vs mobs, so roughly baroque-tier vs mobs, with the same wieldliness and different ammo costs (bone/leather/metal/plastic vs metal/cardboard).

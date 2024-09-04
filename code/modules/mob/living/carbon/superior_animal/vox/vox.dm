@@ -29,7 +29,7 @@
 	get_stat_modifier = TRUE
 
 	melee_sharp = TRUE //Claws
-	armor_divisor = 1.25
+	armor_penetration = 2
 
 	allowed_stat_modifiers = list(
 		/datum/stat_modifier/mob/living/carbon/superior_animal/armor/mult/positive/low = 15,
