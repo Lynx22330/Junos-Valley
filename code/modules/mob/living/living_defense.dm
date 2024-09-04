@@ -65,7 +65,7 @@
 		armor /= 5
 	var/ablative_armor = max(armor_maximum, (getarmorablative(def_zone, attack_flag) - armor_penetration))
 // Damage calculation for QoL purposes.
-// ((Base Projectile Damage * Weapon Damage Projectile Multiplier) + min(armor_maximum, (-Armor + Penetration Power))) * Wound Scale = Result Damage
+// ((Base Projectile Damage * Weapon Damage Projectile Multiplier) - max(armor_maximum, (Armor - Penetration Power))) * Wound Scale = Result Damage
 // Results in clear, flat damage reduction and flat armor pen.
 	var/remaining_armor = armor
 	var/remaining_ablative = ablative_armor

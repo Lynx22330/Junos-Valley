@@ -129,7 +129,7 @@
 
 	var/ignition_source = TRUE //Used for deciding if a projectile should blow up a benzin.
 
-	var/armor_maximum = -3 //The value is intentionally negative. This is essentially "3" armor during the armor calculation proc.
+	var/armor_maximum = 3 //This is a sort of 'one shot protection' against armor, allowing armor to still retain up to 3 points of their armor if it's overpenned.
 
 /obj/item/projectile/New()
 
