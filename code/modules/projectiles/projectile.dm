@@ -129,6 +129,8 @@
 
 	var/ignition_source = TRUE //Used for deciding if a projectile should blow up a benzin.
 
+	var/armor_maximum = -3 //The value is intentionally negative. This is essentially "3" armor during the armor calculation proc.
+
 /obj/item/projectile/New()
 
 	penetration_holder = new /datum/penetration_holder

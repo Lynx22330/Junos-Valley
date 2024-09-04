@@ -16,7 +16,7 @@
 	else
 		show_message(msg1, 1)
 
-/mob/living/proc/damage_through_armor(damage = 0, damagetype = BRUTE, def_zone, attack_flag = ARMOR_MELEE, armor_penetration = 0, used_weapon, sharp = FALSE, edge = FALSE, wounding_multiplier, list/dmg_types = list(), return_continuation = FALSE, dir_mult = 1)
+/mob/living/proc/damage_through_armor(damage = 0, damagetype = BRUTE, def_zone, attack_flag = ARMOR_MELEE, armor_penetration = 0, armor_maximum, used_weapon, sharp = FALSE, edge = FALSE, wounding_multiplier, list/dmg_types = list(), return_continuation = FALSE, dir_mult = 1)
 	if(damage) // If damage is defined, we add it to the list
 		if(!dmg_types[damagetype])
 			dmg_types += damagetype
@@ -60,11 +60,13 @@
 
 
 	// Determine DR and ADR, armour divisor reduces it
-	var/armor = min(0, (-getarmor(def_zone, attack_flag) + armor_penetration))
+	var/armor = min(armor_maximum, (-getarmor(def_zone, attack_flag) + armor_penetration))
 	if(!(attack_flag in list(ARMOR_MELEE, ARMOR_BULLET, ARMOR_ENERGY))) // Making sure BIO and other armor types are handled correctly
 		armor /= 5
-	var/ablative_armor = min(0, (-getarmorablative(def_zone, attack_flag) + armor_penetration))
-
+	var/ablative_armor = min(armor_maximum, (-getarmorablative(def_zone, attack_flag) + armor_penetration))
+// Damage calculation for QoL purposes.
+// ((Base Projectile Damage * Weapon Damage Projectile Multiplier) + min(armor_maximum, (-Armor + Penetration Power))) * Wound Scale = Result Damage
+// Results in clear, flat damage reduction and flat armor pen.
 	var/remaining_armor = armor
 	var/remaining_ablative = ablative_armor
 
