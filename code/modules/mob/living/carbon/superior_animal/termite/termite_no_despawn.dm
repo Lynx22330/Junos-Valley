@@ -17,7 +17,7 @@
 	faction = "wurm"
 	fire_verb = "spits"
 	see_in_dark = 10
-	armor_divisor = 1.1
+	armor_penetration = 1
 	density = 0 // Prevents friendly fire between themselves, projectiles will go over them, making them also harder to target.
 
 	fleshcolor = "#7C90B8"
@@ -190,7 +190,7 @@
 	icon = 'icons/mob/mobs-termite.dmi' // Sprites made by Polyushko#0323
 	icon_state = "koroleva_termite"
 	icon_dead = "koroleva_gore"
-	armor_divisor = 1.3
+	armor_penetration = 1
 	get_stat_modifier =  TRUE
 	inherent_mutations = list(MUTATION_DEAF, MUTATION_RAND_UNSTABLE, MUTATION_GIGANTISM, MUTATION_PROT_MILK, MUTATION_TERMITE_FRIEND)
 
@@ -223,7 +223,7 @@
 	projectiletype = /obj/item/projectile/bullet/spear
 	contaminant_immunity = TRUE
 	get_stat_modifier =  TRUE
-	armor_divisor = 1.5
+	armor_penetration = 2
 	inherent_mutations = list(MUTATION_DEAF, MUTATION_RAND_UNSTABLE, MUTATION_GIGANTISM, MUTATION_SCREAMING)
 
 //Health related variables

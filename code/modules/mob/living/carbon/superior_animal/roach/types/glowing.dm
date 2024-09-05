@@ -22,7 +22,7 @@
 	knockdown_odds = 3 //Well we still can knockdown we dont tend to over other affects
 	melee_damage_lower = 5
 	melee_damage_upper = 7 //Weaker than hunter
-	armor_divisor = 1
+	armor_penetration = 0
 
 /mob/living/carbon/superior_animal/roach/glowing/UnarmedAttack(var/atom/A, var/proximity)
 	. = ..()

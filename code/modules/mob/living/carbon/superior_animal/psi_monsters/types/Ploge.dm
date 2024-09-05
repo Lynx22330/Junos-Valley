@@ -29,7 +29,7 @@
 	can_burrow = FALSE
 	melee_damage_lower = 15
 	melee_damage_upper = 25
-	armor_divisor = 3
+	armor_penetration = 6
 	ranged = TRUE
 
 	pixel_x = 0
@@ -61,7 +61,7 @@
 		knockdown_odds = 50
 		melee_damage_lower = 30
 		melee_damage_upper = 35
-		armor_divisor = 4
+		armor_penetration = 4
 		transform_ed = TRUE
 		projectiletype = /obj/item/projectile/tether/lash
 		for(var/mob/living/target in targets_in_range(in_hear_range = TRUE))

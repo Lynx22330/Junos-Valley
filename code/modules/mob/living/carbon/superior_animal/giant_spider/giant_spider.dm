@@ -18,7 +18,7 @@
 	speak_chance = 5
 
 	get_stat_modifier = FALSE //We're too baby to get extra mods.
-	armor_divisor = 1
+	armor_penetration = 1
 
 	armor = list(melee = 1, bullet = 0, energy = 0, bomb = 1, bio = 10, rad = 25)
 
