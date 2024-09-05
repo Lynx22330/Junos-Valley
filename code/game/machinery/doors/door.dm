@@ -459,8 +459,9 @@
 	if(!can_open(forced))
 		return
 	operating = TRUE
-	activate_mobs_in_range(src, 10)
-
+	//if(user.mind.current)
+	//	activate_mobs_in_range(src, 15)
+	//	to_chat(world, " [user.name] has successfully activated the AI at [src]") // Debug Code
 	set_opacity(0)
 	if(istype(src, /obj/machinery/door/airlock/multi_tile/metal))
 		f5?.set_opacity(0)
