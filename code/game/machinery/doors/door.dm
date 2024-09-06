@@ -459,9 +459,10 @@
 	if(!can_open(forced))
 		return
 	operating = TRUE
+	//This checks if whoever is using the door has a client to activate mobs.
 	if(usr.client)
 		activate_mobs_in_range(src, 15)
-		to_chat(world, " [usr.name] has successfully activated the AI at [src]") // Debug Code
+
 	set_opacity(0)
 	if(istype(src, /obj/machinery/door/airlock/multi_tile/metal))
 		f5?.set_opacity(0)
