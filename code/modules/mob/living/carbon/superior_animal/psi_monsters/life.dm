@@ -41,16 +41,16 @@
 /mob/living/carbon/superior_animal/psi_monster/dreaming_king/Life()
 	. = ..()
 	//Used for teleports, we grab it here to not repeat same code
-/* 	var/turf/simulated/floor/target
-	var/list/validtargets = list()
+	//var/turf/simulated/floor/target
+	//var/list/validtargets = list()
 	if(health <= (maxHealth * 0.66) && first_teleport == FALSE)
-		if(GLOB.deepmaints_data_bool["king_teleporting"])
+		//if(GLOB.deepmaints_data_bool["king_teleporting"])
 
-			for(var/area/A in world)
-				if(istype(A, /area/deepmaint))
-					for(var/turf/simulated/floor/T in A)
-						validtargets += T
-			target = pick(validtargets) */
+		//	for(var/area/A in world)
+		//		if(istype(A, /area/deepmaint))
+		//			for(var/turf/simulated/floor/T in A)
+		//				validtargets += T
+		//	target = pick(validtargets) */
 
 		do_sparks(1, 0, src.loc)
 		new /obj/effect/gibspawner/human(src.loc)
@@ -60,7 +60,7 @@
 		spawn(2)
 		playsound(src.loc, 'sound/hallucinations/hell_screech.ogg', 75, 1, 8, 8)
 
-		src.forceMove(target)
+		//src.forceMove(target)
 
 		do_sparks(1, 0, src.loc)
 		new /obj/effect/gibspawner/human(src.loc)
@@ -85,14 +85,14 @@
 
 		//first_teleport = TRUE
 
-/* 	if(health <= (maxHealth * 0.33) && second_teleport == FALSE)
-		if(GLOB.deepmaints_data_bool["king_teleporting"])
+	if(health <= (maxHealth * 0.33) && second_teleport == FALSE)
+		//if(GLOB.deepmaints_data_bool["king_teleporting"])
 
-			for(var/area/A in world)
-				if(istype(A, /area/deepmaint))
-					for(var/turf/simulated/floor/T in A)
-						validtargets += T
-			target = pick(validtargets) */
+		//	for(var/area/A in world)
+		//		if(istype(A, /area/deepmaint))
+		//			for(var/turf/simulated/floor/T in A)
+		//				validtargets += T
+		//	target = pick(validtargets)
 
 		do_sparks(1, 0, src.loc)
 		new /obj/effect/gibspawner/human(src.loc)
@@ -102,7 +102,7 @@
 		spawn(2)
 		playsound(src.loc, 'sound/hallucinations/hell_screech.ogg', 75, 1, 8, 8)
 
-		src.forceMove(target)
+		//src.forceMove(target)
 
 		do_sparks(1, 0, src.loc)
 		new /obj/effect/gibspawner/human(src.loc)
