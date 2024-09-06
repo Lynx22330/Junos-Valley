@@ -66,6 +66,7 @@
 /obj/effect/decal/cleanable/rubble,
 /obj/effect/decal/cleanable/rubble,
 /mob/living/carbon/superior_animal/wurm,
+/obj/random/cave_in_trap/low_chance,
 /turf/simulated/floor/rock/grey,
 /area/nadezhda/outside/forest/river_forest_underground)
 "am" = (
@@ -150,6 +151,12 @@
 /obj/effect/decal/cleanable/rubble,
 /turf/simulated/floor/asteroid/dirt/dust,
 /area/nadezhda/outside/forest/river_forest_underground)
+"aF" = (
+/obj/structure/table/onestar,
+/obj/item/stack/material/platinum/random,
+/obj/random/junkfood,
+/turf/simulated/floor/tiled/derelict,
+/area/nadezhda/outside/one_star/fo_internal)
 "aJ" = (
 /obj/structure/invislight,
 /obj/structure/flora/ausbushes/grassybush,
@@ -222,6 +229,10 @@
 /obj/machinery/portable_atmospherics/hydroponics/soil/invisible,
 /turf/unsimulated/mineral,
 /area/nadezhda/outside/forest/river_forest_light)
+"bJ" = (
+/obj/effect/decal/cleanable/ash,
+/turf/simulated/floor/tiled/derelict/white_small_edges,
+/area/nadezhda/outside/one_star/fo_internal)
 "bX" = (
 /obj/structure/bed/chair/janicart,
 /turf/simulated/floor/tiled/derelict/white_big_edges,
@@ -238,6 +249,12 @@
 "ce" = (
 /obj/item/remains/ribcage,
 /turf/simulated/floor/asteroid/dirt,
+/area/nadezhda/outside/forest/river_forest_underground)
+"cf" = (
+/obj/structure/boulder,
+/obj/effect/decal/cleanable/rubble,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock/dark,
 /area/nadezhda/outside/forest/river_forest_underground)
 "ck" = (
 /obj/structure/multiz/stairs/enter/bottom,
@@ -274,9 +291,10 @@
 /turf/simulated/floor/tiled/derelict,
 /area/nadezhda/outside/one_star/fo_internal)
 "cO" = (
-/mob/living/carbon/superior_animal/xenomorph/runner/panther,
-/turf/simulated/floor/tiled/derelict/white_small_edges,
-/area/nadezhda/outside/one_star/fo_internal)
+/obj/structure/scrap/medical/large,
+/obj/effect/decal/cleanable/rubble,
+/turf/simulated/floor/rock/grey,
+/area/nadezhda/outside/forest/river_forest_underground)
 "cR" = (
 /obj/random/cluster/xenomorphs/lower_chance,
 /obj/effect/decal/cleanable/rubble,
@@ -353,6 +371,11 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/simulated/floor/asteroid/dirt,
 /area/nadezhda/outside/forest/river_forest_light)
+"dX" = (
+/obj/item/stack/ore,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock/alt,
+/area/nadezhda/outside/forest/river_forest_dark)
 "dY" = (
 /obj/machinery/seed_extractor,
 /turf/simulated/floor/wood/wild5,
@@ -362,7 +385,8 @@
 /turf/simulated/floor/asteroid/grass,
 /area/nadezhda/outside/forest/river_forest_light)
 "ee" = (
-/mob/living/carbon/superior_animal/robot/greyson/synthetic/epistol/rifle,
+/obj/effect/decal/cleanable/ash,
+/obj/effect/damagedfloor/fire,
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star/fo_internal)
 "ei" = (
@@ -370,6 +394,12 @@
 /obj/random/mob/xenomorphs,
 /turf/simulated/floor/rock/dark,
 /area/nadezhda/outside/forest/river_forest_underground)
+"el" = (
+/obj/structure/table/onestar,
+/obj/item/reagent_containers/blood/OPlus,
+/obj/item/material/shard/shrapnel/scrap,
+/turf/simulated/floor/tiled/derelict,
+/area/nadezhda/outside/one_star/fo_internal)
 "en" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/carpet/purcarpet,
@@ -381,6 +411,11 @@
 /obj/random/mob/mukwah,
 /turf/simulated/floor/asteroid/dirt/dark,
 /area/nadezhda/outside/forest/river_forest_underground)
+"et" = (
+/obj/effect/damagedfloor/fire,
+/obj/effect/decal/cleanable/ash,
+/turf/simulated/floor/tiled/derelict,
+/area/nadezhda/outside/one_star/fo_internal)
 "eu" = (
 /turf/simulated/open,
 /area/nadezhda/outside/forest/river_forest_light)
@@ -421,12 +456,29 @@
 "fe" = (
 /obj/structure/table/gamblingtable,
 /obj/item/cardholder,
+/obj/effect/damagedfloor/fire,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
+/area/nadezhda/outside/one_star/fo_internal)
+"fh" = (
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock,
+/area/nadezhda/outside/forest/river_forest_underground)
+"fi" = (
+/obj/effect/damagedfloor/fire,
+/obj/effect/damagedfloor/fire,
+/turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star/fo_internal)
 "fm" = (
 /obj/structure/boulder,
 /turf/simulated/floor/rock,
 /area/nadezhda/outside/forest/river_forest_underground)
+"fn" = (
+/obj/structure/bed/chair/custom/onestar/red{
+	dir = 4
+	},
+/obj/effect/damagedfloor/fire,
+/turf/simulated/floor/tiled/derelict/white_small_edges,
+/area/nadezhda/outside/one_star/fo_internal)
 "fp" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/carpet/bcarpet,
@@ -480,8 +532,8 @@
 /turf/simulated/floor/asteroid/dirt/dark,
 /area/nadezhda/outside/forest/river_forest_underground)
 "fW" = (
-/obj/item/stool,
-/obj/random/mob/roomba/range,
+/obj/random/mob/xenomorphs,
+/obj/effect/damagedfloor/fire,
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star/fo_internal)
 "fX" = (
@@ -550,6 +602,10 @@
 /obj/random/traps,
 /turf/simulated/floor/beach/sand/drywater,
 /area/nadezhda/outside/forest/river_forest_lake)
+"hl" = (
+/obj/item/material/shard/shrapnel/scrap,
+/turf/simulated/floor/tiled/derelict,
+/area/nadezhda/outside/one_star/fo_internal)
 "hm" = (
 /obj/structure/flora/ausbushes/reedbush,
 /obj/random/traps,
@@ -620,6 +676,11 @@
 /obj/structure/boulder,
 /turf/simulated/floor/asteroid/dirt/dark,
 /area/nadezhda/outside/forest/river_forest_underground)
+"ie" = (
+/obj/structure/boulder,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock,
+/area/nadezhda/outside/forest/river_forest_underground)
 "ij" = (
 /obj/item/remains/lizard,
 /turf/simulated/floor/asteroid/dirt/mud,
@@ -631,6 +692,10 @@
 "is" = (
 /obj/random/mob/mukwah,
 /turf/simulated/floor/wood/wild4,
+/area/nadezhda/outside/forest/river_forest_underground)
+"iw" = (
+/obj/effect/decal/cleanable/rubble,
+/turf/simulated/mineral/random/rogue,
 /area/nadezhda/outside/forest/river_forest_underground)
 "ix" = (
 /obj/item/stack/material/bone,
@@ -699,6 +764,12 @@
 /obj/random/closet_tech,
 /turf/simulated/floor/wood/wild4,
 /area/nadezhda/outside/forest/river_forest_underground)
+"jS" = (
+/obj/random/mob/xenomorphs,
+/obj/effect/damagedfloor/fire,
+/obj/effect/damagedfloor/fire,
+/turf/simulated/floor/tiled/derelict/white_small_edges,
+/area/nadezhda/outside/one_star/fo_internal)
 "jU" = (
 /obj/structure/flora/ausbushes/reedbush,
 /turf/simulated/floor/asteroid/dirt/mud,
@@ -771,6 +842,10 @@
 	},
 /obj/effect/spider/stickyweb/chtmant,
 /turf/simulated/floor/rock/dark,
+/area/nadezhda/outside/forest/river_forest_dark)
+"kH" = (
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/asteroid/dirt,
 /area/nadezhda/outside/forest/river_forest_dark)
 "kI" = (
 /turf/simulated/floor/asteroid/dirt,
@@ -900,6 +975,12 @@
 "lR" = (
 /turf/simulated/floor/fixed/fgrass,
 /area/nadezhda/outside/forest/river_forest_dark)
+"lT" = (
+/obj/effect/decal/cleanable/rubble,
+/obj/effect/decal/cleanable/rubble,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/asteroid/dirt/mud,
+/area/nadezhda/outside/forest/river_forest_underground)
 "lU" = (
 /obj/item/remains,
 /turf/simulated/floor/rock/dark,
@@ -956,6 +1037,10 @@
 /obj/item/computer_hardware/hard_drive/portable/design/surgery,
 /turf/simulated/floor/tiled/derelict,
 /area/nadezhda/outside/one_star/fo_internal)
+"mq" = (
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock,
+/area/nadezhda/outside/forest/river_forest_dark)
 "mr" = (
 /obj/structure/flora/ausbushes/grassybush,
 /obj/random/mob/vox/low_chance,
@@ -1009,6 +1094,10 @@
 /obj/item/reagent_containers/food/drinks/teapot,
 /turf/simulated/floor/asteroid/grass,
 /area/nadezhda/outside/forest/river_forest_light)
+"nc" = (
+/obj/item/material/shard/shrapnel/scrap,
+/turf/simulated/floor/tiled/derelict/white_small_edges,
+/area/nadezhda/outside/one_star/fo_internal)
 "ne" = (
 /obj/item/oddity/common/old_knife,
 /turf/simulated/floor/rock/dark,
@@ -1145,6 +1234,11 @@
 /obj/random/credits,
 /turf/simulated/floor/asteroid/grass,
 /area/nadezhda/outside/forest/river_forest_light)
+"oF" = (
+/obj/structure/scrap/food/large,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock/grey,
+/area/nadezhda/outside/forest/river_forest_dark)
 "oG" = (
 /obj/structure/barricade,
 /obj/structure/window/reinforced{
@@ -1168,6 +1262,12 @@
 /obj/item/stack/ore/glass,
 /turf/simulated/floor/rock/dark,
 /area/nadezhda/outside/forest/river_forest_light)
+"oM" = (
+/obj/effect/damagedfloor/fire,
+/obj/effect/damagedfloor/fire,
+/obj/effect/decal/cleanable/ash,
+/turf/simulated/floor/tiled/derelict/white_small_edges,
+/area/nadezhda/outside/one_star/fo_internal)
 "oN" = (
 /obj/random/mob/mukwah,
 /turf/simulated/floor/rock/grey,
@@ -1207,7 +1307,7 @@
 /turf/simulated/floor/asteroid/grass,
 /area/nadezhda/outside/forest/river_forest_light)
 "pb" = (
-/mob/living/carbon/superior_animal/robot/greyson/roomba,
+/obj/effect/damagedfloor/fire,
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star/fo_internal)
 "pf" = (
@@ -1271,6 +1371,12 @@
 /obj/effect/decal/cleanable/rubble,
 /turf/simulated/floor/rock/grey,
 /area/nadezhda/outside/forest/river_forest_underground)
+"pK" = (
+/obj/structure/scrap/cloth,
+/obj/structure/table/rack/shelf,
+/obj/effect/damagedfloor/fire,
+/turf/simulated/floor/tiled/derelict,
+/area/nadezhda/outside/one_star/fo_internal)
 "pL" = (
 /obj/machinery/papershredder,
 /turf/simulated/floor/tiled/derelict,
@@ -1331,6 +1437,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/wild5,
 /area/nadezhda/outside/forest/river_forest_light)
+"qm" = (
+/obj/structure/table/onestar,
+/obj/random/junkfood,
+/obj/effect/damagedfloor/fire,
+/turf/simulated/floor/tiled/derelict/red_white_edges,
+/area/nadezhda/outside/one_star/fo_internal)
 "qn" = (
 /turf/simulated/floor/rock/dark,
 /area/nadezhda/outside/forest/river_forest_light)
@@ -1539,6 +1651,11 @@
 /obj/item/reagent_containers/food/drinks/bottle/pwine,
 /turf/simulated/floor/carpet/gaycarpet,
 /area/nadezhda/outside/forest/river_forest_light)
+"sg" = (
+/obj/structure/flora/small/lavarock1,
+/obj/effect/decal/cleanable/rubble,
+/turf/simulated/floor/rock,
+/area/nadezhda/outside/forest/river_forest_underground)
 "sh" = (
 /turf/simulated/floor/asteroid/dirt/mud,
 /area/nadezhda/outside/forest/river_forest_light)
@@ -1577,7 +1694,8 @@
 /turf/simulated/mineral,
 /area/nadezhda/outside/forest/river_forest_underground)
 "sx" = (
-/obj/effect/window_lwall_spawn/smartspawn/onestar,
+/obj/structure/low_wall/onestar,
+/obj/item/material/shard/shrapnel/scrap,
 /turf/simulated/floor/reinforced,
 /area/nadezhda/outside/one_star/fo_internal)
 "sy" = (
@@ -1769,6 +1887,10 @@
 /obj/item/trash/snack_bowl,
 /turf/simulated/floor/asteroid/grass/jungle,
 /area/nadezhda/outside/forest/river_forest_light)
+"um" = (
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock/dark,
+/area/nadezhda/outside/forest/river_forest_dark)
 "ur" = (
 /turf/simulated/floor/asteroid/dirt/mud{
 	name = "sink hole"
@@ -1896,7 +2018,8 @@
 /turf/simulated/floor/wood/wild4,
 /area/nadezhda/outside/forest/river_forest_underground)
 "vr" = (
-/obj/random/mob/roomba/any,
+/obj/item/scrap_lump,
+/obj/effect/damagedfloor/fire,
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star/fo_internal)
 "vt" = (
@@ -1937,6 +2060,14 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/nadezhda/outside/forest/river_forest_cabin)
+"vL" = (
+/obj/machinery/light/floor,
+/obj/machinery/door/blast/shutters{
+	maxHealth = 15;
+	name = "damaged shutters"
+	},
+/turf/simulated/floor/tiled/derelict/white_small_edges,
+/area/nadezhda/outside/one_star/fo_internal)
 "vM" = (
 /obj/item/reagent_containers/food/snacks/amanita_pie,
 /turf/simulated/floor/rock/grey,
@@ -2001,11 +2132,24 @@
 /obj/random/mob/tahca/low_chance,
 /turf/simulated/floor/asteroid/grass/jungle,
 /area/nadezhda/outside/forest/river_forest_light)
+"wr" = (
+/obj/structure/scrap/cloth,
+/obj/structure/table/rack/shelf,
+/obj/machinery/light/floor,
+/obj/effect/decal/cleanable/ash,
+/obj/effect/damagedfloor/fire,
+/turf/simulated/floor/tiled/derelict,
+/area/nadezhda/outside/one_star/fo_internal)
 "wt" = (
 /obj/item/reagent_containers/glass/beaker/vial/random,
 /obj/structure/flora/small/lavarock2,
 /turf/simulated/floor/asteroid/dirt/mud,
 /area/nadezhda/outside/forest/river_forest_lake)
+"wu" = (
+/obj/effect/window_lwall_spawn/smartspawn/onestar,
+/obj/effect/damagedfloor/fire,
+/turf/simulated/floor/tiled/derelict/red_white_edges,
+/area/nadezhda/outside/one_star/fo_internal)
 "wv" = (
 /obj/item/oddity/common/rusted_sword,
 /turf/simulated/floor/beach/water/shallow,
@@ -2123,6 +2267,12 @@
 /obj/random/voidsuit,
 /turf/simulated/floor/rock/dark,
 /area/nadezhda/outside/forest/river_forest_dark)
+"xu" = (
+/obj/item/stack/rods/random,
+/obj/effect/decal/cleanable/rubble,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock,
+/area/nadezhda/outside/forest/river_forest_underground)
 "xv" = (
 /obj/structure/flora/small/rock4,
 /obj/structure/flora/ausbushes/fullgrass,
@@ -2166,6 +2316,12 @@
 /obj/structure/flora/small/trailrockb1,
 /turf/simulated/floor/asteroid/dirt/burned,
 /area/nadezhda/outside/forest/river_forest_light)
+"xQ" = (
+/obj/structure/boulder,
+/obj/effect/decal/cleanable/rubble,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock,
+/area/nadezhda/outside/forest/river_forest_underground)
 "xR" = (
 /obj/structure/bed/chair/custom/onestar/red{
 	dir = 4
@@ -2192,6 +2348,7 @@
 "yc" = (
 /obj/structure/flora/small/trailrocka2,
 /obj/structure/scrap/food/large,
+/obj/effect/decal/cleanable/rubble,
 /turf/simulated/floor/rock,
 /area/nadezhda/outside/forest/river_forest_underground)
 "yd" = (
@@ -2311,6 +2468,11 @@
 /area/nadezhda/outside/forest/river_forest_light)
 "yR" = (
 /obj/item/stack/material/steel/random,
+/turf/simulated/floor/rock/grey,
+/area/nadezhda/outside/forest/river_forest_underground)
+"yT" = (
+/obj/effect/decal/cleanable/rubble,
+/obj/random/cave_in_trap/low_chance,
 /turf/simulated/floor/rock/grey,
 /area/nadezhda/outside/forest/river_forest_underground)
 "yU" = (
@@ -2457,6 +2619,10 @@
 /obj/item/reagent_containers/food/condiment/sugar,
 /turf/simulated/floor/wood/wild1,
 /area/nadezhda/outside/forest/river_forest_cabin)
+"Af" = (
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock/dark,
+/area/nadezhda/outside/forest/river_forest_underground)
 "Ai" = (
 /obj/random/mob/mukwah,
 /turf/simulated/floor/asteroid/grass,
@@ -2475,9 +2641,15 @@
 /obj/effect/decal/cleanable/rubble,
 /turf/simulated/floor/asteroid/dirt/dust,
 /area/nadezhda/outside/forest/river_forest_underground)
+"Ar" = (
+/obj/effect/decal/cleanable/rubble,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock/dark,
+/area/nadezhda/outside/forest/river_forest_underground)
 "As" = (
 /obj/structure/table/onestar,
 /obj/structure/scrap/guns,
+/obj/effect/damagedfloor/fire,
 /turf/simulated/floor/tiled/derelict,
 /area/nadezhda/outside/one_star/fo_internal)
 "At" = (
@@ -2551,6 +2723,11 @@
 /obj/item/stack/ore,
 /turf/simulated/floor/asteroid/dirt,
 /area/nadezhda/outside/forest/river_forest_dark)
+"Bf" = (
+/obj/structure/flora/rock/variant2,
+/obj/effect/decal/cleanable/rubble,
+/turf/simulated/floor/rock,
+/area/nadezhda/outside/forest/river_forest_underground)
 "Bi" = (
 /obj/item/stack/material/wood,
 /turf/simulated/floor/rock/grey,
@@ -2603,6 +2780,10 @@
 /obj/random/cluster/xenomorphs/low_chance,
 /turf/simulated/floor/rock/dark,
 /area/nadezhda/outside/forest/river_forest_underground)
+"BL" = (
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock/alt,
+/area/nadezhda/outside/forest/river_forest_dark)
 "BN" = (
 /turf/simulated/mineral/planet,
 /area/nadezhda/outside/forest/river_forest_light)
@@ -2677,6 +2858,11 @@
 /obj/structure/scrap/food/large,
 /turf/simulated/floor/rock/alt,
 /area/nadezhda/outside/forest/river_forest_dark)
+"Ci" = (
+/obj/effect/damagedfloor/fire,
+/obj/item/scrap_lump,
+/turf/simulated/floor/tiled/derelict/white_small_edges,
+/area/nadezhda/outside/one_star/fo_internal)
 "Ck" = (
 /obj/item/stack/ore/strangerock,
 /turf/simulated/floor/rock/dark,
@@ -2750,6 +2936,11 @@
 	},
 /turf/simulated/floor/asteroid/grass/jungle,
 /area/nadezhda/outside/forest/river_forest_light)
+"CR" = (
+/obj/structure/scrap/food/large,
+/obj/effect/decal/cleanable/rubble,
+/turf/simulated/floor/rock,
+/area/nadezhda/outside/forest/river_forest_underground)
 "CU" = (
 /obj/random/junk,
 /turf/simulated/floor/beach/sand,
@@ -2862,6 +3053,11 @@
 /obj/structure/flora/rock/variant2,
 /turf/simulated/floor/rock,
 /area/nadezhda/outside/forest/river_forest_underground)
+"Eb" = (
+/obj/item/stack/ore,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock/grey,
+/area/nadezhda/outside/forest/river_forest_dark)
 "Ec" = (
 /obj/item/remains/deer,
 /obj/structure/invislight,
@@ -2909,6 +3105,13 @@
 /obj/item/reagent_containers/food/snacks/cherrypie,
 /turf/simulated/floor/rock/grey,
 /area/nadezhda/outside/forest/river_forest_dark)
+"Ey" = (
+/obj/structure/boulder,
+/obj/effect/decal/cleanable/rubble,
+/obj/effect/decal/cleanable/rubble,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock/dark,
+/area/nadezhda/outside/forest/river_forest_underground)
 "EC" = (
 /obj/item/stack/ore/strangerock,
 /turf/simulated/floor/rock/grey,
@@ -3204,7 +3407,6 @@
 /obj/item/gun/projectile/rivet,
 /obj/item/remains,
 /obj/item/ammo_magazine/magnum_40/hv,
-/mob/living/carbon/superior_animal/xenomorph/runner,
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star/fo_internal)
 "HC" = (
@@ -3220,8 +3422,11 @@
 /turf/simulated/floor/asteroid/dirt/mud,
 /area/nadezhda/outside/forest/plains_farm)
 "HJ" = (
-/obj/structure/bed/chair/custom/onestar/red,
-/obj/random/mob/roomba/range,
+/obj/item/scrap_lump,
+/obj/item/stack/material/wood,
+/obj/item/stack/material/wood,
+/obj/item/stack/material/wood,
+/obj/effect/damagedfloor/fire,
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star/fo_internal)
 "HK" = (
@@ -3281,6 +3486,11 @@
 /obj/item/clothing/mask/costume/halloween/demon,
 /turf/simulated/floor/asteroid/grass/jungle,
 /area/nadezhda/outside/forest/river_forest_light)
+"Ie" = (
+/obj/effect/decal/cleanable/rubble,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock/alt,
+/area/nadezhda/outside/forest/river_forest_dark)
 "If" = (
 /obj/structure/table/onestar,
 /obj/structure/salvageable/console_os{
@@ -3342,6 +3552,10 @@
 /obj/structure/undies_wardrobe,
 /turf/simulated/floor/carpet/bcarpet,
 /area/nadezhda/dungeon/outside/hunter_cabin)
+"IL" = (
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/asteroid/dirt/dark,
+/area/nadezhda/outside/forest/river_forest_underground)
 "IP" = (
 /obj/structure/table/onestar,
 /obj/structure/scrap/science/large,
@@ -3376,6 +3590,11 @@
 "Jx" = (
 /obj/item/stack/rods/random,
 /obj/item/organ/internal/bone/l_leg,
+/turf/simulated/floor/rock,
+/area/nadezhda/outside/forest/river_forest_underground)
+"JA" = (
+/obj/structure/boulder,
+/obj/structure/boulder,
 /turf/simulated/floor/rock,
 /area/nadezhda/outside/forest/river_forest_underground)
 "JC" = (
@@ -3432,6 +3651,12 @@
 "Kh" = (
 /obj/structure/boulder,
 /obj/effect/decal/cleanable/rubble,
+/turf/simulated/floor/rock/grey,
+/area/nadezhda/outside/forest/river_forest_underground)
+"Ki" = (
+/obj/effect/decal/cleanable/rubble,
+/obj/effect/decal/cleanable/rubble,
+/obj/random/cave_in_trap/low_chance,
 /turf/simulated/floor/rock/grey,
 /area/nadezhda/outside/forest/river_forest_underground)
 "Km" = (
@@ -3530,6 +3755,11 @@
 /obj/random/powercell/low_chance,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/nadezhda/outside/one_star/fo_internal)
+"Le" = (
+/obj/structure/bed/chair/custom/onestar/red,
+/obj/effect/damagedfloor/fire,
+/turf/simulated/floor/tiled/derelict/white_small_edges,
+/area/nadezhda/outside/one_star/fo_internal)
 "Lg" = (
 /obj/effect/decal/cleanable/liquid_fuel/flamethrower_fuel,
 /obj/effect/spider/stickyweb,
@@ -3540,6 +3770,17 @@
 /obj/random/pack/tech_loot/onestar,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/nadezhda/outside/one_star/fo_internal)
+"Ln" = (
+/obj/item/scrap_lump,
+/obj/effect/damagedfloor/fire,
+/obj/effect/damagedfloor/fire,
+/turf/simulated/floor/tiled/derelict/white_small_edges,
+/area/nadezhda/outside/one_star/fo_internal)
+"Lp" = (
+/obj/effect/decal/cleanable/rubble,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/asteroid/dirt/dark,
+/area/nadezhda/outside/forest/river_forest_underground)
 "Ls" = (
 /obj/item/stack/ore/diamond,
 /turf/simulated/floor/rock/dark,
@@ -3725,6 +3966,10 @@
 /obj/structure/flora/small/grassb3,
 /turf/simulated/floor/asteroid/grass/colonialjungle1,
 /area/nadezhda/outside/forest/river_forest_light)
+"MQ" = (
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/asteroid/dirt/mud,
+/area/nadezhda/outside/forest/river_forest_underground)
 "MR" = (
 /obj/item/stack/material/bone,
 /obj/effect/decal/cleanable/rubble,
@@ -3823,6 +4068,15 @@
 /obj/item/remains,
 /turf/simulated/floor/asteroid/dirt/dust,
 /area/nadezhda/outside/forest/river_forest_underground)
+"NH" = (
+/obj/effect/decal/cleanable/rubble,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/asteroid/dirt,
+/area/nadezhda/outside/forest/river_forest_dark)
+"NM" = (
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock/grey,
+/area/nadezhda/outside/forest/river_forest_underground)
 "NO" = (
 /obj/structure/flora/small/trailrockb2,
 /turf/simulated/floor/asteroid/dirt/burned,
@@ -3842,6 +4096,13 @@
 /obj/structure/table/gamblingtable,
 /obj/random/junkfood/onlypizza,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
+/area/nadezhda/outside/one_star/fo_internal)
+"NW" = (
+/obj/effect/damagedfloor/fire,
+/obj/item/stack/material/wood,
+/obj/item/stack/material/wood,
+/obj/item/stack/material/wood,
+/turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star/fo_internal)
 "NY" = (
 /obj/item/trash/tastybread,
@@ -3889,6 +4150,11 @@
 /obj/random/circuitboard,
 /turf/simulated/floor/asteroid/dirt/mud,
 /area/nadezhda/outside/forest/river_forest_lake)
+"Oy" = (
+/obj/effect/decal/cleanable/rubble,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/asteroid/dirt/mud,
+/area/nadezhda/outside/forest/river_forest_underground)
 "OB" = (
 /turf/simulated/floor/wood/wild4,
 /area/nadezhda/outside/forest/river_forest_cabin)
@@ -3902,10 +4168,20 @@
 /obj/machinery/light/floor,
 /turf/simulated/floor/wood/wild1,
 /area/nadezhda/outside/forest/river_forest_cabin)
+"OH" = (
+/obj/structure/bed/chair/custom/onestar/red,
+/obj/item/material/shard/shrapnel/scrap,
+/turf/simulated/floor/tiled/derelict/red_white_edges,
+/area/nadezhda/outside/one_star/fo_internal)
 "OJ" = (
 /obj/structure/table/marble,
 /turf/simulated/floor/asteroid/grass,
 /area/nadezhda/outside/forest/river_forest_light)
+"OK" = (
+/obj/structure/table/onestar,
+/obj/effect/damagedfloor/fire,
+/turf/simulated/floor/tiled/derelict,
+/area/nadezhda/outside/one_star/fo_internal)
 "OQ" = (
 /obj/item/oddity/common/old_knife,
 /turf/simulated/floor/rock/grey,
@@ -3945,6 +4221,11 @@
 "Pj" = (
 /turf/simulated/floor/asteroid/dirt/mud,
 /area/nadezhda/outside/forest/river_forest_underground)
+"Pl" = (
+/obj/machinery/light/floor,
+/obj/effect/damagedfloor/fire,
+/turf/simulated/floor/tiled/derelict/white_small_edges,
+/area/nadezhda/outside/one_star/fo_internal)
 "Pm" = (
 /obj/item/stack/ore/glass,
 /turf/simulated/floor/rock/alt,
@@ -4006,6 +4287,11 @@
 /obj/structure/table/rack/shelf,
 /turf/simulated/floor/tiled/derelict,
 /area/nadezhda/outside/one_star/fo_internal)
+"PW" = (
+/obj/structure/low_wall/onestar,
+/obj/item/material/shard/shrapnel/scrap,
+/turf/simulated/floor/tiled/derelict/red_white_edges,
+/area/nadezhda/outside/one_star/fo_internal)
 "Qf" = (
 /obj/structure/table/rack/shelf,
 /obj/random/medical_lowcost,
@@ -4049,6 +4335,10 @@
 /obj/item/clothing/mask/costume/animal/fox,
 /turf/simulated/floor/asteroid/grass/jungle,
 /area/nadezhda/outside/forest/river_forest_light)
+"QM" = (
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock/grey,
+/area/nadezhda/outside/forest/river_forest_dark)
 "QS" = (
 /obj/item/remains/xeno,
 /obj/effect/decal/cleanable/blood/gibs/xeno,
@@ -4069,6 +4359,11 @@
 /obj/machinery/door/unpowered/simple/wood/saloon,
 /turf/simulated/floor/asteroid/dirt,
 /area/nadezhda/outside/forest/river_forest_cabin)
+"Rd" = (
+/obj/item/stack/material/bone,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock,
+/area/nadezhda/outside/forest/river_forest_underground)
 "Re" = (
 /obj/item/organ/internal/bone/r_arm,
 /turf/simulated/floor/rock/grey,
@@ -4091,6 +4386,13 @@
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/asteroid/grass,
 /area/nadezhda/outside/forest/river_forest_light)
+"Rn" = (
+/obj/machinery/door/blast/shutters{
+	maxHealth = 15;
+	name = "damaged shutters"
+	},
+/turf/simulated/floor/tiled/derelict/white_big_edges,
+/area/nadezhda/outside/one_star/fo_internal)
 "Ro" = (
 /obj/item/stack/rods/random,
 /turf/simulated/floor/rock,
@@ -4124,6 +4426,12 @@
 /obj/item/pack/cardemon,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/nadezhda/outside/one_star/fo_internal)
+"RD" = (
+/obj/structure/boulder,
+/obj/effect/decal/cleanable/rubble,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock/grey,
+/area/nadezhda/outside/forest/river_forest_underground)
 "RE" = (
 /turf/simulated/floor/beach/sand/drywater,
 /area/nadezhda/outside/forest/river_forest_lake)
@@ -4169,6 +4477,10 @@
 /obj/machinery/power/port_gen/pacman/camp,
 /turf/simulated/floor/rock/grey,
 /area/nadezhda/outside/forest/river_forest_dark)
+"Se" = (
+/mob/living/carbon/superior_animal/robot/greyson/custodian,
+/turf/simulated/floor/tiled/derelict/white_big_edges,
+/area/nadezhda/outside/one_star/fo_internal)
 "Sf" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/item/roach_egg,
@@ -4193,6 +4505,11 @@
 "Su" = (
 /turf/simulated/floor/rock/alt,
 /area/nadezhda/outside/forest/river_forest_light)
+"Sw" = (
+/obj/effect/decal/cleanable/rubble,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock,
+/area/nadezhda/outside/forest/river_forest_underground)
 "Sx" = (
 /obj/machinery/light/floor,
 /obj/random/mob/roomba/mecha,
@@ -4311,7 +4628,7 @@
 /turf/simulated/floor/rock/alt,
 /area/nadezhda/outside/forest/river_forest_dark)
 "TI" = (
-/mob/living/carbon/superior_animal/robot/greyson/roomba/trip,
+/obj/item/scrap_lump,
 /turf/simulated/floor/tiled/derelict/white_small_edges,
 /area/nadezhda/outside/one_star/fo_internal)
 "TK" = (
@@ -4390,6 +4707,7 @@
 "Up" = (
 /obj/structure/table/onestar,
 /obj/item/oddity/secdocs,
+/obj/random/junkfood,
 /turf/simulated/floor/tiled/derelict,
 /area/nadezhda/outside/one_star/fo_internal)
 "Ut" = (
@@ -4523,6 +4841,12 @@
 "Vu" = (
 /turf/simulated/floor/asteroid/dirt/dark,
 /area/nadezhda/outside/forest/river_forest_light)
+"Vv" = (
+/obj/effect/damagedfloor/fire,
+/obj/machinery/light_construct/floor,
+/obj/item/material/shard/shrapnel/scrap,
+/turf/simulated/floor/tiled/derelict/white_small_edges,
+/area/nadezhda/outside/one_star/fo_internal)
 "Vw" = (
 /obj/item/roach_egg,
 /obj/random/circuitboard,
@@ -4536,6 +4860,7 @@
 "Vz" = (
 /obj/effect/decal/cleanable/rubble,
 /obj/effect/decal/cleanable/rubble,
+/obj/random/cave_in_trap/low_chance,
 /turf/simulated/floor/asteroid/dirt,
 /area/nadezhda/outside/forest/river_forest_underground)
 "VD" = (
@@ -4579,6 +4904,10 @@
 /obj/random/oddity_guns,
 /turf/simulated/floor/rock,
 /area/nadezhda/outside/forest/river_forest_underground)
+"VZ" = (
+/obj/effect/damagedfloor/fire,
+/turf/simulated/floor/tiled/derelict,
+/area/nadezhda/outside/one_star/fo_internal)
 "Wc" = (
 /obj/random/junk/cigbutt,
 /turf/simulated/floor/beach/sand,
@@ -4621,6 +4950,12 @@
 /obj/random/powercell,
 /turf/simulated/floor/asteroid/grass/jungle,
 /area/nadezhda/outside/forest/river_forest_light)
+"Ww" = (
+/obj/effect/decal/cleanable/rubble,
+/obj/effect/decal/cleanable/rubble,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock/dark,
+/area/nadezhda/outside/forest/river_forest_underground)
 "Wy" = (
 /obj/structure/mopbucket,
 /mob/living/carbon/superior_animal/robot/greyson/custodian,
@@ -4682,6 +5017,11 @@
 /obj/item/reagent_containers/food/snacks/cherrypie,
 /turf/simulated/floor/rock/dark,
 /area/nadezhda/outside/forest/river_forest_dark)
+"WY" = (
+/obj/structure/flora/small/lavarock1,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock,
+/area/nadezhda/outside/forest/river_forest_underground)
 "Xc" = (
 /mob/living/simple_animal/hostile/carp,
 /turf/simulated/floor/beach/water/ocean,
@@ -4699,6 +5039,16 @@
 /obj/item/clothing/mask/costume/animal/rat,
 /turf/simulated/floor/asteroid/grass/jungle,
 /area/nadezhda/outside/forest/river_forest_light)
+"Xk" = (
+/obj/effect/decal/cleanable/rubble,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/asteroid/dirt,
+/area/nadezhda/outside/forest/river_forest_underground)
+"Xm" = (
+/obj/structure/boulder,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock/grey,
+/area/nadezhda/outside/forest/river_forest_underground)
 "Xo" = (
 /obj/random/flora/jungle_tree,
 /obj/random/junk/cigbutt,
@@ -8254,14 +8604,14 @@ bn
 uh
 uh
 uh
-uh
+Af
 uh
 uh
 RR
 uh
 uh
 uh
-uh
+Af
 uh
 uh
 uh
@@ -8270,7 +8620,7 @@ uh
 uh
 uh
 uh
-uh
+Af
 WA
 qa
 qa
@@ -8447,7 +8797,7 @@ qa
 qa
 ZH
 uh
-uh
+Af
 uh
 uh
 uh
@@ -9062,7 +9412,7 @@ uh
 uh
 RR
 WA
-uh
+Af
 uh
 uh
 bn
@@ -9480,7 +9830,7 @@ uh
 WA
 WA
 WA
-uh
+Af
 uh
 uh
 uh
@@ -9654,7 +10004,7 @@ qa
 qa
 qa
 FE
-FE
+NM
 FE
 FE
 FE
@@ -9861,7 +10211,7 @@ Nq
 FE
 nP
 FE
-FE
+NM
 ZH
 qa
 qa
@@ -9891,7 +10241,7 @@ uh
 uh
 uh
 uh
-uh
+Af
 WA
 qa
 qa
@@ -10081,7 +10431,7 @@ FE
 FE
 FE
 uh
-FE
+NM
 WA
 qa
 qa
@@ -10359,7 +10709,7 @@ yp
 yp
 ME
 FE
-WA
+Ar
 WA
 WA
 WA
@@ -10580,7 +10930,7 @@ yp
 yp
 FE
 FE
-FE
+NM
 FE
 ZH
 WA
@@ -11078,7 +11428,7 @@ uh
 uh
 uh
 uh
-uh
+Af
 uh
 uh
 uh
@@ -11196,7 +11546,7 @@ ss
 ss
 ss
 yj
-WA
+Ar
 ZH
 ZH
 FE
@@ -11218,7 +11568,7 @@ WA
 WA
 WA
 WA
-ZH
+yT
 ZH
 FE
 FE
@@ -11272,7 +11622,7 @@ uh
 BK
 uh
 uh
-uh
+Af
 uh
 uh
 uh
@@ -11499,7 +11849,7 @@ uh
 WA
 qa
 WA
-uh
+Af
 FE
 Nq
 FE
@@ -11781,7 +12131,7 @@ qa
 qa
 qa
 WA
-WA
+Ar
 FE
 FE
 yp
@@ -12015,7 +12365,7 @@ yp
 yp
 yp
 FE
-ZH
+yT
 ZH
 AO
 ss
@@ -12191,7 +12541,7 @@ FE
 yp
 yp
 FE
-FE
+NM
 yj
 yj
 pS
@@ -12278,7 +12628,7 @@ qa
 qa
 qa
 uh
-uh
+Af
 WA
 WA
 qa
@@ -12374,7 +12724,7 @@ yp
 yp
 yp
 Cv
-FE
+NM
 WA
 gi
 qa
@@ -12689,7 +13039,7 @@ uh
 uh
 uh
 uh
-uh
+Af
 uh
 be
 uh
@@ -12714,7 +13064,7 @@ uh
 uh
 uh
 FE
-uh
+Af
 uh
 uh
 uh
@@ -13097,7 +13447,7 @@ uh
 uh
 uh
 uh
-uh
+Af
 WA
 WA
 WA
@@ -13216,7 +13566,7 @@ WA
 WA
 yj
 ZH
-ZH
+yT
 ZH
 yp
 yp
@@ -13242,7 +13592,7 @@ qa
 qa
 qa
 gi
-WA
+Ar
 ZH
 ZH
 FE
@@ -13314,7 +13664,7 @@ uh
 ly
 FE
 FE
-FE
+NM
 uh
 WA
 WA
@@ -13798,7 +14148,7 @@ WA
 WA
 WA
 ZH
-FE
+NM
 FE
 yp
 yp
@@ -13815,7 +14165,7 @@ ZH
 ZH
 ZH
 ZH
-ZH
+yT
 ZH
 ZH
 FE
@@ -13926,7 +14276,7 @@ WA
 ss
 yj
 uh
-uh
+Af
 uh
 uh
 uh
@@ -14102,7 +14452,7 @@ FE
 FE
 FE
 uh
-uh
+Af
 WA
 WA
 WA
@@ -14312,7 +14662,7 @@ uh
 uh
 uh
 uh
-uh
+Af
 uh
 BK
 uh
@@ -14636,7 +14986,7 @@ WA
 yj
 yj
 xI
-xI
+Ki
 ZH
 FE
 FE
@@ -14659,7 +15009,7 @@ ss
 ss
 WA
 FE
-FE
+NM
 FE
 FE
 yp
@@ -14815,7 +15165,7 @@ WA
 AO
 yj
 yj
-yj
+Ww
 xI
 xI
 yj
@@ -15025,7 +15375,7 @@ gi
 ss
 ss
 WA
-WA
+Ar
 FE
 FE
 yp
@@ -15111,7 +15461,7 @@ uh
 uh
 uh
 uh
-uh
+Af
 uh
 uh
 ZH
@@ -15235,7 +15585,7 @@ wg
 Jj
 yp
 yp
-FE
+NM
 WA
 ss
 ss
@@ -15330,9 +15680,9 @@ bn
 uh
 uh
 uh
+Af
 uh
 uh
-uh
 WA
 WA
 WA
@@ -15340,7 +15690,7 @@ WA
 WA
 WA
 uh
-uh
+Af
 uh
 uh
 uh
@@ -15651,7 +16001,7 @@ WA
 FE
 FE
 FE
-FE
+NM
 WA
 gi
 qa
@@ -15724,7 +16074,7 @@ qa
 qa
 be
 WA
-uh
+Af
 uh
 dU
 uh
@@ -15801,7 +16151,7 @@ Kh
 ZH
 FE
 uh
-Nn
+cf
 Kh
 ZH
 FE
@@ -16000,7 +16350,7 @@ qa
 Np
 Uh
 Kh
-Kh
+RD
 uh
 uh
 Nn
@@ -16052,7 +16402,7 @@ WA
 WA
 WA
 WA
-FE
+NM
 FE
 FE
 ZH
@@ -16209,7 +16559,7 @@ qa
 FE
 FE
 FE
-Kh
+RD
 ZH
 FE
 FE
@@ -16225,7 +16575,7 @@ yp
 yp
 yp
 FE
-ZH
+yT
 WA
 WA
 WA
@@ -16237,7 +16587,7 @@ AO
 WA
 WA
 ZH
-FE
+NM
 FE
 yp
 yp
@@ -16332,7 +16682,7 @@ bn
 uh
 uh
 uh
-uh
+Af
 WA
 qa
 qa
@@ -16386,7 +16736,7 @@ FE
 ZH
 Kh
 Zd
-ZH
+yT
 Kh
 Zd
 qa
@@ -16401,7 +16751,7 @@ qa
 qa
 ZH
 ZH
-Np
+Xm
 Np
 FE
 qa
@@ -16579,7 +16929,7 @@ FE
 FE
 FE
 FE
-FE
+NM
 FE
 FE
 iK
@@ -16601,7 +16951,7 @@ qa
 qa
 yR
 Kh
-SW
+Ey
 ZH
 Uh
 Np
@@ -16749,7 +17099,7 @@ FE
 nP
 FE
 uh
-FE
+NM
 FE
 FE
 FE
@@ -16990,7 +17340,7 @@ Kh
 Kh
 ZH
 xI
-Kh
+RD
 Kh
 kx
 Kh
@@ -17162,7 +17512,7 @@ uh
 uh
 WA
 WA
-fm
+ie
 fm
 fm
 eY
@@ -17385,7 +17735,7 @@ FE
 yp
 yp
 ZH
-Kh
+RD
 ah
 yp
 Ro
@@ -17401,11 +17751,11 @@ Np
 ZH
 Te
 ZH
-Kh
+RD
 ss
 qa
 ZH
-Kh
+RD
 Np
 yR
 qa
@@ -17481,7 +17831,7 @@ ss
 gi
 WA
 yj
-ZH
+yT
 ZH
 FE
 FE
@@ -17579,7 +17929,7 @@ yp
 yp
 Te
 fm
-fm
+ie
 fm
 fm
 ZH
@@ -17777,7 +18127,7 @@ Te
 fm
 fm
 Te
-yp
+fh
 yp
 Te
 qa
@@ -17795,7 +18145,7 @@ yp
 yp
 XX
 XX
-IH
+Rd
 Te
 fX
 yp
@@ -17879,7 +18229,7 @@ FE
 FE
 FE
 FE
-ZH
+yT
 ZH
 ZH
 ZH
@@ -17992,10 +18342,10 @@ yp
 yp
 yp
 Te
-yp
+fh
 fX
 yp
-yp
+fh
 yp
 IH
 fX
@@ -18003,11 +18353,11 @@ fX
 yp
 Ro
 yp
-IH
+Rd
 IH
 fm
 fm
-Np
+Xm
 FE
 Dh
 qa
@@ -18376,7 +18726,7 @@ qa
 qa
 yp
 yp
-fm
+ie
 fm
 yp
 qa
@@ -18411,7 +18761,7 @@ yp
 yp
 yp
 yp
-FE
+NM
 FE
 Dh
 qa
@@ -18603,7 +18953,7 @@ eY
 lZ
 lZ
 IH
-ZH
+yT
 ZH
 ZH
 Te
@@ -18798,7 +19148,7 @@ qa
 ZH
 Te
 Te
-Te
+Sw
 eY
 eY
 Te
@@ -19003,7 +19353,7 @@ TS
 TS
 TS
 eY
-Te
+Sw
 Kh
 Kh
 FE
@@ -19098,7 +19448,7 @@ yp
 yp
 yp
 yp
-FE
+NM
 ZH
 ZH
 ZH
@@ -19424,7 +19774,7 @@ yp
 fX
 ZH
 ZH
-FE
+NM
 qa
 qa
 qa
@@ -19508,7 +19858,7 @@ WA
 ss
 ss
 WA
-ZH
+yT
 FE
 FE
 yp
@@ -19624,7 +19974,7 @@ yp
 Te
 Te
 fX
-Kh
+RD
 ah
 ZH
 qa
@@ -19789,7 +20139,7 @@ qa
 qa
 yp
 fm
-fm
+ie
 Te
 Te
 yp
@@ -19951,7 +20301,7 @@ qa
 qa
 qa
 yp
-Te
+Sw
 Kh
 ZH
 Te
@@ -20210,7 +20560,7 @@ qa
 qa
 qa
 qa
-FE
+NM
 Te
 fX
 cu
@@ -20414,7 +20764,7 @@ qa
 qa
 FE
 Rv
-Kh
+RD
 cu
 WA
 WA
@@ -20425,12 +20775,12 @@ Kh
 ZH
 ry
 Np
-FE
+NM
 Dh
 XX
 yp
 Te
-fX
+xQ
 yp
 Jx
 Dh
@@ -20712,7 +21062,7 @@ qa
 qa
 yp
 FE
-ZH
+yT
 WA
 ss
 ss
@@ -20822,7 +21172,7 @@ ag
 cu
 ZH
 fX
-fX
+xQ
 yp
 yp
 yp
@@ -20966,7 +21316,7 @@ yp
 Te
 Te
 DL
-Xh
+Oy
 Xh
 DL
 DL
@@ -21023,7 +21373,7 @@ ZH
 Te
 TS
 Te
-OT
+xu
 gO
 XX
 XX
@@ -21039,7 +21389,7 @@ Te
 Te
 Te
 ZH
-ZH
+yT
 qa
 qa
 qa
@@ -21238,7 +21588,7 @@ Te
 Te
 Te
 fX
-fX
+xQ
 fX
 Kh
 ZH
@@ -21385,7 +21735,7 @@ qa
 qa
 yp
 Te
-fm
+ie
 Te
 yp
 qa
@@ -21574,12 +21924,12 @@ yp
 Xh
 DL
 DL
-Xh
+Oy
 Xh
 Pj
 gp
 yp
-Te
+Sw
 fm
 qa
 qa
@@ -21608,7 +21958,7 @@ Te
 yp
 yp
 fm
-fm
+ie
 yp
 yp
 qa
@@ -21640,7 +21990,7 @@ FE
 pG
 Kh
 fX
-Te
+Sw
 ZH
 ZH
 ZH
@@ -21792,7 +22142,7 @@ qa
 qa
 yp
 Te
-fm
+ie
 Te
 Te
 fm
@@ -21838,7 +22188,7 @@ kx
 Kh
 Nt
 yp
-yp
+fh
 Kh
 fX
 fX
@@ -21931,7 +22281,7 @@ WA
 WA
 WA
 WA
-WA
+Ar
 ZH
 yp
 yp
@@ -22002,7 +22352,7 @@ fm
 qa
 yp
 Te
-fm
+ie
 fm
 Te
 yp
@@ -22238,7 +22588,7 @@ FE
 FE
 FE
 FE
-FE
+NM
 Kh
 FE
 yp
@@ -22375,7 +22725,7 @@ qa
 yp
 yp
 yp
-yp
+fh
 Te
 cu
 Kh
@@ -22620,7 +22970,7 @@ qa
 qa
 qa
 fm
-fm
+ie
 fm
 fm
 qa
@@ -22989,7 +23339,7 @@ yp
 yp
 Te
 fX
-Te
+Sw
 yp
 yp
 Te
@@ -23429,7 +23779,7 @@ qa
 qa
 yp
 fm
-fm
+ie
 yp
 yp
 qa
@@ -23599,7 +23949,7 @@ yp
 qa
 qa
 Te
-Te
+Sw
 Te
 qa
 qa
@@ -24395,7 +24745,7 @@ qa
 yp
 yp
 Te
-Te
+Sw
 Kh
 Kh
 yp
@@ -24557,7 +24907,7 @@ bl
 Ij
 MD
 Ij
-Ij
+pb
 fN
 bz
 IP
@@ -24752,20 +25102,20 @@ Ij
 Ij
 Tv
 ca
-Ij
+pb
 kl
 Ak
 bl
 Ij
 MD
-Ij
-vr
+pb
+Ln
 fN
 bz
 IP
 Ij
 nv
-Ij
+pb
 nv
 Ij
 AC
@@ -24953,21 +25303,21 @@ CG
 Ij
 ca
 Mk
-Ij
-pQ
-kl
+pb
+vr
+OK
 Ak
 bl
 aS
 ca
-Ij
-Ij
+pb
+oM
 fN
 bz
 IP
 Ij
 As
-vr
+ee
 As
 Ij
 AC
@@ -25019,7 +25369,7 @@ Pj
 Pj
 Xh
 Xh
-Xh
+Oy
 Pj
 Pj
 yp
@@ -25156,20 +25506,20 @@ Ij
 ca
 FT
 Ij
-Ij
+pb
 kl
 Ak
 bl
 Ij
 pN
 Ij
-Ij
+Ci
 fN
 bz
 IP
 Rr
 Ij
-aS
+Pl
 Ij
 Ij
 AC
@@ -25448,7 +25798,7 @@ qa
 qa
 qa
 qa
-fm
+ie
 fm
 qa
 qa
@@ -25559,7 +25909,7 @@ DM
 Ij
 Dx
 ca
-sH
+TI
 Ij
 MD
 fN
@@ -25768,7 +26118,7 @@ aS
 Ij
 Ij
 ca
-Ij
+pb
 Ij
 fN
 fN
@@ -25965,19 +26315,19 @@ Ij
 XD
 Ij
 Rr
-MD
+hl
 fN
 MD
 MD
-MD
-pQ
+et
+Ci
+pb
 Ij
 Ij
 Ij
 Ij
 Ij
-Ij
-pQ
+bJ
 Ij
 Ij
 Gn
@@ -26049,7 +26399,7 @@ qa
 qa
 qa
 BU
-BU
+Lp
 BU
 dl
 It
@@ -26169,11 +26519,11 @@ Ij
 Ij
 kl
 sx
-bl
+OH
 Ij
 pN
+pb
 Ij
-sH
 Ij
 Ij
 Ij
@@ -26227,7 +26577,7 @@ qa
 Pj
 Pj
 Pj
-Xh
+Oy
 od
 od
 od
@@ -26257,7 +26607,7 @@ id
 It
 ce
 LL
-LL
+Xk
 LL
 vl
 tA
@@ -26368,11 +26718,11 @@ Ij
 Ij
 wx
 Dx
-Ij
-ys
+pb
+el
 Ak
 bl
-Ij
+nc
 pN
 Ij
 Ij
@@ -26569,9 +26919,9 @@ kl
 Ij
 KS
 jZ
-ca
-pQ
-kl
+fW
+vr
+OK
 Ak
 bl
 aS
@@ -26582,7 +26932,7 @@ Ij
 ca
 Ij
 Ij
-Ij
+pb
 Ij
 Ij
 Ij
@@ -26772,7 +27122,7 @@ Ij
 Ij
 Ij
 ca
-Ij
+pb
 CG
 Ak
 bl
@@ -26783,9 +27133,9 @@ Ij
 ca
 Ij
 Ij
-Ij
-vr
-Ij
+pb
+ee
+pb
 Ij
 Ij
 MD
@@ -26837,7 +27187,7 @@ Xh
 od
 od
 od
-Xh
+Oy
 Pj
 Pj
 Pj
@@ -26986,9 +27336,9 @@ Ij
 hH
 PR
 PR
+pK
 PR
-PR
-hH
+wr
 Ij
 MD
 fN
@@ -27189,9 +27539,9 @@ Ij
 Ij
 Ij
 Ij
-Ij
-pQ
-Ij
+pb
+ee
+pb
 MD
 fN
 VG
@@ -27229,7 +27579,7 @@ Pj
 Pj
 DL
 DL
-Xh
+Oy
 Pj
 Pj
 Pj
@@ -27262,7 +27612,7 @@ qa
 qa
 ss
 BU
-BU
+Lp
 tA
 yz
 yz
@@ -27392,7 +27742,7 @@ fN
 Ak
 Ak
 Ak
-Ak
+wu
 Ak
 fN
 fN
@@ -27580,7 +27930,7 @@ Ij
 sH
 Ij
 Ij
-cO
+Ij
 rs
 MD
 MD
@@ -27591,7 +27941,7 @@ Ij
 MD
 Ak
 OC
-Ij
+pb
 Mn
 Mn
 Mn
@@ -27780,7 +28130,7 @@ fN
 GY
 Ij
 fw
-RH
+aF
 yd
 Ij
 MD
@@ -27789,10 +28139,10 @@ MD
 qb
 Du
 MD
-Ij
-MD
-Ak
-fz
+pb
+hl
+PW
+qm
 HJ
 fe
 GH
@@ -27981,7 +28331,7 @@ VG
 fN
 XA
 Ij
-Ij
+pQ
 Ij
 CC
 Ij
@@ -27990,12 +28340,12 @@ BQ
 MD
 XA
 Du
-MD
-pQ
-MD
+VZ
+Ci
+VZ
 Ak
 Vp
-VF
+Le
 RB
 NT
 RB
@@ -28193,12 +28543,12 @@ MD
 XA
 fN
 MD
-Ij
+pb
 MD
 fN
 fz
 Ij
-Ty
+NW
 Ty
 Ty
 Ij
@@ -28234,7 +28584,7 @@ Pj
 Pj
 Pj
 Pj
-Pj
+MQ
 Xh
 DL
 DL
@@ -28392,16 +28742,16 @@ OR
 Ij
 Ij
 aS
-cO
+Ij
 Cu
 MD
 Ij
 MD
 Ij
 Ij
-aS
+Vv
 vr
-Ij
+pb
 Ij
 aS
 Vp
@@ -28602,7 +28952,7 @@ MD
 fN
 fz
 Ij
-Mn
+fn
 Mn
 Mn
 Ij
@@ -28643,7 +28993,7 @@ DL
 DL
 DL
 Xh
-Xh
+Oy
 Xh
 Xh
 DL
@@ -28658,7 +29008,7 @@ yp
 yp
 yp
 yp
-Te
+Sw
 Kh
 Kh
 qa
@@ -28992,9 +29342,9 @@ fN
 GY
 Ij
 If
-RH
+aF
 yd
-Ij
+pQ
 MD
 BQ
 MD
@@ -29091,7 +29441,7 @@ ar
 tA
 vl
 LL
-LL
+Xk
 BU
 BU
 dl
@@ -29192,7 +29542,7 @@ qa
 VG
 fN
 GY
-cO
+Ij
 sH
 Ij
 Ij
@@ -29459,7 +29809,7 @@ od
 yp
 yp
 ZH
-ZH
+yT
 ZH
 Kh
 Kh
@@ -29467,7 +29817,7 @@ ZH
 ZH
 eY
 cu
-xI
+Ki
 eY
 jn
 qa
@@ -29688,7 +30038,7 @@ tA
 yz
 kt
 AH
-BU
+Lp
 BU
 qa
 qa
@@ -30213,7 +30563,7 @@ MD
 pE
 Ak
 MD
-Ij
+pb
 MD
 Ak
 ZR
@@ -30414,14 +30764,14 @@ pN
 MD
 MD
 Ak
-MD
-pQ
-MD
+VZ
+vr
+VZ
 Ak
 ZR
 Ij
 ZR
-Ij
+pb
 ZR
 Ij
 ZR
@@ -30617,14 +30967,14 @@ MD
 MD
 oi
 Ij
+pb
 Ij
 Ij
 Ij
 Ij
-Ij
-Ij
-pQ
-Ij
+pb
+vr
+pb
 Ij
 Ij
 fN
@@ -30674,7 +31024,7 @@ Xh
 Kh
 Te
 Te
-Te
+Sw
 Te
 Te
 cu
@@ -30819,13 +31169,13 @@ Ij
 Ij
 qG
 Ij
-Ij
+pb
 Ij
 aS
 Ij
 Ij
 Tc
-Ij
+pb
 Tc
 ca
 aS
@@ -30860,7 +31210,7 @@ yp
 yp
 yp
 Te
-Te
+Sw
 Te
 yp
 yp
@@ -31020,9 +31370,9 @@ MD
 MD
 MD
 oi
-Ij
-pQ
-Ij
+pb
+vr
+pb
 Ij
 Ij
 Ij
@@ -31216,14 +31566,14 @@ fN
 MD
 Ij
 XK
-fW
+tQ
 Ij
 MD
 MD
 MD
 Ak
 MD
-Ij
+pb
 MD
 Ak
 ZR
@@ -32423,7 +32773,7 @@ Ij
 Ij
 Ij
 Ij
-pQ
+TI
 ca
 Ij
 Ij
@@ -32492,7 +32842,7 @@ qa
 yp
 yp
 yp
-Te
+Sw
 Kh
 Kh
 Kh
@@ -32630,7 +32980,7 @@ Ij
 Ij
 Ij
 Ij
-pb
+TI
 Ij
 Ij
 Ij
@@ -32738,7 +33088,7 @@ qa
 qa
 qa
 qa
-tA
+IL
 qa
 qa
 qa
@@ -33041,7 +33391,7 @@ oi
 bl
 cM
 Ij
-pb
+TI
 Ij
 Ak
 Lm
@@ -33303,7 +33653,7 @@ ZH
 Kh
 cu
 Kh
-ZH
+yT
 yp
 yp
 qa
@@ -33446,7 +33796,7 @@ oi
 cM
 Ij
 Ij
-Ij
+pb
 Ak
 oi
 oi
@@ -33635,7 +33985,7 @@ Ak
 Ak
 cM
 Ij
-Ij
+pb
 Ij
 Ak
 Ak
@@ -33647,8 +33997,8 @@ Ak
 Ak
 cM
 Ij
-Ij
-TI
+pb
+vr
 Ak
 Ak
 Ak
@@ -33825,20 +34175,20 @@ qa
 VG
 fN
 Ij
+Ij
+ca
+Ak
+oi
+oi
+oi
+Ak
+Yr
+qD
+oi
+cM
 pb
-ca
-Ak
-oi
-oi
-oi
-Ak
-Yr
-qD
-oi
-cM
-Ij
-TI
-Ij
+vr
+pb
 Ak
 oi
 oi
@@ -33850,7 +34200,7 @@ oi
 cM
 ca
 Ij
-Ij
+pb
 Ak
 oi
 oi
@@ -34039,7 +34389,7 @@ fL
 oi
 Ij
 Ij
-Ij
+fi
 ca
 oi
 oi
@@ -34240,9 +34590,9 @@ Lm
 oi
 oi
 cM
-Ij
 pb
-Ij
+vr
+pb
 Ak
 qD
 Lm
@@ -34443,7 +34793,7 @@ Ak
 Ak
 cM
 Oq
-Ij
+pb
 Ij
 Ak
 Ak
@@ -34645,7 +34995,7 @@ oi
 oi
 cM
 Ij
-pQ
+Ij
 Ij
 Ak
 Yr
@@ -34760,7 +35110,7 @@ qa
 kv
 NS
 Et
-Pj
+BU
 qa
 qa
 qa
@@ -34961,8 +35311,8 @@ qa
 qa
 qa
 Pj
-Pj
-Pj
+BU
+BU
 qa
 qa
 qa
@@ -35049,7 +35399,7 @@ fz
 oi
 cM
 Ij
-Ij
+TI
 Ij
 Ak
 oi
@@ -35162,8 +35512,8 @@ qa
 qa
 qa
 qa
-Pj
-Pj
+BU
+BU
 qa
 qa
 qa
@@ -35263,7 +35613,7 @@ Ak
 Ak
 cM
 Ij
-Ij
+pb
 Ij
 Ak
 Ak
@@ -35322,7 +35672,7 @@ qa
 qa
 yp
 Te
-ZH
+yT
 ZH
 xI
 xI
@@ -35365,9 +35715,9 @@ qa
 qa
 qa
 qa
-yp
-yp
-yp
+BU
+BU
+Te
 yp
 qa
 qa
@@ -35453,7 +35803,7 @@ Yr
 oi
 cM
 Ij
-pQ
+Ij
 Ij
 Ak
 oi
@@ -35464,9 +35814,9 @@ Yr
 Yr
 oi
 cM
-Ij
-ee
-Ij
+pb
+vr
+pb
 Ak
 oi
 oi
@@ -35530,8 +35880,8 @@ xI
 cu
 xI
 eY
+Sw
 Te
-Te
 yp
 yp
 qa
@@ -35567,7 +35917,7 @@ qa
 qa
 qa
 yp
-yp
+BU
 tA
 tA
 yp
@@ -35667,7 +36017,7 @@ aC
 oi
 Ij
 Ij
-Ij
+pb
 Ij
 oi
 oi
@@ -35771,7 +36121,7 @@ yp
 yp
 tA
 tA
-BU
+Lp
 BU
 BU
 BU
@@ -35977,7 +36327,7 @@ BU
 id
 id
 id
-BU
+Lp
 BU
 tA
 tA
@@ -36109,7 +36459,7 @@ jH
 qa
 yp
 yp
-Te
+Sw
 eY
 fX
 fX
@@ -36186,7 +36536,7 @@ BU
 tA
 tA
 BU
-BU
+Lp
 BU
 yp
 yp
@@ -36447,7 +36797,7 @@ fN
 bX
 ZT
 Tn
-ZT
+Se
 ld
 fN
 Ij
@@ -37055,8 +37405,8 @@ TO
 aS
 sj
 ZT
-ZT
-ca
+Rn
+fW
 ca
 Ij
 Ak
@@ -37127,7 +37477,7 @@ Pj
 Pj
 Pj
 Pj
-Xh
+Oy
 DL
 Xh
 Pj
@@ -37181,7 +37531,7 @@ qa
 qa
 yp
 yp
-BU
+Lp
 id
 tS
 Rz
@@ -37258,32 +37608,32 @@ Ij
 sj
 ZT
 fN
-ee
-ca
-Ij
-oi
-oi
-aC
-Lm
-Ak
-Lm
-iC
-oi
-Ij
-Ij
-Ij
-Ij
-oi
-oi
-aC
-Lm
-Ak
-Lm
-iC
-oi
-Ij
-Ij
 vr
+jS
+Ij
+oi
+oi
+aC
+Lm
+Ak
+Lm
+iC
+oi
+Ij
+Ij
+Ij
+Ij
+oi
+oi
+aC
+Lm
+Ak
+Lm
+iC
+oi
+Ij
+Ij
+Ij
 Ij
 oi
 oi
@@ -37460,9 +37810,9 @@ Vr
 Ij
 ld
 fN
-ca
+jS
 vr
-Ij
+pb
 Ak
 fz
 Yr
@@ -37473,7 +37823,7 @@ oi
 oi
 cM
 Ij
-pb
+Ij
 Ij
 Ak
 fz
@@ -37659,11 +38009,11 @@ fN
 lG
 ZT
 RF
-ZT
+Se
 ld
 fN
 ca
-Ij
+pb
 Ij
 Ak
 Ak
@@ -37736,7 +38086,7 @@ Pj
 Pj
 Pj
 Pj
-Xh
+Oy
 WJ
 qa
 qa
@@ -37805,11 +38155,11 @@ GR
 Gs
 tS
 id
-BU
+Lp
 Ka
 yp
 yp
-yp
+Te
 sC
 sC
 sC
@@ -37951,7 +38301,7 @@ yp
 yp
 yp
 yp
-Te
+Sw
 ZH
 Kh
 Np
@@ -38010,8 +38360,8 @@ id
 id
 Te
 yp
-yp
-yp
+Te
+Te
 sC
 sC
 sC
@@ -38079,7 +38429,7 @@ iC
 oi
 Ij
 Ij
-vr
+Ij
 Ij
 oi
 oi
@@ -38090,7 +38440,7 @@ qD
 iC
 oi
 Ij
-Ij
+pb
 Ij
 Ij
 oi
@@ -38212,13 +38562,13 @@ id
 id
 BU
 yp
-yp
-yp
+Te
+Te
 sC
 sC
 xK
-yp
-yp
+Te
+Te
 FE
 FE
 uh
@@ -38242,7 +38592,7 @@ yp
 xX
 xX
 yp
-FE
+NM
 Nq
 FE
 sC
@@ -38292,8 +38642,8 @@ Yr
 Lm
 oi
 cM
-pQ
-Ij
+vr
+pb
 Ij
 Ak
 oi
@@ -38413,15 +38763,15 @@ tS
 id
 id
 BU
-yp
-yp
-yp
-yp
-yp
-yp
-yp
-yp
-FE
+Te
+Sw
+JA
+fm
+fm
+fm
+fm
+Te
+ZH
 FE
 uh
 JE
@@ -38494,7 +38844,7 @@ Ak
 Ak
 Ak
 cM
-Ij
+pb
 Ij
 Ij
 Ak
@@ -38616,20 +38966,20 @@ id
 id
 BU
 Jj
-yp
-yp
+Te
+Te
 xK
-yp
-wg
-yp
-yp
-FE
+fm
+Vx
+ie
+fm
+ZH
 Dy
 uh
 uh
 HK
 FE
-FE
+NM
 FE
 FE
 Wm
@@ -38640,7 +38990,7 @@ yp
 xK
 yp
 yp
-wg
+WY
 yp
 xX
 xX
@@ -38819,13 +39169,13 @@ BU
 tA
 yp
 yp
-yp
-yp
-yp
-yp
-yp
-yp
-FE
+Te
+fm
+ie
+fm
+fm
+Te
+ZH
 FE
 uh
 FE
@@ -38950,7 +39300,7 @@ yp
 qa
 fX
 yp
-ZH
+yT
 ZH
 Kh
 Kh
@@ -38999,7 +39349,7 @@ qa
 qa
 yp
 yp
-BU
+Lp
 id
 tS
 wE
@@ -39021,12 +39371,12 @@ BU
 yp
 yp
 yp
-yp
-yp
-yp
-yp
-yp
-wg
+Te
+fm
+fm
+fm
+Te
+sg
 FE
 FE
 FE
@@ -39291,7 +39641,7 @@ Ak
 Ak
 cM
 ca
-Ij
+pb
 Ij
 Ak
 Ak
@@ -39366,7 +39716,7 @@ yp
 yp
 yp
 yp
-Te
+Sw
 Te
 qa
 qa
@@ -39481,7 +39831,7 @@ qa
 VG
 fN
 Ij
-pb
+TI
 Ij
 Ak
 fz
@@ -39492,7 +39842,7 @@ Yr
 oi
 oi
 cM
-Ij
+pb
 vr
 pb
 Ak
@@ -39505,7 +39855,7 @@ oi
 oi
 cM
 Ij
-Ij
+pb
 Ij
 Ak
 fz
@@ -39624,7 +39974,7 @@ id
 id
 BU
 BU
-yp
+Te
 qa
 qa
 qa
@@ -39643,7 +39993,7 @@ fm
 yp
 yp
 yp
-yp
+fh
 yp
 wg
 yp
@@ -39695,7 +40045,7 @@ aC
 oi
 Ij
 Ij
-Ij
+pb
 Ij
 oi
 oi
@@ -39706,9 +40056,9 @@ Lm
 aC
 oi
 Ij
-ca
-pQ
-Ij
+fW
+vr
+pb
 oi
 oi
 qG
@@ -39747,7 +40097,7 @@ yp
 Kh
 Kh
 Kh
-ZH
+yT
 Te
 Te
 qa
@@ -39812,14 +40162,14 @@ Te
 Gi
 BU
 BU
-BU
+Lp
 id
 id
 tA
 tA
 tA
 BU
-BU
+Lp
 BU
 id
 id
@@ -39909,7 +40259,7 @@ qD
 oi
 cM
 Ij
-Ij
+pb
 Ij
 Ak
 qb
@@ -40061,7 +40411,7 @@ NS
 NS
 fm
 Vx
-yp
+fh
 yp
 fS
 sC
@@ -40099,8 +40449,8 @@ Ak
 Ak
 cM
 Ij
-ee
 Ij
+TI
 Ak
 Ak
 Ak
@@ -40430,7 +40780,7 @@ dl
 BU
 BU
 BU
-BU
+Lp
 yp
 yp
 yp
@@ -40464,9 +40814,9 @@ Pj
 NS
 NS
 Pj
-yp
-FE
-FE
+Te
+ZH
+ZH
 fS
 sC
 sC
@@ -40499,7 +40849,7 @@ Ij
 Ij
 Ij
 Ij
-pb
+TI
 Ij
 Ij
 Ij
@@ -40574,7 +40924,7 @@ cu
 Kh
 Kh
 Te
-Te
+Sw
 yp
 Np
 Kh
@@ -40665,11 +41015,11 @@ yp
 Pj
 NS
 NS
-yp
-yp
+Te
+eY
 Np
-FE
-fS
+ZH
+cO
 sC
 sC
 sC
@@ -40705,7 +41055,7 @@ fN
 fN
 fN
 fN
-aS
+vL
 fN
 fN
 fN
@@ -40866,12 +41216,12 @@ yp
 yp
 yp
 yp
-Pj
-yp
+Xh
+Sw
 fm
 Np
-FE
-fS
+Np
+cO
 sC
 sC
 sC
@@ -40907,7 +41257,7 @@ fN
 fN
 fN
 fN
-Ij
+Cu
 fN
 fN
 fN
@@ -40973,7 +41323,7 @@ Kh
 qa
 qa
 qa
-Te
+Sw
 eY
 Kh
 Kh
@@ -41067,11 +41417,11 @@ yp
 yp
 dF
 yp
-yp
-yp
+Te
+fX
 fm
 fm
-yp
+Sw
 yc
 sC
 sC
@@ -41270,11 +41620,11 @@ xX
 xX
 xX
 sC
-DW
-yp
-yp
-yp
-xX
+Bf
+Te
+Te
+Te
+CR
 sC
 sC
 sC
@@ -41472,8 +41822,8 @@ xX
 xX
 sC
 sC
-sC
-xX
+iw
+CR
 ta
 yp
 xX
@@ -41573,7 +41923,7 @@ qa
 yp
 Te
 Xh
-Xh
+Oy
 Xh
 Xh
 yp
@@ -41767,7 +42117,7 @@ qa
 qa
 yp
 FE
-ZH
+yT
 Kh
 Kh
 Kh
@@ -42390,7 +42740,7 @@ Xh
 Xh
 DL
 WJ
-JD
+lT
 JD
 JD
 Xh
@@ -42978,7 +43328,7 @@ qa
 ss
 Te
 yp
-Te
+Sw
 yp
 FE
 Np
@@ -43188,7 +43538,7 @@ Te
 yp
 Te
 Te
-ZH
+yT
 Kh
 Kh
 Kh
@@ -43395,7 +43745,7 @@ Kh
 Kh
 Kh
 yp
-Xh
+Oy
 WJ
 DL
 DL
@@ -44006,7 +44356,7 @@ TS
 fX
 fX
 Te
-Te
+Sw
 Te
 Te
 yp
@@ -47945,7 +48295,7 @@ yg
 WM
 WM
 sZ
-Va
+oF
 Dc
 WM
 WM
@@ -48690,7 +49040,7 @@ Ca
 Ca
 Dc
 Dc
-Mv
+Ie
 Ca
 Dc
 Jf
@@ -48720,7 +49070,7 @@ Jf
 mk
 Jf
 Mv
-Mv
+Ie
 Mv
 Mv
 WH
@@ -48886,7 +49236,7 @@ yg
 WM
 tI
 mk
-Dc
+QM
 Dc
 Dc
 Dc
@@ -48906,7 +49256,7 @@ Jf
 WM
 Zr
 Dc
-mk
+dX
 Jf
 Jf
 Zr
@@ -49155,7 +49505,7 @@ BN
 Mb
 yg
 WM
-Dc
+QM
 Dc
 Ca
 Dc
@@ -49163,7 +49513,7 @@ rD
 ZM
 Gz
 Zr
-Dc
+QM
 Dc
 Dc
 VP
@@ -49371,7 +49721,7 @@ Zr
 Zr
 Dc
 Jf
-Dc
+QM
 Jf
 WM
 yg
@@ -49461,13 +49811,13 @@ WM
 WM
 WM
 WM
-Pv
+NH
 Pv
 Wh
 Pv
 WM
 WM
-kI
+kH
 WM
 WM
 kI
@@ -49765,7 +50115,7 @@ Dc
 Ca
 Dc
 Jf
-vT
+Eb
 WM
 WM
 kj
@@ -49877,7 +50227,7 @@ WM
 qk
 Zr
 Zr
-Dc
+QM
 Zr
 tI
 Zr
@@ -49900,7 +50250,7 @@ BY
 Ov
 UG
 Dc
-Mv
+Ie
 rp
 Jf
 Jf
@@ -49909,7 +50259,7 @@ Dc
 Dc
 Dc
 Jf
-Jf
+BL
 Jf
 WM
 Jf
@@ -49922,7 +50272,7 @@ Zr
 Dc
 Dc
 Dc
-Dc
+QM
 Jf
 Zr
 Dc
@@ -49930,7 +50280,7 @@ Dc
 Zr
 Jf
 Mv
-Mv
+Ie
 Mv
 Jf
 WM
@@ -50508,7 +50858,7 @@ WM
 WM
 Zr
 Jf
-Jf
+BL
 YA
 WM
 WM
@@ -50577,7 +50927,7 @@ Dc
 Jf
 pn
 rD
-Zr
+um
 Dc
 Jf
 Jf
@@ -51096,7 +51446,7 @@ nt
 Dc
 tI
 yn
-Dc
+QM
 Dc
 qk
 kI
@@ -51178,7 +51528,7 @@ rD
 Ck
 Zr
 Dc
-Dc
+QM
 xh
 Dc
 Dc
@@ -51387,7 +51737,7 @@ Dc
 Dc
 LJ
 Dc
-Dc
+QM
 vT
 yg
 yg
@@ -52099,7 +52449,7 @@ Pv
 kI
 kI
 qk
-qk
+mq
 qk
 qk
 Zr

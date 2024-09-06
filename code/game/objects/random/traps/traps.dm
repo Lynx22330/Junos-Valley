@@ -79,7 +79,7 @@
 
 /obj/random/cave_in_trap/low_chance
 	icon_state = "trap-red-low"
-	spawn_nothing_percentage = 90 // 10% chance due to being a new trap and for how many there
+	spawn_nothing_percentage = 90 // 10% chance due to being a new trap and for how many there are!
 
 /obj/random/cave_in_trap/item_to_spawn()
 	return (/obj/item/cave_in_trap/ominousrockpile)

@@ -1033,6 +1033,10 @@
 	},
 /turf/simulated/floor/plating/under,
 /area/nadezhda/outside/mountainsolars)
+"fz" = (
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock,
+/area/nadezhda/outside/mountainsolars)
 "fD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/warningnew/radiation,
@@ -1774,6 +1778,10 @@
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/asteroid/grass,
 /area/nadezhda/outside/mountainsolars)
+"vq" = (
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/asteroid/dirt/dark,
+/area/nadezhda/outside/mountainsolars)
 "vR" = (
 /obj/machinery/photocopier,
 /turf/simulated/floor/carpet/oracarpet,
@@ -1896,6 +1904,11 @@
 	},
 /turf/simulated/floor/asteroid/grass,
 /area/nadezhda/outside/mountainsolars)
+"xW" = (
+/obj/effect/decal/cleanable/rubble,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/asteroid/grass,
+/area/nadezhda/outside/mountainsolars)
 "yc" = (
 /obj/random/scrap/sparse_even/low_chance,
 /turf/simulated/floor/asteroid/dirt,
@@ -1954,6 +1967,12 @@
 "zi" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil/invisible,
 /turf/simulated/floor/asteroid/grass,
+/area/nadezhda/outside/mountainsolars)
+"zw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/boulder,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/rock,
 /area/nadezhda/outside/mountainsolars)
 "zG" = (
 /obj/effect/floor_decal/industrial/warning/full,
@@ -2222,6 +2241,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/steel,
 /area/nadezhda/engineering/dorm)
+"EK" = (
+/obj/effect/decal/cleanable/rubble,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/fixed/hydrotile,
+/area/nadezhda/outside/mountainsolars)
 "EN" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/decal/cleanable/dirt,
@@ -2668,6 +2692,12 @@
 /obj/random/scrap/moderate_weighted,
 /turf/simulated/floor/asteroid/grass,
 /area/nadezhda/outside/mountainsolars)
+"Ob" = (
+/obj/structure/boulder,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/fixed/hydrotile,
+/area/nadezhda/outside/mountainsolars)
 "Od" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/industrial/warning{
@@ -2739,6 +2769,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/boulder,
+/obj/random/cave_in_trap/low_chance,
 /turf/simulated/floor/asteroid/dirt,
 /area/nadezhda/outside/mountainsolars)
 "PQ" = (
@@ -3033,6 +3064,7 @@
 /area/nadezhda/outside/mountainsolars)
 "UF" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/random/cave_in_trap/low_chance,
 /turf/simulated/floor/asteroid/dirt,
 /area/nadezhda/outside/mountainsolars)
 "UN" = (
@@ -3206,6 +3238,11 @@
 	},
 /turf/simulated/floor/fixed/hydrotile,
 /area/nadezhda/outside/mountainsolars)
+"XB" = (
+/obj/structure/boulder,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/asteroid/dirt/dark,
+/area/nadezhda/outside/mountainsolars)
 "XQ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
@@ -3266,6 +3303,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/steel,
 /area/nadezhda/engineering/dorm)
+"Ze" = (
+/obj/structure/boulder,
+/obj/random/cave_in_trap/low_chance,
+/turf/simulated/floor/asteroid/dirt,
+/area/nadezhda/outside/mountainsolars)
 "Zh" = (
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
 	dir = 4
@@ -10475,7 +10517,7 @@ yc
 dM
 dM
 MC
-MC
+Ze
 MC
 dM
 dM
@@ -10669,7 +10711,7 @@ ac
 ac
 Zm
 mI
-mI
+fz
 ql
 ym
 oP
@@ -10884,7 +10926,7 @@ dM
 dM
 dM
 Rm
-Rm
+XB
 Bi
 Ri
 dM
@@ -10981,14 +11023,14 @@ wK
 iZ
 iZ
 wK
-BP
+Ob
 dM
 dM
 dM
 dM
 Rm
 Ft
-nx
+zw
 Tq
 dM
 dM
@@ -11599,7 +11641,7 @@ JU
 Kf
 dM
 aa
-Dt
+EK
 Uu
 VZ
 dM
@@ -11697,7 +11739,7 @@ al
 al
 al
 WS
-WS
+xW
 JU
 JU
 aa
@@ -12111,7 +12153,7 @@ WS
 aa
 Dt
 OJ
-Dt
+EK
 dM
 dM
 aa
@@ -12619,7 +12661,7 @@ aa
 aa
 aa
 aa
-xb
+vq
 wK
 wK
 iZ
