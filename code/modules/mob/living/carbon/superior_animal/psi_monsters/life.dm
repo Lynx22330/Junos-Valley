@@ -41,9 +41,9 @@
 /mob/living/carbon/superior_animal/psi_monster/dreaming_king/Life()
 	. = ..()
 	//Used for teleports, we grab it here to not repeat same code
-	var/turf/simulated/floor/target
+/* 	var/turf/simulated/floor/target
 	var/list/validtargets = list()
-/* 	if(health <= (maxHealth * 0.66) && first_teleport == FALSE)
+	if(health <= (maxHealth * 0.66) && first_teleport == FALSE)
 		if(GLOB.deepmaints_data_bool["king_teleporting"])
 
 			for(var/area/A in world)
