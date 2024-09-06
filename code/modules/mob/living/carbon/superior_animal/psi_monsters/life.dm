@@ -43,14 +43,14 @@
 	//Used for teleports, we grab it here to not repeat same code
 	var/turf/simulated/floor/target
 	var/list/validtargets = list()
-	if(health <= (maxHealth * 0.66) && first_teleport == FALSE)
+/* 	if(health <= (maxHealth * 0.66) && first_teleport == FALSE)
 		if(GLOB.deepmaints_data_bool["king_teleporting"])
 
 			for(var/area/A in world)
 				if(istype(A, /area/deepmaint))
 					for(var/turf/simulated/floor/T in A)
 						validtargets += T
-			target = pick(validtargets)
+			target = pick(validtargets) */
 
 		do_sparks(1, 0, src.loc)
 		new /obj/effect/gibspawner/human(src.loc)
@@ -66,33 +66,33 @@
 		new /obj/effect/gibspawner/human(src.loc)
 		new /obj/effect/gibspawner/human(src.loc)
 		if(dreaming_king)
-			src.visible_message(SPAN_DANGER("<b><font size='3px'>\the [src] appears from thin air in a shower of gore, wounded and screaming in rage as his court answers his call!</font><b>"))
+			src.visible_message(SPAN_DANGER("<b><font size='3px'>\the [src] shrieks in horror as a shower of gore splatters everywhere, wounded and screaming in rage as his court answers his call from amongst the shadows!</font><b>"))
 			new /mob/living/carbon/superior_animal/psi_monster/mind_gazer/viscount(src.loc)
 			new /mob/living/carbon/superior_animal/psi_monster/pus_maggot/ash_wendigo/duke(src.loc)
 			new /mob/living/carbon/superior_animal/psi_monster/cerebral_crusher/marshal(src.loc)
 		else if (hound_of_the_crown)
-			src.visible_message(SPAN_DANGER("<b><font size='3px'>\the [src] appears from thin air in a shower of gore, wounded and screaming in rage as its pack flocks to its side!</font><b>"))
+			src.visible_message(SPAN_DANGER("<b><font size='3px'>\the [src] shrieks in horror as a shower of gore splatters everywhere, wounded and screaming in rage as its pack flocks to its side from out of the shadows!</font><b>"))
 			new /mob/living/carbon/superior_animal/psi_monster/licker/pack(src.loc)
 			new /mob/living/carbon/superior_animal/psi_monster/licker/pack(src.loc)
 			new /mob/living/carbon/superior_animal/psi_monster/licker/pack(src.loc)
 			new /mob/living/carbon/superior_animal/psi_monster/licker/pack(src.loc)
 			new /mob/living/carbon/superior_animal/psi_monster/licker/pack(src.loc)
 		else
-			src.visible_message(SPAN_DANGER("<b><font size='3px'>\the [src] appears from thin air in a shower of gore, wounded and screaming in rage!</font><b>"))
+			src.visible_message(SPAN_DANGER("<b><font size='3px'>\the [src] shrieks in horror as a shower of gore splatters everywhere, wounded and screaming in rage!</font><b>"))
 		playsound(src.loc, 'sound/hallucinations/hell_screech.ogg', 75, 1, 8, 8)
 		spawn(2)
 		playsound(src.loc, 'sound/hallucinations/hell_screech.ogg', 75, 1, 8, 8)
 
-		first_teleport = TRUE
+		//first_teleport = TRUE
 
-	if(health <= (maxHealth * 0.33) && second_teleport == FALSE)
+/* 	if(health <= (maxHealth * 0.33) && second_teleport == FALSE)
 		if(GLOB.deepmaints_data_bool["king_teleporting"])
 
 			for(var/area/A in world)
 				if(istype(A, /area/deepmaint))
 					for(var/turf/simulated/floor/T in A)
 						validtargets += T
-			target = pick(validtargets)
+			target = pick(validtargets) */
 
 		do_sparks(1, 0, src.loc)
 		new /obj/effect/gibspawner/human(src.loc)
@@ -108,12 +108,12 @@
 		new /obj/effect/gibspawner/human(src.loc)
 		new /obj/effect/gibspawner/human(src.loc)
 		if(dreaming_king)
-			src.visible_message(SPAN_DANGER("<b><font size='3px'>\the [src] appears from thin air in a shower of gore, heavily wounded and howling in agony as his court answers his call!</font><b>"))
+			src.visible_message(SPAN_DANGER("<b><font size='3px'>\the [src] appears to be absolutely battered, body gored and bled, yet with all of this damage they manage to howl in agony, his court answering his call from the shadows once more!</font><b>"))
 			new /mob/living/carbon/superior_animal/psi_monster/flesh_behemoth/baron(src.loc)
 			new /mob/living/carbon/superior_animal/psi_monster/wasonce/crimson_jelly/jester(src.loc)
 			new /mob/living/carbon/superior_animal/psi_monster/wasonce/crimson_jelly/pitch_horror/steward(src.loc)
 		else if (hound_of_the_crown)
-			src.visible_message(SPAN_DANGER("<b><font size='3px'>\the [src] appears from thin air in a shower of gore, heavily wounded and howling in agony as its pack flocks to its side!</font><b>"))
+			src.visible_message(SPAN_DANGER("<b><font size='3px'>\the [src] appears to be absolutely battered, body gored and bled, yet with all of this damage they manage to howl in agony, its pack flocks to its side once more from the shadows!</font><b>"))
 			new /mob/living/carbon/superior_animal/psi_monster/licker/pack(src.loc)
 			new /mob/living/carbon/superior_animal/psi_monster/licker/pack(src.loc)
 			new /mob/living/carbon/superior_animal/psi_monster/licker/pack(src.loc)
@@ -123,12 +123,12 @@
 			new /mob/living/carbon/superior_animal/psi_monster/licker/pack(src.loc)
 			new /mob/living/carbon/superior_animal/psi_monster/licker/pack(src.loc)
 		else
-			src.visible_message(SPAN_DANGER("<b><font size='3px'>\the [src] appears from thin air in a shower of gore, wounded and screaming in rage!</font><b>"))
+			src.visible_message(SPAN_DANGER("<b><font size='3px'>\the [src] appears to be absolutely battered, body gored and bled, yet with all of this damage they manage to howl in agony!</font><b>"))
 		playsound(src.loc, 'sound/hallucinations/hell_screech.ogg', 75, 1, 8, 8)
 		spawn(2)
 		playsound(src.loc, 'sound/hallucinations/hell_screech.ogg', 75, 1, 8, 8)
 
-		second_teleport = TRUE
+		//second_teleport = TRUE
 
 /mob/living/carbon/superior_animal/psi_monster/handle_breath(datum/gas_mixture/breath) //we dont breath, were not even real
 	return

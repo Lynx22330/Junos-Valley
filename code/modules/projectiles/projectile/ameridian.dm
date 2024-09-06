@@ -3,7 +3,7 @@
 	icon_state = "xray"
 	mob_hit_sound = list('sound/effects/gore/sear.ogg')
 	hitsound_wall = 'sound/weapons/guns/misc/laser_searwall.ogg'
-	damage_types = list(BURN  = 40) // 20 more damage than the Cog
+	damage_types = list(BURN  = 30) // 10 more damage than the Cog
 	irradiate = 15
 	armor_divisor = 1.15 //less AP than the Cog
 	check_armour = ARMOR_ENERGY
@@ -18,8 +18,8 @@
 
 /obj/item/projectile/ameridian_shard
 	name = "ameridian shard"
-	damage_types = list(BRUTE = 30) //Were a bit better then 10mm to stay competitive
-	irradiate = 10
+	damage_types = list(BRUTE = 25)
+	irradiate = 6
 	armor_divisor = 1.15
 	check_armour = ARMOR_BULLET
 	embed = TRUE
