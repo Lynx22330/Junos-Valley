@@ -83,7 +83,7 @@
 		spawn(2)
 		playsound(src.loc, 'sound/hallucinations/hell_screech.ogg', 75, 1, 8, 8)
 
-		//first_teleport = TRUE
+		first_teleport = TRUE
 
 	if(health <= (maxHealth * 0.33) && second_teleport == FALSE)
 		//if(GLOB.deepmaints_data_bool["king_teleporting"])
@@ -128,7 +128,7 @@
 		spawn(2)
 		playsound(src.loc, 'sound/hallucinations/hell_screech.ogg', 75, 1, 8, 8)
 
-		//second_teleport = TRUE
+		second_teleport = TRUE
 
 /mob/living/carbon/superior_animal/psi_monster/handle_breath(datum/gas_mixture/breath) //we dont breath, were not even real
 	return
