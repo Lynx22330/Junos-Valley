@@ -9,10 +9,10 @@
 	health = 250
 	attack_sound = list('sound/xenomorph/alien_footstep_charge1.ogg', 'sound/xenomorph/alien_footstep_charge2.ogg', 'sound/xenomorph/alien_footstep_charge3.ogg')
 
-	armor = list(melee = 8, bullet = 8, energy = 3, bomb = 30, bio = 100, rad = 100)
+	armor = list(melee = 5, bullet = 5, energy = 3, bomb = 30, bio = 100, rad = 100)
 
-	melee_damage_lower = 30
-	melee_damage_upper = 35
+	melee_damage_lower = 15
+	melee_damage_upper = 20
 
 	allowed_stat_modifiers = list(
 		/datum/stat_modifier/mob/living/carbon/superior_animal/padded/xeno = 36,
@@ -34,8 +34,8 @@
 	maxHealth = 200
 	health = 200
 
-	melee_damage_lower = 20
-	melee_damage_upper = 25
+	melee_damage_lower = 10
+	melee_damage_upper = 15
 
 	allowed_stat_modifiers = list(
 		/datum/stat_modifier/mob/living/carbon/superior_animal/padded/xeno = 36,
@@ -58,8 +58,8 @@
 	maxHealth = 225
 	health = 225
 
-	melee_damage_lower = 40
-	melee_damage_upper = 50
+	melee_damage_lower = 30
+	melee_damage_upper = 30
 
 	attack_sound = list('sound/xenomorph/alien_bite1.ogg', 'sound/xenomorph/alien_bite2.ogg')
 
@@ -74,8 +74,8 @@
 	maxHealth = 200
 	health = 200
 
-	melee_damage_lower = 30
-	melee_damage_upper = 35
+	melee_damage_lower = 15
+	melee_damage_upper = 15
 	poison_per_bite = 5
 
 	allowed_stat_modifiers = list(
@@ -111,5 +111,5 @@
 
 	armor = list(melee = 7, bullet = 7, energy = 3, bomb = 30, bio = 100, rad = 100)
 
-	melee_damage_lower = 30
-	melee_damage_upper = 35
+	melee_damage_lower = 10
+	melee_damage_upper = 20

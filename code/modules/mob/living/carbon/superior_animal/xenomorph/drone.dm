@@ -47,7 +47,7 @@ var/datum/xenomorph/xenomorph_ai
 	stop_automated_movement_when_pulled = 0
 
 	melee_damage_lower = 10
-	melee_damage_upper = 15
+	melee_damage_upper = 10
 	can_burrow = FALSE
 	acceptableTargetDistance = 5
 	flash_resistances = 50 //No eyes.

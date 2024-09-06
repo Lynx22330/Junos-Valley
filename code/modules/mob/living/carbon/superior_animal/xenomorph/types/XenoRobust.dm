@@ -10,8 +10,8 @@
 	maxHealth = 60
 	health = 60
 	flash_resistances = 8 //Weak xeno dies to like 3 hits of most things, lets not make it to easy
-	melee_damage_lower = 20
-	melee_damage_upper = 25
+	melee_damage_lower = 15
+	melee_damage_upper = 20
 
 /mob/living/carbon/superior_animal/xenomorph/defender
 	name = "defender"
@@ -106,8 +106,8 @@ var/datum/xenomorph/xeno_morph_ai
 	maxHealth = 100
 	health = 100
 	attack_sound = list('sound/xenomorph/alien_bite1.ogg', 'sound/xenomorph/alien_bite2.ogg')
-	melee_damage_lower = 20
-	melee_damage_upper = 25
+	melee_damage_lower = 15
+	melee_damage_upper = 20
 
 /mob/living/carbon/superior_animal/xenomorph/spitter/boiler
 	name = "boiler"
@@ -119,10 +119,10 @@ var/datum/xenomorph/xeno_morph_ai
 	icon_rest = "boiler_stunned"
 	deathmessage = "explodes violently as it dies!"
 
-	maxHealth = 50
-	health = 50
-	melee_damage_lower = 15
-	melee_damage_upper = 20
+	maxHealth = 100
+	health = 100
+	melee_damage_lower = 5
+	melee_damage_upper = 10
 	flash_resistances = 0
 
 	move_to_delay = 6

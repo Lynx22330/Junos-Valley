@@ -46,8 +46,8 @@
 
 	fire_verb = "flings a sharp stinger shard"
 
-	melee_damage_lower = 12
-	melee_damage_upper = 16
+	melee_damage_lower = 8
+	melee_damage_upper = 12
 
 	mag_type = /obj/item/stack/ore
 	mags_left = 6 //each vox has 6 rocks normally

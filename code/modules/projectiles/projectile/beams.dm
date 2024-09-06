@@ -43,7 +43,7 @@ In pvp they also have more lasting damages, such as infections, pain form burns,
 	damage_types = list(BURN = 25) //According to Rain Chule recommendation
 
 /obj/item/projectile/beam/drone
-	damage_types = list(BURN = 15)
+	damage_types = list(BURN = 12)
 	armor_divisor = 1.1 //Some AP
 	recoil = 2
 
@@ -53,7 +53,7 @@ In pvp they also have more lasting damages, such as infections, pain form burns,
 
 /obj/item/projectile/beam/weak
 	damage_types = list(BURN = 16)
-	armor_divisor = 1.15 //Some AP
+	armor_divisor = 1.1 //Some AP
 	recoil = 2
 
 // Laser bullets are your premium and expensive upgrade to your traditional bullets.

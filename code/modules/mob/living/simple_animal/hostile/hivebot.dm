@@ -144,8 +144,8 @@
 	turns_per_move = 4
 	see_in_dark = 10
 
-	melee_damage_lower = 35
-	melee_damage_upper = 40
+	melee_damage_lower = 30
+	melee_damage_upper = 35
 
 	armor = list(melee = 3, bullet = 2, energy = 5, bomb = 25, bio = 0, rad = 25)
 
