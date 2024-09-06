@@ -17,7 +17,7 @@ var/datum/xenomorph/xenomorph_ai
 	mob_size = MOB_LARGE
 	viewRange = 8
 	armor = list(melee = 7, bullet = 7, energy = 1, bomb = 30, bio = 100, rad = 100)
-	armor_divisor = 1.25
+	armor_penetration = 1
 
 	maxHealth = 30
 	health = 30
@@ -47,7 +47,7 @@ var/datum/xenomorph/xenomorph_ai
 	stop_automated_movement_when_pulled = 0
 
 	melee_damage_lower = 10
-	melee_damage_upper = 15
+	melee_damage_upper = 10
 	can_burrow = FALSE
 	acceptableTargetDistance = 5
 	flash_resistances = 50 //No eyes.
@@ -87,7 +87,7 @@ var/datum/xenomorph/xenomorph_ai
 
 
 	melee_sharp = TRUE //claws
-	armor_divisor = 1.25
+	armor_penetration = 1
 
 
 /mob/living/carbon/superior_animal/xenomorph/slip(slipped_on,stun_duration=8)

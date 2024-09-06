@@ -10,16 +10,16 @@
 	pixel_x = -4
 	ranged = TRUE
 
-	health = 800
-	maxHealth = 800
+	health = 550 * MEGAFAUNA_HEALTH_MOD
+	maxHealth = 550 * MEGAFAUNA_HEALTH_MOD
 	break_stuff_probability = 100
 	stop_automated_movement = 1
 	armor = list(
-		melee = 0,
-		bullet = 0,
-		energy = 0,
-		bomb = 0,
-		bio = 0, //robot
+		melee = 10,
+		bullet = 6,
+		energy = 4,
+		bomb = 25,
+		bio = 100, //robot
 		rad = 100, //ROBOT
 		agony = 100 ///robot
 	)
@@ -27,8 +27,8 @@
 	aggro_vision_range = 16 //No more cheesing
 	vision_range = 40 //No more cheesing
 
-	melee_damage_lower = 40
-	melee_damage_upper = 50
+	melee_damage_lower = 35
+	melee_damage_upper = 45
 	megafauna_min_cooldown = 30
 	megafauna_max_cooldown = 60
 
@@ -41,10 +41,10 @@
 /mob/living/simple_animal/hostile/megafauna/excelsior_cosmonaught/death(gibbed, var/list/force_grant)
 	if(health <= death_threshold)
 		visible_message("<b>[src]</b> blows apart in an explosion!")
-		explosion(src.loc, 0,1,3)
+		explosion(src.loc, 0,1,2)
 		new /obj/effect/decal/cleanable/blood/gibs/robot(src.loc)
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
-		s.set_up(3, 1, src)
+		s.set_up(2, 1, src)
 		s.start()
 		..()
 

@@ -459,7 +459,9 @@
 	if(!can_open(forced))
 		return
 	operating = TRUE
-	activate_mobs_in_range(src, 10)
+	//This checks if whoever is using the door has a client to activate mobs.
+	if(usr.client)
+		activate_mobs_in_range(src, 15)
 
 	set_opacity(0)
 	if(istype(src, /obj/machinery/door/airlock/multi_tile/metal))

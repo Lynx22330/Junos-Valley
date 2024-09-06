@@ -59,8 +59,8 @@
 	has_special_parts = TRUE
 	special_parts = list(/obj/item/animal_part/wolf_tooth)
 	harm_intent_damage = 5
-	melee_damage_lower = 20
-	melee_damage_upper = 25
+	melee_damage_lower = 15
+	melee_damage_upper = 20
 
 	break_stuff_probability = 100
 
@@ -78,7 +78,7 @@
 	maxHealth = 150 * CARP_HEALTH_MOD
 	has_special_parts = TRUE
 	special_parts = list(/obj/item/animal_part/wolf_tooth,/obj/item/animal_part/carp_fang)
-	melee_damage_lower = 25
+	melee_damage_lower = 20
 	melee_damage_upper = 30
 	inherent_mutations = list(MUTATION_GIGANTISM, MUTATION_EPILEPSY, MUTATION_DEAF, MUTATION_BAROTRAUMA)
 
@@ -95,8 +95,8 @@
 	//attack_same = 1 We no longer attack are yonger less rare of breeds
 	speed = 1
 	meat_amount = 10
-	melee_damage_lower = 55
-	melee_damage_upper = 65
+	melee_damage_lower = 35
+	melee_damage_upper = 45
 	old_y = -16
 	pixel_y = -16
 	leather_amount = 10 //The amount of leather sheets dropped.

@@ -14,7 +14,7 @@
 	var/life_cycles_before_scan = 360
 
 	var/stasis = FALSE
-	var/AI_inactive = FALSE
+	var/AI_inactive = TRUE // Mobs should spawn with AI disabled by default, that way we don't have random mobs active for no reason. Why this wasn't the case is beyond me.
 
 	var/inventory_shown = 1
 
@@ -34,9 +34,9 @@
 	/// The buildmode holders this mob is currently selected by.
 	var/list/obj/effect/bmode/buildholder/selected_by = list()
 
-	var/armor_divisor = 1 //Used for generic attacks
-	var/projectile_armor_divisor_adjustment = 0
-	var/projectile_armor_divisor_mult = 1
+	var/armor_penetration = 1 //Used for generic attacks
+	var/projectile_armor_penetration_adjustment = 0
+	var/projectile_armor_penetration_mult = 1
 
 	//Damage related vars, NOTE: THESE SHOULD ONLY BE MODIFIED BY PROCS
 	var/bruteloss = 0.0	//Brutal damage caused by brute force (punching, being clubbed by a toolbox ect... this also accounts for pressure damage)

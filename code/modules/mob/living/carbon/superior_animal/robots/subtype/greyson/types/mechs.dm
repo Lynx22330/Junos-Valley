@@ -5,8 +5,8 @@
 	attacktext = "drilled"
 	health = 250 * GREYSONROBUST_HEALTH_MOD
 	maxHealth = 250 * GREYSONROBUST_HEALTH_MOD
-	melee_damage_lower = 40
-	melee_damage_upper = 45
+	melee_damage_lower = 30
+	melee_damage_upper = 40
 	attack_sound = 'sound/mecha/mechdrill.ogg'
 	flash_resistances = 100 // Robot
 
@@ -111,8 +111,8 @@
 	move_to_delay = 1
 	health = 400 * GREYSONROBUST_HEALTH_MOD
 	maxHealth = 400 * GREYSONROBUST_HEALTH_MOD
-	melee_damage_lower = 50
-	melee_damage_upper = 55
+	melee_damage_lower = 40
+	melee_damage_upper = 45
 	attack_sound = 'sound/xenomorph/alien_footstep_charge1.ogg'
 	armor = list(melee = 7, bullet = 7, energy = 7, bomb = 30, bio = 100, rad = 100)
 

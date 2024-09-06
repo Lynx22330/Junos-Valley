@@ -47,7 +47,7 @@
 	armor = list(melee = 8, bullet = 5, energy = 0, bomb = 50, bio = 0, rad = 0)
 
 	ranged = FALSE
-	armor_divisor = 1.25
+	armor_penetration = 2
 
 /mob/living/carbon/superior_animal/vox/hider
 	name = "Inuwa kisa"
@@ -85,8 +85,8 @@
 	turns_per_move = 7
 	see_in_dark = 20
 
-	melee_damage_lower = 24
-	melee_damage_upper = 28
+	melee_damage_lower = 22
+	melee_damage_upper = 24
 
 	knock_over_odds = 35
 
@@ -94,15 +94,15 @@
 
 	maxHealth = 90 * VOXBIRD_HEALTH_MOD
 	health = 90 * VOXBIRD_HEALTH_MOD
-	armor_divisor = 1.25
+	armor_penetration = 2
 
 /mob/living/carbon/superior_animal/vox/weak
 	name = "Yaro mafarauci"
 	desc = "A small predator native to these lands. They are known for their limited craftsmanship and manipulation of objects. This one is young but still deadly."
 	icon_state = "vox_acid"
 
-	melee_damage_lower = 12
-	melee_damage_upper = 15
+	melee_damage_lower = 8
+	melee_damage_upper = 12
 
 	reload_message = "picks up a rock!"
 
@@ -122,7 +122,7 @@
 	melee_damage_upper = 35
 
 	knock_over_odds = 25
-	armor_divisor = 1.25
+	armor_penetration = 2
 
 /mob/living/carbon/superior_animal/vox/scout
 	name = "karfe kafafu"

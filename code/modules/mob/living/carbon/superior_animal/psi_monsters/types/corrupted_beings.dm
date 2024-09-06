@@ -22,7 +22,7 @@
 	special_parts = list(/obj/item/animal_part/chimera_fang)
 
 
-	armor_divisor = 2 //Sharp bones
+	armor_penetration = 2 //Sharp bones
 
 
 	//Good stats baseline in case admins dont edit these
@@ -54,7 +54,7 @@
 	colony_friend = FALSE
 	friendly_to_colony = FALSE
 
-	armor_divisor = 1.25
+	armor_penetration = 1.25
 
 	color = "#49D6F2"
 
@@ -103,7 +103,7 @@ They are soully made and reflavoured to be for PVE.
 	move_to_delay = 1
 	attacktext = "rends apart"
 
-	armor_divisor = 2.5
+	armor_penetration = 2.5
 
 	color = null
 
@@ -200,7 +200,7 @@ They are soully made and reflavoured to be for PVE.
 
 	drop_items = list(/obj/item/tool/sword/cleaver/cult/deepmaints)
 
-	armor_divisor = 1.25
+	armor_penetration = 1.25
 
 /mob/living/carbon/superior_animal/psi_monster/daskvey_follower/cleaver/deepmaints_bound
 	name = "Wild Daskveyian Wall Breaker"
@@ -236,7 +236,7 @@ They are soully made and reflavoured to be for PVE.
 	comfy_range = 6
 	projectiletype = /obj/item/projectile/plasma/aoe/heat
 
-	armor_divisor = 1
+	armor_penetration = 1
 
 /mob/living/carbon/superior_animal/psi_monster/daskvey_follower/plasma/deepmaints_bound
 	name = "Wild Daskveyian Plasma Caster"
@@ -273,7 +273,7 @@ They are soully made and reflavoured to be for PVE.
 	comfy_range = 6
 	projectiletype = /obj/item/projectile/beam
 
-	armor_divisor = 1
+	armor_penetration = 1
 
 /mob/living/carbon/superior_animal/psi_monster/daskvey_follower/laser/deepmaints_bound
 	name = "Wild Daskveyian Las-Gunner"
@@ -314,7 +314,7 @@ They are soully made and reflavoured to be for PVE.
 	projectiletype = /obj/item/projectile/bullet/pistol_35/scrap
 	mag_type = /obj/item/ammo_magazine/smg_35/empty
 
-	armor_divisor = 1
+	armor_penetration = 1
 
 /mob/living/carbon/superior_animal/psi_monster/daskvey_follower/smg/Initialize(mapload)
 	. = ..()
@@ -361,7 +361,7 @@ They are soully made and reflavoured to be for PVE.
 	projectiletype = /obj/item/projectile/bullet/rifle_75/scrap
 	mag_type = /obj/item/ammo_magazine/rifle_75/empty
 
-	armor_divisor = 1
+	armor_penetration = 1
 
 /mob/living/carbon/superior_animal/psi_monster/daskvey_follower/rifle/Initialize(mapload)
 	. = ..()
@@ -394,7 +394,7 @@ They are soully made and reflavoured to be for PVE.
 
 	drop_items = list()
 
-	armor_divisor = 1
+	armor_penetration = 1
 	armor = list(melee = 15, bullet = 15, energy = 3, bomb = 100, bio = 100, rad = 90)
 	var/knockdown_odds = 30
 
@@ -435,7 +435,7 @@ They are soully made and reflavoured to be for PVE.
 
 	drop_items = list()
 
-	armor_divisor = 1.5
+	armor_penetration = 1.5
 	armor = list(melee = 15, bullet = 15, energy = 3, bomb = 100, bio = 100, rad = 90)
 
 /mob/living/carbon/superior_animal/psi_monster/daskvey_follower/halberd/deepmaints_bound
@@ -463,7 +463,7 @@ They are soully made and reflavoured to be for PVE.
 
 	drop_items = list()
 
-	armor_divisor = 1
+	armor_penetration = 1
 	armor = list(melee = 0, bullet = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /mob/living/carbon/superior_animal/psi_monster/daskvey_follower/weakling/deepmaints_bound
@@ -491,7 +491,7 @@ They are soully made and reflavoured to be for PVE.
 
 	drop_items = list()
 
-	armor_divisor = 1
+	armor_penetration = 1
 	armor = list(melee = 0, bullet = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 	rounds_per_fire = 1
@@ -540,7 +540,7 @@ They are soully made and reflavoured to be for PVE.
 
 	drop_items = list()
 
-	armor_divisor = 1
+	armor_penetration = 1
 	armor = list(melee = 0, bullet = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 	rounds_per_fire = 1

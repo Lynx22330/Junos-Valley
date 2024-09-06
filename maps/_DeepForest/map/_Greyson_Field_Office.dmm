@@ -2199,6 +2199,11 @@
 /obj/item/ammo_casing/magnum_40/spent,
 /turf/simulated/floor/tiled/derelict/red_white_edges,
 /area/nadezhda/outside/one_star/fo_internal)
+"rL" = (
+/obj/random/cluster/roaches/low_chance,
+/obj/random/cluster/roaches/low_chance,
+/turf/simulated/floor/rock/manmade/road,
+/area/nadezhda/outside/one_star/fo_outside)
 "rO" = (
 /obj/structure/bed/chair/comfy/beige,
 /turf/simulated/floor/tiled/white/cargo,
@@ -6031,6 +6036,10 @@
 	},
 /turf/simulated/floor/tiled/dark/cargo,
 /area/nadezhda/outside/one_star/fo_outside)
+"VN" = (
+/obj/random/cluster/roaches/low_chance,
+/turf/simulated/floor/asteroid/grass,
+/area/nadezhda/outside/one_star/fo_outside)
 "VO" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/railing/grey,
@@ -6390,7 +6399,7 @@
 /turf/simulated/floor/reinforced,
 /area/nadezhda/outside/one_star/fo_internal)
 "Yr" = (
-/obj/random/cluster/roaches,
+/obj/random/cluster/roaches/low_chance,
 /turf/simulated/floor/rock/manmade/road,
 /area/nadezhda/outside/one_star/fo_outside)
 "Ys" = (
@@ -6798,7 +6807,7 @@ wK
 Rl
 Re
 Re
-PN
+VN
 PN
 PN
 PN
@@ -6832,7 +6841,7 @@ PN
 cF
 cF
 Yr
-cF
+Yr
 cF
 PN
 PN
@@ -6949,9 +6958,7 @@ Je
 MV
 rB
 Yr
-Yr
-cF
-cF
+rL
 cF
 cF
 cF
@@ -6970,6 +6977,8 @@ cF
 cF
 Yr
 Yr
+Yr
+cF
 cF
 cF
 cF
