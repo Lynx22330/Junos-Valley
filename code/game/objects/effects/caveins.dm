@@ -36,7 +36,7 @@
 		to_chat(M, SPAN_DANGER("YOU ARE CRUSHED BY A BOULDER!!!"))
 		M.update_lying_buckled_and_verb_status()
 		M.AdjustWeakened(6)
-		M.adjustBruteLoss(20) //Reminder that there is also an AOE check in the spawn_rubble proc. 20 + 25 = 45
+		M.adjustBruteLoss(15) //Reminder that there is also an AOE check in the spawn_rubble proc. 20 + 25 = 45
 
 	// Rubble, sound, and a boulder always spawns if you don't pass deliberately, AKA walking.
 	playsound(src.loc, 'sound/effects/impacts/rumble4.ogg', 300, 1)
@@ -49,7 +49,7 @@
 	// It's a cave-in. Any mob around us should be hurt!
 	for (var/mob/living/M in dview(spread, T))
 		if (M)
-			M.adjustBruteLoss(25) // 20 + 25 = 45
+			M.adjustBruteLoss(15) // 20 + 15 = 30
 			to_chat(M, SPAN_DANGER("You are pelted by the rubble!"))
 			new /obj/effect/decal/cleanable/rubble(M.loc) // Always spawn rubble under a mob.
 
