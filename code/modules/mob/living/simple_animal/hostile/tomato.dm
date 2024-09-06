@@ -13,8 +13,8 @@
 	response_disarm = "pushes aside"
 	response_harm   = "smacks"
 	harm_intent_damage = 5
-	melee_damage_upper = 15
 	melee_damage_lower = 10
+	melee_damage_upper = 15
 	attacktext = "mauled"
 	leather_amount = 0
 	bones_amount = 0

@@ -8,10 +8,10 @@
 //#define WURM_ARMOR_HIGH 50
 //#define WURM_ARMOR_ULTRA 65
 
-#define WURM_DMG_LOW 15
-#define WURM_DMG_MED 25
-#define WURM_DMG_HIGH 40
-#define WURM_DMG_ULTRA 55
+#define WURM_DMG_LOW 10
+#define WURM_DMG_MED 20
+#define WURM_DMG_HIGH 25
+#define WURM_DMG_ULTRA 35
 
 #define WURM_SPEED_SLUG 9
 #define WURM_SPEED_LOW 7

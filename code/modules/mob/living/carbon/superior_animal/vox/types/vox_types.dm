@@ -85,8 +85,8 @@
 	turns_per_move = 7
 	see_in_dark = 20
 
-	melee_damage_lower = 24
-	melee_damage_upper = 28
+	melee_damage_lower = 22
+	melee_damage_upper = 24
 
 	knock_over_odds = 35
 
@@ -101,8 +101,8 @@
 	desc = "A small predator native to these lands. They are known for their limited craftsmanship and manipulation of objects. This one is young but still deadly."
 	icon_state = "vox_acid"
 
-	melee_damage_lower = 12
-	melee_damage_upper = 15
+	melee_damage_lower = 8
+	melee_damage_upper = 12
 
 	reload_message = "picks up a rock!"
 

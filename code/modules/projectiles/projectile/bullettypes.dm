@@ -629,6 +629,18 @@
 	affective_ap_range = 9
 	recoil = 9
 
+/obj/item/projectile/bullet/c10x24/turret
+	damage_types = list(BRUTE = 14)
+	armor_divisor = 1
+	wounding_mult = WOUNDING_SMALL
+	penetrating = 1
+	can_ricochet = TRUE
+	sharp = TRUE
+	step_delay = 0.3
+	affective_damage_range = 9
+	affective_ap_range = 9
+	recoil = 9
+
 /obj/item/projectile/bullet/auto_460
 	damage_types = list(BRUTE = 30)
 	armor_penetration = 2

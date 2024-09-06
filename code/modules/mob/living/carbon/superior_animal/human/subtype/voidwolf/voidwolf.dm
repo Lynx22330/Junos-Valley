@@ -10,8 +10,8 @@
 	stop_automated_movement_when_pulled = 0
 	maxHealth = 125 * VOIDWOLF_HEALTH_MOD
 	health = 125 * VOIDWOLF_HEALTH_MOD
-	melee_damage_lower = 30
-	melee_damage_upper = 30
+	melee_damage_lower = 20
+	melee_damage_upper = 25
 
 	melee_sharp = FALSE //Eswords
 	armor_penetration = 3
@@ -97,8 +97,8 @@
 /mob/living/carbon/superior_animal/human/voidwolf/fieldtech
 	name = "Void Wolf Field Tech"
 	desc = "A Void Wolf mercenary wielding an industrial welder."
-	melee_damage_lower = 20
-	melee_damage_upper = 22
+	melee_damage_lower = 14
+	melee_damage_upper = 18
 	icon_state = "voidengie"
 	icon_dead = "voidengie_dead"
 	attacktext = "burnt"
@@ -115,15 +115,15 @@
 	icon_state = "voidwolf"
 	icon_dead = "voidwolf_dead"
 	projectilesound = 'sound/weapons/energy/laser.ogg'
-	melee_damage_lower = 10 //We dont like melee
-	melee_damage_upper = 15
+	melee_damage_lower = 8 //We dont like melee
+	melee_damage_upper = 14
 	maxHealth = 75 * VOIDWOLF_HEALTH_MOD
 	health = 75 * VOIDWOLF_HEALTH_MOD
 	ranged = TRUE
 	rapid = TRUE
 	rapid_fire_shooting_amount = 3
 	ranged_cooldown = 3
-	projectiletype = /obj/item/projectile/beam
+	projectiletype = /obj/item/projectile/beam/weak
 	drop_items = list(/obj/item/gun/energy/cog)
 	limited_ammo = TRUE
 	mag_drop = TRUE
@@ -142,11 +142,11 @@
 	desc = "A Void Wolf mercenary wielding an industrial welder and energy pistol."
 	icon_state = "voidengie_ranged"
 	icon_dead = "voidengie_ranged_dead"
-	melee_damage_lower = 20
-	melee_damage_upper = 22
+	melee_damage_lower = 10
+	melee_damage_upper = 14
 	ranged = TRUE
 	rapid = FALSE
-	projectiletype = /obj/item/projectile/beam
+	projectiletype = /obj/item/projectile/beam/weak
 	projectilesound = 'sound/weapons/energy/laser.ogg'
 	drop_items = list(/obj/item/tool/weldingtool/advanced, /obj/item/gun/energy/gun/martin)
 	limited_ammo = TRUE
@@ -172,7 +172,7 @@
 	rounds_left = 16
 	mags_left = 2
 	rapid_fire_shooting_amount = 3
-	projectiletype = /obj/item/projectile/beam
+	projectiletype = /obj/item/projectile/beam/weak
 	drop_items = list(/obj/item/gun/energy/cog)
 	melee_sharp = FALSE
 	armor_penetration = 1
@@ -186,8 +186,8 @@
 	desc = "A Void Wolf field commander wielding an energy sword and Spider Rose combo. "
 	icon_state = "voidwolfcap"
 	icon_dead = "voidwolfcap_dead"
-	melee_damage_lower = 30
-	melee_damage_upper = 35
+	melee_damage_lower = 20
+	melee_damage_upper = 25
 	maxHealth = 150 * VOIDWOLF_HEALTH_MOD
 	health = 150 * VOIDWOLF_HEALTH_MOD
 	ranged_cooldown = 3
@@ -322,8 +322,8 @@ casingtype = /obj/item/ammo_casing/a75/spent
 */
 /mob/living/carbon/superior_animal/human/voidwolf/elite/myrmidon
 	icon_state = "reaver_melee"
-	melee_damage_lower = 35
-	melee_damage_upper = 40
+	melee_damage_lower = 30
+	melee_damage_upper = 35
 	ranged = FALSE
 	rapid = FALSE
 	limited_ammo = FALSE

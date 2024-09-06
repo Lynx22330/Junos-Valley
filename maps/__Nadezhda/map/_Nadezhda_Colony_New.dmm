@@ -30638,13 +30638,8 @@
 /turf/simulated/floor/plating/under,
 /area/nadezhda/command/hallway)
 "gcn" = (
-/obj/effect/overlay/water,
-/obj/effect/overlay/water/top,
-/obj/structure/barricade,
-/turf/simulated/floor/beach/water/jungledeep{
-	desc = "Filthy, stinking bilge water.";
-	name = "murky water"
-	},
+/obj/structure/boulder,
+/turf/unsimulated/mineral,
 /area/nadezhda/maintenance/undergroundfloor1north)
 "gco" = (
 /turf/simulated/wall/r_wall,
@@ -34809,6 +34804,12 @@
 /obj/random/contraband/low_chance,
 /turf/simulated/floor/wood/wild5,
 /area/colony)
+"gRt" = (
+/obj/random/mob/nightmare/low_chance{
+	spawn_nothing_percentage = 45
+	},
+/turf/simulated/floor/beach/water/jungledeep,
+/area/nadezhda/maintenance/undergroundfloor1north)
 "gRx" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
@@ -38035,6 +38036,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/nadezhda/maintenance/surfacesec)
 "hyA" = (
+/obj/effect/decal/cleanable/rubble,
 /mob/living/simple_animal/hostile/nightmare/dream_daemon,
 /turf/simulated/floor/rock,
 /area/nadezhda/maintenance/undergroundfloor1north)
@@ -40519,6 +40521,11 @@
 	},
 /turf/simulated/floor/asteroid/dirt,
 /area/nadezhda/engineering/engine_room)
+"hWr" = (
+/obj/random/mob/nightmare,
+/obj/effect/decal/cleanable/rubble,
+/turf/simulated/floor/rock,
+/area/nadezhda/maintenance/undergroundfloor1north)
 "hWs" = (
 /obj/structure/mirror{
 	pixel_y = -28
@@ -54608,6 +54615,7 @@
 "kKJ" = (
 /obj/effect/decal/cleanable/rubble,
 /obj/random/dungeon_armor_mods,
+/obj/effect/decal/cleanable/rubble,
 /turf/simulated/floor/rock,
 /area/nadezhda/maintenance/undergroundfloor1north)
 "kKO" = (
@@ -92300,6 +92308,11 @@
 /obj/structure/flora/ausbushes/grassybush,
 /turf/simulated/floor/asteroid/grass,
 /area/nadezhda/crew_quarters/hydroponics/garden)
+"saW" = (
+/obj/effect/decal/cleanable/rubble,
+/obj/effect/decal/cleanable/rubble,
+/turf/simulated/floor/rock,
+/area/nadezhda/maintenance/undergroundfloor1north)
 "sbc" = (
 /obj/machinery/light/small,
 /obj/machinery/light_switch{
@@ -141462,7 +141475,7 @@ vtB
 jNY
 arU
 arU
-gcn
+arU
 arU
 arU
 xhA
@@ -141663,9 +141676,9 @@ jNY
 arU
 arU
 arU
-gaS
-lTx
-arU
+xhA
+gcn
+xhA
 xhA
 xhA
 xhA
@@ -141864,12 +141877,12 @@ arU
 arU
 arU
 xhA
-arU
-lTx
-gaS
+xhA
 arU
 arU
 arU
+arU
+xhA
 xhA
 xhA
 xhA
@@ -142060,14 +142073,14 @@ wBX
 tui
 arU
 arU
-xhA
+arU
 xhA
 xhA
 xhA
 xhA
 arU
 arU
-kXs
+hbs
 xuK
 arU
 arU
@@ -142261,8 +142274,8 @@ suy
 suy
 jOi
 arU
-xhA
-xhA
+arU
+arU
 arU
 arU
 arU
@@ -142275,7 +142288,7 @@ beG
 arU
 arU
 lTx
-hyA
+bpZ
 arU
 arU
 xhA
@@ -142461,11 +142474,11 @@ lyg
 lyg
 bnt
 suy
-qrd
-arU
-xhA
-arU
-arU
+lTx
+kXs
+kXs
+gIO
+gIO
 arU
 arU
 arU
@@ -142663,11 +142676,11 @@ hYT
 lyg
 fLF
 aJq
-arU
-arU
-xhA
-arU
-bpZ
+kXs
+kXs
+xuK
+kXs
+hWr
 kKJ
 arU
 arU
@@ -142861,16 +142874,16 @@ suy
 lyg
 hYT
 dXm
-hYT
+gRt
 uPs
 lyg
 suy
-arU
-arU
-xhA
-arU
-dRV
 xuK
+xuK
+xuK
+xuK
+dRV
+saW
 kXs
 puJ
 arU
@@ -143067,11 +143080,11 @@ hYT
 eZn
 lyg
 suy
-qrd
-arU
-xhA
-arU
-arU
+gIO
+xuK
+xuK
+kXs
+kXs
 lTx
 xuK
 xuK
@@ -143269,11 +143282,11 @@ uPs
 owZ
 suy
 xRW
+kXs
 xuK
-arU
-xhA
-arU
-arU
+kXs
+gIO
+kXs
 arU
 vQA
 arU
@@ -143473,9 +143486,9 @@ arU
 fgl
 wPo
 arU
-xhA
-xhA
-xhA
+arU
+arU
+arU
 arU
 arU
 arU
@@ -143492,7 +143505,7 @@ arU
 arU
 beG
 xuK
-bpZ
+xuK
 arU
 xhA
 arU
@@ -143676,7 +143689,7 @@ ljs
 nos
 arU
 xhA
-arU
+xhA
 xhA
 xhA
 arU
@@ -143693,7 +143706,7 @@ xuK
 beG
 arU
 arU
-kXs
+hyA
 beG
 arU
 xhA

@@ -3,7 +3,7 @@
 	icon_state = "xray"
 	mob_hit_sound = list('sound/effects/gore/sear.ogg')
 	hitsound_wall = 'sound/weapons/guns/misc/laser_searwall.ogg'
-	damage_types = list(BURN  = 40) // 20 more damage than the Cog
+	damage_types = list(BURN  = 30) // 10 more damage than the Cog
 	irradiate = 15
 	armor_penetration = 2 //less AP than the Cog
 	check_armour = ARMOR_ENERGY
