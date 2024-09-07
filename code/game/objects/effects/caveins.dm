@@ -10,7 +10,7 @@
 	var/delay = 40
 
 // These traps only apply to human mobs since they do not naturally live in caves.
-/obj/item/cave_in_trap/ominousrockpile/Crossed(mob/living/carbon/human/M as mob|obj)
+/obj/item/cave_in_trap/ominousrockpile/Crossed(mob/living/carbon/human/M as mob)
 	if (istype(M, /mob/observer)) // Anti ghost check since the Crossed proc doesn't check that automatically.
 		return
 
@@ -22,6 +22,14 @@
 	if (MOVING_DELIBERATELY(M))
 		to_chat(M, SPAN_NOTICE("The dust settles on your shoulders safely..."))
 		return
+
+	//Mob check since they do not have a true dir tied to their nonexisting client. We will just skip past any vigilance checks.
+	if (!M.client)
+		playsound(src.loc, 'sound/effects/impacts/rumble4.ogg', 300, 1)
+		spawn_rubble(src.loc, 2, 33)
+		new /obj/structure/boulder(src.loc)
+		qdel(src)
+
 	//However, if you're not being careful...
 
 	//You're aware enough to understand that, holy shit, the roof is caving in! Vigilance check of 25.
