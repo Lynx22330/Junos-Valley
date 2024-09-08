@@ -631,7 +631,7 @@
 
 /obj/item/projectile/bullet/c10x24/turret
 	damage_types = list(BRUTE = 14)
-	armor_divisor = 1
+	armor_penetration = 1
 	wounding_mult = WOUNDING_SMALL
 	penetrating = 1
 	can_ricochet = TRUE
