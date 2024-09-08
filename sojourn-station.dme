@@ -3512,4 +3512,8 @@
 #include "modular_sojourn\task_master\human_helper.dm"
 #include "modular_sojourn\task_master\task_helpers.dm"
 #include "modular_sojourn\task_master\tasks.dm"
+#include "code\modules\mob\living\carbon\superior_animal\reactive_speech\reactive_speech_towards.dm"
+#include "code\modules\mob\living\carbon\superior_animal\reactive_speech\reactive_speech_back.dm"
+#include "code\modules\mob\living\carbon\superior_animal\reactive_speech\reactive_idle_speech_towards.dm"
+#include "code\modules\mob\living\carbon\superior_animal\reactive_speech\reactive_idle_speech_back.dm"
 // END_INCLUDE

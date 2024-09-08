@@ -300,6 +300,28 @@
 
 	return FALSE
 
+//Check if we don't like the person talking. Primarily used for reactive speech.
+/mob/living/carbon/superior_animal/proc/foe_check(var/mob/living/speaker = null)
+	if(speaker in friends)
+		return TRUE
+	return FALSE
+
+/mob/living/carbon/superior_animal/proc/tone(var/message, var/verb = "says", var/datum/language/language = null, var/alt_name = "", var/italics = 0, var/mob/living/speaker = null, var/sound/speech_sound, var/sound_vol, speech_volume)
+	// Hostile
+	if(findtext(message, "[reactive_speech_towards_0]"))
+		tone = 0
+	// Polite
+	if(findtext(message, "[reactive_speech_towards_1]"))
+		tone = 1
+	// Inquisitive
+	if(findtext(message, "[reactive_speech_towards_2]"))
+		tone = 2
+	//Sensual?!
+	if(findtext(message, "[reactive_speech_towards_3]"))
+		tone = 3
+	else
+		return
+
 //Putting this here do to no idea were it would fit other then here
 /mob/living/carbon/superior_animal/verb/toggle_AI()
 	set name = "Toggle AI"

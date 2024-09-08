@@ -32,6 +32,15 @@
 	var/turns_since_move = 0
 	universal_speak = 0		//No, just no.
 
+	// Reactive mob speech and actions, such as when getting shot for the first time, being snuck up on, or simply idle chatter.
+	// Can even lead to mobs actively fighting eachother when they are idle, and a player is sneaking around.
+
+	var/list/reactivespeak = list()
+	var/list/reactive_emote = list()
+	var/list/reactive_visible_emote = list()
+	var/list/idle_speak = list()
+	var/list/idle_response = list()
+
 	//Meat/harvest vars
 	var/meat_amount = 1
 	var/meat_type = /obj/item/reagent_containers/food/snacks/meat //all mobs now can be butchered into meat

@@ -308,3 +308,9 @@
 	 * final offset of the projectile. Make sure to sync with initial_firing_offset.
 	**/
 	var/current_firing_offset = 2
+
+	// Used in determining the state of our conversations between players and other mobs.
+
+	var/tone = 0
+	var/current_topic_state = 0
+	var/current_idle_topic_state = 0

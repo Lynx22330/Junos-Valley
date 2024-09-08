@@ -367,3 +367,22 @@ casingtype = /obj/item/ammo_casing/a75/spent
 	drop_death_loot()
 	qdel(src)
 	return
+
+/mob/living/carbon/superior_animal/human/voidwolf/hear_say(var/message, var/verb = "says", var/datum/language/language = null, var/alt_name = "", var/italics = 0, var/mob/living/speaker = null, var/sound/speech_sound, var/sound_vol, speech_volume)
+	..()
+	if(!foe_check(speaker))
+		if(findtext(message, "[reactive_idle_speech_towards_0]")) // Reacting towards the idle speech.
+			visible_emote("[reactive_idle_speech_back_0]")
+
+	if(foe_check(speaker))
+		tone()
+		switch(tone)
+			if(0)
+				visible_emote("[pick(reactive_speech_back_0)]")
+			if(1)
+				visible_emote("[pick(reactive_speech_back_1)]")
+			if(2)
+				visible_emote("[pick(reactive_speech_back_2)]")
+			if(3)
+				visible_emote("[pick(reactive_speech_back_3)]")
+
