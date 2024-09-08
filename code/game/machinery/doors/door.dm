@@ -460,7 +460,7 @@
 		return
 	operating = TRUE
 	//This checks if whoever is using the door has a client to activate mobs.
-	if(usr.client)
+	if(usr.client && istype(usr, /mob/living/carbon/human))
 		activate_mobs_in_range(src, 15)
 
 	set_opacity(0)
