@@ -72,6 +72,7 @@
 		/mob/living/carbon/superior_animal/human/voidwolf/fieldtech = 2,
 		/mob/living/carbon/superior_animal/human/voidwolf/ranged = 4,
 		/mob/living/carbon/superior_animal/human/voidwolf/fieldtech/ranged = 4,
+		/mob/living/carbon/superior_animal/human/voidwolf/grenadier = 1,
 		/mob/living/carbon/superior_animal/human/voidwolf/captain = 0.5
 		)
 

@@ -367,3 +367,30 @@ casingtype = /obj/item/ammo_casing/a75/spent
 	drop_death_loot()
 	qdel(src)
 	return
+
+/mob/living/carbon/superior_animal/human/voidwolf/grenadier
+	name = "Void Wolf Grenadier"
+	desc = "A Void Wolf mercenary wielding an energy blade and riot shield. This one appears to have found an extra grenade somewhere!"
+	ranged = TRUE
+	rapid = FALSE // Just to make sure it's never true.
+	limited_ammo = TRUE // Yes. Do not remove this.
+	comfy_range = 7
+
+	// Grenade information.
+	projectiletype = /obj/item/projectile/bullet/grenade/voidwolf
+	rounds_left = 1
+	mag_type = /obj/item/ammo_magazine/grenade_pouch/empty
+	mags_left = 1
+	do_friendly_fire_chance = 0 // We are throwing grenades over our allies.
+	initial_firing_offset = 20 // We are not professional grenade throwers.
+	current_firing_offset = 20
+
+	// Telegraph information.
+	telegraph_beam_alpha = 200 // Players HAVE to know whats going on.
+	telegraph_beam_color = COLOR_RED // Extra warning to tell players "Oh shit that's not good!"
+	range_telegraph = "prepares to throw a grenade towards"
+	target_telegraph = "pulls the pin on their grenade! Look out,"
+	range_charge_telegraph = "begins pulling their arm back to get ready to throw towards"
+	fire_verb = "tosses a grenade, take cover"
+	reload_message = "pulls another grenade out of their pocket!"
+	delay_for_range = 3 SECONDS    // We are straight up throwing grenades. So... Don't wanna perma stunlock people between each explosion. Hopefully.
