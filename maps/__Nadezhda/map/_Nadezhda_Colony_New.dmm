@@ -1990,7 +1990,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark/cargo,
 /area/nadezhda/security/maingate)
 "auL" = (
@@ -26671,7 +26670,6 @@
 /obj/effect/floor_decal/industrial/warningwhite{
 	dir = 8
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
 /area/nadezhda/security/maingate)
 "flH" = (
@@ -64382,7 +64380,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
 /area/nadezhda/security/maingate)
 "mJq" = (
@@ -69435,6 +69432,10 @@
 /area/nadezhda/maintenance{
 	name = "Residential District Maintenance"
 	})
+"nFQ" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/asteroid/grass,
+/area/nadezhda/outside/inside_colony)
 "nFR" = (
 /obj/structure/catwalk,
 /obj/structure/cable/cyan{
@@ -74754,7 +74755,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
 /area/nadezhda/security/maingate)
 "oFL" = (
@@ -77849,7 +77849,6 @@
 /area/nadezhda/maintenance/undergroundfloor2west)
 "pkA" = (
 /obj/effect/floor_decal/industrial/outline,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
 /area/nadezhda/security/maingate)
 "pkC" = (
@@ -94854,7 +94853,6 @@
 	},
 /obj/effect/floor_decal/industrial/stand_clear/white,
 /obj/effect/floor_decal/industrial/warningwhite,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark/cargo,
 /area/nadezhda/security/maingate)
 "szM" = (
@@ -222125,7 +222123,7 @@ rJT
 rJT
 rJT
 hJm
-hJm
+nFQ
 hJm
 hJm
 hJm

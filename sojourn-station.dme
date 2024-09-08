@@ -3460,6 +3460,7 @@
 #include "interface\fonts\fonts_datum.dm"
 #include "interface\fonts\grand_9k.dm"
 #include "maps\_map_shims.dm"
+//#include "maps\__JunosValley\Map_JunosValley.dm"
 #include "maps\__Nadezhda\Map_Nadezhda.dm"
 #include "maps\_dungeons\crawler\crawler.dm"
 #include "maps\_dungeons\deepmaint\deepmaint.dm"
