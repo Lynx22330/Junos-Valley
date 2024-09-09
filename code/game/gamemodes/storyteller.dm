@@ -1,4 +1,5 @@
 GLOBAL_DATUM(storyteller, /datum/storyteller)
+GLOBAL_VAR_INIT(mob_count, 0) // For calculating how many mobs are alive at once.
 
 /datum/storyteller
 	//Strings
@@ -18,8 +19,13 @@ GLOBAL_DATUM(storyteller, /datum/storyteller)
 	var/force_spawn_now = FALSE
 	var/list/processing_events = list()
 	var/last_tick = 0
+	var/last_hourly_tick = 0      // Using the same 'last_tick' is bad... For some reason.
 	var/next_tick = 0
+	var/next_hourly_tick = 0
 	var/tick_interval = 60 SECONDS //Ticks once per minute.
+	var/hourly_tick_interval = 1 HOURS //Ticks once per hour.
+	var/multipliergain = 1
+	var/tally = 0 // Player count used for chaos increments.
 
 	var/crew = 0
 	var/heads = 0
@@ -113,6 +119,7 @@ GLOBAL_DATUM(storyteller, /datum/storyteller)
 	build_event_pools()
 	set_timer()
 	set_up_events()
+	change_multipliers()
 
 /datum/storyteller/proc/set_up_events()
 	return
@@ -127,7 +134,6 @@ GLOBAL_DATUM(storyteller, /datum/storyteller)
 		//Update these things so we can accurately select events
 		update_crew_count()
 		update_event_weights()
-
 		/*
 			Handle points calls a large stack that increments all the point totals, and then attempts to
 			trigger as many events as our totals can afford to
@@ -138,10 +144,16 @@ GLOBAL_DATUM(storyteller, /datum/storyteller)
 
 		//Set the time for the next tick
 		set_timer()
-
+		//Increase chaos every hour.
+	if(can_hourly_tick())
+		increase_chaos()
 
 /datum/storyteller/proc/can_tick()
 	if (world.time > next_tick)
+		return TRUE
+
+/datum/storyteller/proc/can_hourly_tick()
+	if (world.time > next_hourly_tick)
 		return TRUE
 
 /datum/storyteller/proc/set_timer()
@@ -153,7 +165,7 @@ GLOBAL_DATUM(storyteller, /datum/storyteller)
 
 	last_tick = world.time
 	next_tick = last_tick + tick_interval
-
+	next_hourly_tick = last_hourly_tick + hourly_tick_interval
 
 
 /****************************
@@ -231,10 +243,10 @@ GLOBAL_DATUM(storyteller, /datum/storyteller)
 		points[EVENT_LEVEL_MAJOR] += 1 * (gain_mult_major) * (RAND_DECIMAL(1-variance, 1+variance))
 		points[EVENT_LEVEL_ROLESET] += 0 //1 * (gain_mult_roleset) * (RAND_DECIMAL(1-variance, 1+variance))
 	else
-		points[EVENT_LEVEL_MUNDANE] += GLOB.chaos_level * (gain_mult_mundane) * (RAND_DECIMAL(1-variance, 1+variance))
-		points[EVENT_LEVEL_MODERATE] += GLOB.chaos_level * (gain_mult_moderate) * (RAND_DECIMAL(1-variance, 1+variance))
-		points[EVENT_LEVEL_MAJOR] += GLOB.chaos_level * (gain_mult_major) * (RAND_DECIMAL(1-variance, 1+variance))
-		points[EVENT_LEVEL_ROLESET] += GLOB.chaos_level * 0 //(gain_mult_roleset) * (RAND_DECIMAL(1-variance, 1+variance))
+		points[EVENT_LEVEL_MUNDANE] += (GLOB.chaos_level / 2 ) * (gain_mult_mundane) * (RAND_DECIMAL(1-variance, 1+variance))
+		points[EVENT_LEVEL_MODERATE] += (GLOB.chaos_level / 3 ) * (gain_mult_moderate) * (RAND_DECIMAL(1-variance, 1+variance))
+		points[EVENT_LEVEL_MAJOR] += (GLOB.chaos_level / 4 ) * (gain_mult_major) * (RAND_DECIMAL(1-variance, 1+variance))
+		points[EVENT_LEVEL_ROLESET] += (GLOB.chaos_level / 4 ) * 0 //(gain_mult_roleset) * (RAND_DECIMAL(1-variance, 1+variance))
 
 
 	check_thresholds()
@@ -374,3 +386,20 @@ The actual fire event proc is located in storyteller_meta*/
 
 		pool[a] = new_weight
 	return pool
+
+/****************************
+*  Chaos Level Handling
+*****************************/
+// Intended to increase chaos overtime throughout a round to a certain cap, based on how many players are present.
+
+/datum/storyteller/proc/increase_chaos()
+	if (GLOB.chaos_level < 4)
+		tally = 0
+		for(var/mob/living/L in GLOB.player_list)
+			tally += 1
+	GLOB.chaos_level += ((tally * 0.1) * GLOB.chaos_storyteller_gain_multiplier)  // At a rate of each hour, increase chaos levels to a certain cap.
+	if (GLOB.chaos_level > (tally * 0.1) + 4 && !GLOB.chaos_surpass)
+		GLOB.chaos_level = 4      // Caps the chaos level to 4 just incase it does somehow go beyond 5. Requires the "Increase Chaos Levels" vote to trigger once to be able to surpass.
+
+/datum/storyteller/proc/change_multipliers()
+	GLOB.chaos_storyteller_gain_multiplier = multipliergain

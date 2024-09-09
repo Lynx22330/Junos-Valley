@@ -23,7 +23,7 @@
 	var/web_activity = 30
 	move_to_delay = 4 //slightly faster than guardians but slower than hunters
 	armor = list(melee = 0, bullet = 0, energy = 0, bomb = 5, bio = 10, rad = 25, agony = 0)
-	var/egg_inject_chance = 0 //AHAHAHAHAHAHAHAAHAHAH, no
+	var/egg_inject_chance = 1 //AHAHAHAHAHAHAHAAHAHAH, no, but, why not 1%?
 	life_cycles_before_sleep = 3000 //We need more time to eat and web
 	inherent_mutations = list(MUTATION_PROT_MILK, MUTATION_SPIDER_FRIEND, MUTATION_NERVOUSNESS, MUTATION_DEAF)
 
@@ -49,7 +49,7 @@
 	health = 100 * SPIDER_HEALTH_MOD
 	melee_damage_lower = 10
 	melee_damage_upper = 15
-	poison_per_bite = 4
+	poison_per_bite = 8
 	poison_type = "frostoil"
 	move_to_delay = 5 // Very slow
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/spider/cave_spider

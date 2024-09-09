@@ -60,6 +60,8 @@
 	data += "<br>Debug mode: <b><a href='?src=\ref[src];toggle_debug=1'>\[[debug_mode?"ON":"OFF"]\]</a></b>"
 	data += "<br>One role per player: <b><a href='?src=\ref[src];toggle_orpp=1'>\[[one_role_per_player?"YES":"NO"]\]</a></b>"
 	data += "<br>Chaos Level: <a href='?src=\ref[src];edit_chaos=1'>\[[GLOB.chaos_level]\]</a>"
+	data += "<br>Chaos Gain: <a href='?src=\ref[src];edit_chaos_gain=1'>\[[GLOB.chaos_storyteller_gain_multiplier]\]</a>"
+	data += "<br>Mob count: <b>[GLOB.mob_count]</b>"
 	data += "</td><td style=\"padding-left: 40px\">"
 
 	data += "Heads: [heads] "
@@ -202,6 +204,9 @@
 
 	if(href_list["edit_chaos"])
 		GLOB.chaos_level = input("Enter new chaos level, only use values >=1.","Chaos Level",GLOB.chaos_level) as num
+
+	if(href_list["edit_chaos_gain"])
+		GLOB.chaos_storyteller_gain_multiplier = input("Enter new chaos gain.","Chaos Level",GLOB.chaos_storyteller_gain_multiplier) as num
 
 	if(href_list["call_shuttle"])
 		switch(href_list["call_shuttle"])

@@ -7,8 +7,8 @@
 
 	meat_amount = 2
 	turns_per_move = 1
-	maxHealth = 40 * ROACH_HEALTH_MOD
-	health = 40 * ROACH_HEALTH_MOD
+	maxHealth = 55 * ROACH_HEALTH_MOD
+	health = 55 * ROACH_HEALTH_MOD
 
 	flash_resistances = 10 //We are the light
 
@@ -19,10 +19,10 @@
 	contaminant_immunity = TRUE
 	toxin_immune = TRUE
 
-	knockdown_odds = 3 //Well we still can knockdown we dont tend to over other affects
-	melee_damage_lower = 5
-	melee_damage_upper = 7 //Weaker than hunter
-	armor_penetration = 0
+	knockdown_odds = 2 //Well we still can knockdown we dont tend to over other affects
+	melee_damage_lower = 4
+	melee_damage_upper = 6 //Weaker than hunter as we are a support mob
+	armor_penetration = 1
 
 /mob/living/carbon/superior_animal/roach/glowing/UnarmedAttack(var/atom/A, var/proximity)
 	. = ..()
@@ -34,7 +34,7 @@
 			L.damage_through_armor(damage, BURN)
 			playsound(src, 'sound/voice/insect_battle_screeching.ogg', 30, 1, -3)
 			L.visible_message(SPAN_DANGER("\the [src] pinches hard, chemically burning \the [L]!"))
-		if(prob(5))
+		if(prob(15))
 			var/mob/living/carbon/C = L
 			var/safety = C.eyecheck()
 			if(safety < FLASH_PROTECTION_MINOR)
