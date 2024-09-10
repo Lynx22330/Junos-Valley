@@ -7,7 +7,7 @@ GLOBAL_LIST_INIT(hive_data_bool, list(
 	"tyrant_death_kills_hive"		= TRUE,
 	"all_church_to_battle"			= FALSE,
 	"pop_lock"						= FALSE,
-	"slime_pop_lock"				= TRUE))
+	"slime_pop_lock"				= FALSE))
 
 GLOBAL_LIST_INIT(hive_data_float, list(
 	"maximum_controlled_areas"		= 3, // Stop expansion when controlling certain number of areas, 0 to disable

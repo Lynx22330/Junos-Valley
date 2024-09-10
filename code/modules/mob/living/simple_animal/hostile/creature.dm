@@ -133,8 +133,8 @@
 	special_parts = list(/obj/item/animal_part/sarg_horn, /obj/item/animal_part/sarg_horn)
 	armor = list(melee = 1, bullet = 2, energy = 0, bomb = 25, bio = 0, rad = 25)
 
-/*
-#define MOOK_ATTACK_NEUTRAL 0
+
+/* #define MOOK_ATTACK_NEUTRAL 0
 #define MOOK_ATTACK_WARMUP 1
 #define MOOK_ATTACK_ACTIVE 2
 #define MOOK_ATTACK_RECOVERY 3
@@ -152,6 +152,7 @@
 	pixel_x = -16
 	maxHealth = 45
 	health = 45
+	faction = "pond"
 	melee_damage_lower = 30
 	melee_damage_upper = 30
 	pixel_y = -8
@@ -168,13 +169,15 @@
 		var/mob/living/simple_animal/hostile/mook/M = O
 		if(M.attack_state == MOOK_ATTACK_ACTIVE && M.throwing)
 			return TRUE
-*/
+ */
+
 /mob/living/simple_animal/hostile/mook/death()
 	playsound(src.loc, 'sound/voice/mook_death.ogg', 100, 1)
 	desc = "A deceased primitive. Upon closer inspection, it was suffering from severe cellular degeneration and its garments are machine made..."//Can you guess the twist
 	return ..()
 
 /mob/living/simple_animal/hostile/mook/AttackingTarget()
+
 	if(isliving(target_mob))
 		if(ranged_cooldown <= world.time && attack_state == MOOK_ATTACK_NEUTRAL)
 			var/mob/living/L = target_mob
@@ -224,10 +227,10 @@
 		var/mob_direction = get_dir(src,target_mob)
 		if(get_dist(src,target_mob) > 1)
 			step(src,mob_direction)
-		//if(targets_from && isturf(targets_from.loc) && target_mob.Adjacent(targets_from) && isliving(target_mob))
-			//var/mob/living/L = target_mob
-			//L.attack_animal(src)
-			//return
+		if(targets_from && isturf(targets_from.loc) && isliving(target_mob))
+			var/mob/living/L = target_mob
+			L.UnarmedAttack(src)
+			return
 		var/swing_turf = get_step(src,mob_direction)
 		new /obj/effect/temp_visual/kinetic_blast(swing_turf)
 		playsound(src, 'sound/weapons/slashmiss.ogg', 50, TRUE)
@@ -250,7 +253,7 @@
 		playsound(src, 'sound/weapons/thudswoosh.ogg', 25, TRUE)
 		playsound(src, 'sound/voice/mook_leap_yell.ogg', 100, TRUE)
 		var/target_turf = get_turf(target_mob)
-		throw_at(target_turf, 7, 1, src, FALSE, callback = CALLBACK(src, PROC_REF(AttackRecovery)))
+		throw_at(target_turf, 7, 1, src, FALSE, CALLBACK(src, PROC_REF(AttackRecovery)))
 		return
 	attack_state = MOOK_ATTACK_RECOVERY
 	ResetNeutral()
@@ -284,12 +287,12 @@
 			update_icons()
 			MoveToTarget(target_mob, move_to_delay, minimum_distance)
 
-/mob/living/simple_animal/hostile/mook/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
+/mob/living/simple_animal/hostile/mook/throw_impact(atom/hit_atom)
 	. = ..()
 	if(isliving(hit_atom) && attack_state == MOOK_ATTACK_ACTIVE)
 		var/mob/living/L = hit_atom
 		if(AttackTarget(L))
-			//L.attack_animal(src)
+			L.UnarmedAttack(src)
 			struck_target_leap = TRUE
 			density = TRUE
 			update_icons()
@@ -303,7 +306,7 @@
 			var/mob/living/ML = A
 			if(!struck_target_leap && AttackTarget(ML))//Check if some joker is attempting to use rest to evade us
 				struck_target_leap = TRUE
-				//ML.attack_animal(src)
+				ML.UnarmedAttack(src)
 				density = TRUE
 				struck_target_leap = TRUE
 				update_icons()
@@ -312,7 +315,7 @@
 				var/mob/living/simple_animal/hostile/mook/M = ML
 				if(!M.stat)
 					mook_under_us = TRUE
-					var/anydir = pick(GLOB.cardinals)
+					var/anydir = pick(GLOB.cardinal)
 					Move(get_step(src, anydir), anydir)
 					continue
 /*
@@ -320,7 +323,7 @@
 	if(attack_state)
 		return
 	return ..()
-*/
+ */
 /mob/living/simple_animal/hostile/mook/OpenFire()
 	if(isliving(target_mob))
 		var/mob/living/L = target_mob
@@ -362,4 +365,5 @@
 #undef MOOK_ATTACK_ACTIVE
 #undef MOOK_ATTACK_RECOVERY
 #undef ATTACK_INTERMISSION_TIME
-*/
+
+ */

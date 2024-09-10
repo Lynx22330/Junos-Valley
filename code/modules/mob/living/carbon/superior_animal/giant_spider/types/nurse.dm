@@ -23,7 +23,7 @@
 	var/web_activity = 30
 	move_to_delay = 4 //slightly faster than guardians but slower than hunters
 	armor = list(melee = 0, bullet = 0, energy = 0, bomb = 5, bio = 10, rad = 25, agony = 0)
-	var/egg_inject_chance = 1 //AHAHAHAHAHAHAHAAHAHAH, no, but, why not 1%?
+	var/egg_inject_chance = 0
 	life_cycles_before_sleep = 3000 //We need more time to eat and web
 	inherent_mutations = list(MUTATION_PROT_MILK, MUTATION_SPIDER_FRIEND, MUTATION_NERVOUSNESS, MUTATION_DEAF)
 
@@ -49,7 +49,7 @@
 	health = 100 * SPIDER_HEALTH_MOD
 	melee_damage_lower = 10
 	melee_damage_upper = 15
-	poison_per_bite = 8
+	poison_per_bite = 2 //Being slowed for so long is annoying as hell. This shit can stack every bite.
 	poison_type = "frostoil"
 	move_to_delay = 5 // Very slow
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/spider/cave_spider
@@ -60,7 +60,7 @@
 	icon_state = "carrier"
 	icon_living = "carrier"
 	deathmessage = "splits open! Several wriggling spiders crawl from its gore!"
-	egg_inject_chance = 2 //maybe...
+	egg_inject_chance = 10 //Considering it's a "Carrier", they damn well should be able to give you babies!
 	var/has_made_spiderlings = FALSE
 	move_to_delay = 5 //Has babys on it!
 
@@ -99,7 +99,7 @@
 	health = 15 * SPIDER_HEALTH_MOD
 	poison_per_bite = 1 //1u is all it takes to sleep you, your asleep also dosnt prevet it form attacking you more then once meaning this quit quickly stacks without someones help
 	melee_damage_lower = 3
-	melee_damage_upper = 5
+	melee_damage_upper = 6
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/spider/recluse
 	meat_amount = 2
 	egg_inject_chance = 15 //Defiently
@@ -116,8 +116,8 @@
 	icon_living = "spider_queen"
 	maxHealth = 200 * SPIDER_HEALTH_MOD
 	health = 200 * SPIDER_HEALTH_MOD
-	melee_damage_lower = 20
-	melee_damage_upper = 30
+	melee_damage_lower = 14
+	melee_damage_upper = 22 // Our armor pen does significant damage to targets
 	poison_per_bite = 4
 	poison_type = "menace"
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/spider/queen
@@ -129,7 +129,7 @@
 	get_stat_modifier =  TRUE
 	armor = list(melee = 3, bullet = 1, energy = 0, bomb = 5, bio = 10, rad = 25, agony = 0)
 	inherent_mutations = list(MUTATION_GIGANTISM, MUTATION_SPIDER_FRIEND, MUTATION_RAND_UNSTABLE, MUTATION_RAND_UNSTABLE, MUTATION_RAND_UNSTABLE)
-	armor_penetration = 2
+	armor_penetration = 8
 
 /mob/living/carbon/superior_animal/giant_spider/nurse/queen/New()
 	..()

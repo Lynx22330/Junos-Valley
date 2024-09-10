@@ -19,6 +19,15 @@
 	contaminant_immunity = TRUE
 	toxin_immune = TRUE
 
+	projectiletype = /obj/item/projectile/roach_spit
+	fire_verb = "spits glowing bile"
+	ranged = TRUE
+	limited_ammo = TRUE
+	rounds_left = 1 //We can only spit once.
+	mags_left = 0 // See above
+	delay_for_range = 0.5 SECONDS
+	reload_message = "lets out another gurgle of bile from their mandibles!"
+
 	knockdown_odds = 2 //Well we still can knockdown we dont tend to over other affects
 	melee_damage_lower = 4
 	melee_damage_upper = 6 //Weaker than hunter as we are a support mob

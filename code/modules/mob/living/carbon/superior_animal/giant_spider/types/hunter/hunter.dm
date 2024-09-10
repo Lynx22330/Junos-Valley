@@ -8,7 +8,7 @@
 	health = 70 * SPIDER_HEALTH_MOD
 	melee_damage_lower = 10
 	melee_damage_upper = 20
-	poison_per_bite = 4
+	poison_per_bite = 3
 	move_to_delay = 4.5
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/spider/hunter
 	meat_amount = 4
@@ -35,7 +35,7 @@
 	health = 100 * SPIDER_HEALTH_MOD
 	melee_damage_lower = 10
 	melee_damage_upper = 15 // We are designed for injecting, not chewing.
-	poison_per_bite = 7 // Slightly more venom than normal.
+	poison_per_bite = 5 // Slightly more venom than normal.
 
 
 /mob/living/carbon/superior_animal/giant_spider/hunter/viper_cloaker
@@ -86,11 +86,11 @@
 	icon_living = "tarantula"
 	maxHealth = 110 * SPIDER_HEALTH_MOD
 	health = 110 * SPIDER_HEALTH_MOD
-	melee_damage_lower = 20
-	melee_damage_upper = 25
+	melee_damage_lower = 5
+	melee_damage_upper = 10
 	emote_see = list("chitters.","rubs its legs.","thumps its many legs on the ground.")
 	mob_size = MOB_LARGE
-	armor = list(melee = 3, bullet = 1, energy = 0, bomb = 5, bio = 10, rad = 25, agony = 0)
+	armor = list(melee = 6, bullet = 4, energy = 2, bomb = 15, bio = 15, rad = 25, agony = 0)
 
 
 /mob/living/carbon/superior_animal/giant_spider/tarantula/UnarmedAttack(var/atom/A, var/proximity)
@@ -185,6 +185,7 @@
 	icon_state = "ogre"
 	icon_living = "ogre"
 	poison_per_bite = 4
+	//Slightly tankier than the tarantula. That's about it.
 	maxHealth = 130 * SPIDER_HEALTH_MOD
 	health = 130 * SPIDER_HEALTH_MOD
 
@@ -193,9 +194,9 @@
 	desc = "Furry and orange, it makes you shudder to look at it. Normally it lacks in toxins but makes up for in its immense bone-snapping mandibles. "
 	icon_state = "pit"
 	icon_living = "pit"
-	poison_per_bite = 0
-	melee_damage_lower = 35
-	melee_damage_upper = 40
+	poison_per_bite = 1
+	melee_damage_lower = 10
+	melee_damage_upper = 15
 	poison_type = "aranecolmin" //Shockingly this is more deadly then normal as it makes metaball faster
 
 /mob/living/carbon/superior_animal/giant_spider/tarantula/burrowing
@@ -218,16 +219,19 @@
 	move_to_delay = 1
 	turns_per_move = 7
 	viewRange = 9
-	melee_damage_lower = 20
-	melee_damage_upper = 30
-	poison_per_bite = 4
+	armor_penetration = 12
+	melee_damage_lower = 24
+	melee_damage_upper = 24
+	//We trade our poison for piercing armor and scaring the shit out of people. We ONLY deal 24 brute.
+	poison_per_bite = 0
 	flash_resistances = 3 //For balance against are speedy fello
 	poison_type = "party drops"
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/spider/emperor
-	armor = list(melee = 6, bullet = 6, energy = 2, bomb = 25, bio = 10, rad = 25, agony = 0)
-	armor_penetration = 2
 
-	get_stat_modifier = TRUE //Were not getting armor //Yes we are.
+	//We are weak to melee due to our long, /thin/ legs. Easy to cleave them!
+	armor = list(melee = 0, bullet = 6, energy = 2, bomb = 25, bio = 10, rad = 25, agony = 0)
+
+	get_stat_modifier = TRUE
 
 	//Giving the emperor spider his own meat that has party drops. Reducing dropped meat to 3 from 4.
 	meat_amount = 4 //So its more worth killing these
@@ -252,13 +256,13 @@
 	health = 750 * LEVIATHAN_HEALTH_MOD
 	move_to_delay = 2
 	turns_per_move = 1
-	melee_damage_lower = 40
-	melee_damage_upper = 50
+	armor_penetration = 8
+	melee_damage_lower = 30
+	melee_damage_upper = 40
 	flash_resistances = 100 //Many large eyes, flashing one doesn't blind the others
-	poison_per_bite = 6
+	poison_per_bite = 2
 	poison_type = "stoxin"
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/spider/reaper_spider
-	armor_penetration = 3
 
 	get_stat_modifier = FALSE //Were not getting armor
 

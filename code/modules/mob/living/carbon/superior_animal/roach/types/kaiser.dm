@@ -12,18 +12,18 @@ Has ability of every roach.
 	density = TRUE
 
 	turns_per_move = 6
-	maxHealth = 1000 * LEVIATHAN_HEALTH_MOD
-	health = 1000 * LEVIATHAN_HEALTH_MOD
+	maxHealth = 1500 * LEVIATHAN_HEALTH_MOD
+	health = 1500 * LEVIATHAN_HEALTH_MOD
 	contaminant_immunity = TRUE
 	get_stat_modifier = TRUE
 
 	var/datum/reagents/gas_sac
 
-	armor = list(melee = 10, bullet = 8, energy = 6, bomb = 50, bio = 20, rad = 100, agony = 0)
+	armor = list(melee = 10, bullet = 8, energy = 6, bomb = 50, bio = 10, rad = 100, agony = 0)
 
 	knockdown_odds = 10
-	melee_damage_lower = 20
-	melee_damage_upper = 35
+	melee_damage_lower = 15
+	melee_damage_upper = 20
 	move_to_delay = 4.5 //we're fast despite our size, many legs move us quick! otherwise, it's too easy to kite us.
 	mob_size = MOB_LARGE  // The same as Hivemind Tyrant
 	status_flags = 0
@@ -47,7 +47,7 @@ Has ability of every roach.
 	special_parts = list(/obj/item/animal_part/kingly_pheromone_gland)
 	ranged = TRUE // RUN, COWARD!
 	limited_ammo = TRUE //Do we run out of ammo?
-	rounds_left = 2 //We get 2 shots then go for melee, this makes us a threat Nnnnope.
+	rounds_left = 0 //We start with one shot when we retarget someone.
 	projectiletype = /obj/item/projectile/roach_spit/large
 	fire_verb = "spits glowing bile"
 
@@ -56,8 +56,8 @@ Has ability of every roach.
 /mob/living/carbon/superior_animal/roach/kaiser/getTargets()
 	. = ..()
 
-	rounds_left = 2 //Reload us, after all we are now targeting someone new
-	ranged = TRUE //Were reloaded we can be ranged once more
+	rounds_left = 1 //Reload us, after all we are now targeting someone new.
+	ranged = TRUE //Were reloaded we can be ranged once more.
 
 /mob/living/carbon/superior_animal/roach/kaiser/New()
 	. = ..()
@@ -72,7 +72,7 @@ Has ability of every roach.
 	if(can_call_reinforcements())
 		distress_call()
 
-	gas_sac.add_reagent("blattedin", 1)
+	gas_sac.add_reagent("blattedin", 2)
 	if(prob(7))
 		gas_attack()
 
@@ -83,12 +83,11 @@ Has ability of every roach.
 
 	if(isliving(A))
 		var/mob/living/L = A
-		if(prob(10))
+		if(prob(20))
 			var/damage = rand(melee_damage_lower, melee_damage_upper)
-			L.apply_effect(200, IRRADIATE) // Looks like a lot but its really not // Because for players it cap at 100. -R4d6
 			L.damage_through_armor(damage, TOX, attack_flag = ARMOR_BIO)
 			playsound(src, 'sound/voice/insect_battle_screeching.ogg', 30, 1, -3)
-			L.visible_message(SPAN_DANGER("\the [src] globs up some glowing bile all over \the [L]!"))
+			L.visible_message(SPAN_DANGER("\the [src] uses its incredibly sharp mandibles to chew through \the [L], leaving toxic bile all over them!"))
 
 // SUPPORT ABILITIES
 /mob/living/carbon/superior_animal/roach/kaiser/proc/gas_attack()

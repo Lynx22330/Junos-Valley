@@ -47,7 +47,8 @@
 /mob/living/carbon/superior_animal/giant_spider/hunter/pepper/handle_attacking_stance(atom/targetted_mob, already_destroying_surroundings)
 	. = ..()
 
-	var/spray_range = (comfy_range - 2)
+	//By default 6 tiles. Roughly 5 range. Lets give them some love, shall we?
+	var/spray_range = comfy_range
 
 	if (cooldown <= world.time)
 		if (isliving(targetted_mob))
