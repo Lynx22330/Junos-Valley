@@ -23,7 +23,7 @@ GLOBAL_VAR_INIT(mob_count, 0) // For calculating how many mobs are alive at once
 	var/next_tick = 0
 	var/next_chaos_tick = 0
 	var/tick_interval = 60 SECONDS //Ticks once per minute.
-	var/chaos_tick_interval = 30 MINUTES
+	var/chaos_tick_interval = 10 SECONDS
 	var/multipliergain = 1
 
 	var/player_tally = 0 // Player count used for chaos increments.
@@ -145,17 +145,21 @@ GLOBAL_VAR_INIT(mob_count, 0) // For calculating how many mobs are alive at once
 
 		//Set the time for the next tick
 		set_timer()
-		//Increase chaos every hour.
-	if(can_hourly_tick())
+
+	//This doesnt work. It's currently only every second. But what the fuck ever.
+	if(can_chaos_tick())
+
 		increase_chaos()
+		set_chaos_timer()
 
 /datum/storyteller/proc/can_tick()
 	if (world.time > next_tick)
 		return TRUE
 
-/datum/storyteller/proc/can_hourly_tick()
+/datum/storyteller/proc/can_chaos_tick()
 	if (world.time > next_chaos_tick)
 		return TRUE
+	return FALSE
 
 /datum/storyteller/proc/set_timer()
 	if (!(world.time > next_tick))
@@ -166,6 +170,11 @@ GLOBAL_VAR_INIT(mob_count, 0) // For calculating how many mobs are alive at once
 
 	last_tick = world.time
 	next_tick = last_tick + tick_interval
+
+/datum/storyteller/proc/set_chaos_timer()
+	if(!(world.time > next_tick))
+		return
+	last_chaos_tick = world.time
 	next_chaos_tick = last_chaos_tick + chaos_tick_interval
 
 
@@ -398,9 +407,11 @@ The actual fire event proc is located in storyteller_meta*/
 		player_tally = 0
 		for(var/mob/living/L in GLOB.player_list)
 			player_tally++
-	GLOB.chaos_level += ((player_tally * 0.05) * GLOB.chaos_storyteller_gain_multiplier)  // At a rate of each hour, increase chaos levels to a certain cap.
-	if (GLOB.chaos_level > ((player_tally * 0.05) + 4) && GLOB.chaos_surpass)
-		GLOB.chaos_level = 4      // Caps the chaos level to 4 just incase it does somehow go beyond 5. Requires the "Increase Chaos Levels" vote to trigger once to be able to surpass.
+		GLOB.chaos_level += ((player_tally * 0.01) * GLOB.chaos_storyteller_gain_multiplier)
+
+	// Caps the chaos level to 4 just incase it does somehow go beyond 5. Requires the "Increase Chaos Levels" vote to trigger once to be able to surpass.
+	if (GLOB.chaos_level > ((player_tally * 0.01) + 4) && GLOB.chaos_surpass)
+		GLOB.chaos_level = 4
 
 /datum/storyteller/proc/change_multipliers()
 	GLOB.chaos_storyteller_gain_multiplier = multipliergain
