@@ -14,8 +14,7 @@
 			var/mob/living/L = target
 			var/damage = rand(4, 8)
 			L.damage_through_armor(damage, TOX, attack_flag = ARMOR_BIO)
-			L.AdjustWeakened(1)
-			on_impact()// We don't want this to overpen infinitely.
+			L.AdjustWeakened(0.2)
 		//10% chance to leave a puddle in its wake!
 		if(prob(10))
 			if(locate(/obj/effect/decal/cleanable/greenglow/bile) in target.loc)
@@ -47,8 +46,7 @@
 			var/mob/living/L = target
 			var/damage = rand(12, 20)
 			L.damage_through_armor(damage, BURN, attack_flag = ARMOR_BIO)
-			L.AdjustWeakened(2)
-			on_impact() // We don't want this to overpen infinitely.
+			L.AdjustWeakened(0.4)
 			if(locate(/obj/effect/decal/cleanable/greenglow/bile) in target.loc)
 				return
 			new /obj/effect/decal/cleanable/greenglow/bile(target.loc)
