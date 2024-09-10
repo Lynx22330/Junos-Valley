@@ -5,7 +5,7 @@
 /obj/item/organ/external/proc/is_damageable(additional_damage = 0)
 	return (vital || brute_dam + burn_dam + additional_damage < max_damage)
 
-/obj/item/organ/external/take_damage(amount, damage_type, armor_divisor = 1, wounding_multiplier = 1, sharp, edge, used_weapon = null, list/forbidden_limbs = list(), silent)
+/obj/item/organ/external/take_damage(amount, damage_type, armor_penetration = 1, wounding_multiplier = 1, sharp, edge, used_weapon = null, list/forbidden_limbs = list(), silent)
 	var/prev_brute = brute_dam	//We'll record how much damage the limb already had, before we apply the damage from this incoming hit
 	var/prev_burn = burn_dam
 
@@ -28,9 +28,9 @@
 		var/transferred_damage_amount
 		switch(damage_type)
 			if(BRUTE)
-				transferred_damage_amount = amount - (max_damage - brute_dam) / armor_divisor / 2
+				transferred_damage_amount = amount - (max_damage - brute_dam) / armor_penetration / 2
 			if(BURN)
-				transferred_damage_amount = amount - (max_damage - burn_dam) / armor_divisor / 2
+				transferred_damage_amount = amount - (max_damage - burn_dam) / armor_penetration / 2
 			if(HALLOSS)
 				transferred_damage_amount = 0
 			else

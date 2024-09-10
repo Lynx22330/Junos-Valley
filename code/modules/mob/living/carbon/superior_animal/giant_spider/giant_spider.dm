@@ -18,7 +18,7 @@
 	speak_chance = 5
 
 	get_stat_modifier = FALSE //We're too baby to get extra mods.
-	armor_divisor = 1
+	armor_penetration = 1
 
 	armor = list(melee = 1, bullet = 0, energy = 0, bomb = 1, bio = 10, rad = 25)
 
@@ -41,8 +41,8 @@
 	bones_amount = 0
 	stop_automated_movement_when_pulled = 1
 
-	melee_damage_lower = 12
-	melee_damage_upper = 17
+	melee_damage_lower = 10
+	melee_damage_upper = 15
 
 	min_breath_required_type = 3
 	min_air_pressure = 15 //below this, brute damage is dealt

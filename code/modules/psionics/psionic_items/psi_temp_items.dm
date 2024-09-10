@@ -133,7 +133,7 @@
 	if(user.stats.getPerk(PERK_PSI_MANIA))
 		force = WEAPON_FORCE_BRUTAL
 		whack_speed = 6
-		armor_divisor = ARMOR_PEN_HALF
+		armor_penetration = ARMOR_PEN_HALF
 
 	var/throwdir = get_dir(user,target)
 	target.throw_at(get_edge_target_turf(target, throwdir),whack_speed,whack_speed)
@@ -191,7 +191,7 @@
 
 	if(user.stats.getPerk(PERK_PSI_MANIA))
 		force = WEAPON_FORCE_BRUTAL
-		armor_divisor = ARMOR_PEN_HALF
+		armor_penetration = ARMOR_PEN_HALF
 
 	..()
 	force = initial(force) // Reset the damage just in case
@@ -289,7 +289,7 @@
 
 		if(holder.stats.getPerk(PERK_PSI_MANIA))
 			force = /obj/item/projectile/kinetic_blast/brutal
-			armor_divisor = ARMOR_PEN_HALF
+			armor_penetration = ARMOR_PEN_HALF
 
 		projectile_type = force
 
@@ -360,7 +360,7 @@
 
 		if(holder.stats.getPerk(PERK_PSI_MANIA))
 			force = /obj/item/projectile/kinetic_blast_electro/brutal
-			armor_divisor = ARMOR_PEN_HALF
+			armor_penetration = ARMOR_PEN_HALF
 
 		projectile_type = force
 

@@ -176,7 +176,7 @@
 		damage_types[HALLOSS] *= newmult
 
 /obj/item/projectile/add_projectile_penetration(newmult)
-	armor_divisor = initial(armor_divisor) + newmult
+	armor_penetration = initial(armor_penetration) + newmult
 
 /obj/item/projectile/multiply_pierce_penetration(newmult)
 	penetrating = initial(penetrating) + newmult
@@ -285,11 +285,11 @@
 			for (var/entry in livingfirer.projectile_damage_increment)
 				damage_types[entry] += livingfirer.projectile_damage_increment[entry]
 
-		if (livingfirer.projectile_armor_divisor_mult != 1)
-			add_projectile_penetration(livingfirer.projectile_armor_divisor_mult)
+		if (livingfirer.projectile_armor_penetration_mult != 1)
+			add_projectile_penetration(livingfirer.projectile_armor_penetration_mult)
 
-		if (livingfirer.projectile_armor_divisor_adjustment)
-			armor_divisor *= livingfirer.projectile_armor_divisor_adjustment
+		if (livingfirer.projectile_armor_penetration_adjustment)
+			armor_penetration *= livingfirer.projectile_armor_penetration_adjustment
 
 		if (livingfirer.projectile_speed_mult != 1)
 			multiply_projectile_step_delay(livingfirer.projectile_speed_mult)
@@ -893,15 +893,15 @@
 
 
 			if(has_drop_off) //Does this shot get weaker as it goes?
-				//log_and_message_admins("LOG 1: range shot [range_shot] | drop ap [ap_drop_off] | drop damg | [damage_drop_off] | penetrating [penetrating] armor_divisor [armor_divisor].")
+				//log_and_message_admins("LOG 1: range shot [range_shot] | drop ap [ap_drop_off] | drop damg | [damage_drop_off] | penetrating [penetrating] armor_penetration [armor_penetration].")
 				range_shot++ //We get the distence form the shooter to what it hit
 				damage_drop_off = max(1, range_shot - affective_damage_range) / 100 //How far we were shot - are affective range. This one is for damage drop off
 				ap_drop_off = max(1, range_shot - affective_ap_range) //How far we were shot - are affective range. This one is for AP drop off
 
-				armor_divisor = max(0.001, armor_divisor - (ap_drop_off * 0.01))
+				armor_penetration = max(0.001, armor_penetration - (ap_drop_off * 0.01))
 
 				agony = max(0, agony - range_shot) //every step we lose one agony, this stops sniping with rubbers.
-				//log_and_message_admins("LOG 2| range shot [range_shot] | drop ap [ap_drop_off] | drop damg | [damage_drop_off] | penetrating [penetrating] | armor_divisor [armor_divisor].")
+				//log_and_message_admins("LOG 2| range shot [range_shot] | drop ap [ap_drop_off] | drop damg | [damage_drop_off] | penetrating [penetrating] | armor_penetration [armor_penetration].")
 				if(damage_types[BRUTE])
 					damage_types[BRUTE] -= max(0, damage_drop_off - penetrating / 2) //1 penitration gives 25 tiles| 2 penitration 50 tiles making 0 drop
 
@@ -962,15 +962,15 @@
 
 
 			if(has_drop_off) //Does this shot get weaker as it goes?
-				//log_and_message_admins("LOG 1: range shot [range_shot] | drop ap [ap_drop_off] | drop damg | [damage_drop_off] | penetrating [penetrating] | armor_divisor [armor_divisor].")
+				//log_and_message_admins("LOG 1: range shot [range_shot] | drop ap [ap_drop_off] | drop damg | [damage_drop_off] | penetrating [penetrating] | armor_penetration [armor_penetration].")
 				range_shot++ //We get the distence form the shooter to what it hit
 				damage_drop_off = max(1, range_shot - affective_damage_range) / 100 //How far we were shot - are affective range. This one is for damage drop off
 				ap_drop_off = max(1, range_shot - affective_ap_range) //How far we were shot - are affective range. This one is for AP drop off
 
-				armor_divisor = max(0.001, armor_divisor - (ap_drop_off & 0.01))
+				armor_penetration = max(0.001, armor_penetration - (ap_drop_off & 0.01))
 
 				agony = max(0, agony - range_shot) //every step we lose one agony, this stops sniping with rubbers.
-				//log_and_message_admins("LOG 2| range shot [range_shot] | drop ap [ap_drop_off] | drop damg | [damage_drop_off] | penetrating [penetrating] | armor_divisor [armor_divisor].")
+				//log_and_message_admins("LOG 2| range shot [range_shot] | drop ap [ap_drop_off] | drop damg | [damage_drop_off] | penetrating [penetrating] | armor_penetration [armor_penetration].")
 				if(damage_types[BRUTE])
 					damage_types[BRUTE] -= max(0, damage_drop_off - penetrating / 2) //1 penitration gives 25 tiles| 2 penitration 50 tiles making 0 drop
 
@@ -1112,7 +1112,7 @@
 			P.activate(P.lifetime)
 
 /obj/item/projectile/proc/block_damage(var/amount, atom/A)
-	amount /= armor_divisor
+	amount /= armor_penetration
 	var/dmg_total = 0
 	var/dmg_remaining = 0
 	for(var/dmg_type in damage_types)

@@ -4,7 +4,7 @@
 	mob_hit_sound = list('sound/effects/gore/sear.ogg')
 	hitsound_wall = 'sound/weapons/guns/misc/laser_searwall.ogg'
 	damage_types = list(BURN = 28)
-	armor_divisor = 1.1
+	armor_penetration = 1.1
 	check_armour = ARMOR_ENERGY
 	fire_stacks = 1 //Blasma
 
@@ -24,7 +24,7 @@
 /obj/item/projectile/plasma/light
 	name = "light plasma bolt"
 	damage_types = list(BURN = 33)
-	armor_divisor = 0.65
+	armor_penetration = 0.65
 	recoil = 7
 
 /obj/item/projectile/plasma/heavy
@@ -36,7 +36,7 @@
 	fire_stacks = 1
 
 	damage_types = list(BURN = 30)
-	armor_divisor = 2.3
+	armor_penetration = 2.3
 
 /obj/item/projectile/plasma/heavy/shell
 	damage_types = list(BURN = 42)
@@ -190,7 +190,7 @@
 	mob_hit_sound = list('sound/effects/gore/sear.ogg')
 	hitsound_wall = 'sound/weapons/guns/misc/ric4.ogg'
 	damage_types = list(BRUTE = 54)
-	armor_divisor = 4
+	armor_penetration = 4
 	check_armour = ARMOR_BULLET
 	affective_damage_range = 16
 	affective_ap_range = 16
@@ -201,7 +201,7 @@
 /obj/item/projectile/plasma/check_penetrate(var/atom/A)
 	if(istype(A, /obj/item/shield))
 		var/obj/item/shield/S = A
-		var/loss = min(round(armor_divisor * 2 / S.durability), 1)
+		var/loss = min(round(armor_penetration * 2 / S.durability), 1)
 		block_damage(loss, A)
 		A.visible_message(SPAN_WARNING("\The [src] is weakened by the \the [A]!"))
 		playsound(A.loc, 'sound/weapons/shield/shielddissipate.ogg', 50, 1)

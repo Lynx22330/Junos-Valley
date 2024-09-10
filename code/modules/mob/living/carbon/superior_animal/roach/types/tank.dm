@@ -14,7 +14,7 @@
 	get_stat_modifier = TRUE //we're big boys, we get a little mod as a treat.
 
 	armor = list(melee = 4, bullet = 3, energy = 3, bomb = 5, bio = 20, rad = 0, agony = 0)
-	armor_divisor = 1.2
+	armor_penetration = 1.2
 
 // Panzers won't slip over on water or soap.
 /mob/living/carbon/superior_animal/roach/tank/slip(slipped_on,stun_duration=8)

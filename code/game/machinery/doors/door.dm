@@ -474,6 +474,10 @@
 		var/wait = normalspeed ? 150 : 5
 		addtimer(CALLBACK(src, PROC_REF(close)), wait)
 
+		//This checks if whoever is using the door has a client to activate mobs.
+	if(usr.client && istype(usr, /mob/living/carbon/human) && !istype(usr, /obj/machinery))
+		activate_mobs_in_range(src, 15)
+
 	return TRUE
 
 

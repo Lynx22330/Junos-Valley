@@ -13,7 +13,7 @@
 	knockdown_odds = 3
 	melee_damage_lower = 6
 	melee_damage_upper = 8 //Weaker than hunter, as they use toxic damage.
-	armor_divisor = 1.3
+	armor_penetration = 1.3
 
 /mob/living/carbon/superior_animal/roach/toxic/UnarmedAttack(atom/A, proximity)
 	. = ..()
