@@ -1,16 +1,16 @@
 GLOBAL_LIST_INIT(hive_data_bool, list(
-	"maximum_existing_mobs"			= FALSE, // Exact number set separately
+	"maximum_existing_mobs"			= TRUE, // Exact number set separately
 	"spread_trough_burrows"			= FALSE,
 	"spread_on_lower_z_level"		= TRUE, // Spread via wires "falling down" from higher z-level
 	"teleport_core_when_damaged"	= FALSE,
 	"allow_tyrant_spawn"			= TRUE,
-	"tyrant_death_kills_hive"		= FALSE,
+	"tyrant_death_kills_hive"		= TRUE,
 	"all_church_to_battle"			= FALSE,
-	"pop_lock"						= TRUE,
+	"pop_lock"						= FALSE,
 	"slime_pop_lock"				= TRUE))
 
 GLOBAL_LIST_INIT(hive_data_float, list(
-	"maximum_controlled_areas"		= 0, // Stop expansion when controlling certain number of areas, 0 to disable
+	"maximum_controlled_areas"		= 3, // Stop expansion when controlling certain number of areas, 0 to disable
 	"maximum_existing_mobs"			= 50, // Should be true in "hive_data_bool" to take effect, 0 means no hive mob spawn (except champions)
 	"gibbing_warning_timer"			= 0, //How many seconds of warning should be given before a humanoid body is gibbed by hivemind wires. 0 means it doesn't at all
 	"core_oddity_drop_chance"		= 50,)) // prob() of hive node leaving hive-themed oddity on death
