@@ -35,9 +35,9 @@
 /obj/effect/decal/cleanable/greenglow/bile/Process()
 	. = ..()
 	for(var/mob/living/carbon/l in range(4))
-		if(prob(25))
+		if(prob(10))
 			to_chat(src, SPAN_WARNING("The air begins to feel warm, accompanied by a hideous aroma."))	//Equinox edit: makes the danger more obvious
-		l.apply_effect(0.5, IRRADIATE) //we spit out THREE of these.
+		l.apply_effect(0.2, IRRADIATE) //we spit out THREE of these.
 
 /obj/effect/decal/cleanable/dirt
 	name = "dirt"

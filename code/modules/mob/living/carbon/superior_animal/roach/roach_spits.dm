@@ -3,7 +3,7 @@
 	icon = 'icons/obj/hivemind.dmi'
 	icon_state = "goo_proj"
 	damage_types = list()
-	irradiate = 20
+	irradiate = 10
 	check_armour = ARMOR_BIO
 	step_delay = 2
 
@@ -12,8 +12,14 @@
 	if(isliving(target))
 		if (!testing)
 			var/mob/living/L = target
-			var/damage = rand(3, 7)
+			var/damage = rand(4, 8)
 			L.damage_through_armor(damage, TOX, attack_flag = ARMOR_BIO)
+			L.AdjustWeakened(0.2)
+		//10% chance to leave a puddle in its wake!
+		if(prob(10))
+			if(locate(/obj/effect/decal/cleanable/greenglow/bile) in target.loc)
+				return
+			new /obj/effect/decal/cleanable/greenglow/bile(target.loc)
 
 /obj/item/projectile/roach_spit/attack_mob(mob/living/target_mob, distance, miss_modifier=0)
 	if (isroach(target_mob))
@@ -27,17 +33,23 @@
 	damage_types = list()
 	irradiate = 20
 	check_armour = ARMOR_BIO
-	step_delay = 2
+	//Its slower so that you can dodge it to avoid being knocked down.
+	step_delay = 2.4
 
 /obj/item/projectile/roach_spit/large/on_hit(atom/target)
 	. = ..()
-	if(!(locate(/obj/effect/decal/cleanable/greenglow/bile) in target.loc))		//Equinox edit: Prevents excessive stacking of hundreds of puddles that process and irradiate
-		new /obj/effect/decal/cleanable/greenglow/bile(target.loc)		//Equinox edit: Makes the puddles drop right on the intended target instead of harmlessly splatering on distant walls
+	//if(!(locate(/obj/effect/decal/cleanable/greenglow/bile) in target.loc))		//Equinox edit: Prevents excessive stacking of hundreds of puddles that process and irradiate
+		//new /obj/effect/decal/cleanable/greenglow/bile(target.loc)		//Equinox edit: Makes the puddles drop right on the intended target instead of harmlessly splatering on distant walls
+
 	if(isliving(target))
 		if (!testing)
 			var/mob/living/L = target
 			var/damage = rand(12, 20)
 			L.damage_through_armor(damage, BURN, attack_flag = ARMOR_BIO)
+			L.AdjustWeakened(0.4)
+			if(locate(/obj/effect/decal/cleanable/greenglow/bile) in target.loc)
+				return
+			new /obj/effect/decal/cleanable/greenglow/bile(target.loc)
 
 /obj/item/projectile/roach_spit/large/attack_mob(mob/living/target_mob, distance, miss_modifier=0)
 	if (isroach(target_mob))
