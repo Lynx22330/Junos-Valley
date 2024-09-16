@@ -459,6 +459,7 @@
 	if(!can_open(forced))
 		return
 	operating = TRUE
+	activate_mobs_in_range(src, 10, FALSE) //We can hear when a door is opening all around us! Anti-cheese
 
 	set_opacity(0)
 	if(istype(src, /obj/machinery/door/airlock/multi_tile/metal))
