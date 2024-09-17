@@ -492,3 +492,71 @@
 #undef BASE_REGEN
 #undef DISTENDED_STOMACH_CONTENTS
 #undef MAX_STOMACH_CONTENTS
+
+// Junos Valley's "Slumbering Cave" beast
+
+/mob/living/carbon/superior_animal/genetics/fratellis/slumber
+	name = "Slumber"
+	desc = "An old beast that is nearing its end. Local's here deem this to be the oldest creature in Junos, and that it shares similar life cycles with that of a phoenix. They are incredibly intelligent, but with their age, have lost a lot of their prime. "
+
+/mob/living/carbon/superior_animal/genetics/fratellis/slumber/Life()
+
+	if(speech_cooldown > 0)
+		speech_cooldown--
+	if(spam_prevention > 0)
+		spam_prevention--
+	if(greet_duration > 0)
+		greet_duration--
+	if(greet_duration <= 0)
+		greeted = FALSE
+	if(idle_chatter > 0)
+		idle_chatter--
+		if(prob(1))
+			var/response = idle_cave_beast
+			visible_message("<B>[src.name]</B> bellows hoarsly, [pick(response)]")
+			speech_cooldown = 5
+
+/mob/living/carbon/superior_animal/genetics/fratellis/slumber/hear_say(message, verb, datum/language/language, alt_name, italics, mob/living/speaker, sound/speech_sound, sound_vol, speech_volume)
+
+	//They are old, and they are weak. Give them time to recover.
+	if(speech_cooldown > 0)
+		if(spam_prevention > 0)
+			return
+		if(greeted)
+			visible_message("<B>[src.name]</B> doesn't respond, give them some time.")
+			spam_prevention = 3
+		else
+			visible_message("<B>[src.name]</B> doesn't respond. Pehaps you should say hello, first?")
+			spam_prevention = 3
+			return
+	//We say hello to Slumberson. We must greet them at least once to speak to them for a while.
+	for(var/beast_quotes in greeting_cave_beast)
+		if(findtext(message, beast_quotes))
+			var/response = greeting_cave_beast_response
+			visible_message("<B>[src.name]</B> bellows gently, [pick(response)]")
+			speech_cooldown = 5
+			greeted = TRUE
+
+			//5-10 Minutes of speaking time before forgetting the conversation.
+			greet_duration = rand(150, 300)
+			idle_chatter = rand(90, 180)
+	if(greeted && greet_duration > 0)
+		//If we hear them ask who they are, they shall respond.
+		for(var/beast_quotes in whois_cave_beast)
+			if(findtext(message, beast_quotes))
+				var/response = whois_cave_beast_response
+				visible_message("<B>[src.name]</B> bellows hoarsly, [pick(response)]")
+				speech_cooldown = 5
+		//The player gives them their name.
+		for(var/beast_quotes in namegiven_cave_beast)
+			if(findtext(message, beast_quotes) && copytext(speaker.real_name, 1, findtext(speaker.real_name, " ")))
+				var/response = namegiven_cave_beast_response
+				visible_message("<B>[src.name]</B> bellows softly, \"[speaker.name][pick(response)]")
+				speech_cooldown = 5
+		//The player asks for advice.
+		for(var/beast_quotes in advice_cave_beast)
+			if(findtext(message, beast_quotes))
+				var/response = advice_cave_beast_response
+				visible_message("<B>[src.name]</B> bellows softly, [pick(response)]")
+				speech_cooldown = 5
+

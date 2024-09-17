@@ -1999,6 +1999,7 @@
 #include "code\modules\genetics\genetics.dm"
 #include "code\modules\genetics\creatures\ambusher.dm"
 #include "code\modules\genetics\creatures\bioshock.dm"
+#include "code\modules\genetics\creatures\slumbering_cave_beast_quotes.dm"
 #include "code\modules\genetics\creatures\fratellis.dm"
 #include "code\modules\genetics\creatures\golden_roach.dm"
 #include "code\modules\genetics\creatures\wasonce.dm"
