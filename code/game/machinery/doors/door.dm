@@ -474,7 +474,7 @@
 		addtimer(CALLBACK(src, PROC_REF(close)), wait)
 
 		//This checks if whoever is using the door has a client to activate mobs.
-	if(istype(usr, /obj/machinery/)) //Because apparently machines are opening themselves. Spooky!
+	if(istype(src, /obj/machinery/)) //Because apparently machines are opening themselves. Spooky!
 		return TRUE
 	if(usr.client && istype(usr, /mob/living/carbon/human))
 		activate_mobs_in_range(src, 15)
