@@ -547,7 +547,7 @@ For the sake of consistency, I suggest always rounding up on even values when ap
 		if(extra_proj_penmult)
 			projectile.add_projectile_penetration(penetration_multiplier)
 
-		//projectile.add_projectile_penetration(penetration_multiplier) //Soj edit, no more phantom +1 ad should be moved to its own var rather then add AND mult
+		//projectile.add_projectile_penetration(penetration_multiplier) //Soj edit, no more phatom +1 ad should be moved to its own var rather then add AND mult
 
 		if(extra_proj_wallbangmult)
 			projectile.multiply_pierce_penetration(extra_proj_wallbangmult)
@@ -1069,6 +1069,12 @@ For the sake of consistency, I suggest always rounding up on even values when ap
 		var/datum/firemode/new_mode = firemodes[sel_mode]
 		new_mode.update(force_state)
 
+/obj/item/gun/proc/force_firemode_deselect(mob/user)
+	if (sel_mode && firemodes && firemodes.len)
+		var/datum/firemode/new_mode = firemodes[sel_mode]
+		new_mode.force_deselect(user)
+
+
 /obj/item/gun/AltClick(mob/user)
 	if(user.incapacitated())
 		to_chat(user, SPAN_WARNING("You can't do that right now!"))
@@ -1117,10 +1123,13 @@ For the sake of consistency, I suggest always rounding up on even values when ap
 /obj/item/gun/dropped(mob/user)
 	// I really fucking hate this but this is how this is going to work.
 	var/mob/living/carbon/human/H = user
+	if(wielded)
+		unwield(H)
 	if (istype(H) && H.using_scope)
 		toggle_scope(H)
 	update_firemode(FALSE)
 	.=..()
+	force_firemode_deselect(H)
 
 /obj/item/gun/swapped_from()
 	.=..()

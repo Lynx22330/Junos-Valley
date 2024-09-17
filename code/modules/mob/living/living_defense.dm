@@ -150,6 +150,7 @@
 						o.status &= ~ORGAN_SPLINTED
 	var/effective_armor = (1 - dealt_damage / total_dmg) * 100
 
+	//log_and_message_admins("LOG 2: effective_armor [effective_armor] | total_dmg [total_dmg] | dealt_damage| [dealt_damage].")
 
 
 	//Feedback
@@ -166,7 +167,7 @@
 		if(49 to 74)
 			armor_message(SPAN_NOTICE("[src] armor absorbs most of the damage!"),
 							SPAN_NOTICE("Your armor protects you from the impact!"))
-		if(-INFINITY to 24)
+		if(1 to 24)
 			armor_message(SPAN_NOTICE("[src] armor reduces the impact by a little."),
 							SPAN_NOTICE("Your armor reduced the impact a little."))
 
