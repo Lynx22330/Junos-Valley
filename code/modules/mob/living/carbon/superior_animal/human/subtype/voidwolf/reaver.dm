@@ -21,7 +21,7 @@
 
 	flash_resistances = 20 //no.
 	melee_sharp = TRUE //Eswords
-	armor_divisor = 3
+	armor_penetration = 3
 	armor = list(melee = 15, bullet = 13, energy = 12, bomb = 75, bio = 100, rad = 25) //Legitmently their armor
 
 /mob/living/carbon/superior_animal/human/voidwolf/elite/New()
@@ -44,7 +44,7 @@
 	rapid_fire_shooting_amount = 5 //we're using the burst 5 mode
 	delay_for_rapid_range = 0.22 SECONDS
 	melee_sharp = FALSE
-	armor_divisor = 1
+	armor_penetration = 1
 
 /obj/item/gun/energy/firestorm/reaver_modded
 
@@ -69,7 +69,7 @@
 
 	casingtype = /obj/item/ammo_casing/pistol_35/spent
 	melee_sharp = FALSE
-	armor_divisor = 1
+	armor_penetration = 1
 
 /mob/living/carbon/superior_animal/human/voidwolf/elite/c20r/mob_reload()
 	..()
@@ -122,7 +122,7 @@
 
 casingtype = /obj/item/ammo_casing/a75/spent
 	melee_sharp = FALSE
-	armor_divisor = 1
+	armor_penetration = 1
 
 /mob/living/carbon/superior_animal/human/voidwolf/elite/gyrojet/New()
 	..()
@@ -141,7 +141,7 @@ casingtype = /obj/item/ammo_casing/a75/spent
 	drop_items = list(/obj/item/tool/sword/saber/cutlass, /obj/item/shield/buckler/energy/reaver/damaged,/obj/random/cloth/assault/reaver)
 
 	melee_sharp = TRUE //Eswords
-	armor_divisor = 3
+	armor_penetration = 3
 	var/block_chance = 65
 	move_and_attack = TRUE
 
@@ -178,7 +178,7 @@ casingtype = /obj/item/ammo_casing/a75/spent
 
 	projectiletype = /obj/item/projectile/beam/voidwolf
 	melee_sharp = TRUE //Eswords
-	armor_divisor = 3
+	armor_penetration = 3
 	var/block_chance = 65
 	move_and_attack = TRUE
 
