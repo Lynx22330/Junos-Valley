@@ -110,7 +110,7 @@
 
 				if(dmg_type == HALLOSS && ishuman(src)) //We already did this for mobs
 					dmg = round(dmg * clamp((get_specific_organ_efficiency(OP_NERVE, def_zone) / 100), 0.5, 1.5))
-					var/pain_armor = max(0, (src.getarmor(def_zone, "bullet") +  src.getarmor(def_zone, "melee") / armor_penetration))//All brute over-pen checks bullet rather then melee for simple mobs to keep melee viable
+					var/pain_armor = max(0, (src.getarmor(def_zone, "bullet") +  src.getarmor(def_zone, "melee") - armor_penetration))//All brute over-pen checks bullet rather then melee for simple mobs to keep melee viable
 					var/pain_no_matter_what = (dmg * 0.15) //we deal 15% of are pain, this is to stop rubbers being *completely* uses with basic armor - Its not perfect in melee
 					dmg = max(pain_no_matter_what, (dmg - pain_armor))
 					if(ishuman(src))
