@@ -44,8 +44,8 @@
 
 	maxHealth = 550 * MEGAFAUNA_HEALTH_MOD
 	health = 550 * MEGAFAUNA_HEALTH_MOD
-	melee_damage_lower = 35
-	melee_damage_upper = 40
+	melee_damage_lower = 25
+	melee_damage_upper = 30
 
 	armor = list(melee = 10, bullet = 14, energy = 12, bomb = 5, bio = 10, agony = 10, rad = 25)
 
@@ -114,7 +114,7 @@
 	emote_hear = list("rawrs","rumbles","rowls")
 	emote_see = list("stares ferociously", "snarls")
 	melee_damage_lower = 10
-	melee_damage_upper = 30
+	melee_damage_upper = 25
 	old_x = -16
 	old_y = 0
 	default_pixel_x = -16
@@ -178,8 +178,8 @@
 	response_harm = "hits the"
 	attacktext = list("bit")
 
-	melee_damage_upper = 25
 	melee_damage_lower = 15
+	melee_damage_upper = 20
 	mob_size = MOB_LARGE
 
 	old_x = -16
@@ -203,8 +203,8 @@
 	icon_living = "arachnid"
 	icon_rest = "arachnid_sleeping"
 	icon_dead = "arachnid_dead"
-	melee_damage_lower = 30
-	melee_damage_upper = 35
+	melee_damage_lower = 20
+	melee_damage_upper = 25
 	maxHealth = 300 * MEGAFAUNA_HEALTH_MOD
 	health = 300 * MEGAFAUNA_HEALTH_MOD
 	move_to_delay = 2
@@ -213,7 +213,7 @@
 	aggro_vision_range = 16
 	pixel_x = -16
 	move_to_delay = 2
-	speak_emote = list("chitters.", "sharpens its claws.")
+	speak_emote = list("chitters.", "sharpens its claws.", "gives a cold stare.")
 	attack_sound = 'sound/xenomorph/alien_bite1.ogg'
 	alpha = 30
 	faction = "stalker"
@@ -234,8 +234,8 @@
 	icon_living = "arachnid_daemon"
 	icon_rest = "arachnid_daemon_sleeping"
 	icon_dead = "arachnid_daemon_dead"
-	melee_damage_lower = 40
-	melee_damage_upper = 60
+	melee_damage_lower = 30
+	melee_damage_upper = 40
 	maxHealth = 450 * MEGAFAUNA_HEALTH_MOD
 	health = 450 * MEGAFAUNA_HEALTH_MOD
 	move_to_delay = 4
@@ -274,8 +274,8 @@
 	icon_state = "leaper"
 	icon_living = "leaper"
 	icon_dead = "leaper_dead"
-	melee_damage_lower = 50
-	melee_damage_upper = 60
+	melee_damage_lower = 30
+	melee_damage_upper = 40
 	maxHealth = 600 * MEGAFAUNA_HEALTH_MOD
 	health = 600 * MEGAFAUNA_HEALTH_MOD
 	move_to_delay = 4
@@ -326,8 +326,8 @@
 	icon_state = "hellpig"
 	icon_living = "hellpig"
 	icon_dead = "hellpig_dead"
-	melee_damage_lower = 30
-	melee_damage_upper = 45
+	melee_damage_lower = 20
+	melee_damage_upper = 30
 	maxHealth = 750 * MEGAFAUNA_HEALTH_MOD
 	health = 750 * MEGAFAUNA_HEALTH_MOD
 	move_to_delay = 4
@@ -357,16 +357,16 @@
 	icon_state = "wendigo"
 	icon_living = "wendigo"
 	icon_dead = "wendigo_dead"
-	melee_damage_lower = 25
-	melee_damage_upper = 35
-	maxHealth = 600 * MEGAFAUNA_HEALTH_MOD
-	health = 600 * MEGAFAUNA_HEALTH_MOD
+	melee_damage_lower = 20
+	melee_damage_upper = 30
+	maxHealth = 650 * MEGAFAUNA_HEALTH_MOD
+	health = 650 * MEGAFAUNA_HEALTH_MOD
 	move_to_delay = 2
 	turns_per_move = 6
 	speak_emote = list("snarls!", "jerks erratically.")
 	has_special_parts = TRUE
 	special_parts = list(/obj/item/animal_part/wolf_tooth,/obj/item/animal_part/wolf_tooth,/obj/item/animal_part/cannibal_tooth)
-	armor = list(melee = 8, bullet = 10, energy = 3, bomb = 5, bio = 10, agony = 10, rad = 25)
+	armor = list(melee = 12, bullet = 10, energy = 3, bomb = 5, bio = 10, agony = 10, rad = 25)
 	inherent_mutations = list(MUTATION_GIGANTISM, MUTATION_CLUMSY, MUTATION_IMBECILE, MUTATION_RAND_UNSTABLE, MUTATION_HYPERION)
 
 

@@ -18,6 +18,7 @@
 	name = "cloaker spider"
 	desc = "Furry and black, it makes you shudder to look at it. This one has a weaker chameleonic chitin that makes it hard to see."
 	alpha = 50
+	move_to_delay = 3
 	armor = list(melee = 1, bullet = 0, energy = 0, bomb = 0, bio = 10, rad = 25, agony = 0)
 
 
@@ -32,8 +33,27 @@
 	icon_living = "viper"
 	maxHealth = 100 * SPIDER_HEALTH_MOD
 	health = 100 * SPIDER_HEALTH_MOD
-	melee_damage_lower = 20
-	melee_damage_upper = 25
+	melee_damage_lower = 10
+	melee_damage_upper = 15 // We are designed for injecting, not chewing.
+	poison_per_bite = 7 // Slightly more venom than normal.
+
+
+/mob/living/carbon/superior_animal/giant_spider/hunter/viper_cloaker
+	name = "cloaked viper spider"
+	desc = "Furry, black, and has a powerful, energy resilient chameleonic chitin. It makes you want to scream. It's glinted, purple eyes and red splotch on its abdomen makes you fear for your life."
+	icon_state = "viper"
+	icon_living = "viper"
+	maxHealth = 30 * SPIDER_HEALTH_MOD // We are very venemous. We are very hard to spot. Yet, we can't take a single melee attack it seems.
+	health = 30 * SPIDER_HEALTH_MOD
+	melee_damage_lower = 5
+	melee_damage_upper = 10      // Fangs designed for injecting heavy doses, not heavy bites. Better carry some anti-venom!
+	poison_per_bite = 9
+	alpha = 45
+	armor = list(melee = 0, bullet = 0, energy = 20, bomb = 1, bio = 10, rad = 25)
+
+/mob/living/carbon/superior_animal/giant_spider/hunter/viper_cloaker/death() //We are still somewhat hidden after death, our cloak is stronger than normal.
+	..()
+	alpha = 200
 
 //bomb spider, very little toxins and not much health but explodes on reaching melee range.
 /mob/living/carbon/superior_animal/giant_spider/plasma
@@ -51,7 +71,7 @@
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/spider/plasma
 	meat_amount = 4
 	emote_see = list("chitters.","rubs its legs.","vibrates.")
-	armor_divisor = 3
+	armor_penetration = 3
 
 /mob/living/carbon/superior_animal/giant_spider/plasma/UnarmedAttack(var/atom/A, var/proximity)
 	. = ..()
@@ -205,7 +225,7 @@
 	poison_type = "party drops"
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/spider/emperor
 	armor = list(melee = 6, bullet = 6, energy = 2, bomb = 25, bio = 10, rad = 25, agony = 0)
-	armor_divisor = 2
+	armor_penetration = 2
 
 	get_stat_modifier = TRUE //Were not getting armor //Yes we are.
 
@@ -238,7 +258,7 @@
 	poison_per_bite = 6
 	poison_type = "stoxin"
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/spider/reaper_spider
-	armor_divisor = 3
+	armor_penetration = 3
 
 	get_stat_modifier = FALSE //Were not getting armor
 

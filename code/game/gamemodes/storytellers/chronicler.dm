@@ -9,6 +9,7 @@
 	gain_mult_moderate = 0.7
 	gain_mult_major = 0.7
 	gain_mult_roleset = 1.5
+	event_schedule_delay = 35 // Just like the warrior, events may spawn closer together to help speed up the round and give more opportunities for antags to occur.
 
 	//Less combat-oriented events, so that we'll not be fighting NPC monsters much
 	tag_weight_mults = list(TAG_COMBAT = 0.5)

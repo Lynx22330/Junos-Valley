@@ -6,8 +6,8 @@
 	icon_state = "crab3"
 	icon_living = "crab3"
 
-	maxHealth = 1400 * PSIBOSS_HEALTH_MOD
-	health = 1400 * PSIBOSS_HEALTH_MOD
+	maxHealth = 2000 * PSIBOSS_HEALTH_MOD
+	health = 2000 * PSIBOSS_HEALTH_MOD
 	attack_sound = 'sound/xenomorph/alien_footstep_charge1.ogg'
 	melee_damage_lower = 50
 	melee_damage_upper = 60
@@ -20,10 +20,10 @@
 	default_pixel_x = -16
 	default_pixel_y = 0
 	size_pixel_offset_x = -16
-	armor_divisor = 4
+	armor_penetration = 12
 	momento_mori = /obj/effect/decal/cleanable/psi_ash/king
-	first_teleport_callout = "<b><font size='3px'>\the Dreaming King looses a terrible scream before journeying to nowhere, his words bellowing in rage, \"Only the king may wear the crown!\" The answering calls of his court echoing through the realm!</font></b>"
-	second_teleport_callout = "<b><font size='3px'>\the Dreaming King looses an agonized howl before journeying to nowhere, his words bellowing in rage, \"I will never die!\" The strongest of his court heard affirming his call!</font></b>"
+	first_teleport_callout = "<b><font size='3px'>\the Dreaming King looses a terrible scream before smashing a fist into the floor, \"Only the king may wear the crown!\" The answering calls of his court echoing through the realm, the king has their first wind!</font></b>"
+	second_teleport_callout = "<b><font size='3px'>\the Dreaming King looses an agonized howl before flexing with all of its strength, arms splaying to their sides with bellow that causes the halls to reverberate with his words, bellowing in rage, \"I will never die! I WILL NEVER!\" The strongest of his court heard his cries, affirming his call with their presence!</font></b>"
 	var/dreaming_king = TRUE
 	var/hound_of_the_crown = FALSE
 	drop_items = list(/obj/random/psi/always_spawn, /obj/random/psi/always_spawn, /obj/random/psi/always_spawn, /obj/random/psi/always_spawn, /obj/random/psi/always_spawn, /obj/random/psi/always_spawn, /obj/random/psi/always_spawn, /obj/random/psi/always_spawn)
@@ -43,8 +43,8 @@
 	poison_per_bite = 5
 	turns_per_move = 12
 	momento_mori = /obj/effect/decal/cleanable/psi_ash/hound
-	first_teleport_callout = "<b><font size='3px'>\the Hound of the Crown looses a terrible scream before journeying to nowhere, the thing screaming in pure blackened hate! Distant howls can be heard echoing through the halls in answer!</font></b>"
-	second_teleport_callout = "<b><font size='3px'>\the Hound of the Crown looses an agonized howl before journeying to nowhere, its words echoing, \"Nobody stands before the king!\" Nearby howls can be heard echoing through the halls in answer!</font></b>"
+	first_teleport_callout = "<b><font size='3px'>\the Hound of the Crown looses a terrible scream before snapping its jaws to prepare its next breath, the thing soon screaming in pure blackened hate!!! Distant howls can be heard echoing through the halls in answer!</font></b>"
+	second_teleport_callout = "<b><font size='3px'>\the Hound of the Crown looses an agonized howl before stepping back with a slight limp for but a moment, its words echoing, \"Nobody stands before the king! NOBODY!\" Suddenly, nearby howls can be heard echoing through the halls in answer!</font></b>"
 	dreaming_king = FALSE
 	hound_of_the_crown = TRUE
 	fast_respawn = 1 MINUTES

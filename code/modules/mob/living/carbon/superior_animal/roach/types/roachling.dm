@@ -4,8 +4,8 @@
 	icon_state = "roachling"
 
 	turns_per_move = 3
-	maxHealth = 10 * ROACH_HEALTH_MOD
-	health = 10 * ROACH_HEALTH_MOD
+	maxHealth = 25 * ROACH_HEALTH_MOD
+	health = 25 * ROACH_HEALTH_MOD
 	move_to_delay = 3.5
 
 	knockdown_odds = 3
@@ -23,6 +23,7 @@
 	var/big_boss = FALSE
 
 
+
 /mob/living/carbon/superior_animal/roach/roachling/Life()
 	.=..()
 	if(!stat)
@@ -33,24 +34,26 @@
 			if (fed > 0) // If roachling has eaten a corpse
 				if (big_boss == TRUE && prob(fed)) // has eaten a fuhrer roach and has eaten a bunch otherwise
 					spawn_type = /mob/living/carbon/superior_animal/roach/kaiser// or got lucky
-				else
-					spawn_type = pickweight(list(/mob/living/carbon/superior_animal/roach = 0.5,
-						/mob/living/carbon/superior_animal/roach/tank = 4,
-						/mob/living/carbon/superior_animal/roach/toxic = 6,
-						/mob/living/carbon/superior_animal/roach/nanite = 0.5,
-						/mob/living/carbon/superior_animal/roach/glowing = 1,
-						/mob/living/carbon/superior_animal/roach/hunter = 2,
-						/mob/living/carbon/superior_animal/roach/support = 6,
-						/mob/living/carbon/superior_animal/roach/fuhrer = 2))
-			else
-				spawn_type = pickweight(list(/mob/living/carbon/superior_animal/roach = 9,
-					/mob/living/carbon/superior_animal/roach/tank = 2,
-					/mob/living/carbon/superior_animal/roach/toxic = 2,
-					/mob/living/carbon/superior_animal/roach/nanite = 2,
-					/mob/living/carbon/superior_animal/roach/glowing = 1,
-					/mob/living/carbon/superior_animal/roach/hunter = 4,
-					/mob/living/carbon/superior_animal/roach/support = 4,
-					/mob/living/carbon/superior_animal/roach/fuhrer = 0.5))
+				spawn_type += list(/mob/living/carbon/superior_animal/roach = 9,
+				/mob/living/carbon/superior_animal/roach/tank = 2,
+				/mob/living/carbon/superior_animal/roach/toxic = 2,
+				/mob/living/carbon/superior_animal/roach/hunter = 4)
+				if(GLOB.chaos_level > 1) //Higher weights as chaose increase
+					spawn_type += list(/mob/living/carbon/superior_animal/roach/fuhrer = (0.5 * GLOB.chaos_level)) //They finally get some order.
+				if(GLOB.chaos_level > 2)
+					spawn_type += list(/mob/living/carbon/superior_animal/roach/nitro = (0.5 * GLOB.chaos_level))
+					spawn_type += list(/mob/living/carbon/superior_animal/roach/glowing = (2 * GLOB.chaos_level)) // This is where the more supportive roaches begin.
+					spawn_type += list(/mob/living/carbon/superior_animal/roach/support = (2 * GLOB.chaos_level))
+				if(GLOB.chaos_level > 3)
+					spawn_type += list(/mob/living/carbon/superior_animal/roach/nanite = (0.2 * GLOB.chaos_level))
+					spawn_type += list(/mob/living/carbon/superior_animal/roach/elektromagnetisch = (0.2 * GLOB.chaos_level))
+				if(GLOB.chaos_level > 5) // These should only be active if players ever decide to vote on it.
+					spawn_type += list(/mob/living/carbon/superior_animal/roach/kaiser = (0.02 * GLOB.chaos_level)) //0.10, then 0.12, 0.14, so on, so forth. Starts off 0.1% chance spawning.
+					spawn_type += list(/mob/living/carbon/superior_animal/roach/tazntz = (1 * GLOB.chaos_level)) // The roaches are now mutating. True chaos unfolds.
+					spawn_type += list(/mob/living/carbon/superior_animal/roach/bluespace = (0.05 * GLOB.chaos_level)) // Teleporting Roaches? Chaos... Chaos!
+				return pickweight(spawn_type)
+
+
 
 			if (ispath(spawn_type, /mob/living/carbon/superior_animal/roach))
 				new spawn_type(src.loc, src, list("friends" = src.friends.Copy()))

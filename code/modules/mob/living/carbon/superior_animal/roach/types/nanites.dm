@@ -6,12 +6,12 @@
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/roachmeat/kraftwerk
 	meat_amount = 3
 	turns_per_move = 1
-	maxHealth = 30 * ROACH_HEALTH_MOD
-	health = 30 * ROACH_HEALTH_MOD
+	maxHealth = 145 * ROACH_HEALTH_MOD
+	health = 145 * ROACH_HEALTH_MOD      // More HP to accomodate their rarity and ability to swarm people with weaker flies.
 
 	knockdown_odds = 3
-	melee_damage_lower = 1
-	melee_damage_upper = 3 //He's a ranged roach
+	melee_damage_lower = 15
+	melee_damage_upper = 20             // We are robotic. We have sharp, metallic pincers designed for piercing through metal.
 
 	blattedin_revives_left = 1
 
@@ -22,18 +22,16 @@
 
 	min_air_pressure = 0
 	min_bodytemperature = 0
-	armor_divisor = 2
+	armor_penetration = 2
 	never_stimulate_air = TRUE
 
 	var/list/nanite_swarms = list()
 	var/max_swarms = 5
 
 /mob/living/carbon/superior_animal/roach/nanite/UnarmedAttack(atom/A, proximity)
-	. = ..()
-
 	if(isliving(A))
 		var/mob/living/L = A
-		if(istype(L) && prob(25) && nanite_swarms.len < max_swarms)
+		if(istype(L) && prob(33) && nanite_swarms.len < max_swarms)
 			var/sound/screech = pick('sound/machines/robots/robot_talk_light1.ogg','sound/machines/robots/robot_talk_light2.ogg','sound/machines/robots/robot_talk_heavy4.ogg')
 			playsound(src, screech, 30, 1, -3)
 			var/mob/living/simple_animal/hostile/naniteswarm/M = new /mob/living/simple_animal/hostile/naniteswarm(get_turf(src), src)
@@ -62,10 +60,10 @@
 	icon_living = "naniteswarm"
 	pass_flags = PASSTABLE
 	density = FALSE
-	health = 10
-	maxHealth = 10
-	melee_damage_lower = 1
-	melee_damage_upper = 2
+	health = 30
+	maxHealth = 30
+	melee_damage_lower = 2
+	melee_damage_upper = 4
 	attacktext = "cut"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	faction = "roach"
@@ -102,3 +100,11 @@
 		parent.friends.Remove(src)
 		parent = null
 	.=..()
+
+/mob/living/simple_animal/hostile/naniteswarm/UnarmedAttack(atom/A, proximity)
+	if(isliving(A))
+		var/mob/living/L = A
+		if(istype(L) && prob(20))
+			var/sound/screech = pick('sound/machines/robots/robot_talk_light1.ogg','sound/machines/robots/robot_talk_light2.ogg','sound/machines/robots/robot_talk_heavy4.ogg')
+			playsound(src, screech, 15, 1, -3)
+			say("11010")

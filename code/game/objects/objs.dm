@@ -10,7 +10,7 @@
 	var/edge = 0		// whether this object is more likely to dismember
 	var/in_use = 0 // If we have a user using us, this will be set on. We will check if the user has stopped using us, and thus stop updating and LAGGING EVERYTHING!
 	var/damtype = BRUTE
-	var/armor_divisor = 1
+	var/armor_penetration = 1
 	var/corporation = null
 	var/heat = 0
 	//soj edit
@@ -257,7 +257,7 @@
 
 //Same for AP
 /obj/proc/add_projectile_penetration(newmult)
-	armor_divisor = initial(armor_divisor) + newmult
+	armor_penetration = initial(armor_penetration) + newmult
 
 /obj/proc/multiply_pierce_penetration(newmult)
 

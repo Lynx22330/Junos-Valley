@@ -7,7 +7,7 @@
 	health = 80
 	maxHealth = 80
 	melee_damage_lower = 25
-	melee_damage_upper = 50
+	melee_damage_upper = 35
 	attacktext = "chomped"
 	attack_sound = 'sound/weapons/bite.ogg'
 	faction = "creature"
@@ -36,8 +36,8 @@
 	color = "#8B0000"
 	health = 200
 	maxHealth = 200
-	melee_damage_lower = 20
-	melee_damage_upper = 35
+	melee_damage_lower = 15
+	melee_damage_upper = 30
 
 /mob/living/simple_animal/hostile/retaliate/spaceman
 	name = "spaceman"
@@ -110,7 +110,7 @@
 	desc = "Some things are older than we can ever understand."
 	icon_state = "cultist"
 	melee_damage_lower = 20
-	melee_damage_upper = 25
+	melee_damage_upper = 30
 	health = 150
 	maxHealth = 150
 

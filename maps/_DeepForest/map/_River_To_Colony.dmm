@@ -131,6 +131,10 @@
 "bY" = (
 /turf/simulated/floor/rock/grey,
 /area/colony/exposedsun/crashed_shop/bottom_floor)
+"cb" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/mineral,
+/area/colony/exposedsun/crashed_shop/bottom_floor)
 "cc" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -697,6 +701,7 @@
 /area/colony/exposedsun/crashed_shop)
 "lf" = (
 /mob/living/simple_animal/hostile/hell_pig/wendigo,
+/obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/rock,
 /area/colony/exposedsun/crashed_shop/bottom_floor)
 "lp" = (
@@ -1426,6 +1431,10 @@
 /obj/random/voidsuit/low_chance,
 /turf/simulated/floor/wood_old,
 /area/colony/exposedsun/crashed_shop/workshop)
+"xr" = (
+/obj/structure/invislight,
+/turf/simulated/floor/asteroid/dirt,
+/area/colony/exposedsun/crashed_shop/bottom_floor)
 "xy" = (
 /obj/structure/railing{
 	dir = 8
@@ -2336,6 +2345,10 @@
 "Lr" = (
 /turf/simulated/wall/wood_old,
 /area/colony/exposedsun/crashed_shop/workshop)
+"Lu" = (
+/obj/structure/invislight,
+/turf/simulated/floor/rock,
+/area/colony/exposedsun/crashed_shop/bottom_floor)
 "LC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/random/pack/rare,
@@ -2643,9 +2656,8 @@
 /turf/simulated/floor/plating/under,
 /area/colony/exposedsun/crashed_shop/bottom_floor)
 "Pk" = (
-/obj/item/remains,
 /obj/effect/decal/cleanable/blood,
-/turf/simulated/floor/asteroid/dirt/dark,
+/turf/simulated/floor/rock,
 /area/colony/exposedsun/crashed_shop/bottom_floor)
 "Pl" = (
 /obj/structure/sign/departmentold/janitorial{
@@ -3254,6 +3266,12 @@
 	},
 /turf/simulated/floor/tiled/dark/techfloor_grid,
 /area/colony/exposedsun/crashed_shop)
+"Zp" = (
+/obj/item/remains,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/rock,
+/area/colony/exposedsun/crashed_shop/bottom_floor)
 "Zr" = (
 /obj/structure/table/steel_reinforced,
 /obj/random/rig_module/low_chance,
@@ -4102,8 +4120,8 @@ UX
 UX
 UX
 KU
-uy
-UK
+mm
+UX
 UK
 UK
 Fe
@@ -4184,8 +4202,8 @@ UX
 UX
 UX
 uy
-uy
-uy
+fc
+UX
 gz
 fc
 fc
@@ -4266,13 +4284,13 @@ uy
 uy
 Ob
 uy
-uy
-uy
+fc
+xr
 fc
 fc
 UK
 fc
-UK
+fc
 UK
 UX
 UX
@@ -4348,12 +4366,12 @@ uy
 uy
 uy
 uy
-Pk
-uy
+Ss
+UX
 fc
 UK
 ys
-fc
+UK
 Fe
 UK
 UK
@@ -4430,8 +4448,8 @@ Lj
 mm
 uy
 uy
-uy
-uy
+fc
+xr
 fc
 UK
 UX
@@ -4512,8 +4530,8 @@ Lj
 uy
 wZ
 Ob
-uy
-uy
+UX
+UX
 fc
 hg
 UX
@@ -4595,9 +4613,9 @@ uy
 uy
 uy
 uy
-uy
-Ss
-UK
+UX
+UX
+UX
 UX
 UX
 UK
@@ -5251,7 +5269,7 @@ Uw
 uy
 uy
 uy
-uy
+mm
 uy
 fc
 fc
@@ -7548,13 +7566,13 @@ aQ
 Yw
 Yw
 Yw
-lf
+Yw
 KK
 aQ
 Yw
 Yw
-Yw
-Yw
+Zp
+MC
 lP
 lP
 wv
@@ -7635,11 +7653,11 @@ Yw
 Yw
 Yw
 Yw
-Yw
+Zp
 Yw
 Yw
 lP
-wv
+lP
 wv
 wv
 wv
@@ -7720,10 +7738,10 @@ Yw
 Yw
 Yw
 Ta
+Lu
+Yw
 lP
-wv
-wv
-wv
+lP
 wv
 wv
 wv
@@ -7802,10 +7820,10 @@ Yw
 Yw
 Yw
 Yw
+Lu
+Yw
+Yw
 lP
-wv
-wv
-wv
 wv
 wv
 wv
@@ -7883,12 +7901,12 @@ Yw
 Yw
 Yw
 Yw
+MC
+lP
+Yw
+Yw
 Yw
 lP
-wv
-wv
-wv
-wv
 wv
 wv
 "}
@@ -7966,11 +7984,11 @@ Yw
 Yw
 Yw
 lP
+cb
 lP
-wv
-wv
-wv
-wv
+Pk
+Yw
+lP
 wv
 wv
 "}
@@ -8048,11 +8066,11 @@ Yw
 Yw
 Yw
 lP
-wv
-wv
-wv
-wv
-wv
+lP
+lP
+Yw
+MC
+lP
 wv
 wv
 "}
@@ -8130,11 +8148,11 @@ Yw
 lP
 lP
 lP
-wv
-wv
-wv
-wv
-wv
+lP
+Ta
+MC
+Yw
+lP
 wv
 wv
 "}
@@ -8212,11 +8230,11 @@ UX
 UX
 UX
 UX
-wv
-wv
-wv
-wv
-wv
+lP
+Yw
+Yw
+Yw
+lP
 wv
 wv
 "}
@@ -8294,11 +8312,11 @@ UX
 UX
 UX
 UX
-wv
-wv
-wv
-wv
-wv
+lP
+MC
+MC
+lP
+lP
 wv
 wv
 "}
@@ -8376,11 +8394,11 @@ UX
 UX
 UX
 UX
-wv
-wv
-wv
-wv
-wv
+lP
+Yw
+MC
+lP
+lP
 wv
 wv
 "}
@@ -8458,11 +8476,11 @@ UX
 UX
 UX
 UX
-wv
-wv
-wv
-wv
-wv
+lP
+MC
+Pk
+MC
+lP
 wv
 wv
 "}
@@ -8540,11 +8558,11 @@ UX
 UX
 UX
 UX
-wv
-wv
-wv
-wv
-wv
+lP
+Pk
+MC
+Ta
+lP
 wv
 wv
 "}
@@ -8622,11 +8640,11 @@ UX
 UX
 UX
 UX
-wv
-wv
-wv
-wv
-wv
+lP
+Pk
+lf
+lP
+lP
 wv
 wv
 "}
@@ -8704,11 +8722,11 @@ UX
 UX
 UX
 UX
-wv
-wv
-wv
-wv
-wv
+lP
+lP
+Pk
+lP
+lP
 wv
 wv
 "}
@@ -8786,10 +8804,10 @@ UX
 UX
 UX
 UX
-wv
-wv
-wv
-wv
+lP
+lP
+lP
+lP
 wv
 wv
 wv
@@ -8868,10 +8886,10 @@ UX
 UX
 UX
 UX
-wv
-wv
-wv
-wv
+lP
+lP
+lP
+lP
 wv
 wv
 wv
@@ -8950,10 +8968,10 @@ UX
 UX
 UX
 UX
-wv
-wv
-wv
-wv
+lP
+lP
+lP
+lP
 wv
 wv
 wv

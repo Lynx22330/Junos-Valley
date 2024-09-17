@@ -110,7 +110,7 @@
 	/// Alpha value of our telegraph beam.
 	var/telegraph_beam_alpha = 50
 
-	var/moved = FALSE
+	// var/moved = FALSE         This appears to be unused. Commenting out for now.
 	var/move_attack_mult = 0.6
 	var/move_and_attack = FALSE
 	universal_understand = TRUE //QoL to admins controling mobs

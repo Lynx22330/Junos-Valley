@@ -8,13 +8,12 @@
 	question = "End Shift?"
 	time = 90
 	choice_types = list(/datum/vote_choice/restart, /datum/vote_choice/countinue_round)
-	next_vote = 255 MINUTES //Minimum round length before it can be called for the first time
+	next_vote = 150 MINUTES //Minimum round length before it can be called for the first time
 	cooldown = 15 MINUTES //Cooldown is set to 15 mins as 1 hour is a bit much when things change so much in so little time + maxium 8 hour rounds means we should be a bit more forgiven.
 
 	// Overriden by implementation of IsAdminOnly
 	//only_admin = TRUE
 
-	multiple_votes = TRUE //Duel votes are fun
 	can_revote = TRUE
 	can_unvote = TRUE //In case you heck up
 
@@ -317,7 +316,107 @@
 /datum/vote_choice/no_chaos_level
 	text = "We have enough chaos already!"
 
+/datum/poll/chaos_level_increase
+	name = "Surpass the Chaos Level"
+	question = "Do you want to allow the chaos level to go beyond level 4?"
+	description = "Allows the storyteller's chaos to go beyond level 4, allowing new, dangerous mobs to be added to the spawn pool and new changes to existing mobs to occur."
+	time = 120
+	minimum_win_percentage = 0.75 //High % needed for something that alters the whole round
+	cooldown = 30 MINUTES
+	next_vote = 90 MINUTES //Same lenght as bluespace jump
+	choice_types = list(/datum/vote_choice/yes_chaos_surpass, /datum/vote_choice/no_chaos_surpass)
+	only_admin = FALSE
+	can_revote = TRUE
+	can_unvote = TRUE
 
+
+/datum/vote_choice/yes_chaos_surpass
+	text = "Uncap the chaos level!"
+
+/datum/vote_choice/yes_chaos_surpass/on_win()
+	GLOB.chaos_surpass = TRUE
+	for (var/mob/M as mob in SSmobs.mob_list)
+		to_chat(M, "<br><center><span class='danger'><b><font size=4>Chaos Level Has Been Uncapped. Embrace Chaos!</font></b><br></span></center><br>")
+
+/datum/vote_choice/no_chaos_surpass
+	text = "No! Do not allow chaos to consume us!"
+
+/datum/poll/chaos_level_decrease
+	name = "Decrease Chaos Level"
+	question = "Do you want to decrease the chaos level?"
+	description = "Lower chaos level makes storyteller events much less likely."
+	time = 120
+	minimum_win_percentage = 0.75 //High % needed for something that alters the whole round
+	cooldown = 30 MINUTES
+	next_vote = 90 MINUTES //Same lenght as bluespace jump
+	choice_types = list(/datum/vote_choice/yes_decrease_chaos_level, /datum/vote_choice/no_decrease_chaos_level)
+	only_admin = FALSE
+	can_revote = TRUE
+	can_unvote = TRUE
+
+
+/datum/vote_choice/yes_decrease_chaos_level
+	text = "Decrease the chaos level!"
+
+/datum/vote_choice/yes_decrease_chaos_level/on_win()
+	GLOB.chaos_level -= 1
+	for (var/mob/M as mob in SSmobs.mob_list)
+		to_chat(M, "<br><center><span class='danger'><b><font size=4>Chaos Level Decreased</font></b><br></span></center><br>")
+
+/datum/vote_choice/no_decrease_chaos_level
+	text = "We don't have enough chaos!"
+
+
+
+/datum/poll/chaos_level_reset
+	name = "Reset Chaos Level"
+	question = "Do you want to reset the chaos level?"
+	description = "Reset chaos back to its default value. For when things are too much."
+	time = 120
+	minimum_win_percentage = 0.75 //High % needed for something that alters the whole round
+	cooldown = 30 MINUTES
+	next_vote = 90 MINUTES //Same lenght as bluespace jump
+	choice_types = list(/datum/vote_choice/yes_reset_chaos_level, /datum/vote_choice/no_reset_chaos_level)
+	only_admin = FALSE
+	can_revote = TRUE
+	can_unvote = TRUE
+
+
+/datum/vote_choice/yes_reset_chaos_level
+	text = "Return to normalcy."
+
+/datum/vote_choice/yes_reset_chaos_level/on_win()
+	GLOB.chaos_level -= GLOB.chaos_level
+	GLOB.chaos_surpass = FALSE
+	for (var/mob/M as mob in SSmobs.mob_list)
+		to_chat(M, "<br><center><span class='danger'><b><font size=4>Chaos Level has been RESET!</font></b><br></span></center><br>")
+
+/datum/vote_choice/no_reset_chaos_level
+	text = "Embrace chaos."
+
+/datum/poll/power
+	name = "Power the Colony"	// Equinox edit: simple edit to keep the lights on during engineerless lowpop rounds.
+	question = "No engineers? Have no fear! Simply vote here and all your problems will go away (not really)."
+	time = 60
+	choice_types = list(/datum/vote_choice/power, /datum/vote_choice/nopower)
+	minimum_voters = 0
+	only_admin = FALSE
+
+	multiple_votes = FALSE
+	can_revote = TRUE
+	can_unvote = TRUE
+	cooldown = 30 MINUTES
+	next_vote = 5 MINUTES	//Have to wait 5 minutes after roundstart before doing it
+	see_votes = TRUE
+
+/datum/vote_choice/power
+	text = "Power to the people!"
+
+/datum/vote_choice/power/on_win()
+	power_restore()
+
+/datum/vote_choice/nopower
+	text = "Don't ruin my immersion."
 
 /datum/poll/custom
 	name = "Custom"

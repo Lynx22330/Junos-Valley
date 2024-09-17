@@ -5,8 +5,8 @@
 	icon_state = "golem_ameridian_purple"
 	health = 200 * AMGOLEM_HEALTH_MOD
 	maxHealth = 200 * AMGOLEM_HEALTH_MOD
-	melee_damage_lower = 40
-	melee_damage_upper = 50
+	melee_damage_lower = 30
+	melee_damage_upper = 40
 	move_to_delay = 5
 	armor = list(melee = 17, bullet = 15, energy = 20, bomb = 40, bio = 100, rad = 100) //We want to be gunned down, not lasered
 	drop_amount = 3

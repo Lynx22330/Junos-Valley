@@ -39,8 +39,8 @@ SUBSYSTEM_DEF(migration)
 /datum/controller/subsystem/migration/Initialize()
 	. = ..()
 	for (var/i = 0; i < roundstart_burrows; i++)
-		var/area/A = random_ship_area(FALSE, FALSE, FALSE)
-		var/turf/T = A.random_space() //Lets make sure the selected area is valid
+		var/area/A = typesof(/area/nadezhda/maintenance)
+		var/turf/T = A //Lets make sure the selected area is valid
 		create_burrow(T)
 
 /*
@@ -62,6 +62,10 @@ This proc will attempt to create a burrow against a wall, within view of the tar
 
 		//No being under a low wall
 		if (F.is_wall)
+			continue
+
+		//No deleting pipes just to spawn a burrow in
+		if(!turf_clear(F))
 			continue
 
 		//No stacking multiple burrows per tile

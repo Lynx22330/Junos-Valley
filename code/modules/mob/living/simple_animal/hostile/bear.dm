@@ -18,8 +18,8 @@
 	stop_automated_movement_when_pulled = 0
 	maxHealth = 60
 	health = 60
-	melee_damage_lower = 20
-	melee_damage_upper = 30
+	melee_damage_lower = 10
+	melee_damage_upper = 20
 	attack_sound = 'sound/effects/creatures/maul.ogg'
 	leather_amount = 6
 	bones_amount = 4
@@ -142,8 +142,8 @@
 	armor = list(melee = 5, bullet = 3, energy = 1, bomb = 10, bio = 100, rad = 100, agony = 0) // It's an ARMORED bear
 	maxHealth = 300 * EXCELSIOR_HEALTH_MOD
 	health = 300 * EXCELSIOR_HEALTH_MOD
-	melee_damage_lower = 30
-	melee_damage_upper = 40
+	melee_damage_lower = 20
+	melee_damage_upper = 30
 	special_parts = list(/obj/item/animal_part/wolf_tooth,/obj/item/animal_part/wolf_tooth)
 
 // Credit to scar#1579 for the sprite.

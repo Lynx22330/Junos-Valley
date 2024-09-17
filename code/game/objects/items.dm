@@ -688,7 +688,7 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 /obj/item/proc/refresh_upgrades()
 	damtype = initial(damtype)
 	force = initial(force)
-	armor_divisor = initial(armor_divisor)
+	armor_penetration = initial(armor_penetration)
 	item_flags = initial(item_flags)
 	name = initial(name)
 	max_upgrades = initial(max_upgrades)
@@ -750,7 +750,7 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 /obj/item/proc/alt_mode_activeate_two()
 	damtype = alt_mode_damagetype
 	force = force *= alt_mode_lossrate
-	armor_divisor= armor_divisor *= alt_mode_lossrate
+	armor_penetration= armor_penetration *= alt_mode_lossrate
 	attack_verb = LAZYCOPY(alt_mode_verbs)
 	sharp = alt_mode_sharp
 	flags |= NOBLOODY

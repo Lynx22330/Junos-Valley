@@ -28,8 +28,8 @@
 	meat_amount = 0
 	stop_automated_movement_when_pulled = 0
 
-	melee_damage_lower = 12
-	melee_damage_upper = 17
+	melee_damage_lower = 8
+	melee_damage_upper = 14
 	destroy_surroundings = FALSE
 	armor = list(melee = 8, bullet = 6, energy = 10, bomb = 60, bio = 100, rad = 100) //We want to be gunned down, not lasered
 
@@ -61,7 +61,7 @@
 	reload_message = "ejects a magazine as it loudly reloads with mechanical speed!"
 	ranged = TRUE //will it shoot?
 	rapid = FALSE //will it shoot fast?
-	projectiletype = /obj/item/projectile/bullet/c10x24
+	projectiletype = /obj/item/projectile/bullet/c10x24/turret
 	projectilesound = 'sound/weapons/Gunshot.ogg'
 	limited_ammo = TRUE
 	mag_drop = TRUE

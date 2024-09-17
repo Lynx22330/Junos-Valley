@@ -867,6 +867,9 @@ default behaviour is:
 	//Skills and mastery holder
 	learnt_tasks = new(src)
 
+	//Counting how many /mob/living/ exist at the start of the round.
+	GLOB.mob_count += 1
+
 	generate_static_overlay()
 	for(var/mob/observer/eye/angel/A in GLOB.player_list)
 		if(A)
@@ -878,6 +881,8 @@ default behaviour is:
 		update_z(T.z)
 
 /mob/living/Destroy()
+	// For when they are GONE! DEAD! OUT OF HERE!
+	GLOB.mob_count -= 1
 
 	for (var/obj/effect/bmode/buildholder/selector in selected_by)
 		selector.selected_mobs -= src

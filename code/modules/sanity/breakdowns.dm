@@ -439,7 +439,7 @@
 	active_view = FALSE
 	time = world.time + cooldown
 
-/*
+
 /datum/breakdown/common/herald
 	name = "Herald"
 	restore_sanity_pre = 5
@@ -459,7 +459,7 @@
 		message_time = world.time + cooldown_message
 		var/chance = rand(1, 100)
 		holder.owner.say(chance <= 50 ? "[holder.pick_quote_20()]" : "[holder.pick_quote_40()]")
-*/
+
 
 /datum/breakdown/common/desire_for_chrome
 	name = "Desire for Chrome"

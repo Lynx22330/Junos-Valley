@@ -15,7 +15,7 @@
 	maxHealth = 1000
 	health = 1000
 	melee_damage_lower = 30
-	melee_damage_upper = 35
+	melee_damage_upper = 30
 	old_x = -16
 	speed = 0.8
 	var/zoomeye = 7

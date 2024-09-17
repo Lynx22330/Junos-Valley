@@ -1163,6 +1163,10 @@
 /obj/random/rig_module,
 /turf/simulated/floor/tiled/dark/monofloor,
 /area/nadezhda/dungeon/outside/prepper/vault/floor5)
+"fQ" = (
+/obj/random/cluster/roaches/lower_chance,
+/turf/simulated/floor/tiled/cafe,
+/area/nadezhda/dungeon/outside/prepper/vault/floor3)
 "fV" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -1954,6 +1958,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
+/obj/random/cluster/roaches_hoard,
 /turf/simulated/floor/tiled/dark/gray_platform,
 /area/nadezhda/dungeon/outside/prepper/vault/floor3)
 "kG" = (
@@ -3672,7 +3677,7 @@
 "sc" = (
 /obj/random/cluster/roaches,
 /turf/simulated/floor/tiled/dark,
-/area/nadezhda/dungeon/outside/prepper/vault/floor3)
+/area/nadezhda/dungeon/outside/prepper/vault/floor4)
 "sd" = (
 /obj/item/material/shard,
 /turf/simulated/floor/tiled/dark,
@@ -4357,8 +4362,7 @@
 /area/nadezhda/dungeon/outside/prepper/vault/floor3)
 "tS" = (
 /obj/random/cluster/roaches,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/cafe,
 /area/nadezhda/dungeon/outside/prepper/vault/floor3)
 "tV" = (
 /obj/machinery/light/small,
@@ -6266,6 +6270,11 @@
 /obj/random/contraband/low_chance,
 /turf/simulated/floor/tiled/dark,
 /area/nadezhda/dungeon/outside/prepper/vault/floor4)
+"BS" = (
+/obj/effect/decal/cleanable/filth,
+/obj/random/cluster/roaches/lower_chance,
+/turf/simulated/floor/asteroid/dirt/dark,
+/area/nadezhda/dungeon/outside/prepper/vault/floor4)
 "BU" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/dark,
@@ -6349,10 +6358,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/nadezhda/dungeon/outside/prepper/vault/entryway)
 "CD" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/random/mob/prepper,
-/turf/simulated/floor/carpet/bcarpet,
-/area/nadezhda/dungeon/outside/prepper/vault/floor3)
+/obj/effect/decal/cleanable/rubble,
+/obj/random/cluster/roaches/lower_chance,
+/turf/simulated/floor/asteroid/dirt/dark,
+/area/nadezhda/dungeon/outside/prepper/vault/floor4)
 "CE" = (
 /obj/machinery/light/small,
 /obj/effect/decal/cleanable/dirt,
@@ -7289,9 +7298,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/nadezhda/dungeon/outside/prepper/vault/floor4)
 "Gm" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/random/mob/prepper_boss_lowchance,
-/turf/simulated/floor/tiled/dark,
+/obj/random/cluster/roaches/lower_chance,
+/turf/simulated/floor/asteroid/dirt/dark,
 /area/nadezhda/dungeon/outside/prepper/vault/floor4)
 "Gn" = (
 /obj/machinery/recharge_station,
@@ -7825,9 +7833,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/nadezhda/dungeon/outside/prepper/vault/floor4)
 "Ii" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/random/cluster/roaches,
+/obj/random/cluster/roaches/lower_chance,
 /turf/simulated/floor/tiled/dark,
 /area/nadezhda/dungeon/outside/prepper/vault/floor4)
 "Ij" = (
@@ -9367,7 +9373,7 @@ Ms
 Ms
 Gc
 yg
-Gm
+yq
 yg
 yg
 yq
@@ -9376,7 +9382,7 @@ yq
 Gw
 GI
 yq
-yg
+sc
 HT
 yg
 yg
@@ -9738,7 +9744,7 @@ yg
 yg
 yg
 yq
-Ii
+Cb
 Fe
 Iw
 Hw
@@ -9823,7 +9829,7 @@ Ms
 yg
 GT
 yq
-yg
+Ii
 yq
 Hz
 yQ
@@ -10380,7 +10386,7 @@ HZ
 HZ
 IG
 IG
-Iz
+Gm
 II
 Ju
 HZ
@@ -11002,7 +11008,7 @@ HN
 HO
 IB
 II
-IP
+BS
 HZ
 HZ
 HZ
@@ -11014,7 +11020,7 @@ HZ
 IG
 IG
 IG
-IG
+CD
 IG
 Jt
 aa
@@ -11173,7 +11179,7 @@ yq
 yg
 yg
 yg
-Hb
+yq
 yq
 HD
 HO
@@ -14693,9 +14699,9 @@ ho
 hG
 hb
 hb
-Mo
+ho
 aw
-YC
+fQ
 ke
 aw
 aa
@@ -15042,7 +15048,7 @@ aw
 aw
 aw
 aw
-sc
+hb
 sC
 Zo
 ho
@@ -15051,7 +15057,7 @@ ho
 ho
 ho
 hG
-CD
+zK
 uM
 hb
 aw
@@ -15134,7 +15140,7 @@ ab
 aw
 sd
 sD
-sc
+hb
 hb
 hb
 ho
@@ -15412,10 +15418,10 @@ ho
 ho
 hG
 zK
-RY
+hb
 hb
 aw
-YC
+fQ
 ke
 aw
 aa
@@ -15775,7 +15781,7 @@ ho
 QM
 iS
 aw
-YC
+tS
 YC
 aw
 aa
@@ -16035,7 +16041,7 @@ aw
 hb
 sG
 ho
-tS
+ho
 hb
 hb
 ho
@@ -16135,7 +16141,7 @@ gE
 hb
 ho
 aw
-YC
+tS
 xt
 aw
 aa
@@ -16212,7 +16218,7 @@ hb
 aw
 aw
 aw
-sc
+hb
 hb
 hb
 ho
