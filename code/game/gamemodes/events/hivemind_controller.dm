@@ -7,7 +7,7 @@ GLOBAL_LIST_INIT(hive_data_bool, list(
 	"tyrant_death_kills_hive"		= TRUE,
 	"all_church_to_battle"			= FALSE,
 	"pop_lock"						= FALSE,
-	"slime_pop_lock"				= TRUE,
+	"slime_pop_lock"				= FALSE,
 	"prevent_gibbing_dead"			= FALSE))
 
 GLOBAL_LIST_INIT(hive_data_float, list(

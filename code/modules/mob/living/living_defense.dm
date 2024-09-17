@@ -22,9 +22,9 @@
 			dmg_types += damagetype
 		dmg_types[damagetype] += damage
 
-	if(armor_penetration <= 0)
+/* 	if(armor_penetration <= 0)
 		armor_penetration = 0.001
-		log_debug("[used_weapon] applied damage to [name] with a nonpositive armor divisor")
+		log_debug("[used_weapon] applied damage to [name] with a nonpositive armor divisor") */
 
 	var/total_dmg = 0
 	var/dealt_damage = 0
@@ -70,7 +70,7 @@
 	var/remaining_armor = armor
 	var/remaining_ablative = ablative_armor
 	//log_and_message_admins("LOG 1: armor [armor] | ablative_armor [ablative_armor] | remaining_armor| [remaining_armor] | remaining_ablative [remaining_ablative].")
-	//log_and_message_admins("LOG 1.2: attack_flag [attack_flag] | damagetype [damagetype] | def_zone| [def_zone] | armor_divisor [armor_divisor].")	for(var/dmg_type in dmg_types)
+	//log_and_message_admins("LOG 1.2: attack_flag [attack_flag] | damagetype [damagetype] | def_zone| [def_zone] | armor_penetration [armor_penetration].")	for(var/dmg_type in dmg_types)
 	for(var/dmg_type in dmg_types)
 		var/dmg = dmg_types[dmg_type]
 		if(dmg)
@@ -150,6 +150,7 @@
 						o.status &= ~ORGAN_SPLINTED
 	var/effective_armor = (1 - dealt_damage / total_dmg) * 100
 
+	//log_and_message_admins("LOG 2: effective_armor [effective_armor] | total_dmg [total_dmg] | dealt_damage| [dealt_damage].")
 
 
 	//Feedback
@@ -166,7 +167,7 @@
 		if(49 to 74)
 			armor_message(SPAN_NOTICE("[src] armor absorbs most of the damage!"),
 							SPAN_NOTICE("Your armor protects you from the impact!"))
-		if(-INFINITY to 24)
+		if(1 to 24)
 			armor_message(SPAN_NOTICE("[src] armor reduces the impact by a little."),
 							SPAN_NOTICE("Your armor reduced the impact a little."))
 

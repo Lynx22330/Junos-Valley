@@ -95,7 +95,7 @@
 	if(isnull(targetted_mob))
 		return
 
-	if (!Adjacent(targetted_mob))
+	if(!Adjacent(targetted_mob))
 		return
 
 	return UnarmedAttack(targetted_mob,1)
@@ -361,3 +361,7 @@
 				if (retaliation_type & APPROACH_ATTACKER)
 					if (stat != DEAD)
 						INVOKE_ASYNC(SSmove_manager, /datum/controller/subsystem/move_manager/proc/move_to, src, target_location, (comfy_range - comfy_distance), move_to_delay)
+
+
+/mob/living/carbon/superior_animal/proc/movement_tech()
+	moved = TRUE

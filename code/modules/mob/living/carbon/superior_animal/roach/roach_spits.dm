@@ -41,7 +41,7 @@
 		//new /obj/effect/decal/cleanable/greenglow/bile(target.loc)		//Equinox edit: Makes the puddles drop right on the intended target instead of harmlessly splatering on distant walls
 
 	if(isliving(target))
-		if (!testing)
+		if(!testing)
 			var/mob/living/L = target
 			var/damage = rand(12, 20)
 			L.damage_through_armor(damage, BURN, attack_flag = ARMOR_BIO)
@@ -50,6 +50,6 @@
 			new /obj/effect/decal/cleanable/greenglow/bile(target.loc)
 
 /obj/item/projectile/roach_spit/large/attack_mob(mob/living/target_mob, distance, miss_modifier=0)
-	if (isroach(target_mob))
+	if(isroach(target_mob))
 		return FALSE // so these pass through roaches
 	..()
