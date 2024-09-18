@@ -29,7 +29,7 @@ Has ability of every roach.
 	faction= "psi_monster"
 	friendly_to_colony = FALSE
 
-	viewRange = 12
+	view_range = 12
 	randpixel = 0
 	pixel_x = -16
 	pixel_y = 0
@@ -181,7 +181,7 @@ Has ability of every roach.
 
 	var/turf/our_turf = get_turf(src)
 	if (our_turf) //If we're not in anything, continue
-		for(var/mob/living/O in hearers(src, viewRange))
+		for(var/mob/living/O in hearers(src, view_range))
 			var/priority = isValidAttackTarget(O)
 			if (priority)
 				var/temp_weighting = priority * get_dist(src, O)

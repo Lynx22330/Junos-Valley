@@ -142,14 +142,14 @@
 			if(following)
 				following = null
 			else
-				following = input(usr, "Choose who [src] should follow : ", "Set Following", null) as mob in oview(viewRange, src)
+				following = input(usr, "Choose who [src] should follow : ", "Set Following", null) as mob in oview(view_range, src)
 				last_followed = following //not really sure if this works
 		else
 			visible_emote("state, \"Error, User doesn't have permission to perform this action.\"")
 
 	if(href_list["adduser"])
 		if(creator_check())
-			var/list/Possible_Choice = oviewers(viewRange, src)
+			var/list/Possible_Choice = oviewers(view_range, src)
 
 			// We remove mobs that are already allowed
 			for(var/mob/M in Possible_Choice)

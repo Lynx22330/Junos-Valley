@@ -20,11 +20,11 @@
 					var/list/eatTargets = new
 					var/turf/our_turf = get_turf(src)
 					if (our_turf) //If we're not in anything, continue
-						for(var/mob/living/carbon/C as anything in hearers(src, viewRange))
+						for(var/mob/living/carbon/C as anything in hearers(src, view_range))
 							if ((C.stat == DEAD) && ((istype(C, /mob/living/carbon/human)) || (istype(C, /mob/living/carbon/superior_animal))))
 								eatTargets += C
 
-						for(var/obj/effect/spider/S in view(src, viewRange)) //S for Spider
+						for(var/obj/effect/spider/S in view(src, view_range)) //S for Spider
 							if (((istype(S, /obj/effect/spider/eggcluster)) || (istype(S, /obj/effect/spider/spiderling))))
 								eatTargets += S
 

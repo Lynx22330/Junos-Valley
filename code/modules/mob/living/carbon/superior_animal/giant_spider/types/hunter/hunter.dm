@@ -197,7 +197,7 @@
 	health = 200 * SPIDER_HEALTH_MOD
 	move_to_delay = 1
 	turns_per_move = 7
-	viewRange = 9
+	view_range = 9
 	melee_damage_lower = 20
 	melee_damage_upper = 30
 	poison_per_bite = 4

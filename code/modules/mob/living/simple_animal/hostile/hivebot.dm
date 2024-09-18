@@ -154,7 +154,7 @@
 	maxHealth = 450 * REPUBLICON_HEALTH_MOD
 	attacktext = "sliced"
 	faction = "hivebot"
-	viewRange = 14
+	view_range = 14
 	default_pixel_x = -16
 	randpixel = 0
 

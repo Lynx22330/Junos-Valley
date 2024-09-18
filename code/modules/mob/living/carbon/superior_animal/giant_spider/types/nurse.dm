@@ -23,8 +23,9 @@
 	var/web_activity = 30
 	move_to_delay = 4 //slightly faster than guardians but slower than hunters
 	armor = list(melee = 0, bullet = 0, energy = 0, bomb = 5, bio = 10, rad = 25, agony = 0)
-	var/egg_inject_chance = 0 //AHAHAHAHAHAHAHAAHAHAH, no
-	life_cycles_before_sleep = 3000 //We need more time to eat and web
+	var/egg_inject_chance = 1 //AHAHAHAHAHAHAHAAHAHAH, no, but, why not 1%?
+	life_cycles_before_sleep = 1000 //We need more time to eat and web
+	self_activate_ai_chance = 10
 	inherent_mutations = list(MUTATION_PROT_MILK, MUTATION_SPIDER_FRIEND, MUTATION_NERVOUSNESS, MUTATION_DEAF)
 
 /mob/living/carbon/superior_animal/giant_spider/nurse/midwife
@@ -168,7 +169,7 @@
 			var/list/cocoonTargets = new
 			var/turf/our_turf = get_turf(src)
 			if (our_turf) //If we're not in anything, continue
-				for(var/mob/living/C in hearers(src, viewRange))
+				for(var/mob/living/C in hearers(src, view_range))
 					if(C.stat != CONSCIOUS)
 						cocoonTargets += C
 

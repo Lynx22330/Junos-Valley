@@ -9,7 +9,7 @@
 			if(life_cycles_before_scan > 0)
 				life_cycles_before_scan--
 			else
-				if(check_surrounding_area(7))
+				if(check_surrounding_area(view_range) || prob(self_activate_ai_chance))
 					activate_ai()
 					life_cycles_before_scan = 29 / rand(0.1, 1.25) //So it doesn't fall asleep just to wake up the next tick
 				else

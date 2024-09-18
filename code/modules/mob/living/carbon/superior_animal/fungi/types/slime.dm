@@ -12,7 +12,7 @@
 	health = 400
 	melee_damage_lower = 40
 	melee_damage_upper = 45
-	viewRange = 3
+	view_range = 3
 	armor = list(
 		melee = 10,
 		bullet = 5,

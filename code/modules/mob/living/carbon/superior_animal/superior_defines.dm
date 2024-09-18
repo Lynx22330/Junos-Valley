@@ -197,13 +197,12 @@
 	var/retaliation_type = NO_RETALIATION
 	/// Determines what the mob will do if they are reacting to an attack and they can't see their target.
 	var/target_out_of_sight_mode = GUESS_LOCATION_WITH_END_OF_LINE
-	/// If true, turfs that have no LOS on the target out of viewrange will be ignored when finding a location in an aura/line that's out of viewrange.
+	/// If true, turfs that have no LOS on the target out of view_range will be ignored when finding a location in an aura/line that's out of view_range.
 	var/out_of_sight_turf_LOS_check = TRUE
 	/// If target_out_of_sight_mode == GUESS_LOCATION_WITH_LINE, distance from src and target will be multiplied by this, then set as the limit for the line search.
 	var/out_of_viewrange_line_distance_mult = 2
 
 	var/list/objectsInView //memoization for getObjectsInView()
-	var/viewRange = 7 //how far the mob AI can see
 	var/acceptableTargetDistance = 1 //consider all targets within this range equally
 
 	var/stance = HOSTILE_STANCE_IDLE //current mob AI state

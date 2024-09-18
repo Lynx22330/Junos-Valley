@@ -13,7 +13,7 @@
 	maxHealth = 75
 	melee_damage_lower = 20 // Diamond-tipped drill.
 	melee_damage_upper = 30
-	viewRange = 6
+	view_range = 6
 	move_to_delay = 3
 	randpixel = 0
 	mob_size = MOB_SMALL
@@ -36,7 +36,7 @@
 	..()
 	if(!client) // If there's anyone controlling the bot, this AI part won't run
 		if(!look_around() && (mining_modes & WANDER_MODE) && !in_use) // If we didn't find anything of value and can (mining_modes & WANDER_MODE) and someoen isn't using our UI
-			target = pick(oview(viewRange + 1, src)) // Go somewhere random
+			target = pick(oview(view_range + 1, src)) // Go somewhere random
 
 		// Are we going to a minable turf despite not being supposed to?
 		if(istype(target, /turf/simulated/mineral && !(mining_modes & MINER_MODE)))
@@ -116,7 +116,7 @@
 	if(.) // Did we mine or pick up stuff earlier on?
 		return . // return TRUE
 
-	for(var/O in oview(viewRange, src)) // Check everything we can see
+	for(var/O in oview(view_range, src)) // Check everything we can see
 		if((mining_modes & GATHER_MODE) && istype(O, /obj/item/stack/ore)) // Is it ore on the ground?
 			var/obj/item/stack/ore/Ore = O
 			target = Ore // Let's go there

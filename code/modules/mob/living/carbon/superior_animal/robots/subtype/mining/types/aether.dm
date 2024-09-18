@@ -3,7 +3,7 @@
 	desc = "A small Aether-model mining drone, developed by a Roboticist in Soteria and sold to Lonestar to facilitate mining operations. \
 			It is autonomous and can be set to mine, pick up ore and even wander on its own."
 	gender = FEMALE
-	viewRange = 6
+	view_range = 6
 	move_to_delay = 3
 	mob_size = MOB_SMALL
 	do_gibs = TRUE

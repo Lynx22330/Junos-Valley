@@ -9,7 +9,7 @@
 	melee_damage_lower = 14
 	melee_damage_upper = 19
 	aggro_noise = FALSE
-	viewRange = 5
+	view_range = 5
 	turns_per_move = 8
 
 	attack_sound = FALSE

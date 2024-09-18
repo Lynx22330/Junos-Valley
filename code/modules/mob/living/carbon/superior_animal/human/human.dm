@@ -4,7 +4,7 @@
 	desc = "A random guy, report this to R4d6 or Kaz if you see this."
 	icon = 'icons/mob/mobs-humanoid.dmi'
 	move_to_delay = 4
-	viewRange = 8
+	view_range = 8
 	speak_chance = 5
 	turns_per_move = 5
 	randpixel = 0

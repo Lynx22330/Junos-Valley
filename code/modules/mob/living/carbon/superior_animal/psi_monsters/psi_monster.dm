@@ -12,7 +12,7 @@
 	pass_flags = PASSTABLE
 
 	mob_size = MOB_LARGE
-	viewRange = 8
+	view_range = 8
 	armor = list(melee = 5, bullet = 2, energy = 1, bomb = 30, bio = 100, rad = 100)
 
 	cant_be_pulled = TRUE

@@ -120,19 +120,19 @@
  * distance: The distance between our target and us. Defaults to just that value. Here for override purposes.
  * target_mode: Defaults to target_out_of_sight_mode. Here for override purposes.
  *
- * If target_mode == ALWAYS_SEE, just returns target. If target_mode == GUESS_LOCATION_WITH_AREA, returns RANGE_TURFS, radius being the distance outside of viewrange.
+ * If target_mode == ALWAYS_SEE, just returns target. If target_mode == GUESS_LOCATION_WITH_AREA, returns RANGE_TURFS, radius being the distance outside of view_range.
  * Trims said list to remove any turfs that are dense, or turfs that have dense objects in them. If out_of_sight_turf_LOS_check is true, also removes and turfs
  * that fail a can_see check.
  *
- * If target_mode == GUESS_TARGET_WITH_LINE, does above, except it returns a list of turfs generated from a line drawn from the edge of viewrange to
+ * If target_mode == GUESS_TARGET_WITH_LINE, does above, except it returns a list of turfs generated from a line drawn from the edge of view_range to
  *
  * out_of_viewrange_line_distance_mult the distance from said distance to the target.
 **/
 /mob/living/carbon/superior_animal/proc/target_outside_of_view_range(var/atom/target, distance = get_dist(src, target), target_mode = target_out_of_sight_mode)
 
-	var/tiles_out_of_viewrange = (distance - viewRange) //self explanatory
+	var/tiles_out_of_viewrange = (distance - view_range) //self explanatory
 	if (tiles_out_of_viewrange <= 0)
-		return FALSE //they are within our viewrange
+		return FALSE //they are within our view_range
 
 	var/list/possible_locations //initialize the var
 	switch (target_mode)
@@ -454,7 +454,7 @@
 
 			if (targetted == target_location_resolved) //this isnt our target. its useless to shoot at it
 
-				if (distance > viewRange) //if it's not in our viewrange...
+				if (distance > view_range) //if it's not in our view_range...
 					var/turf/viewrange_edge = get_turf_at_edge_of_viewRange(targetted)
 					if (viewrange_edge.opacity || !(can_see_check(viewrange_edge))) //... and if itself blocks LOS or we cant see it...
 						if (!fire_through_walls) //...and we arent allowed to fire through walls...
@@ -480,7 +480,7 @@
 		if (stat != DEAD)
 			SSmove_manager.move_to(src, targetted_mob, 1, move_to_delay)
 
-/mob/living/carbon/superior_animal/proc/get_turf_at_edge_of_viewRange(var/atom/target, view_range = viewRange)
+/mob/living/carbon/superior_animal/proc/get_turf_at_edge_of_viewRange(var/atom/target, view_range = view_range)
 	var/turf/viewrange_edge = get_turf(src)
 	if (!target)
 		return null
@@ -492,14 +492,14 @@
 /mob/living/carbon/superior_animal/proc/can_see_check(var/atom/targetted_mob, var/mob/living/targetted_mob_real, can_see = FALSE, use_hearers = FALSE)
 
 	if (!see_through_walls) // we can skip these checks if we can always see our target
-		var/distance = (min(get_dist(src, targetted_mob), viewRange))
+		var/distance = (min(get_dist(src, targetted_mob), view_range))
 		if ((targetted_mob_real && (targetted_mob_real.client) && (ismob(targetted_mob))) || use_hearers) // is our target_mob a mob with a player controlling it?
 			if (targetted_mob in hearers(distance, src)) //we can afford a more expensive proc for the sake of making the player experience with ai better
 				can_see = TRUE
 		else if (can_see(src, targetted_mob, distance)) // if not, lets use a inaccurate cheap proc
 			can_see = TRUE
 	else
-		if (see_past_viewRange || (targetted_mob in range(viewRange, src)))
+		if (see_past_viewRange || (targetted_mob in range(view_range, src)))
 			can_see = TRUE
 
 	return can_see
@@ -609,20 +609,23 @@
 				SSmove_manager.stop_looping(src)
 				last_followed = null // this exists so we only stop the following once, no need to constantly end our walk
 
-	if(life_cycles_before_sleep)
-		life_cycles_before_sleep--
-		return TRUE
-	if(!(AI_inactive && life_cycles_before_sleep))
-		AI_inactive = TRUE
+	if(config.enable_mob_sleep)
+		if(stat != DEAD && !mind)	// Check for mind so player-driven, nonhuman mobs don't sleep
+			if(life_cycles_before_scan > 0)
+				life_cycles_before_scan--
+			else
+				if(check_surrounding_area(view_range) || prob(self_activate_ai_chance))
+					activate_ai()
+					life_cycles_before_scan = 29 / rand(0.2, 1.25) //So it doesn't fall asleep just to wake up the next tick
+				else
+					life_cycles_before_scan = 240 / rand(0.75, 1.25) // Now has random ticks to not bottleneck the CPU and cause it to choke.
 
-	if(life_cycles_before_scan)
-		life_cycles_before_scan--
-		return FALSE
-	if(check_surrounding_area(viewRange))
-		activate_ai()
-		life_cycles_before_scan = initial(life_cycles_before_scan)/6 //So it doesn't fall asleep just to wake up the next tick
-		return TRUE
-	life_cycles_before_scan = initial(life_cycles_before_scan)
+			if(life_cycles_before_sleep)
+				life_cycles_before_sleep--
+
+			if(life_cycles_before_sleep < 1 && !AI_inactive)
+				AI_inactive = TRUE
+
 	return FALSE
 
 /**

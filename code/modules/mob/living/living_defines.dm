@@ -10,8 +10,13 @@
 
 	var/death_threshold = HEALTH_THRESHOLD_SOFTCRIT
 
-	var/life_cycles_before_sleep = 60
-	var/life_cycles_before_scan = 360
+	var/life_cycles_before_sleep = 29
+	var/life_cycles_before_scan = 240
+
+	//Intended for use with mobs that are 'scouts' or 'supportive', I.E. Egg laying, nesting, and stirring up fights.
+	var/self_activate_ai_chance = 0
+
+	var/view_range = 7
 
 	var/stasis = FALSE
 	var/AI_inactive = TRUE // Mobs should spawn with AI disabled by default, that way we don't have random mobs active for no reason. Why this wasn't the case is beyond me.

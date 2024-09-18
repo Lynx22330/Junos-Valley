@@ -29,7 +29,7 @@
 	leather_amount = 0
 	bones_amount = 0
 	randpixel = 0
-	viewRange = 8
+	view_range = 8
 	reagent_immune = TRUE
 	toxin_immune = TRUE
 	cold_protection = 1

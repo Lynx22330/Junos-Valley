@@ -13,7 +13,7 @@
 
     //range/ammo stuff
 	ranged = 1
-	viewRange = 10
+	view_range = 10
 	comfy_range = 7
 	rapid = 0
 	ranged_cooldown = 2

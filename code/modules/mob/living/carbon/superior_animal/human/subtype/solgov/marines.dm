@@ -15,7 +15,7 @@
 
     //range/ammo stuff
 	ranged = TRUE
-	viewRange = 10
+	view_range = 10
 	comfy_range = 7
 	rapid = FALSE
 	ranged_cooldown = 2
@@ -191,7 +191,7 @@
 
 	casingtype = /obj/item/ammo_casing/heavy_rifle_408/hv/spent
 
-	viewRange = 14
+	view_range = 14
 	comfy_range = 12
 	ranged_cooldown = 4
 	projectiletype = /obj/item/projectile/bullet/heavy_rifle_408/hv

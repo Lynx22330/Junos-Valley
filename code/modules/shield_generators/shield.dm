@@ -381,5 +381,5 @@ Like for example singulo act and whatever.
 
 //This function takes a turf to prevent race conditions, as the object calling it will probably be deleted in the same frame
 /proc/shield_impact_sound(var/turf/T, var/range, var/volume = 100)
-	//The supplied volume is reduced by an amount = distance - viewrange * 2, viewrange is 7 i think
+	//The supplied volume is reduced by an amount = distance - view_range * 2, view_range is 7 i think
 	playsound(T, 'sound/effects/impacts/shield_impact_1.ogg', volume, 1,extrarange = range * 1.5, falloff = range, use_pressure = 0)

@@ -15,7 +15,7 @@ var/datum/xenomorph/xenomorph_ai
 	cant_be_pulled = TRUE
 
 	mob_size = MOB_LARGE
-	viewRange = 8
+	view_range = 8
 	armor = list(melee = 7, bullet = 7, energy = 1, bomb = 30, bio = 100, rad = 100)
 	armor_divisor = 1.25
 

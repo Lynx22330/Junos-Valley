@@ -261,7 +261,7 @@ They are soully made and reflavoured to be for PVE.
 	move_to_delay = 4
 	attacktext = "bashes"
 
-	viewRange = 20
+	view_range = 20
 	comfy_range = 20
 
 	drop_items = list(/obj/item/gun/energy/laser/cult/deepmaints)

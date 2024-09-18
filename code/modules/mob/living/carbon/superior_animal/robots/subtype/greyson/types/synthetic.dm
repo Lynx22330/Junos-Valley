@@ -78,17 +78,17 @@
 	advance = FALSE
 
 /mob/living/carbon/superior_animal/robot/greyson/synthetic/epistol/sniper/lowestrange
-	viewRange = 9
+	view_range = 9
 	comfy_range = 9
 
 /mob/living/carbon/superior_animal/robot/greyson/synthetic/epistol/sniper/lowrange //lower performance impact
-	viewRange = 20
+	view_range = 20
 	comfy_range = 20
 
 /mob/living/carbon/superior_animal/robot/greyson/synthetic/epistol/sniper/medrange //moderate performance impact
-	viewRange = 40
+	view_range = 40
 	comfy_range = 40
 
 /mob/living/carbon/superior_animal/robot/greyson/synthetic/epistol/sniper/highrange_laggy //for use in absurd distances, large performance impact comparatively
-	viewRange = 100
+	view_range = 100
 	comfy_range = 100

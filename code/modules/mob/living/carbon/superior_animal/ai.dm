@@ -1,7 +1,7 @@
 
 //NOTE: Don't use this proc for finding specific mobs or a very certain object; ultilize GLOBs instead of view()/mob/living/carbon/superior_animal/proc/getObjectsInView()
 /mob/living/carbon/superior_animal/proc/getObjectsInView()
-	objectsInView = objectsInView || view(src, viewRange)
+	objectsInView = objectsInView || view(src, view_range)
 	return objectsInView
 
 //Use this for all mobs per zlevel, get_dist() checked
@@ -9,13 +9,13 @@
 	var/turf/T = get_turf(src)
 	if(!T)
 		return //We're contained inside something, a locker perhaps.
-	return hearers(src, viewRange)
+	return hearers(src, view_range)
 
 
 	/* There was an attempt at optimization, but it was unsanitized, and was more expensive than just checking hearers.
 	var/list/list_to_return = new
 	for(var/atom/thing in SSmobs.mob_living_by_zlevel[((get_turf(src)).z)])
-		if(get_dist(src, thing) <= viewRange)
+		if(get_dist(src, thing) <= view_range)
 			list_to_return += thing
 	return list_to_return*/
 
@@ -30,28 +30,37 @@
 
 	var/turf/our_turf = get_turf(src)
 	if (our_turf) //If we're not in anything, continue
-		for(var/mob/living/target_mob in hearers(src, viewRange)) //as anything : Removed do optimization
+		var/list/inview = view(src, view_range)
+
+		for(var/obj/item/item_clearing in inview) //removes all items from are list this should make mobs target faster
+			inview -= item_clearing
+
+		for(var/mob/living/target_mob in inview) //as anything : Removed do optimization
 			if(isValidAttackTarget(target_mob))
 				if(target_mob.target_dummy && prioritize_dummies) //Target me over anyone else
 					return target_mob
 				filteredTargets += target_mob
+			inview -= target_mob
 
-		for(var/obj/machinery/tesla_turret/tesla_turret in view(src, viewRange))
+		for(var/obj/machinery/tesla_turret/tesla_turret in view(src, view_range))
 			if(isValidAttackTarget(tesla_turret))
 				filteredTargets += tesla_turret
+			inview -= tesla_turret
 
-		for(var/obj/machinery/porta_turret/porta_turret in view(src, viewRange))
+		for(var/obj/machinery/porta_turret/porta_turret in view(src, view_range))
 			if(isValidAttackTarget(porta_turret))
 				filteredTargets += porta_turret
+			inview -= porta_turret
 
-		for(var/obj/machinery/power/os_turret/os_turret in view(src, viewRange))
+		for(var/obj/machinery/power/os_turret/os_turret in view(src, view_range))
 			if(isValidAttackTarget(os_turret))
 				filteredTargets += os_turret
+			inview -= os_turret
 
 		for(var/obj/mecha/M in GLOB.mechas_list)
 			//As goofy as this looks its more optimized as were not looking at every mech outside are z-level if they are around us. - Trilby
 			if(M.z == z)
-				if(get_dist(src, M) <= viewRange)
+				if(get_dist(src, M) <= view_range)
 					if(isValidAttackTarget(M))
 						filteredTargets += M
 
@@ -74,9 +83,9 @@
 		if (RANDOM)
 			return L
 		if (CLOSEST)
-			return getClosestObjects(L, sourceLocation, viewRange)
+			return getClosestObjects(L, sourceLocation, view_range)
 		if (FURTHEST)
-			return getFurthestObjects(L, sourceLocation, viewRange)
+			return getFurthestObjects(L, sourceLocation, view_range)
 
 /mob/living/carbon/superior_animal/proc/attemptAttackOnTarget()
 	var/atom/targetted_mob = (target_mob?.resolve())
@@ -86,7 +95,7 @@
 	if(isnull(targetted_mob))
 		return
 
-	if (!Adjacent(targetted_mob))
+	if(!Adjacent(targetted_mob))
 		return
 
 	return UnarmedAttack(targetted_mob,1)
@@ -105,7 +114,7 @@
 		loseTarget()
 		return
 
-	if ((get_dist(src, targetted_mob) >= viewRange) || z != targetted_mob.z && !istype(targetted_mob, /obj/mecha))
+	if ((get_dist(src, targetted_mob) >= view_range) || z != targetted_mob.z && !istype(targetted_mob, /obj/mecha))
 		loseTarget()
 		return
 	if (check_if_alive())
@@ -140,7 +149,8 @@
 		var/mob/living/L = O
 		if(L.stat != CONSCIOUS)
 			return FALSE
-		if(L.health <= (ishuman(L) ? HEALTH_THRESHOLD_CRIT : 0))
+		//If we are standing well below crit, then it is still a threat
+		if(L.health <= (ishuman(L) ? HEALTH_THRESHOLD_CRIT : 0) && resting)
 			return FALSE
 		if((!attack_same && (L.faction == faction)) || (L in friends)) //just cuz your a friend dosnt mean it magically will no longer attack same
 			return FALSE
@@ -340,7 +350,7 @@
 			var/atom/new_target = attacker
 			var/atom/new_target_location = get_turf(attacker)
 			var/distance = (get_dist(src, attacker))
-			if (distance > viewRange) // are they out of our viewrange? TODO: maybe add a see/hear check
+			if (distance > view_range) // are they out of our view_range? TODO: maybe add a see/hear check
 				new_target_location = target_outside_of_view_range(attacker, distance) //this is where we think they might be
 			target_mob = WEAKREF(new_target)
 			target_location = WEAKREF(new_target_location)
@@ -351,3 +361,7 @@
 				if (retaliation_type & APPROACH_ATTACKER)
 					if (stat != DEAD)
 						INVOKE_ASYNC(SSmove_manager, /datum/controller/subsystem/move_manager/proc/move_to, src, target_location, (comfy_range - comfy_distance), move_to_delay)
+
+
+/mob/living/carbon/superior_animal/proc/movement_tech()
+	moved = TRUE
