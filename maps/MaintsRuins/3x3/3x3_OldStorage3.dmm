@@ -1,54 +1,43 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/obj/effect/plant/hivemind,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long0"
+	},
+/area/template_noop)
+"f" = (
 /turf/simulated/floor/industrial/blue_slates_long_fixed{
 	icon_state = "blue_long6"
 	},
 /area/template_noop)
-"j" = (
-/obj/effect/plant/hivemind,
-/turf/simulated/floor/industrial/blue_slates_long_fixed{
-	icon_state = "blue_long4"
-	},
-/area/template_noop)
-"l" = (
-/obj/effect/plant/hivemind,
+"s" = (
 /turf/simulated/floor/industrial/blue_slates_long_fixed{
 	icon_state = "blue_long5"
 	},
 /area/template_noop)
-"H" = (
-/obj/effect/plant/hivemind,
+"u" = (
+/obj/machinery/hivemind_machine/node,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long4"
+	},
+/area/template_noop)
+"T" = (
 /turf/simulated/floor/industrial/blue_slates_long_fixed{
 	icon_state = "blue_long2"
 	},
 /area/template_noop)
-"J" = (
-/obj/effect/plant/hivemind,
-/turf/simulated/floor/industrial/blue_slates_long_fixed{
-	icon_state = "blue_long0"
-	},
-/area/template_noop)
-"Y" = (
-/obj/random/structures/hivemind_machine_or_mob,
-/obj/effect/plant/hivemind,
-/turf/simulated/floor/industrial/blue_slates_long_fixed{
-	icon_state = "blue_long0"
-	},
-/area/template_noop)
 
 (1,1,1) = {"
-Y
 a
-a
+f
+f
 "}
 (2,1,1) = {"
-J
-j
-l
+a
+u
+s
 "}
 (3,1,1) = {"
-J
-Y
-H
+a
+a
+T
 "}
