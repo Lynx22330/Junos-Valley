@@ -1,0 +1,81 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/effect/spider/stickyweb,
+/obj/structure/spider_nest,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long1"
+	},
+/area/template_noop)
+"i" = (
+/obj/effect/spider/stickyweb,
+/obj/random/cluster/spiders,
+/obj/random/ammo_fancy/low_chance,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long2"
+	},
+/area/template_noop)
+"k" = (
+/obj/random/ammo_fancy/low_chance,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long0"
+	},
+/area/template_noop)
+"m" = (
+/obj/random/ammo_fancy/low_chance,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long6"
+	},
+/area/template_noop)
+"x" = (
+/obj/random/ammo_fancy/low_chance,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long4"
+	},
+/area/template_noop)
+"F" = (
+/obj/random/cluster/xenomorphs/lower_chance,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long0"
+	},
+/area/template_noop)
+"J" = (
+/obj/random/gun_fancy,
+/obj/effect/spider/stickyweb,
+/obj/random/spider_trap,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long5"
+	},
+/area/template_noop)
+"M" = (
+/obj/random/cluster/spiders,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long0"
+	},
+/area/template_noop)
+"O" = (
+/obj/effect/spider/stickyweb,
+/obj/structure/spider_nest,
+/obj/random/ammo_fancy/low_chance,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long1"
+	},
+/area/template_noop)
+
+(1,1,1) = {"
+O
+k
+i
+"}
+(2,1,1) = {"
+F
+J
+x
+"}
+(3,1,1) = {"
+m
+M
+a
+"}
