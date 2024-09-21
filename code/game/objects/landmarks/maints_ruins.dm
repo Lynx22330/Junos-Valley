@@ -53,10 +53,10 @@ GLOBAL_LIST_EMPTY(chosen_station_templates)
 	return pickweight(template_names)
 
 /obj/effect/landmark/stationroom/maint/
-	unique = TRUE
+	unique = FALSE
 
 /obj/effect/landmark/stationroom/maint/threexthree
-	template_names = list("Maint OldStorage", "Maint OldStorage1", "Maint OldStorage2")
+	template_names = list("Maint OldStorage", "Maint OldStorage1", "Maint OldStorage2", "Maint OldStorage3", "Maint OldStorage4", "Maint OldStorage5")
 /obj/effect/landmark/stationroom/maint/threexfive
 	template_names = list()
 /obj/effect/landmark/stationroom/maint/fivexthree
