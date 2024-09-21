@@ -314,12 +314,12 @@ var/world_topic_spam_protect_time = world.timeofday
 		s += "<b>[config.server_name]</b> &#8212; "
 
 	s += "<b>[station_name()]</b>";
-//	s += " ("
+	s += " ("
 //	s += "<a href=\"https://discord.com/invite/aXrM3SDyEw\">" //Change this to wherever you want the hub to link to.
-//	s += "[game_version]"
+	s += "[game_version]"
 //	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 //	s += "</a>"
-//	s += ")"
+	s += ")"
 
 	var/list/features = list()
 
