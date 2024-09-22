@@ -10779,12 +10779,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/nadezhda/rnd/xenobiology)
 "chS" = (
-/obj/random/junk/low_chance,
+/obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
 	dir = 8;
 	pixel_y = 8
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/industrial/concrete_bricks,
 /area/nadezhda/maintenance/undergroundfloor1south)
 "chX" = (
@@ -134267,9 +134266,9 @@ qZC
 qZC
 qZC
 qZC
-qZC
-dyP
 chS
+dyP
+dyP
 qZC
 jaj
 cZb
