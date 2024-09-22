@@ -143,3 +143,6 @@
 
 	/// Icon used for speechbubbles
 	var/bubble_icon = "default"
+
+	//Hearthstone Ported MERP menu
+	var/datum/sex_controller/sexcon

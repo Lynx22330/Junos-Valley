@@ -339,7 +339,15 @@ var/list/rummage_sound = list(\
 
 	return toplay
 
-/proc/playsound(atom/source, soundin, vol as num, vary, extrarange as num, falloff, is_global, frequency, is_ambiance = 0,  ignore_walls = TRUE, zrange = 2, override_env, envdry, envwet, use_pressure = TRUE)
+#define CHANNEL_HIGHEST_AVAILABLE 1011
+
+/proc/open_sound_channel()
+	var/static/next_channel = 1	//loop through the available 1024 - (the ones we reserve) channels and pray that its not still being used
+	. = ++next_channel
+	if(next_channel > CHANNEL_HIGHEST_AVAILABLE)
+		next_channel = 1
+
+/proc/playsound(atom/source, soundin, vol as num, vary, extrarange as num, falloff, is_global, frequency, is_ambiance = 0,  ignore_walls = TRUE, zrange = 2, override_env, envdry, envwet, use_pressure = TRUE, repeat = src)
 	if(isarea(source))
 		error("[source] is an area and is trying to make the sound: [soundin]")
 		return
@@ -374,6 +382,33 @@ var/list/rummage_sound = list(\
 			if(T && (T.z == turf_source.z || zrange && abs(T.z - turf_source.z) <= zrange))
 				M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, is_global, extrarange, override_env, envdry, envwet, use_pressure)
 
+	if(repeat)
+		if(istype(repeat, /datum/looping_sound))
+			var/datum/looping_sound/D = repeat
+			if(src in D.thingshearing) //we are already hearing this loop
+				if(client.played_loops[D])
+					var/sound/DS = client.played_loops[D]["SOUND"]
+					if(DS)
+						var/volly = client.played_loops[D]["VOL"]
+						if(volly != S.volume)
+							DS.x = S.x
+							DS.y = S.y
+							DS.z = S.z
+							DS.falloff = S.falloff
+							client.played_loops[D]["VOL"] = S.volume
+							update_sound_volume(DS, S.volume)
+							if(client.played_loops[D]["MUTESTATUS"]) //we have sound so turn this off
+								client.played_loops[D]["MUTESTATUS"] = null
+						return TRUE
+			else
+				D.thingshearing += src
+			client.played_loops[D] = list()
+			client.played_loops[D]["SOUND"] = S
+			client.played_loops[D]["VOL"] = S.volume
+			client.played_loops[D]["MUTESTATUS"] = null
+//			if(D.persistent_loop) //shut up music because we're hearing ingame music
+//				play_ambience(get_area(src))
+			S.repeat = 1
 
 var/const/FALLOFF_SOUNDS = 0.5
 

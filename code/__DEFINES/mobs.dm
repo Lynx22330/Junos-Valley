@@ -207,6 +207,12 @@
 #define OP_NERVE         "nerve"
 #define OP_BLOOD_VESSEL  "blood vessel"
 
+//Organ process for MERP
+#define OP_PENIS		"penis"
+#define OP_VAGINA		"vagina"
+#define OP_BREASTS		"breasts"
+#define OP_TESTICLES 	"testicles"
+
 // Extra organs
 #define OP_KIDNEY_LEFT    "left kidney"
 #define OP_KIDNEY_RIGHT   "right kidney"

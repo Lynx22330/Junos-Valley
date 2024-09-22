@@ -47,6 +47,8 @@
 	/// A weak reference to another datum
 	var/datum/weakref/weak_reference
 
+	var/abstract_type = /datum
+
 #ifdef REFERENCE_TRACKING
 	var/running_find_references
 	var/last_find_references = 0

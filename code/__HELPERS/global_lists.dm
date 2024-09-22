@@ -415,3 +415,37 @@ var/list/bee_food_list = list("harebell", "sunflowers", "thaadra", "telriis", "s
 
 //Used to track repeat odditie weapon spawns, as the name suggests. Currently helps reduce repeats
 GLOBAL_LIST_EMPTY(reapeat_odditie_weapon_spawn)
+
+//Used for referring to genital sizes.
+GLOBAL_LIST_INIT(named_penis_sizes, list(
+	"small" = 1,
+	"average" = 2,
+	"large" = 3,
+))
+
+GLOBAL_LIST_INIT(named_ball_sizes, list(
+	"small" = 1,
+	"average" = 2,
+	"large" = 3,
+))
+
+GLOBAL_LIST_INIT(named_breast_sizes, list(
+	"flat" = 0,
+	"sery small" = 1,
+	"small" = 2,
+	"normal" = 3,
+	"large" = 4,
+	"enormous" = 5,
+	"towering" = 6,
+	"gigantic" = 7,
+	"gargantuan" = 8,
+	"colossal" = 9,
+	"ungodly big" = 10,
+))
+
+GLOBAL_LIST_INIT(named_belly_sizes, list(
+	"flat" = 0,
+	"small" = 1,
+	"medium" = 2,
+	"large" = 3,
+))
