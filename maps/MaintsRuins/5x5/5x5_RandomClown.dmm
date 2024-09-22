@@ -1,0 +1,152 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/effect/decal/cleanable/blood,
+/obj/random/mob/voidwolf/low_chance,
+/turf/simulated/floor/industrial/blue_slates{
+	icon_state = "black_large_fixed"
+	},
+/area/template_noop)
+"b" = (
+/obj/item/bananapeel,
+/turf/simulated/floor/industrial/blue_slates{
+	icon_state = "black_large"
+	},
+/area/template_noop)
+"c" = (
+/turf/simulated/floor/industrial/blue_slates{
+	icon_state = "black_large"
+	},
+/area/template_noop)
+"e" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/industrial/blue_slates{
+	icon_state = "black_large3"
+	},
+/area/template_noop)
+"g" = (
+/obj/item/bananapeel,
+/obj/item/seeds/bloodtomatoseed,
+/turf/simulated/floor/industrial/blue_slates{
+	icon_state = "black_large"
+	},
+/area/template_noop)
+"h" = (
+/turf/simulated/floor/industrial/blue_slates{
+	icon_state = "black_large3"
+	},
+/area/template_noop)
+"i" = (
+/obj/item/reagent_containers/glass/beaker/vial/vape/banana,
+/obj/effect/decal/cleanable/blood,
+/obj/item/seeds/bloodtomatoseed,
+/turf/simulated/floor/industrial/blue_slates{
+	icon_state = "black_large1"
+	},
+/area/template_noop)
+"j" = (
+/obj/item/reagent_containers/food/snacks/sliceable/bananabread,
+/turf/simulated/floor/industrial/blue_slates{
+	icon_state = "black_large1"
+	},
+/area/template_noop)
+"k" = (
+/obj/item/bananapeel,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/industrial/blue_slates{
+	icon_state = "black_large_fixed"
+	},
+/area/template_noop)
+"w" = (
+/obj/effect/decal/cleanable/blood,
+/obj/item/seeds/bloodtomatoseed,
+/turf/simulated/floor/industrial/blue_slates{
+	icon_state = "black_large2"
+	},
+/area/template_noop)
+"A" = (
+/obj/item/bananapeel,
+/mob/living/simple_animal/hostile/retaliate/clown/banana,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/industrial/blue_slates{
+	icon_state = "black_large3"
+	},
+/area/template_noop)
+"F" = (
+/obj/random/mob/voidwolf/low_chance,
+/turf/simulated/floor/industrial/blue_slates{
+	icon_state = "black_large2"
+	},
+/area/template_noop)
+"I" = (
+/turf/simulated/floor/industrial/blue_slates{
+	icon_state = "black_large2"
+	},
+/area/template_noop)
+"L" = (
+/obj/random/mob/voidwolf/low_chance,
+/turf/simulated/floor/industrial/blue_slates{
+	icon_state = "black_large_fixed"
+	},
+/area/template_noop)
+"O" = (
+/obj/item/bananapeel,
+/obj/item/reagent_containers/food/snacks/sliceable/bananabread,
+/turf/simulated/floor/industrial/blue_slates{
+	icon_state = "black_large3"
+	},
+/area/template_noop)
+"P" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/industrial/blue_slates{
+	icon_state = "black_large"
+	},
+/area/template_noop)
+"R" = (
+/turf/simulated/floor/industrial/blue_slates{
+	icon_state = "black_large1"
+	},
+/area/template_noop)
+"T" = (
+/obj/item/bananapeel,
+/obj/item/reagent_containers/food/snacks/sliceable/bananabread,
+/obj/random/mob/voidwolf/low_chance,
+/turf/simulated/floor/industrial/blue_slates{
+	icon_state = "black_large3"
+	},
+/area/template_noop)
+
+(1,1,1) = {"
+P
+R
+e
+L
+c
+"}
+(2,1,1) = {"
+h
+T
+g
+w
+P
+"}
+(3,1,1) = {"
+e
+I
+A
+O
+I
+"}
+(4,1,1) = {"
+I
+i
+j
+a
+k
+"}
+(5,1,1) = {"
+h
+F
+P
+b
+I
+"}

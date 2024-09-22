@@ -1,0 +1,157 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark/cyancorner{
+	icon_state = "techfloor"
+	},
+/area/template_noop)
+"d" = (
+/obj/structure/table/rack,
+/obj/random/science,
+/obj/random/science/low_chance,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark/cyancorner{
+	icon_state = "techfloor"
+	},
+/area/template_noop)
+"e" = (
+/mob/living/carbon/superior_animal/roach/fuhrer,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark/cyancorner{
+	icon_state = "techfloor"
+	},
+/area/template_noop)
+"h" = (
+/obj/random/mecha/damaged/low_chance,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark/cyancorner{
+	icon_state = "techfloor"
+	},
+/area/template_noop)
+"j" = (
+/obj/structure/table/rack,
+/obj/random/science,
+/obj/random/science/low_chance,
+/obj/random/science/low_chance,
+/obj/random/science/low_chance,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark/cyancorner{
+	icon_state = "techfloor"
+	},
+/area/template_noop)
+"k" = (
+/obj/structure/table/rack,
+/obj/random/science,
+/obj/random/science/low_chance,
+/obj/random/science/low_chance,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark/cyancorner{
+	icon_state = "techfloor"
+	},
+/area/template_noop)
+"q" = (
+/obj/random/cluster/roaches,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark/cyancorner{
+	icon_state = "techfloor"
+	},
+/area/template_noop)
+"A" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark/cyancorner{
+	icon_state = "techfloor"
+	},
+/area/template_noop)
+"C" = (
+/obj/structure/table/rack,
+/obj/random/science,
+/obj/random/science/low_chance,
+/obj/random/science/low_chance,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark/cyancorner{
+	icon_state = "techfloor"
+	},
+/area/template_noop)
+"I" = (
+/obj/structure/table/rack,
+/obj/random/science,
+/obj/random/science/low_chance,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark/cyancorner{
+	icon_state = "techfloor"
+	},
+/area/template_noop)
+"J" = (
+/obj/random/cluster/roaches,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark/cyancorner{
+	icon_state = "techfloor"
+	},
+/area/template_noop)
+"P" = (
+/mob/living/carbon/superior_animal/roach/fuhrer,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark/cyancorner{
+	icon_state = "techfloor"
+	},
+/area/template_noop)
+"R" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark/cyancorner{
+	icon_state = "techfloor"
+	},
+/area/template_noop)
+"Y" = (
+/obj/machinery/constructable_frame/machine_frame,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark/cyancorner{
+	icon_state = "techfloor"
+	},
+/area/template_noop)
+
+(1,1,1) = {"
+Y
+R
+a
+d
+d
+"}
+(2,1,1) = {"
+R
+P
+J
+A
+C
+"}
+(3,1,1) = {"
+R
+h
+e
+A
+R
+"}
+(4,1,1) = {"
+R
+a
+A
+q
+k
+"}
+(5,1,1) = {"
+R
+j
+a
+R
+I
+"}
