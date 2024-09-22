@@ -43,3 +43,22 @@
 	id = "OldStorage5"
 	suffix = "3x3_OldStorage5.dmm"
 	name = "Maint OldStorage5"
+
+//Five by Five rooms base.
+/datum/map_template/ruin/station/maint/fivexfive
+	prefix = "maps/MaintsRuins/5x5/"
+
+/datum/map_template/ruin/station/maint/threexthree/roachchamber
+	id = "RoachChamber"
+	suffix = "5x5_RoachChamber.dmm"
+	name = "Maint RoachChamber"
+
+/datum/map_template/ruin/station/maint/threexthree/bigshower
+	id = "BigShower"
+	suffix = "5x5_BigShower.dmm"
+	name = "Maint BigShower"
+
+/datum/map_template/ruin/station/maint/threexthree/smallworkshop
+	id = "SmallWorkshop"
+	suffix = "5x5_SmallWorkshop.dmm"
+	name = "Maint SmallWorkshop"
