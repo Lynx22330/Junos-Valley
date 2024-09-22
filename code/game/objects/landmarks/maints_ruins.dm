@@ -56,9 +56,11 @@ GLOBAL_LIST_EMPTY(chosen_station_templates)
 	unique = FALSE
 
 /obj/effect/landmark/stationroom/maint/threexthree
-	template_names = list("Maint OldStorage", "Maint OldStorage1", "Maint OldStorage2", "Maint OldStorage3", "Maint OldStorage4", "Maint OldStorage5")
+	template_names = list("Maint 3x3OldStorage", "Maint 3x3OldStorage1", "Maint 3x3OldStorage2", "Maint 3x3OldStorage3",
+	 "Maint 3x3OldStorage4", "Maint 3x3OldStorage5")
 /obj/effect/landmark/stationroom/maint/fivexfive
-	template_names = list("Maint RoachChamber", "Maint BigShower", "Maint SmallWorkshop")
+	template_names = list("Maint 5x5OldStorage", "Maint 5x5OldStorage1", "Maint RoachChamber", "Maint BigShower", "Maint SmallWorkshop",
+	 "Maint RandomClown", "Maint SingularTree", "Maint SmallArcade", "TeaDollRoom", "Maint GiantBathroom")
 /obj/effect/landmark/stationroom/maint/threexfive
 	template_names = list()
 /obj/effect/landmark/stationroom/maint/fivexthree
