@@ -1,0 +1,239 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/structure/table/reinforced,
+/obj/random/science,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/industrial/black_large_slates,
+/area/template_noop)
+"e" = (
+/turf/simulated/wall,
+/area/template_noop)
+"f" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/random/cluster/roaches_hoard,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/industrial/black_large_slates,
+/area/template_noop)
+"h" = (
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/industrial/black_large_slates,
+/area/template_noop)
+"i" = (
+/obj/structure/table/reinforced,
+/obj/random/tool_upgrade/rare/low_chance,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/industrial/black_large_slates,
+/area/template_noop)
+"j" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/industrial/black_large_slates,
+/area/template_noop)
+"k" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/random/junk/low_chance,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/industrial/black_large_slates,
+/area/template_noop)
+"o" = (
+/obj/structure/table/reinforced,
+/obj/random/science/low_chance,
+/obj/random/tool,
+/obj/random/tool,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/industrial/black_large_slates,
+/area/template_noop)
+"s" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/industrial/black_large_slates,
+/area/template_noop)
+"t" = (
+/obj/structure/table/reinforced,
+/obj/random/toolbox,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/industrial/black_large_slates,
+/area/template_noop)
+"u" = (
+/obj/structure/cable,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/industrial/black_large_slates,
+/area/template_noop)
+"y" = (
+/obj/structure/table/reinforced,
+/obj/random/tool_upgrade/low_chance,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/industrial/black_large_slates,
+/area/template_noop)
+"A" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/industrial/black_large_slates,
+/area/template_noop)
+"C" = (
+/obj/random/junk/low_chance,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/industrial/black_large_slates,
+/area/template_noop)
+"D" = (
+/obj/random/junk/low_chance,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/industrial/black_large_slates,
+/area/template_noop)
+"G" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/industrial/black_large_slates,
+/area/template_noop)
+"H" = (
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/industrial/black_large_slates,
+/area/template_noop)
+"J" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/random/cluster/roaches_hoard,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/industrial/black_large_slates,
+/area/template_noop)
+"U" = (
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/industrial/black_large_slates,
+/area/template_noop)
+"V" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/random/junk/low_chance,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/industrial/black_large_slates,
+/area/template_noop)
+"Y" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/industrial/black_large_slates,
+/area/template_noop)
+
+(1,1,1) = {"
+t
+o
+h
+C
+e
+"}
+(2,1,1) = {"
+i
+k
+j
+f
+a
+"}
+(3,1,1) = {"
+U
+G
+e
+V
+u
+"}
+(4,1,1) = {"
+D
+J
+Y
+A
+C
+"}
+(5,1,1) = {"
+e
+y
+H
+s
+e
+"}
