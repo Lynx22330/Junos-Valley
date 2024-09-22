@@ -3,8 +3,9 @@
 
 // NAME = "Maint Oldstorage"
 
-// In the list, you use the name VARIABLE Maint Oldstorage, NOT the datum path name, and NOT its ID.
-// For random rooms without any set theme, call it OldStorage.
+// In the list, you use the name VARIABLE Maint 3x3Oldstorage, NOT the datum path name, and NOT its ID.
+// For random rooms without any set theme, call it [size]OldStorage. (3x3OldStorage for example)
+// Make sure to NOT have the same names, otherwise you will break template and map loading.
 // If you do have a theme for your room, please name it appropriately.
 
 ///Base for all station ruins.
@@ -17,34 +18,34 @@
 	prefix = "maps/MaintsRuins/3x3/"
 
 /datum/map_template/ruin/station/maint/threexthree/oldstorage
-	id = "OldStorage"
+	id = "3x3OldStorage"
 	suffix = "3x3_OldStorage.dmm"
-	name = "Maint OldStorage"
+	name = "Maint 3x3OldStorage"
 
 /datum/map_template/ruin/station/maint/threexthree/oldstorage1
-	id = "OldStorage1"
+	id = "3x3OldStorage1"
 	suffix = "3x3_OldStorage1.dmm"
-	name = "Maint OldStorage1"
+	name = "Maint 3x3OldStorage1"
 
 /datum/map_template/ruin/station/maint/threexthree/oldstorage2
-	id = "OldStorage2"
+	id = "3x3OldStorage2"
 	suffix = "3x3_OldStorage2.dmm"
-	name = "Maint OldStorage2"
+	name = "Maint 3x3OldStorage2"
 
 /datum/map_template/ruin/station/maint/threexthree/oldstorage3
-	id = "OldStorage3"
+	id = "3x3OldStorage3"
 	suffix = "3x3_OldStorage3.dmm"
-	name = "Maint OldStorage3"
+	name = "Maint 3x3OldStorage3"
 
 /datum/map_template/ruin/station/maint/threexthree/oldstorage4
-	id = "OldStorage4"
+	id = "3x3OldStorage4"
 	suffix = "3x3_OldStorage4.dmm"
-	name = "Maint OldStorage4"
+	name = "Maint 3x3OldStorage4"
 
 /datum/map_template/ruin/station/maint/threexthree/oldstorage5
-	id = "OldStorage5"
+	id = "3x3OldStorage5"
 	suffix = "3x3_OldStorage5.dmm"
-	name = "Maint OldStorage5"
+	name = "Maint 3x3OldStorage5"
 
 //Five by Five rooms base.
 /datum/map_template/ruin/station/maint/fivexfive
@@ -70,13 +71,33 @@
 	suffix = "5x5_RandomClown.dmm"
 	name = "Maint RandomClown"
 
+/datum/map_template/ruin/station/maint/fivexfive/singulartree
+	id = "SingularTree"
+	suffix = "5x5_SingularTree.dmm"
+	name = "Maint SingularTree"
+
+/datum/map_template/ruin/station/maint/fivexfive/smallarcade
+	id = "SmallArcade"
+	suffix = "5x5_SmallArcade.dmm"
+	name = "Maint SmallArcade"
+
+/datum/map_template/ruin/station/maint/fivexfive/teadollroom
+	id = "TeaDollRoom"
+	suffix = "5x5_TeaDollRoom.dmm"
+	name = "Maint TeaDollRoom"
+
+/datum/map_template/ruin/station/maint/fivexfive/giantbathroom
+	id = "GiantBathroom"
+	suffix = "5x5_GiantBathroom.dmm"
+	name = "Maint GiantBathroom"
+
 /datum/map_template/ruin/station/maint/fivexfive/oldstorage
-	id = "OldStorage"
+	id = "5x5OldStorage"
 	suffix = "5x5_OldStorage.dmm"
-	name = "Maint OldStorage"
+	name = "Maint 5x5OldStorage"
 
 /datum/map_template/ruin/station/maint/fivexfive/oldstorage1
-	id = "OldStorage1"
+	id = "5x5OldStorage1"
 	suffix = "5x5_OldStorage1.dmm"
-	name = "Maint OldStorage1"
+	name = "Maint 5x5OldStorage1"
 
