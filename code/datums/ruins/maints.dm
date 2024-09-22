@@ -4,7 +4,8 @@
 // NAME = "Maint Oldstorage"
 
 // In the list, you use the name VARIABLE Maint 3x3Oldstorage, NOT the datum path name, and NOT its ID.
-// For random rooms without any set theme, call it [size]OldStorage. Make sure to NOT have the same names, otherwise you will break loading.
+// For random rooms without any set theme, call it [size]OldStorage. (3x3OldStorage for example)
+// Make sure to NOT have the same names, otherwise you will break template and map loading.
 // If you do have a theme for your room, please name it appropriately.
 
 ///Base for all station ruins.
@@ -69,6 +70,26 @@
 	id = "RandomClown"
 	suffix = "5x5_RandomClown.dmm"
 	name = "Maint RandomClown"
+
+/datum/map_template/ruin/station/maint/fivexfive/singulartree
+	id = "SingularTree"
+	suffix = "5x5_SingularTree.dmm"
+	name = "Maint SingularTree"
+
+/datum/map_template/ruin/station/maint/fivexfive/smallarcade
+	id = "SmallArcade"
+	suffix = "5x5_SmallArcade.dmm"
+	name = "Maint SmallArcade"
+
+/datum/map_template/ruin/station/maint/fivexfive/teadollroom
+	id = "TeaDollRoom"
+	suffix = "5x5_TeaDollRoom.dmm"
+	name = "Maint TeaDollRoom"
+
+/datum/map_template/ruin/station/maint/fivexfive/giantbathroom
+	id = "GiantBathroom"
+	suffix = "5x5_GiantBathroom.dmm"
+	name = "Maint GiantBathroom"
 
 /datum/map_template/ruin/station/maint/fivexfive/oldstorage
 	id = "5x5OldStorage"

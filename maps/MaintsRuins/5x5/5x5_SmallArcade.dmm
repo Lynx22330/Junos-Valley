@@ -1,0 +1,208 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/effect/floor_decal/border/carpet/orange{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/purcarpet,
+/area/template_noop)
+"f" = (
+/obj/effect/floor_decal/border/carpet/orange{
+	dir = 1
+	},
+/obj/effect/floor_decal/border/carpet/orange{
+	dir = 4
+	},
+/obj/effect/floor_decal/border/carpet/orange{
+	dir = 5
+	},
+/obj/machinery/computer/arcade/orion_trail,
+/turf/simulated/floor/carpet/purcarpet,
+/area/template_noop)
+"h" = (
+/obj/effect/floor_decal/border/carpet/orange{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/oracarpet,
+/area/template_noop)
+"l" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/purcarpet,
+/area/template_noop)
+"m" = (
+/obj/effect/floor_decal/border/carpet/orange{
+	dir = 8
+	},
+/obj/effect/floor_decal/border/carpet/orange,
+/obj/effect/floor_decal/border/carpet/orange{
+	dir = 10
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/purcarpet,
+/area/template_noop)
+"o" = (
+/obj/effect/floor_decal/border/carpet/orange{
+	dir = 8
+	},
+/obj/structure/table/reinforced,
+/obj/random/booze/low_chance,
+/obj/random/junkfood,
+/obj/random/junkfood,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/oracarpet,
+/area/template_noop)
+"t" = (
+/obj/effect/floor_decal/border/carpet/orange,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/oracarpet,
+/area/template_noop)
+"u" = (
+/obj/effect/floor_decal/border/carpet/orange{
+	dir = 8
+	},
+/obj/machinery/computer/arcade/orion_trail,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/oracarpet,
+/area/template_noop)
+"v" = (
+/obj/effect/floor_decal/border/carpet/orange{
+	dir = 4
+	},
+/obj/machinery/computer/arcade/orion_trail,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/oracarpet,
+/area/template_noop)
+"y" = (
+/obj/effect/floor_decal/border/carpet/orange{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/purcarpet,
+/area/template_noop)
+"D" = (
+/obj/effect/floor_decal/border/carpet/orange{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/purcarpet,
+/area/template_noop)
+"F" = (
+/obj/effect/floor_decal/border/carpet/orange{
+	dir = 1
+	},
+/obj/structure/sign/misc/arcade{
+	pixel_y = 24
+	},
+/obj/machinery/computer/arcade/orion_trail,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/oracarpet,
+/area/template_noop)
+"G" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/purcarpet,
+/area/template_noop)
+"H" = (
+/obj/effect/floor_decal/border/carpet/orange,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/oracarpet,
+/area/template_noop)
+"J" = (
+/obj/machinery/computer/arcade/orion_trail,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/purcarpet,
+/area/template_noop)
+"K" = (
+/obj/effect/floor_decal/border/carpet/orange{
+	dir = 1
+	},
+/obj/structure/sign/misc/arcade{
+	pixel_y = 24
+	},
+/obj/structure/table/reinforced,
+/obj/random/booze/low_chance,
+/obj/random/booze/low_chance,
+/obj/random/booze/low_chance,
+/obj/random/junkfood/low_chance,
+/obj/random/junkfood/low_chance,
+/obj/random/junkfood/low_chance,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/oracarpet,
+/area/template_noop)
+"O" = (
+/obj/effect/floor_decal/border/carpet/orange,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/purcarpet,
+/area/template_noop)
+"S" = (
+/obj/effect/floor_decal/border/carpet/orange{
+	dir = 4
+	},
+/obj/effect/floor_decal/border/carpet/orange,
+/obj/effect/floor_decal/border/carpet/orange{
+	dir = 6
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/purcarpet,
+/area/template_noop)
+"Z" = (
+/obj/effect/floor_decal/border/carpet/orange{
+	dir = 1
+	},
+/obj/effect/floor_decal/border/carpet/orange{
+	dir = 8
+	},
+/obj/effect/floor_decal/border/carpet/orange{
+	dir = 9
+	},
+/obj/structure/table/reinforced,
+/obj/random/booze/low_chance,
+/obj/random/junkfood,
+/obj/random/junkfood/low_chance,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/purcarpet,
+/area/template_noop)
+
+(1,1,1) = {"
+Z
+o
+D
+u
+m
+"}
+(2,1,1) = {"
+K
+G
+G
+J
+H
+"}
+(3,1,1) = {"
+y
+l
+G
+G
+O
+"}
+(4,1,1) = {"
+F
+G
+G
+J
+t
+"}
+(5,1,1) = {"
+f
+h
+a
+v
+S
+"}
