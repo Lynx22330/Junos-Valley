@@ -14,13 +14,13 @@
 /obj/random/cloth/backpack/low_chance,
 /obj/random/cloth/armor/low_chance,
 /obj/random/cloth/armor/low_chance,
-/turf/simulated/floor/reinforced/plasma{
+/turf/simulated/floor/reinforced{
 	icon_state = "techmaint_perforated"
 	},
 /area/template_noop)
 "m" = (
 /obj/machinery/washing_machine,
-/turf/simulated/floor/reinforced/plasma{
+/turf/simulated/floor/reinforced{
 	icon_state = "techmaint_perforated"
 	},
 /area/template_noop)
@@ -35,7 +35,7 @@
 	},
 /area/template_noop)
 "y" = (
-/turf/simulated/floor/reinforced/plasma{
+/turf/simulated/floor/reinforced{
 	icon_state = "techmaint_perforated"
 	},
 /area/template_noop)
