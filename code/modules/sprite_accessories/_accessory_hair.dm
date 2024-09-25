@@ -211,6 +211,10 @@
 	name = "Coffee House"
 	icon_state = "coffeehouse"
 
+/datum/sprite_accessory/hair/cotton
+	name = "Cotton"
+	icon_state = "hair_cotton"
+
 /datum/sprite_accessory/hair/crew
 	name = "Crewcut"
 	icon_state = "crewcut"
