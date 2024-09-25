@@ -3528,8 +3528,11 @@
 #include "modular_sojourn\task_master\tasks.dm"
 #include "code\datums\sexcon\sex_action.dm"
 #include "code\datums\sexcon\sexcon_helpers.dm"
+#include "code\__DEFINES\sexcon_defines.dm"
 #include "code\datums\sexcon\sexcon.dm"
-#include "code\datums\sexcon\sex_actions\deviant\ear_sex.dm"
+#include "code\controllers\subsystems\rogue\soundloopers.dm"
+#include "code\game\soundloop.dm"
+/* #include "code\datums\sexcon\sex_actions\deviant\ear_sex.dm"
 #include "code\datums\sexcon\sex_actions\deviant\facesitting.dm"
 #include "code\datums\sexcon\sex_actions\deviant\footjob.dm"
 #include "code\datums\sexcon\sex_actions\deviant\force_thighjob.dm"
@@ -3579,7 +3582,7 @@
 #include "code\datums\sexcon\sex_actions\toy\toy_other_anal.dm"
 #include "code\datums\sexcon\sex_actions\toy\toy_other_oral.dm"
 #include "code\datums\sexcon\sex_actions\toy\toy_other_vaginal.dm"
-#include "code\datums\sexcon\sex_actions\toy\toy_vaginal.dm"
+#include "code\datums\sexcon\sex_actions\toy\toy_vaginal.dm" */
 #include "code\datums\looping_sounds\_looping_sound.dm"
 #include "code\modules\surgery\surgery_helpers.dm"
 // END_INCLUDE

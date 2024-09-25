@@ -102,8 +102,7 @@
 		return
 	// ZAPED
 	to_chat(user, span_boldwarning(pick(list("I feel tainted...", "I feel less human..."))))
-	log_combat(user, victim, "Initiated rape against")
-	adjust_playerquality(-4, user.ckey, reason = "Initiated rape on an AFK/resisting person.")
+	log_attack(user, victim, "Initiated rape against")
 	user.client.prefs.violated[victim.mind.key] = world.time
 
 /datum/sex_controller/proc/adjust_speed(amt)
@@ -150,19 +149,19 @@
 	show_ui()
 
 /datum/sex_controller/proc/cum_onto()
-	log_combat(user, target, "Came onto the target")
+	log_attack(user, target, "Came onto the target")
 	playsound(target, 'sound/misc/mat/endout.ogg', 50, TRUE, ignore_walls = FALSE)
 	add_cum_floor(get_turf(target))
 	after_ejaculation()
 
 /datum/sex_controller/proc/cum_into(oral = FALSE)
-	log_combat(user, target, "Came inside [target]")
+	log_attack(user, target, "Came inside [target]")
 	if(oral)
 		playsound(target, pick(list('sound/misc/mat/mouthend (1).ogg','sound/misc/mat/mouthend (2).ogg')), 100, FALSE, ignore_walls = FALSE)
 		if(ejacmessaged != 1)
 			target.visible_message(span_info("With every load I swallow, with Eora's blessing I feel more satiated so I may go longer."))
 			ejacmessaged = 1
-		target.adjust_nutrition(100)
+		target.adjustNutrition(100)
 	else
 		playsound(target, 'sound/misc/mat/endin.ogg', 50, TRUE, ignore_walls = FALSE)
 	after_ejaculation()
@@ -170,7 +169,7 @@
 		after_intimate_climax()
 
 /datum/sex_controller/proc/ejaculate()
-	log_combat(user, user, "Ejaculated")
+	log_attack(user, user, "Ejaculated")
 	user.visible_message(span_love("[user] makes a mess!"))
 	//small heal burst, this should not happen often due the delay on how often one can cum.
 	//user.adjustBruteLoss(-10)
@@ -184,12 +183,10 @@
 	if(ejacmessaged != 1)
 		user.visible_message(span_info("With every ejaculation I feel Eora's blessing satiate me so I may go longer."))
 		ejacmessaged = 1
-	user.adjust_nutrition(50)
+	user.adjustNutrition(50)
 	set_arousal(40)
 	adjust_charge(-CHARGE_FOR_CLIMAX)
-	if(user.has_flaw(/datum/charflaw/addiction/lovefiend))
-		user.sate_addiction()
-	user.emote("sexmoanhvy", forced = TRUE)
+	user.emote("sexmoanhvy")
 	user.playsound_local(user, 'sound/misc/mat/end.ogg', 100)
 	last_ejaculation_time = world.time
 	SSticker.cums++
@@ -197,7 +194,7 @@
 /datum/sex_controller/proc/after_intimate_climax()
 	if(user == target)
 		return
-	if(HAS_TRAIT(target, TRAIT_GOODLOVER))
+/* 	if(HAS_TRAIT(target, TRAIT_GOODLOVER))
 		if(!user.mob_timers["cumtri"])
 			user.mob_timers["cumtri"] = world.time
 			user.adjust_triumphs(1)
@@ -206,7 +203,7 @@
 		if(!target.mob_timers["cumtri"])
 			target.mob_timers["cumtri"] = world.time
 			target.adjust_triumphs(1)
-			to_chat(target, span_love("This felt TRIUMPHantly good!!!"))
+			to_chat(target, span_love("This felt TRIUMPHantly good!!!")) */
 
 /datum/sex_controller/proc/just_ejaculated()
 	return (last_ejaculation_time + 2 SECONDS >= world.time)
@@ -543,7 +540,7 @@
 	desire_stop = FALSE
 	current_action = action_type
 	var/datum/sex_action/action = SEX_ACTION(current_action)
-	log_combat(user, target, "Started sex action: [action.name]")
+	log_attack(user, target, "Started sex action: [action.name]")
 	INVOKE_ASYNC(src, PROC_REF(sex_action_loop))
 
 /datum/sex_controller/proc/sex_action_loop()

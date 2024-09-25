@@ -106,7 +106,7 @@
 				if(!M.client)
 					thingshearing -= M
 					continue
-				if(!(M in R) || M.sleeping())// they are out of range
+				if(!(M in R) || M.Sleeping())// they are out of range
 					var/list/L = M.client.played_loops[src]
 					if(L)
 						var/sound/SD = L["SOUND"]

@@ -17,6 +17,9 @@ SUBSYSTEM_DEF(ticker)
 	var/event_time = null
 	var/event = 0
 
+	//Horny Shmorny
+	var/cums = 0
+
 	var/list/datum/mind/minds = list()//The people in the game. Used for objective tracking.
 
 	var/random_players = 0 	// if set to nonzero, ALL players who latejoin or declare-ready join will have random appearances/genders
