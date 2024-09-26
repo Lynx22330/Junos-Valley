@@ -2,7 +2,7 @@
 	Spawns a rapidly expanding plant that can grow through doors.
 	The plant is vulnerable to fire and cutting weapons
 
-	It's not really dangerous, it doesn't eat you like the blob, so it has a lower cost
+	It's not really dangerous, it doesn't eat you like the blob, so it has a lower cost*/
 
 /datum/storyevent/spacevine
 	id = "spacevine"
@@ -28,6 +28,3 @@
 
 /datum/event/spacevine/announce()
 	level_six_announcement()
-
-
-*/ //Vines are laggy, spawn randomly including outside and generally? Suck major ass. Don't see a good reason to actually have this event at this time particularly given the issues with it spawning outside the gate

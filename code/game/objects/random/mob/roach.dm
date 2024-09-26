@@ -3,9 +3,9 @@
 	icon_state = "hostilemob-brown"
 	alpha = 128
 	mobs = list(/mob/living/carbon/superior_animal/roach = 10,
-				/mob/living/carbon/superior_animal/roach/tank = 8,
-				/mob/living/carbon/superior_animal/roach/hunter = 7,
-				/mob/living/carbon/superior_animal/roach/toxic = 7	, // Small cast of Roaches early on. Relatively tame.
+				/mob/living/carbon/superior_animal/roach/tank = 4,
+				/mob/living/carbon/superior_animal/roach/hunter = 9,
+				/mob/living/carbon/superior_animal/roach/toxic = 9	, // Small cast of Roaches early on. Relatively tame.
 				)
 
 /obj/random/mob/roaches/item_to_spawn()
