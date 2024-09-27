@@ -260,6 +260,13 @@
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/spider/reaper_spider
 	armor_penetration = 3
 
+	ranged = TRUE
+	limited_ammo = FALSE
+	rounds_left = 2
+	projectiletype = /obj/item/projectile/spider_webbing
+	fire_verb = "spews webs from its abdomen"
+
+
 	get_stat_modifier = FALSE //Were not getting armor
 
 /mob/living/carbon/superior_animal/giant_spider/tarantula/emperor/reaper_spider/slip(var/slipped_on)

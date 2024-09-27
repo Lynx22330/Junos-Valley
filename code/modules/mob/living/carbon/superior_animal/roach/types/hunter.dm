@@ -1,6 +1,6 @@
 /mob/living/carbon/superior_animal/roach/hunter
 	name = "Jager Roach"
-	desc = "A monstrous, dog-sized cockroach. This one has bigger claws."
+	desc = "A monstrous, dog-sized cockroach, notorious for its spider hunting abilities. This one has bigger claws, and specially curved pincers."
 	icon_state = "jager"
 
 	turns_per_move = 1 // Should always be moving, actively hunting for their next host.
@@ -17,3 +17,13 @@
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/roachmeat/jager
 	meat_amount = 3
 	armor_penetration = 2
+
+/mob/living/carbon/superior_animal/roach/hunter/UnarmedAttack(var/atom/A, var/proximity)
+	. = ..()
+	if(isliving(A))
+		var/mob/living/L = A
+		if(issuperiorspider(L))
+			var/damage = rand(melee_damage_lower, melee_damage_upper) + 10 //Bonus damage vs spiders
+			L.damage_through_armor(damage, BRUTE)
+			playsound(src, 'sound/voice/insect_battle_screeching.ogg', 30, 1, -3)
+			L.visible_message(SPAN_DANGER("\the [src] pierces with its mandibles into \the [L] exoskeleton!"))
