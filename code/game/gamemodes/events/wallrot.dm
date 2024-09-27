@@ -69,6 +69,9 @@
 	var/number_rots = rand(2,3)
 	for(var/i=0, i<number_rots, i++)
 		new/obj/effect/overlay/wallrot(src)
+		if(prob(2))
+			new/obj/effect/plant(get_turf(src), new/datum/seed/mushroom/maintshroom)
+			message_admins("Maintshroom has spawned at ([jumplink(src)])", 0, 1)
 
 
 /obj/effect/overlay/wallrot

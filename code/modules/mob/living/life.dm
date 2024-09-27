@@ -6,6 +6,8 @@
 	..()
 	if(config.enable_mob_sleep)
 		if(stat != DEAD && !mind)	// Check for mind so player-driven, nonhuman mobs don't sleep
+			if(prob(0.1))//To help rarely stir up some life around the map as well so mobs can still begin messing around
+				activate_ai()
 			if(life_cycles_before_scan > 0)
 				life_cycles_before_scan--
 			else
