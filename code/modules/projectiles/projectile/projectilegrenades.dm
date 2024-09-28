@@ -200,7 +200,7 @@
 	damage_types = list()
 	devastation_range = 0
 	heavy_impact_range = 0
-	light_impact_range = 2 // It IS a grenade, after all. Albeit weak.
+	light_impact_range = 3 // It IS a grenade, after all. Albeit weak.
 	flash_range = 0 // This is annoying, and not fun to fight.
 	recoil = 25
 	step_delay = 2.4 // Relatively quick. Still should be enough time to react due to the initial fire delay.

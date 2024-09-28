@@ -8,7 +8,7 @@
 	name = "Voidwold Invasion"
 
 	event_type =/datum/event/voidwolf_invasion
-	event_pools = list(EVENT_LEVEL_MODERATE = POOL_THRESHOLD_MODERATE)
+	event_pools = list(EVENT_LEVEL_MAJOR = POOL_THRESHOLD_MAJOR)
 	tags = list(TAG_COMMUNAL, TAG_COMBAT, TAG_DESTRUCTIVE, TAG_SCARY, TAG_EXTERNAL)
 
 //////////////////////////////////////////////////////////
@@ -16,7 +16,10 @@
 /datum/event/voidwolf_invasion
 	endWhen = 1000
 	var/list/viable_turfs = list()
-	var/voidwolves_to_spawn = 40
+	var/list/viable_bomb_turfs_east = list()
+	var/list/viable_bomb_turfs_west = list()
+	var/voidwolves_to_spawn = 100
+	var/explosions_to_spawn = 40
 
 
 
@@ -41,20 +44,55 @@
 
 	//We will then use pickweight and this will be more likely to choose tiles with many windows, for maximum exposure
 
+	var/area/spessbombeast = locate(/area/nadezhda/security/maingate/east) in world
+	for (var/turf/T in spessbombeast)
+		if (!(T.z in GLOB.maps_data.station_levels))
+			continue
 
-	announceWhen = rand(40, 60)
+		var/numbomeast
+		for (var/turf/simulated/floor/asteroid/dirt/W in view(4, T))
+			numbomeast++
+
+		//And the square of it is entered into the list as a weight
+		if (numbomeast)
+			viable_bomb_turfs_east[T] = numbomeast*numbomeast
+
+	var/area/spessbombwest = locate(/area/nadezhda/security/maingate/west) in world
+	for (var/turf/T in spessbombwest)
+		if (!(T.z in GLOB.maps_data.station_levels))
+			continue
+
+		var/numbomwest
+		for (var/turf/simulated/floor/asteroid/dirt/W in view(4, T))
+			numbomwest++
+
+		//And the square of it is entered into the list as a weight
+		if (numbomwest)
+			viable_bomb_turfs_west[T] = numbomwest*numbomwest
+
 	endWhen = rand(600,1200)
 
 /datum/event/voidwolf_invasion/announce()
 	var/msg
-	if(prob(33))
-		msg = "Voidwolves have began positioning within colony walls. Lock down all exterior exits and windows. Take caution when going into the colony yard, reports say they do not intend on leaving."
+	msg = "A voidwolf fleet has been sighted above the colony, do not go outside. Scans indicate a missile bombardment to expose our walls is imminent. Remain in-doors at all times, secure yourself inside of a safe location, and do not attempt to engage unarmed. Reports claim they do not intend on leaving. All capable personel are requested to fight back against the invaders."
+	command_announcement.Announce(msg, "Voidwolf Invasion - EVACUATE FROM THE COLONY GARDENS AND WALLS IMMEDIATELY")
 
 /datum/event/voidwolf_invasion/start()
 	//Pick a list of spawn locatioons
 	var/list/spawn_locations = pickweight_mult(viable_turfs, voidwolves_to_spawn)
+	var/list/explosion_locations_east = pickweight_mult(viable_bomb_turfs_east, explosions_to_spawn)
+	var/list/explosion_locations_west = pickweight_mult(viable_bomb_turfs_west, explosions_to_spawn)
 
 	log_and_message_admins("Spawning [voidwolves_to_spawn]")
 	for(var/turf/T in spawn_locations)
-		var/obj/random/mob/voidwolf/D = new /obj/random/mob/voidwolf(T)
+		if(/mob/living/carbon/human.client in dview(10))
+			continue
+		spawn(rand(60, 75) SECONDS)
+			new /obj/random/mob/voidwolf(T)
 		log_and_message_admins("Voidwolf spawned at [jumplink(T)],")
+	for(var/turf/T in explosion_locations_east)
+		spawn(rand(20, 60) SECONDS)
+			explosion(T, 1, 5, 7, 4)
+	for(var/turf/T in explosion_locations_west)
+		spawn(rand(20, 60) SECONDS)
+			explosion(T, 1, 5, 7, 4)
