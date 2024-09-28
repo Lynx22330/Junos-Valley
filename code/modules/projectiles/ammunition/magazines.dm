@@ -1213,3 +1213,15 @@
 
 /obj/item/ammo_magazine/rifle_223/empty
 	initial_ammo = 0
+
+// Special NPC/Mob Variant Ammo
+/obj/item/ammo_magazine/grenade_pouch
+	name = "grenade pouch"
+	desc = "A grenade pouch intended to be used by NPC's. Why do you see this? Please alert an admin."
+	mag_type = MAGAZINE
+	mag_well = MAG_WELL_GENERIC
+	ammo_type = /obj/item/ammo_casing/grenade/frag
+	max_ammo = 1
+
+/obj/item/ammo_magazine/grenade_pouch/empty
+	initial_ammo = 0
