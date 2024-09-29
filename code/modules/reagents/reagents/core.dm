@@ -30,7 +30,7 @@
 	if(!istype(D))
 		blood_splatter(T, src, 1)
 		return
-	
+
 	var/mob/living/something = D.resolve()
 	if(istype(something, /mob/living/carbon/human))
 		blood_splatter(T, src, 1)
@@ -92,6 +92,8 @@
 		M.take_organ_damage(0, 1 * effect_multiplier)
 	if(!ishuman(M))
 		M.adjustHalLoss(-0.5)
+	//It's water. It absorbs radiation which is then removed from the body. It's ineffective, but still viable.
+	M.radiation = max(M.radiation - (0.2 * effect_multiplier), 0)
 
 /datum/reagent/water/affect_blood(var/mob/living/carbon/M, var/alien)
 	if(M.species.reagent_tag == IS_SLIME)

@@ -1,0 +1,74 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/closet/low_chance,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long0"
+	},
+/area/template_noop)
+"f" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/boxes/low_chance,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long6"
+	},
+/area/template_noop)
+"s" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/closet/low_chance,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long5"
+	},
+/area/template_noop)
+"u" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/boxes,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long4"
+	},
+/area/template_noop)
+"T" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/closet/low_chance,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long2"
+	},
+/area/template_noop)
+"U" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/closet/low_chance,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long6"
+	},
+/area/template_noop)
+"W" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/boxes/low_chance,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long0"
+	},
+/area/template_noop)
+
+(1,1,1) = {"
+W
+U
+f
+"}
+(2,1,1) = {"
+a
+u
+s
+"}
+(3,1,1) = {"
+W
+W
+T
+"}

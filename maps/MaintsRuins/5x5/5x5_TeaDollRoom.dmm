@@ -1,0 +1,120 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/item/stool/padded,
+/obj/random/toy/plushie_onlymisc,
+/turf/simulated/floor/industrial,
+/area/template_noop)
+"d" = (
+/obj/item/stool/padded,
+/obj/random/toy/plushie_onlysquid,
+/obj/effect/gibspawner,
+/turf/simulated/floor/industrial,
+/area/template_noop)
+"h" = (
+/obj/item/stool/padded,
+/obj/random/toy/plushie_onlycarp,
+/turf/simulated/floor/industrial,
+/area/template_noop)
+"l" = (
+/obj/item/stool/padded,
+/obj/random/toy/plushie_onlycorgi,
+/turf/simulated/floor/industrial,
+/area/template_noop)
+"n" = (
+/obj/structure/table/woodentable,
+/obj/item/reagent_containers/food/drinks/tea/green{
+	pixel_x = -6
+	},
+/obj/item/reagent_containers/food/drinks/tea/green{
+	pixel_x = 8;
+	pixel_y = 8
+	},
+/turf/simulated/floor/industrial,
+/area/template_noop)
+"o" = (
+/obj/effect/gibspawner,
+/turf/simulated/floor/industrial,
+/area/template_noop)
+"v" = (
+/obj/item/stool/padded,
+/obj/random/toy/plushie_onlycat,
+/turf/simulated/floor/industrial,
+/area/template_noop)
+"E" = (
+/obj/structure/table/woodentable,
+/obj/item/reagent_containers/food/drinks/teapot{
+	pixel_y = 13;
+	pixel_x = -3
+	},
+/obj/item/reagent_containers/food/drinks/tea/green{
+	pixel_y = 2;
+	pixel_x = -5
+	},
+/obj/item/reagent_containers/food/drinks/tea/green{
+	pixel_x = 8;
+	pixel_y = 7
+	},
+/turf/simulated/floor/industrial,
+/area/template_noop)
+"F" = (
+/turf/simulated/floor/industrial,
+/area/template_noop)
+"J" = (
+/obj/structure/table/woodentable,
+/obj/item/reagent_containers/food/drinks/tea/green{
+	pixel_y = 9;
+	pixel_x = -3
+	},
+/obj/item/reagent_containers/food/drinks/tea/green{
+	pixel_y = 1;
+	pixel_x = 4
+	},
+/obj/effect/gibspawner,
+/turf/simulated/floor/industrial,
+/area/template_noop)
+"K" = (
+/obj/item/stool/padded,
+/obj/item/clothing/head/tophat,
+/turf/simulated/floor/industrial,
+/area/template_noop)
+"Z" = (
+/obj/item/stool/padded,
+/obj/random/toy/therapydoll,
+/turf/simulated/floor/industrial,
+/area/template_noop)
+
+(1,1,1) = {"
+o
+F
+F
+F
+F
+"}
+(2,1,1) = {"
+F
+h
+l
+Z
+o
+"}
+(3,1,1) = {"
+K
+J
+E
+n
+F
+"}
+(4,1,1) = {"
+F
+a
+v
+d
+F
+"}
+(5,1,1) = {"
+F
+o
+F
+F
+F
+"}

@@ -459,10 +459,6 @@
 	if(!can_open(forced))
 		return
 	operating = TRUE
-	//This checks if whoever is using the door has a client to activate mobs.
-	if(usr.client && istype(usr, /mob/living/carbon/human))
-		activate_mobs_in_range(src, 15)
-
 	set_opacity(0)
 	if(istype(src, /obj/machinery/door/airlock/multi_tile/metal))
 		f5?.set_opacity(0)
@@ -475,6 +471,12 @@
 	if(autoclose)
 		var/wait = normalspeed ? 150 : 5
 		addtimer(CALLBACK(src, PROC_REF(close)), wait)
+
+		//This checks if whoever is using the door has a client to activate mobs.
+	if(usr == null) //Because apparently machines are opening themselves. Spooky!
+		return TRUE
+	if(usr.client && ishuman(usr) || issilicon(usr))
+		activate_mobs_in_range(src, 15, TRUE)
 
 	return TRUE
 

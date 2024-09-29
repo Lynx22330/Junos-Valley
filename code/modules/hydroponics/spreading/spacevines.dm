@@ -31,10 +31,12 @@
 	origin.break_open()
 
 	T = get_turf(origin)
-	var/datum/seed/seed = plant_controller.create_random_seed(1)
-	seed.set_trait(TRAIT_SPREAD,3)             // So it will function properly as vines.
-	seed.set_trait(TRAIT_POTENCY,rand(potency_min, potency_max)) // 70-100 potency will help guarantee a wide spread and powerful effects.
-	seed.set_trait(TRAIT_MATURATION,rand(maturation_min, maturation_max))
+	var/datum/seed/kudzu/seed = plant_controller.create_random_seed(1)
+	seed.set_trait(TRAIT_SPREAD, 3)             // So it will function properly as vines.
+	seed.set_trait(TRAIT_POTENCY, rand(potency_min, potency_max)) // 70-100 potency will help guarantee a wide spread and powerful effects.
+	seed.set_trait(TRAIT_MATURATION, rand(maturation_min, maturation_max))
+	seed.set_trait(TRAIT_NUTRIENT_CONSUMPTION, 0)
+	seed.seed_noun = "vines" //Necessary to always be vine icon
 	seed.force_layer = LOW_OBJ_LAYER //Vines will grow in the background underneath and around objects
 
 

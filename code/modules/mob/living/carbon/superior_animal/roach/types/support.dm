@@ -3,14 +3,14 @@
 	desc = "A monstrous, dog-sized cockroach. This one smells like hell and secretes strange vapors."
 	icon_state = "seuche"
 	turns_per_move = 6
-	maxHealth = 15 * ROACH_HEALTH_MOD
-	health = 15 * ROACH_HEALTH_MOD
+	maxHealth = 100 * ROACH_HEALTH_MOD
+	health = 100 * ROACH_HEALTH_MOD
 	var/datum/reagents/gas_sac //Stores gas. Can't use the default reagents since that is now bloodstream
 	melee_damage_upper = 3
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/roachmeat/seuche
 	meat_amount = 3
 
-	knockdown_odds = 3
+	knockdown_odds = 5  // We are a support we should be able to knockdown more often.
 
 	blattedin_revives_left = 1
 	inherent_mutations = list(MUTATION_ROACH_BLOOD, MUTATION_PSN_BREATH, MUTATION_COUGHING, MUTATION_DEAF, MUTATION_TOURETTES, MUTATION_EPILEPSY)
@@ -54,12 +54,15 @@
 	if(stat != AI_inactive)
 		return
 
+	if(prob(1))
+		activate_ai()
+
 	gas_sac.add_reagent("blattedin", 1)
 
 	if(!targetted_mob)
 		return
 
-	if(prob(7))
+	if(prob(12))     //Higher chance to attack. They come in smokey clouds of death.
 		gas_attack()
 
 /mob/living/carbon/superior_animal/roach/support/doTargetMessage()

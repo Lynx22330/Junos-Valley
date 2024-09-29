@@ -5,12 +5,12 @@
 	icon_state = "fuhrer"
 
 	turns_per_move = 4
-	maxHealth = 125 * ROACH_HEALTH_MOD
-	health = 125 * ROACH_HEALTH_MOD
+	maxHealth = 250 * ROACH_HEALTH_MOD
+	health = 250 * ROACH_HEALTH_MOD          // Tanky leader, meant to give them time to actually make calls and get backup.
 
 	knockdown_odds = 5
-	melee_damage_lower = 15
-	melee_damage_upper = 30
+	melee_damage_lower = 10
+	melee_damage_upper = 15   // Somewhat strong, somewhat weak. They are a leader, not a fighter.
 	move_to_delay = 8
 	mob_size = MOB_MEDIUM
 	get_stat_modifier = TRUE

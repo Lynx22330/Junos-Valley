@@ -5,6 +5,8 @@
 	description = "A storyteller which will not do anything."
 	votable = TRUE //For lower pops
 
+	multipliergain = 0
+
 	gain_mult_mundane = 0
 	gain_mult_moderate = 0
 	gain_mult_major = 0

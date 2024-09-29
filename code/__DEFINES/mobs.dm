@@ -115,8 +115,8 @@
 // Defines mob health modifier, all mobs of a subtype will have their health modified by this. Mobs may have multiple types, attached to a max() operator.
 // Mobs may have multiple types, attached to a max() operator.  this is mostly because some 'miscelaneous' mobs are grouped more generally.
 // If you don't see something here that seems to fit what you want, it may very well not have a define.
-#define ROACH_HEALTH_MOD         1            //all roaches other than kaisers./
-#define SPIDER_HEALTH_MOD        0.5          //all spiders other than reapers./
+#define ROACH_HEALTH_MOD         0.5            //all roaches other than kaisers./
+#define SPIDER_HEALTH_MOD        0.66          //all spiders other than reapers./
 #define TERMITE_HEALTH_MOD       0.5          //all termites./
 #define CAVEMOB_HEALTH_MOD       0.70         //wurms, Sargoyle./
 #define AMGOLEM_HEALTH_MOD       0.70         //ameridien golems./
@@ -469,7 +469,7 @@
 
 #define ORGAN_HEALTH_MULTIPLIER 1
 #define ORGAN_REGENERATION_MULTIPLIER 0.2
-#define WOUND_BLEED_MULTIPLIER 0.035 //Bleeding wounds drip damage*this units of blood per process tick, this also cheats by doble taking, so higher numbers byond 0.1 are insainly bleedy
+#define WOUND_BLEED_MULTIPLIER 0.035 //Bleeding wounds drip damage*this units of blood per process tick, this also cheats by doble taking, so higher numbers byond 0.1 are insanely bleedy
 #define OPEN_ORGAN_BLEED_AMOUNT 0.5 //Wounds with open, unclamped incisions bleed this many units of blood per process tick
 
 #define HEAT_MOBIGNITE_THRESHOLD 530 //minimum amount of heat an object needs to ignite a mob when it hits the mob

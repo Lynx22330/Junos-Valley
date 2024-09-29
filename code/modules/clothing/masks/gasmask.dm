@@ -343,7 +343,7 @@
 	var/gas_filter_strength = 1			//For gas mask filters
 	item_flags = AIRTIGHT
 	w_class = ITEM_SIZE_SMALL
-	body_parts_covered = EYES //We only care about the eyes.
+	body_parts_covered = FACE|EYES
 	cold_protection = 0.5 //Instead of giving gas protection, it gives you other types of protection
 	heat_protection = 0.5
 	gas_transfer_coefficient = 0.001

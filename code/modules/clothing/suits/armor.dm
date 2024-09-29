@@ -86,8 +86,8 @@
 	max_upgrades = 1
 	armor_list = list(
 		melee = 10,
-		bullet = 11,
-		energy = 10,
+		bullet = 12,
+		energy = 7,
 		bomb = 25,
 		bio = 100,
 		rad = 70
@@ -118,7 +118,8 @@
 
 /obj/item/clothing/suit/storage/vest/breach2
 	name = "chemical breacher vest"
-	desc = "A reinforced combat vest from solfed surplus stockpiles. Originally an enviroment protection suit clad in armor plating for full body protection and points for mounting specialist equipment. This comes with enough pouches to hold any mission essential equipment like pens, pencils, chocolate or a brick of plastique at the cost of some range of movement."
+	desc = "A reinforced combat vest from solfed surplus stockpiles. Originally an enviroment protection suit clad in armor plating for full body protection and points for mounting specialist equipment. \
+	This comes with enough pouches to hold any mission essential equipment like pens, pencils, chocolate or a brick of plastique at the cost of some range of movement."
 	icon_state = "breach2"
 	item_state = "breach2"
 	blood_overlay_type = "armor"
@@ -129,8 +130,8 @@
 	slowdown = 0.1
 	armor_list = list(
 		melee = 10,
-		bullet = 11,
-		energy = 10,
+		bullet = 12,
+		energy = 7,
 		bomb = 25,
 		bio = 100,
 		rad = 70
@@ -255,6 +256,31 @@
 	item_state = "armor_ih_fullbody"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
 	stiffness = LIGHT_STIFFNESS
+
+/obj/item/clothing/suit/armor/vest/ironhammer/full/verb/toggle_style()
+	set name = "Adjust Style"
+	set category = "Object"
+	set src in usr
+
+	if(!isliving(loc))
+		return
+
+	var/mob/M = usr
+	var/list/options = list()
+	options["standard armor"] = "armor_ih_fullbody"
+	options["tactical armor"] = "armor_ih_fullbody_alt"
+
+	var/choice = input(M,"What kind of style do you want?","Adjust Style") as null|anything in options
+
+	if(src && choice && !M.incapacitated() && Adjacent(M))
+		icon_state = options[choice]
+		item_state = options[choice]
+		item_state_slots = null
+		to_chat(M, "You adjusted your attire's style into [choice] mode.")
+		update_icon()
+		update_wear_icon()
+		usr.update_action_buttons()
+		return 1
 
 /obj/item/clothing/suit/armor/vest/ironhammer_wintercoat //pieced together thanks to Rebel's Supply spec coat - Dongels
 	name = "security armored coat"

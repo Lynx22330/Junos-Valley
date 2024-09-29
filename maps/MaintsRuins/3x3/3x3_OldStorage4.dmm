@@ -1,0 +1,71 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/random/junk/nondense,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long4"
+	},
+/area/template_noop)
+"b" = (
+/obj/random/junk/nondense,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long6"
+	},
+/area/template_noop)
+"i" = (
+/obj/random/closet_maintloot,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long5"
+	},
+/area/template_noop)
+"k" = (
+/obj/random/closet_tech/low_chance,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long3"
+	},
+/area/template_noop)
+"o" = (
+/obj/random/junk/nondense,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long0"
+	},
+/area/template_noop)
+"r" = (
+/obj/random/closet/low_chance,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long0"
+	},
+/area/template_noop)
+"s" = (
+/obj/random/junkfood/rotten/low_chance,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long0"
+	},
+/area/template_noop)
+"F" = (
+/obj/random/junkfood/rotten/low_chance,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long5"
+	},
+/area/template_noop)
+"W" = (
+/obj/random/junkfood/rotten/low_chance,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long2"
+	},
+/area/template_noop)
+
+(1,1,1) = {"
+k
+b
+r
+"}
+(2,1,1) = {"
+s
+F
+a
+"}
+(3,1,1) = {"
+o
+W
+i
+"}

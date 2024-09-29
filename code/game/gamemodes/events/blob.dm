@@ -98,7 +98,7 @@
 	//Expansion gets slower as the blob gets farther away from the origin core
 	var/next_expansion = 0
 	var/coredist = 1
-	var/dist_time_scaling = 1.5
+	var/dist_time_scaling = 6
 
 /obj/effect/blob/New(loc, var/obj/effect/blob/_parent)
 	if (_parent)

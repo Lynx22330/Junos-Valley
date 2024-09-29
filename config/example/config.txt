@@ -1,8 +1,8 @@
 ## Server name: This appears at the top of the screen in-game. In this case it will read "tgstation: station_name" where station_name is the randomly generated name of the station for the round. Remove the # infront of SERVERNAME and replace 'spacestation13' with the name of your choice
-SERVERNAME Sojourn Colony
+SERVERNAME Junos Valley
 
 ## Hub visiblity - uncomment to make visible on the HUB
-#HUB_VISIBLE
+HUB_VISIBLE
 
 ## Alert levels
 ALERT_GREEN All threats to the ship have passed. Security may not have weapons visible, privacy laws are once again fully enforced.
@@ -219,7 +219,7 @@ GITHUBURL https://github.com/Endless-Horizon/CEV-Eris
 ## Remove the # to allow special 'Easter-egg' events on special holidays such as seasonal holidays and stuff like 'Talk Like a Pirate Day' :3 YAARRR
 ALLOW_HOLIDAYS
 ## Defines the FPS for the world. 30 is the normal one, 45+ is smoother.
-FPS 40
+FPS 60
 
 ## Defines if Tick Compensation is used.  It results in a minor slowdown of movement of all mobs, but attempts to result in a level movement speed across all ticks.  Recommended if tickrate is lowered.
 #TICKCOMP

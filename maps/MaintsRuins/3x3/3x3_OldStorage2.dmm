@@ -1,0 +1,58 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/structure/table/rack/shelf,
+/obj/random/powercell/low_chance,
+/turf/simulated/floor/industrial/blue_slates_long_fixed,
+/area/template_noop)
+"d" = (
+/obj/structure/table/rack/shelf,
+/obj/random/gun_energy_cheap,
+/turf/simulated/floor/industrial/blue_slates_long_fixed,
+/area/template_noop)
+"k" = (
+/obj/structure/table/rack/shelf,
+/obj/random/rig/damaged/low_chance,
+/turf/simulated/floor/industrial/blue_slates_long_fixed,
+/area/template_noop)
+"p" = (
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long1"
+	},
+/area/template_noop)
+"w" = (
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long4"
+	},
+/area/template_noop)
+"C" = (
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long3"
+	},
+/area/template_noop)
+"E" = (
+/obj/random/powercell/low_chance,
+/obj/structure/table/rack/shelf,
+/turf/simulated/floor/industrial/blue_slates_long_fixed,
+/area/template_noop)
+"U" = (
+/obj/random/cluster/spiders,
+/turf/simulated/floor/industrial/blue_slates_long_fixed{
+	icon_state = "blue_long3"
+	},
+/area/template_noop)
+
+(1,1,1) = {"
+d
+w
+E
+"}
+(2,1,1) = {"
+C
+U
+w
+"}
+(3,1,1) = {"
+a
+p
+k
+"}

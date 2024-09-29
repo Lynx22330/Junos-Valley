@@ -97,11 +97,10 @@
 			GLOB.all_maintshrooms += src
 		else if(seed.get_trait(TRAIT_CARNIVOROUS) == 2)
 			growth_type = 1 // WOOOORMS.
-		else if(!(seed.seed_noun in list("seeds","pits")))
+		else if(!(seed.seed_noun in list("seeds","pits","vines")))
+			growth_type = 4 // Mold
 			if(seed.seed_noun == "nodes")
 				growth_type = 3 // Biomass
-			else
-				growth_type = 4 // Mold
 
 		if (growth_type != 4 && !(seed.get_trait(TRAIT_WALL_HUGGER)))
 			//Random rotation for vines

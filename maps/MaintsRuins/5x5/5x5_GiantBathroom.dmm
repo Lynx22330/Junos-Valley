@@ -1,0 +1,87 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/floor/industrial{
+	icon_state = "fancy"
+	},
+/area/template_noop)
+"k" = (
+/obj/structure/closet/crate/trashcart,
+/obj/random/cloth,
+/obj/random/cloth,
+/obj/random/cloth,
+/obj/random/cloth,
+/obj/random/cloth/backpack/low_chance,
+/obj/random/cloth/backpack/low_chance,
+/obj/random/cloth/armor/low_chance,
+/obj/random/cloth/armor/low_chance,
+/turf/simulated/floor/reinforced{
+	icon_state = "techmaint_perforated"
+	},
+/area/template_noop)
+"m" = (
+/obj/machinery/washing_machine,
+/turf/simulated/floor/reinforced{
+	icon_state = "techmaint_perforated"
+	},
+/area/template_noop)
+"o" = (
+/turf/simulated/floor/industrial{
+	icon_state = "fancy5"
+	},
+/area/template_noop)
+"w" = (
+/turf/simulated/floor/industrial{
+	icon_state = "fancy3"
+	},
+/area/template_noop)
+"y" = (
+/turf/simulated/floor/reinforced{
+	icon_state = "techmaint_perforated"
+	},
+/area/template_noop)
+"A" = (
+/turf/simulated/floor/industrial{
+	icon_state = "fancy6"
+	},
+/area/template_noop)
+"O" = (
+/turf/simulated/floor/industrial{
+	icon_state = "fancy4"
+	},
+/area/template_noop)
+
+(1,1,1) = {"
+w
+o
+a
+A
+a
+"}
+(2,1,1) = {"
+a
+m
+m
+k
+O
+"}
+(3,1,1) = {"
+A
+y
+y
+y
+a
+"}
+(4,1,1) = {"
+a
+m
+m
+m
+a
+"}
+(5,1,1) = {"
+a
+a
+w
+w
+A
+"}

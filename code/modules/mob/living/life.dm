@@ -11,9 +11,9 @@
 			else
 				if(check_surrounding_area(7))
 					activate_ai()
-					life_cycles_before_scan = 29 / rand(0.1, 1.25) //So it doesn't fall asleep just to wake up the next tick
+					life_cycles_before_scan = 29 / rand(1, 1.5) //So it doesn't fall asleep just to wake up the next tick
 				else
-					life_cycles_before_scan = 240 / rand(0.75, 1.25) // Now has random ticks to not bottleneck the CPU and cause it to choke.
+					life_cycles_before_scan = 240 / rand(1, 1.5) // Now has random ticks to not bottleneck the CPU and cause it to choke.
 
 			if(life_cycles_before_sleep)
 				life_cycles_before_sleep--
@@ -218,7 +218,7 @@
 		else
 			sight &= ~(SEE_TURFS|SEE_MOBS|SEE_OBJS)
 			see_in_dark = initial(see_in_dark)
-			see_in_dark += additional_darksight //Done like this for sake of easyer to read
+			see_in_dark += additional_darksight //Done like this for sake of easier to read
 			see_invisible = initial(see_invisible)
 
 /mob/living/proc/update_dead_sight()
@@ -226,7 +226,7 @@
 	sight |= SEE_MOBS
 	sight |= SEE_OBJS
 	see_in_dark = 8
-	see_in_dark += additional_darksight //Done like this for sake of easyer to read
+	see_in_dark += additional_darksight //Done like this for sake of easier to read
 
 	see_invisible = SEE_INVISIBLE_LEVEL_TWO
 
